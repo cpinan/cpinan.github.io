@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro 3D Maze — Privacy Policy / Política de Privacidad</title>
+<style>
+  :root {
+    --bg: #008080;
+    --panel: #C0C0C0;
+    --panel-text: #000000;
+    --light: #DFDFDF;
+    --shadow: #808080;
+    --title-a: #000080;
+    --title-b: #1084D0;
+    --muted: #4A4A4A;
+    --link: #000080;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--panel-text);
+    line-height: 1.7;
+    padding: 20px 16px 60px;
+  }
+  .container { max-width: 820px; margin: 0 auto; }
+  .window {
+    background: var(--panel);
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid var(--shadow);
+    border-bottom: 2px solid var(--shadow);
+    padding: 4px;
+    margin: 20px 0;
+  }
+  .titlebar {
+    background: linear-gradient(90deg, var(--title-a), var(--title-b));
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
+  .body { padding: 22px 24px 28px; }
+  h1 { font-size: 1.6rem; margin: 26px 0 8px; }
+  h1:first-child { margin-top: 0; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 30px 0 10px;
+    border-bottom: 2px solid var(--shadow);
+    padding-bottom: 5px;
+  }
+  h3 { font-size: 1.02rem; margin: 20px 0 6px; }
+  p, li { margin-bottom: 10px; }
+  ul { padding-left: 22px; }
+  .muted { color: var(--muted); font-size: 0.92rem; }
+  .note {
+    background: var(--light);
+    border-top: 2px solid var(--shadow);
+    border-left: 2px solid var(--shadow);
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    padding: 16px 18px;
+    margin: 20px 0;
+  }
+  code {
+    background: #FFFFFF;
+    border: 1px solid var(--shadow);
+    padding: 1px 5px;
+    font-size: 0.9em;
+  }
+  a { color: var(--link); }
+  hr { border: 0; border-top: 2px solid var(--shadow); margin: 46px 0; }
+  footer { text-align: center; margin-top: 34px; }
+  @media (max-width: 600px) {
+    .body { padding: 18px 14px 22px; }
+    h1 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="window">
+  <div class="titlebar">Retro 3D Maze — Privacy Policy</div>
+  <div class="body">
+
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated: 7 August 2026</p>
+
+  <div class="note">
+    <p><strong>Retro 3D Maze collects nothing and sends nothing.</strong> It has no accounts, no
+    ads, no analytics and no crash reporting. It declares <strong>no Android permissions at all</strong>
+    — including no internet permission, which means the app is not merely choosing to stay offline,
+    it is technically incapable of making a network request.</p>
+  </div>
+
+  <h2>1. Information kept on your device</h2>
+  <p>The app stores one preferences file, <code>maze3d.xml</code>, on your device. It holds:</p>
+  <ul>
+    <li>Your settings: mode, maze algorithm, maze size, texture pack, walk speed, and the
+    floor-plan map, rats, globes and rainbow toggles.</li>
+    <li>Your progress: how many mazes you have solved, your best time for each algorithm and size,
+    and whether the hidden word has been entered.</li>
+    <li>If you chose a custom wall image, a <em>reference</em> to that image — not a copy of it.</li>
+  </ul>
+  <p>Nothing else is written. The app creates no database and no files of its own.</p>
+
+  <h2>2. Your custom wall image</h2>
+  <p>Choosing <strong>Custom bitmap…</strong> opens Android's own document picker. You pick one
+  image and the app reads it to draw the maze walls. The image is never copied out of where it
+  already lives, never uploaded, and never shared. The app is only granted permission to read that
+  one file, and only until you pick a different one or uninstall.</p>
+
+  <h2>3. What leaves your device</h2>
+  <p>Nothing the app sends — it cannot. There is one indirect exception worth stating plainly,
+  because it is a choice made in the app's configuration rather than by you:</p>
+  <ul>
+    <li><strong>Android Backup.</strong> The preferences file above is marked as eligible for
+    Android's own backup and device-transfer system, so your best times and solved count follow you
+    to a new phone. When that happens the file is uploaded by <em>Android</em>, to <em>your own</em>
+    Google account, under Google's backup encryption — not to us, and we never see it. You control
+    it entirely from <strong>Settings → Google → Backup</strong> on your device.</li>
+  </ul>
+  <p>The live wallpaper and the screen saver run entirely on your device and transmit nothing.</p>
+
+  <h2>4. What is never collected</h2>
+  <p>No name, no email address, no phone number, no contacts, no location, no advertising
+  identifier, no device identifier, no usage statistics, no crash reports, no free text of any kind.
+  The app has no code that could gather any of it and no permission that would allow it to.</p>
+
+  <h2>5. Permissions</h2>
+  <p>The app requests <strong>none</strong>. It declares two hardware <em>features</em> — OpenGL ES
+  3.0, which it needs to draw, and live wallpaper support, which is optional — and these are
+  capability declarations, not permissions, and grant no access to anything of yours.</p>
+
+  <h2>6. How long anything is kept</h2>
+  <ul>
+    <li>On your device: until you clear the app's data or uninstall it. Uninstalling deletes all
+    of it permanently.</li>
+    <li>In your Android Backup: for as long as your Google account keeps that backup, under your
+    control, per Google's retention rules.</li>
+    <li>With us: nothing, because we never receive anything.</li>
+  </ul>
+
+  <h2>7. Children</h2>
+  <p>The app is suitable for all ages and collects no personal information from anyone, children
+  included.</p>
+
+  <h2>8. Your rights (Peru, Law No. 29733)</h2>
+  <p>Under Peru's Personal Data Protection Law and its regulations you have rights of
+  <strong>access, rectification, cancellation and objection</strong> regarding your personal data.
+  In this case there is nothing to exercise them against, because no personal data is collected or
+  held. To erase everything stored locally, clear the app's data or uninstall it. To remove the
+  backup copy, delete the app's backup from your Google account.</p>
+
+  <h2>9. Changes</h2>
+  <p>If this policy changes, this page and the date at the top will be updated. Any change that
+  broadens what is collected will additionally be announced in the release notes.</p>
+
+  <h2>10. Contact</h2>
+  <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+  <hr>
+
+  <h1>Política de Privacidad</h1>
+  <p class="muted">Última actualización: 7 de agosto de 2026</p>
+
+  <div class="note">
+    <p><strong>Retro 3D Maze no recopila nada y no envía nada.</strong> No tiene cuentas, ni
+    anuncios, ni analíticas, ni informes de errores. No declara <strong>ningún permiso de
+    Android</strong> — tampoco el de internet, lo que significa que la aplicación no es que decida
+    quedarse sin conexión: es técnicamente incapaz de hacer una petición de red.</p>
+  </div>
+
+  <h2>1. Información que se guarda en tu dispositivo</h2>
+  <p>La aplicación guarda un único archivo de preferencias, <code>maze3d.xml</code>, en tu
+  dispositivo. Contiene:</p>
+  <ul>
+    <li>Tus ajustes: modo, algoritmo del laberinto, tamaño, paquete de texturas, velocidad, y las
+    casillas de plano, ratas, globos y colores.</li>
+    <li>Tu progreso: cuántos laberintos has resuelto, tu mejor tiempo para cada algoritmo y tamaño,
+    y si se ha introducido la palabra oculta.</li>
+    <li>Si elegiste una imagen propia para las paredes, una <em>referencia</em> a esa imagen — no
+    una copia de ella.</li>
+  </ul>
+  <p>No se escribe nada más. La aplicación no crea ninguna base de datos ni archivos propios.</p>
+
+  <h2>2. Tu imagen personalizada</h2>
+  <p>Al pulsar <strong>Custom bitmap…</strong> se abre el selector de documentos del propio
+  Android. Eliges una imagen y la aplicación la lee para dibujar las paredes. La imagen nunca se
+  copia fuera de donde ya está, nunca se sube y nunca se comparte. La aplicación sólo recibe
+  permiso para leer ese archivo concreto, y sólo hasta que elijas otro o desinstales.</p>
+
+  <h2>3. Qué sale de tu dispositivo</h2>
+  <p>Nada que la aplicación envíe — no puede. Hay una excepción indirecta que conviene decir con
+  claridad, porque es una decisión de la configuración de la aplicación y no tuya:</p>
+  <ul>
+    <li><strong>Copia de seguridad de Android.</strong> El archivo de preferencias anterior está
+    marcado como apto para el sistema de copia de seguridad y transferencia de Android, para que tus
+    mejores tiempos te acompañen a un teléfono nuevo. Cuando eso ocurre, el archivo lo sube
+    <em>Android</em>, a <em>tu propia</em> cuenta de Google, bajo el cifrado de copias de Google — no
+    a nosotros, y nunca lo vemos. Lo controlas por completo desde <strong>Ajustes → Google →
+    Copia de seguridad</strong>.</li>
+  </ul>
+  <p>El fondo de pantalla animado y el salvapantallas se ejecutan por completo en tu dispositivo y
+  no transmiten nada.</p>
+
+  <h2>4. Qué nunca se recopila</h2>
+  <p>Ni nombre, ni correo electrónico, ni número de teléfono, ni contactos, ni ubicación, ni
+  identificador de publicidad, ni identificador de dispositivo, ni estadísticas de uso, ni informes
+  de errores, ni texto libre de ningún tipo. La aplicación no tiene código que pudiera recogerlo ni
+  permiso que se lo permitiera.</p>
+
+  <h2>5. Permisos</h2>
+  <p>La aplicación no solicita <strong>ninguno</strong>. Declara dos <em>características</em> de
+  hardware — OpenGL ES 3.0, que necesita para dibujar, y compatibilidad con fondos animados, que es
+  opcional — y son declaraciones de capacidad, no permisos, y no dan acceso a nada tuyo.</p>
+
+  <h2>6. Cuánto tiempo se conserva</h2>
+  <ul>
+    <li>En tu dispositivo: hasta que borres los datos de la aplicación o la desinstales.
+    Desinstalarla lo elimina todo de forma permanente.</li>
+    <li>En tu copia de seguridad de Android: mientras tu cuenta de Google conserve esa copia, bajo
+    tu control y según las reglas de retención de Google.</li>
+    <li>Con nosotros: nada, porque nunca recibimos nada.</li>
+  </ul>
+
+  <h2>7. Menores de edad</h2>
+  <p>La aplicación es apta para todos los públicos y no recopila información personal de nadie,
+  menores incluidos.</p>
+
+  <h2>8. Tus derechos (Ley N.º 29733)</h2>
+  <p>Conforme a la Ley de Protección de Datos Personales del Perú y su reglamento, tienes derecho de
+  <strong>acceso, rectificación, cancelación y oposición</strong> respecto de tus datos personales.
+  En este caso no hay nada sobre lo que ejercerlos, porque no se recopilan ni se conservan datos
+  personales. Para borrar todo lo guardado localmente, borra los datos de la aplicación o
+  desinstálala. Para eliminar la copia de seguridad, bórrala desde tu cuenta de Google.</p>
+
+  <h2>9. Cambios</h2>
+  <p>Si esta política cambia, se actualizará esta página y la fecha del encabezado. Un cambio que
+  amplíe la información recopilada se anunciará además en las notas de la versión.</p>
+
+  <h2>10. Contacto</h2>
+  <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+  <footer class="muted">
+    <p>An original tribute to 90s desktop screensavers. Not affiliated with, endorsed by, or
+    connected to any other company.</p>
+    <p><a href="./">Retro 3D Maze</a> · <a href="../">cpinan.github.io</a></p>
+  </footer>
+
+  </div>
+</div>
+</div>
+</body>
+</html>
