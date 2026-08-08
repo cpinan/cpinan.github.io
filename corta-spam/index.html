@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corta Spam — Bloqueo de llamadas de código abierto para Android</title>
+<meta name="description" content="Filtra llamadas antes de que suene el teléfono. Sin anuncios, sin rastreo, sin permiso de internet. Código abierto bajo licencia MIT. / Open-source call blocking for Android. No ads, no tracking, no internet permission.">
+<style>
+  :root {
+    --cream: #FFF4E6;
+    --paper: #FFFFFF;
+    --ink: #17233C;
+    --coral: #EF6A5B;
+    --muted: #5B6577;
+    --rule: #E6D9C6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+    padding: 28px 16px 72px;
+  }
+  .container { max-width: 820px; margin: 0 auto; }
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 32px 30px 36px;
+    margin: 22px 0;
+  }
+  header { text-align: center; padding: 16px 0 4px; }
+  .mark {
+    width: 104px; height: 104px; margin: 0 auto 18px;
+    border-radius: 24px; overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .mark svg { display: block; width: 100%; height: 100%; }
+  h1 { font-size: 2.3rem; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); font-size: 1.1rem; margin-top: 8px; }
+  h2 {
+    font-size: 1.25rem;
+    margin: 28px 0 10px;
+    padding-left: 12px;
+    border-left: 4px solid var(--coral);
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 10px 0; }
+  ul { margin: 10px 0 10px 22px; }
+  li { margin: 7px 0; }
+  a { color: var(--coral); }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+  .pill {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: .88rem;
+    color: var(--muted);
+  }
+  .lang-split { border: 0; border-top: 2px dashed var(--rule); margin: 46px 0 30px; }
+  .cta { text-align: center; margin: 22px 0 4px; }
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 11px 24px;
+    font-weight: 600;
+    margin: 5px;
+  }
+  .btn.alt { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  footer { text-align: center; color: var(--muted); font-size: .88rem; padding: 10px 0 0; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="mark">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Corta Spam">
+      <rect width="1024" height="1024" fill="#FFF4E6"/>
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" transform="translate(72 120) scale(25)" fill="#17233C"/>
+      <path d="M615 435h92m-34-34 34 34-34 34" fill="none" stroke="#17233C" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="752" y="222" width="112" height="580" rx="28" fill="#EF6A5B"/>
+    </svg>
+  </div>
+  <h1>Corta Spam</h1>
+  <p class="tagline">Tu app de teléfono, con reglas.<br>Your phone app, with rules.</p>
+  <div class="pills">
+    <span class="pill">Sin anuncios / No ads</span>
+    <span class="pill">Sin rastreo / No tracking</span>
+    <span class="pill">Sin internet / No internet permission</span>
+    <span class="pill">MIT</span>
+  </div>
+</header>
+
+<div class="cta">
+  <a class="btn" href="https://github.com/cpinan/Corta-Spam">Código fuente / Source</a>
+  <a class="btn alt" href="privacy.html">Privacidad / Privacy</a>
+</div>
+
+<!-- ============================ ESPAÑOL ============================ -->
+<div class="card">
+
+<h2>Qué hace</h2>
+<p>Corta Spam es una app de teléfono completa. Cuando entra una llamada, comprueba el número contra tus reglas <em>antes</em> de que el teléfono suene, y decide si suena, si se bloquea o si contesta con un saludo grabado.</p>
+
+<h2>Reglas que puedes crear</h2>
+<ul>
+  <li><strong>Números bloqueados y permitidos</strong>, con una etiqueta opcional que luego aparece en el registro.</li>
+  <li><strong>Patrones</strong> con comodines, como <code>+34900*</code> o <code>*1234</code>.</li>
+  <li><strong>Países</strong>, comparados solo con números escritos en formato internacional, de modo que bloquear un país no bloquea un número local que empieza igual.</li>
+  <li><strong>Horas de silencio</strong>, con ajustes de Noche, Siesta y Trabajo.</li>
+  <li><strong>Llamadas repetidas</strong>: bloquear un número tras N intentos, o al revés, dejar pasar a quien insiste mucho.</li>
+  <li>Una <strong>lista de spam incluida</strong> dentro de la app, sin consultar ningún servidor.</li>
+</ul>
+
+<h2>Lo que verás</h2>
+<ul>
+  <li>Un <strong>registro de llamadas propio</strong> que dice qué regla tomó cada decisión, no solo que algo se bloqueó.</li>
+  <li><strong>Estadísticas</strong> por día, semana y mes, calculadas sobre tu medianoche local.</li>
+  <li><strong>Respaldo</strong> manual a JSON, que tú activas y puedes leer antes de compartirlo.</li>
+  <li><strong>Auto-respondedor</strong> opcional (experimental) que contesta llamadas bloqueadas con un saludo tuyo.</li>
+</ul>
+
+<h2>Privacidad</h2>
+<p>La app no declara el permiso de internet, así que es <em>incapaz</em> de hacer una petición de red. Además rechaza la copia de seguridad automática de Android, de modo que tu registro de llamadas no sale del teléfono ni siquiera hacia tu propia cuenta de Google. Todo esto se puede comprobar en el código. Los detalles están en la <a href="privacy.html">política de privacidad</a>.</p>
+
+<h2>Idiomas</h2>
+<p>Español, inglés, portugués (Brasil) e hindi.</p>
+
+<h2>Soporte</h2>
+<p>Escribe a <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>, o abre un issue en <a href="https://github.com/cpinan/Corta-Spam/issues">GitHub</a>.</p>
+
+</div>
+
+<hr class="lang-split">
+
+<!-- ============================ ENGLISH ============================ -->
+<div class="card">
+
+<h2>What it does</h2>
+<p>Corta Spam is a full phone app. When a call arrives it checks the number against your rules <em>before</em> the phone rings, and decides whether it rings, gets blocked, or is answered with a recorded greeting.</p>
+
+<h2>Rules you can build</h2>
+<ul>
+  <li><strong>Blocked and allowed numbers</strong>, with an optional label that shows up later in the log.</li>
+  <li><strong>Patterns</strong> with wildcards, like <code>+34900*</code> or <code>*1234</code>.</li>
+  <li><strong>Countries</strong>, matched only against numbers actually written in international form, so blocking a country never blocks a local number that happens to start the same way.</li>
+  <li><strong>Quiet hours</strong>, with Night, Siesta and Work presets.</li>
+  <li><strong>Repeat callers</strong>: block a number after N attempts, or the reverse — let someone through once they have tried hard enough.</li>
+  <li>A <strong>bundled spam list</strong> inside the app, with no server queried.</li>
+</ul>
+
+<h2>What you see</h2>
+<ul>
+  <li>Its <strong>own call log</strong>, which tells you which rule made each decision, not merely that something was blocked.</li>
+  <li><strong>Statistics</strong> by day, week and month, computed on your local midnight.</li>
+  <li>Manual <strong>JSON backup</strong>, which you trigger and can read before sharing.</li>
+  <li>An optional <strong>auto-responder</strong> (experimental) that answers blocked calls with a greeting of your own.</li>
+</ul>
+
+<h2>Privacy</h2>
+<p>The app declares no internet permission, so it is <em>incapable</em> of making a network request. It also opts out of Android's automatic backup, so your call log does not leave the phone even to your own Google account. All of this is checkable in the source. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+
+<h2>Languages</h2>
+<p>Spanish, English, Portuguese (Brazil) and Hindi.</p>
+
+<h2>Support</h2>
+<p>Email <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>, or open an issue on <a href="https://github.com/cpinan/Corta-Spam/issues">GitHub</a>.</p>
+
+</div>
+
+<footer>
+  <p>© 2026 Carlos Piñán · <a href="https://github.com/cpinan/Corta-Spam">MIT</a></p>
+</footer>
+
+</div>
+</body>
+</html>
