@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stat Calculator — Pokémon stat calculator for Android</title>
+<meta name="description" content="Calculate Pokémon stats by nature, IVs, EVs and generation. All nine generations, all 1,025 Pokémon, works offline, six languages.">
+<style>
+  :root {
+    --bg: #0d0d1a;
+    --card: #12122a;
+    --border: #2a2a5a;
+    --text: #e8e8f8;
+    --muted: #9898c8;
+    --gold: #ffcc00;
+    --red: #cc0000;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { color: var(--gold); font-size: 2rem; margin: 20px 0 6px; text-align: center; }
+  h2 { color: var(--gold); font-size: 1.2rem; margin: 30px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  p, li { margin-bottom: 10px; }
+  ul { padding-left: 22px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 20px 0; }
+  .muted { color: var(--muted); font-size: 0.92rem; text-align: center; }
+  .tagline { color: var(--muted); text-align: center; margin-bottom: 24px; }
+  a { color: var(--gold); }
+  .bars { text-align: center; margin: 24px 0 4px; line-height: 0; }
+  .bars span { display: inline-block; width: 14px; margin: 0 4px; vertical-align: bottom; border-radius: 1px; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 18px 0; }
+  .row a { border: 1px solid var(--border); border-radius: 8px; padding: 8px 16px; text-decoration: none; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="bars">
+  <span style="height:26px;background:#e84393"></span>
+  <span style="height:42px;background:#ff4444"></span>
+  <span style="height:58px;background:#ff9900"></span>
+  <span style="height:74px;background:#ffcc00"></span>
+</div>
+
+<h1>Stat Calculator</h1>
+<p class="tagline">A Pokémon stat calculator for Android. Pick a Pokémon, set IVs, EVs, nature, level and generation — see the final stats.</p>
+
+<h2>What it does</h2>
+<div class="card">
+<ul>
+  <li><strong>All nine generations.</strong> Gen I and II use DVs and Stat Exp; Gen III onward use IVs, EVs and nature multipliers. Switching generation re-clamps the spread.</li>
+  <li><strong>All 1,025 Pokémon</strong>, searchable offline, with base stats and types from PokéAPI cached for offline use.</li>
+  <li><strong>Compare builds</strong> side by side, with per-stat winners.</li>
+  <li><strong>Save up to 20 builds</strong> and reload them into the calculator or the comparator.</li>
+  <li><strong>A formula reference sheet</strong>, so the arithmetic is inspectable rather than magic.</li>
+  <li><strong>Six languages</strong> — English, Spanish, Portuguese, French, German, Italian.</li>
+  <li><strong>Works offline</strong> once a Pokémon has been looked up.</li>
+</ul>
+</div>
+
+<h2>Privacy</h2>
+<p>No accounts, no sign-in, no analytics. Your builds stay on your device. The app is ad-supported, and the <a href="privacy.html">privacy policy</a> sets out exactly what the ad SDK collects and what it does not — including the Android backup behaviour that most policies quietly omit.</p>
+
+<div class="row">
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="mailto:carlos.pinan@gmail.com">Support</a>
+</div>
+
+<h2>Support</h2>
+<p>Bug reports, wrong numbers, or a translation that reads badly in your language — all welcome at <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>. If you are reporting a wrong stat, the Pokémon, level, nature, IVs, EVs and generation make it fixable in one go.</p>
+
+<hr>
+
+<p class="muted">Stat Calculator is an unofficial fan-made reference tool. It is not affiliated with, endorsed by, or associated with Nintendo, Game Freak, Creatures Inc. or The Pokémon Company. Pokémon and Pokémon character names are trademarks of their respective owners. Stat formulas are facts about the games and are used here for reference purposes.</p>
+
+</div>
+</body>
+</html>

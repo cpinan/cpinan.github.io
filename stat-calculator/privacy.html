@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stat Calculator — Privacy Policy / Política de Privacidad</title>
+<style>
+  :root {
+    --bg: #0d0d1a;
+    --card: #12122a;
+    --border: #2a2a5a;
+    --text: #e8e8f8;
+    --muted: #9898c8;
+    --dim: #6868a8;
+    --gold: #ffcc00;
+    --red: #cc0000;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { color: var(--gold); font-size: 1.8rem; margin: 30px 0 10px; text-align: center; }
+  h2 { color: var(--gold); font-size: 1.25rem; margin: 30px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { color: var(--text); font-size: 1.02rem; margin: 18px 0 6px; }
+  p, li { margin-bottom: 10px; }
+  ul { padding-left: 22px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin: 20px 0; }
+  .muted { color: var(--muted); font-size: 0.92rem; text-align: center; }
+  .lead { color: var(--muted); }
+  a { color: var(--gold); }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 50px 0; }
+  code { background: #000; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; color: var(--muted); }
+  .bars { text-align: center; margin: 24px 0 4px; line-height: 0; }
+  .bars span { display: inline-block; width: 12px; margin: 0 3px; vertical-align: bottom; border-radius: 1px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="bars">
+  <span style="height:22px;background:#e84393"></span>
+  <span style="height:36px;background:#ff4444"></span>
+  <span style="height:50px;background:#ff9900"></span>
+  <span style="height:64px;background:#ffcc00"></span>
+</div>
+
+<h1>Stat Calculator — Privacy Policy</h1>
+<p class="muted">Last updated: 8 August 2026</p>
+
+<div class="card">
+<p class="lead">Stat Calculator is a Pokémon stat calculator. It has no accounts, no sign-in, and no analytics. Your builds are stored on your device. It does show ads, and this page explains exactly what that means for your data — because "we care about your privacy" is not a statement anyone can check.</p>
+</div>
+
+<h2>What is stored on your device</h2>
+<p>Two local databases, and nothing else:</p>
+<ul>
+  <li><strong>Saved builds</strong> — up to 20 of them: the Pokémon, level, generation, nature, IVs/EVs and the name you gave it. Nobody but you ever sees these.</li>
+  <li><strong>A cache of Pokémon data</strong> — base stats and types fetched from PokéAPI, kept so the app works offline and does not refetch the same species repeatedly.</li>
+</ul>
+<p>Both can be erased at any time by deleting saved builds in the app, or by clearing the app's storage in Android settings.</p>
+
+<h2>What leaves your device</h2>
+
+<h3>1. PokéAPI requests</h3>
+<p>When you look up a Pokémon the app requests its data from <a href="https://pokeapi.co">pokeapi.co</a>, and sprite artwork from GitHub. These requests contain the Pokémon's name or number and nothing about you — no identifier, no build, no account. As with any web request, those services can see the IP address it came from.</p>
+<p>Your IVs, EVs, natures, saved builds and comparisons are <strong>never</strong> transmitted. All calculation happens on the device.</p>
+
+<h3>2. Advertising (Google AdMob)</h3>
+<p>The app shows a banner ad, and occasionally a full-screen ad after you save a build. Ads are served by Google AdMob, which collects data on its own behalf — not ours. Typically this includes:</p>
+<ul>
+  <li>your device's <strong>advertising ID</strong> (a resettable identifier you control in Android settings);</li>
+  <li>your <strong>IP address</strong>, and coarse location derived from it;</li>
+  <li>device and app information — model, OS version, app version;</li>
+  <li>ad interactions, such as which ads were shown or tapped.</li>
+</ul>
+<p>We never receive any of this. We see only aggregate earnings reports containing no information about individuals.</p>
+<p>If you are in the European Economic Area, the United Kingdom or Switzerland, the app asks for your consent before personalised ads are shown, using Google's certified consent form. You may decline, and you may change your answer later; declining means you see non-personalised ads, not fewer features. Google's own explanation of the data it collects is at <a href="https://business.safety.google/privacy/">business.safety.google/privacy</a>.</p>
+<p>You can reset or delete your advertising ID at any time under <code>Settings → Google → Ads</code>.</p>
+
+<h3>3. Android Auto Backup</h3>
+<p>This one is easy to overlook, so it is stated plainly. Android backs up your <strong>saved builds</strong> to your own Google Drive, under your Google account and Google's backup encryption. It goes to you, not to us — we have no access to it and never see it. The Pokémon data cache is explicitly excluded from this backup, because it is refetchable and would only consume your storage quota.</p>
+<p>You control this entirely under <code>Settings → Google → Backup</code>.</p>
+
+<h2>What is never collected</h2>
+<p>A list of absences is checkable in a way that a reassurance is not. The app does not collect, transmit or store:</p>
+<ul>
+  <li>your name, email address, phone number or any account — there is no sign-in;</li>
+  <li>your contacts, photos, files, camera or microphone;</li>
+  <li>precise or GPS location;</li>
+  <li>your saved builds, comparisons or calculator inputs;</li>
+  <li>usage analytics of any kind — there is no analytics SDK in the app;</li>
+  <li>crash reports.</li>
+</ul>
+
+<h2>Permissions</h2>
+<p>The app requests three, all of them for the same reason:</p>
+<ul>
+  <li><code>INTERNET</code> — fetching Pokémon data and ads.</li>
+  <li><code>ACCESS_NETWORK_STATE</code> and <code>ACCESS_WIFI_STATE</code> — detecting whether you are offline, so the app can show the offline notice and serve cached data instead of failing.</li>
+</ul>
+<p>It requests no storage, camera, location, contacts or microphone permission. Google Play may additionally list an advertising-ID permission, which is added by the AdMob SDK for the purpose described above.</p>
+
+<h2>Retention</h2>
+<ul>
+  <li><strong>On your device:</strong> until you delete the builds, clear the app's storage, or uninstall the app.</li>
+  <li><strong>In your Google backup:</strong> governed by your Google account settings, not by us.</li>
+  <li><strong>With us:</strong> nothing. We operate no servers and hold no user data of any kind.</li>
+  <li><strong>With Google:</strong> per Google's own advertising retention policies, linked above.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Stat Calculator is intended for a general audience aged 13 and over, and is not directed at children. We do not knowingly collect personal information from children. If you believe a child has provided personal information through this app, contact us and we will act on it — though note that the app has no mechanism by which a child could submit personal information to us in the first place.</p>
+
+<h2>Your rights (Peru, Law No. 29733)</h2>
+<p>Under Peru's Personal Data Protection Law No. 29733 you have the rights of access, rectification, cancellation and objection with respect to your personal data. Because we hold no personal data about you, there is in practice nothing for us to disclose, correct or erase — but you may exercise these rights at any time by writing to the address below, and we will respond.</p>
+<p>For data collected by Google AdMob, those requests are directed to Google, which is the controller of that data.</p>
+
+<h2>Changes to this policy</h2>
+<p>If the app's data practices change, this page changes with them and the date at the top is updated. Material changes will be noted in the app's release notes.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+<p class="muted">Stat Calculator is an unofficial fan-made reference tool. It is not affiliated with, endorsed by, or associated with Nintendo, Game Freak, Creatures Inc. or The Pokémon Company. Pokémon and Pokémon character names are trademarks of their respective owners.</p>
+
+<hr>
+
+<h1>Stat Calculator — Política de Privacidad</h1>
+<p class="muted">Última actualización: 8 de agosto de 2026</p>
+
+<div class="card">
+<p class="lead">Stat Calculator es una calculadora de estadísticas de Pokémon. No tiene cuentas, ni inicio de sesión, ni analítica. Tus builds se guardan en tu dispositivo. Sí muestra publicidad, y esta página explica exactamente qué significa eso para tus datos — porque «nos importa tu privacidad» no es algo que nadie pueda comprobar.</p>
+</div>
+
+<h2>Qué se guarda en tu dispositivo</h2>
+<p>Dos bases de datos locales, y nada más:</p>
+<ul>
+  <li><strong>Builds guardadas</strong> — hasta 20: el Pokémon, nivel, generación, naturaleza, IVs/EVs y el nombre que le diste. Nadie salvo tú las ve.</li>
+  <li><strong>Una caché de datos de Pokémon</strong> — estadísticas base y tipos obtenidos de PokéAPI, guardados para que la app funcione sin conexión y no vuelva a pedir la misma especie.</li>
+</ul>
+<p>Ambas se pueden borrar en cualquier momento eliminando las builds en la app, o borrando el almacenamiento de la app en los ajustes de Android.</p>
+
+<h2>Qué sale de tu dispositivo</h2>
+
+<h3>1. Peticiones a PokéAPI</h3>
+<p>Cuando buscas un Pokémon, la app pide sus datos a <a href="https://pokeapi.co">pokeapi.co</a>, y las imágenes a GitHub. Esas peticiones contienen el nombre o número del Pokémon y nada sobre ti — ningún identificador, ninguna build, ninguna cuenta. Como en cualquier petición web, esos servicios pueden ver la dirección IP de origen.</p>
+<p>Tus IVs, EVs, naturalezas, builds guardadas y comparaciones <strong>nunca</strong> se transmiten. Todo el cálculo ocurre en el dispositivo.</p>
+
+<h3>2. Publicidad (Google AdMob)</h3>
+<p>La app muestra un banner y, ocasionalmente, un anuncio a pantalla completa después de guardar una build. Los anuncios los sirve Google AdMob, que recopila datos por su cuenta — no por la nuestra. Normalmente incluye:</p>
+<ul>
+  <li>el <strong>identificador de publicidad</strong> de tu dispositivo (un ID reiniciable que tú controlas en los ajustes de Android);</li>
+  <li>tu <strong>dirección IP</strong>, y la ubicación aproximada derivada de ella;</li>
+  <li>información del dispositivo y de la app — modelo, versión del sistema, versión de la app;</li>
+  <li>interacciones con los anuncios, como cuáles se mostraron o se pulsaron.</li>
+</ul>
+<p>Nosotros no recibimos nada de eso. Solo vemos informes de ingresos agregados que no contienen información sobre personas concretas.</p>
+<p>Si te encuentras en el Espacio Económico Europeo, el Reino Unido o Suiza, la app pide tu consentimiento antes de mostrar publicidad personalizada, mediante el formulario certificado de Google. Puedes rechazarlo, y puedes cambiar tu respuesta después; rechazarlo significa ver anuncios no personalizados, no menos funciones. La explicación de Google sobre los datos que recopila está en <a href="https://business.safety.google/privacy/">business.safety.google/privacy</a>.</p>
+<p>Puedes reiniciar o eliminar tu identificador de publicidad en <code>Ajustes → Google → Anuncios</code>.</p>
+
+<h3>3. Copia de seguridad automática de Android</h3>
+<p>Esto se pasa por alto con facilidad, así que se dice claramente. Android copia tus <strong>builds guardadas</strong> a tu propio Google Drive, bajo tu cuenta de Google y con el cifrado de copia de seguridad de Google. Va a ti, no a nosotros — no tenemos acceso y nunca lo vemos. La caché de datos de Pokémon está excluida explícitamente de esa copia, porque se puede volver a descargar y solo consumiría tu cuota de almacenamiento.</p>
+<p>Tú lo controlas por completo en <code>Ajustes → Google → Copia de seguridad</code>.</p>
+
+<h2>Qué nunca se recopila</h2>
+<p>Una lista de ausencias se puede comprobar; una promesa tranquilizadora no. La app no recopila, transmite ni almacena:</p>
+<ul>
+  <li>tu nombre, correo electrónico, teléfono ni ninguna cuenta — no hay inicio de sesión;</li>
+  <li>tus contactos, fotos, archivos, cámara ni micrófono;</li>
+  <li>ubicación precisa ni GPS;</li>
+  <li>tus builds guardadas, comparaciones ni datos introducidos en la calculadora;</li>
+  <li>analítica de uso de ningún tipo — no hay ningún SDK de analítica en la app;</li>
+  <li>informes de fallos.</li>
+</ul>
+
+<h2>Permisos</h2>
+<p>La app solicita tres, todos por el mismo motivo:</p>
+<ul>
+  <li><code>INTERNET</code> — obtener datos de Pokémon y anuncios.</li>
+  <li><code>ACCESS_NETWORK_STATE</code> y <code>ACCESS_WIFI_STATE</code> — detectar si estás sin conexión, para mostrar el aviso correspondiente y servir datos de la caché en lugar de fallar.</li>
+</ul>
+<p>No solicita permisos de almacenamiento, cámara, ubicación, contactos ni micrófono. Google Play puede además listar un permiso de identificador de publicidad, añadido por el SDK de AdMob para el fin descrito arriba.</p>
+
+<h2>Conservación</h2>
+<ul>
+  <li><strong>En tu dispositivo:</strong> hasta que borres las builds, borres el almacenamiento de la app, o la desinstales.</li>
+  <li><strong>En tu copia de seguridad de Google:</strong> según los ajustes de tu cuenta de Google, no los nuestros.</li>
+  <li><strong>Con nosotros:</strong> nada. No operamos servidores ni guardamos datos de usuarios de ningún tipo.</li>
+  <li><strong>Con Google:</strong> según las políticas de conservación publicitaria de Google, enlazadas arriba.</li>
+</ul>
+
+<h2>Menores</h2>
+<p>Stat Calculator está dirigida a un público general de 13 años en adelante, y no está dirigida a menores. No recopilamos conscientemente información personal de menores. Si crees que un menor ha proporcionado información personal a través de esta app, escríbenos y actuaremos — aunque conviene señalar que la app no tiene ningún mecanismo por el que un menor pudiera enviarnos información personal.</p>
+
+<h2>Tus derechos (Perú, Ley N.º 29733)</h2>
+<p>Conforme a la Ley de Protección de Datos Personales N.º 29733 del Perú, tienes derecho de acceso, rectificación, cancelación y oposición respecto de tus datos personales. Dado que no conservamos datos personales sobre ti, en la práctica no hay nada que podamos comunicar, corregir o suprimir — pero puedes ejercer estos derechos en cualquier momento escribiendo a la dirección indicada abajo, y responderemos.</p>
+<p>Para los datos recopilados por Google AdMob, esas solicitudes se dirigen a Google, que es el responsable de dichos datos.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si las prácticas de datos de la app cambian, esta página cambia con ellas y se actualiza la fecha de la parte superior. Los cambios importantes se indicarán en las notas de la versión.</p>
+
+<h2>Contacto</h2>
+<p>Consultas sobre esta política: <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+<p class="muted">Stat Calculator es una herramienta de referencia no oficial hecha por fans. No está afiliada, respaldada ni asociada con Nintendo, Game Freak, Creatures Inc. ni The Pokémon Company. Pokémon y los nombres de los personajes son marcas registradas de sus respectivos propietarios.</p>
+
+</div>
+</body>
+</html>
