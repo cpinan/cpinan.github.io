@@ -85,13 +85,17 @@
   <div class="body">
 
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: 7 August 2026</p>
+  <p class="muted">Last updated: 9 August 2026</p>
 
   <div class="note">
-    <p><strong>Retro 3D Maze collects nothing and sends nothing.</strong> It has no accounts, no
-    ads, no analytics and no crash reporting. It declares <strong>no Android permissions at all</strong>
-    — including no internet permission, which means the app is not merely choosing to stay offline,
-    it is technically incapable of making a network request.</p>
+    <p><strong>Retro 3D Maze shows ads, and collects nothing else.</strong> There are no accounts,
+    no analytics and no crash reporting, and nothing you do in the maze is recorded anywhere but on
+    your own phone. The ads are served by Google AdMob, which uses your device's advertising ID —
+    that is the one thing about you that leaves the device, and section 3 says exactly what it
+    involves and how to turn the personalised part of it off.</p>
+    <p class="muted">Versions up to 1.0.0 declared no Android permissions at all and could not make
+    a network request. Version 1.1.0 added ads, and with them the internet and advertising-ID
+    permissions. This page was rewritten for that change rather than quietly amended.</p>
   </div>
 
   <h2>1. Information kept on your device</h2>
@@ -101,75 +105,134 @@
     floor-plan map, rats, globes and rainbow toggles.</li>
     <li>Your progress: how many mazes you have solved, your best time for each algorithm and size,
     and whether the hidden word has been entered.</li>
+    <li>How many times you have come back from a maze, and when the last full-screen ad was shown.
+    This is what spaces the ads out; it is a counter and a timestamp, and it is never sent
+    anywhere.</li>
     <li>If you chose a custom wall image, a <em>reference</em> to that image — not a copy of it.</li>
   </ul>
-  <p>Nothing else is written. The app creates no database and no files of its own.</p>
+  <p>Google's ad and consent libraries keep a few small preference files of their own beside it,
+  holding ad settings and your consent answer. The app creates no database and no other files.</p>
 
   <h2>2. Your custom wall image</h2>
   <p>Choosing <strong>Custom bitmap…</strong> opens Android's own document picker. You pick one
   image and the app reads it to draw the maze walls. The image is never copied out of where it
-  already lives, never uploaded, and never shared. The app is only granted permission to read that
-  one file, and only until you pick a different one or uninstall.</p>
+  already lives, never uploaded, and never shared — least of all with an advertiser. The app is only
+  granted permission to read that one file, and only until you pick a different one or uninstall.</p>
 
-  <h2>3. What leaves your device</h2>
-  <p>Nothing the app sends — it cannot. There is one indirect exception worth stating plainly,
-  because it is a choice made in the app's configuration rather than by you:</p>
+  <h2>3. Advertising</h2>
+  <p>Ads are served by <strong>Google AdMob</strong> and appear in exactly two places:</p>
   <ul>
+    <li>A banner strip below the settings dialog.</li>
+    <li>A full-screen ad when you return to the settings dialog from a maze — every third time, and
+    never less than ninety seconds after the last one.</li>
+  </ul>
+  <p>There are no ads while you are walking a maze, none in the live wallpaper, and none in the
+  screen saver. Those three run exactly as they did before.</p>
+  <p>To fetch an ad, Google's code inside the app asks Google's ad servers for one. That request
+  carries what any ad request carries: your device's <strong>advertising ID</strong>, your IP
+  address — which implies an approximate, city-level location — and technical details about the
+  device, the app and the ad slot. It is sent to Google, not to us. We never see it. What we receive
+  is a count of ads shown and what they earned, with nothing in it that identifies anyone.</p>
+  <p>Google explains what it does with this in
+  <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from
+  sites or apps that use our services</a>.</p>
+
+  <h3>Your choices</h3>
+  <ul>
+    <li><strong>In the EEA, the UK and Switzerland</strong> the app asks before any personalised ad
+    is served, using Google's official consent form. Your answer is remembered, and the
+    <strong>Ad privacy</strong> button in the settings dialog reopens that form whenever you want to
+    change it. The button is shown only where the choice is legally required, which is why you may
+    not see it.</li>
+    <li><strong>Anywhere in the world</strong>, you can reset or delete the advertising ID from
+    <strong>Settings → Privacy → Ads</strong> on your device. Deleting it stops the app from
+    receiving one at all. Ads still appear; they simply stop being personalised.</li>
+  </ul>
+
+  <h2>4. What leaves your device</h2>
+  <ul>
+    <li><strong>Ad requests</strong>, as described in section 3. This is the only thing the app
+    itself sends, and it goes to Google.</li>
     <li><strong>Android Backup.</strong> The preferences file above is marked as eligible for
     Android's own backup and device-transfer system, so your best times and solved count follow you
     to a new phone. When that happens the file is uploaded by <em>Android</em>, to <em>your own</em>
     Google account, under Google's backup encryption — not to us, and we never see it. You control
     it entirely from <strong>Settings → Google → Backup</strong> on your device.</li>
   </ul>
-  <p>The live wallpaper and the screen saver run entirely on your device and transmit nothing.</p>
+  <p>The live wallpaper and the screen saver contain no ad code and transmit nothing at all.</p>
 
-  <h2>4. What is never collected</h2>
-  <p>No name, no email address, no phone number, no contacts, no location, no advertising
-  identifier, no device identifier, no usage statistics, no crash reports, no free text of any kind.
-  The app has no code that could gather any of it and no permission that would allow it to.</p>
+  <h2>5. What is never collected</h2>
+  <p>No name, no email address, no phone number, no contacts, no precise location, no photos or
+  files beyond the single wall image you choose — and that one is only read, never sent. No account
+  of any kind, no analytics, no crash reporting, no record of which mazes you played or how you
+  played them, no free text. The app has no code that gathers any of it. Everything that does leave
+  the device is listed in section 4, in full.</p>
 
-  <h2>5. Permissions</h2>
-  <p>The app requests <strong>none</strong>. It declares two hardware <em>features</em> — OpenGL ES
-  3.0, which it needs to draw, and live wallpaper support, which is optional — and these are
-  capability declarations, not permissions, and grant no access to anything of yours.</p>
+  <h2>6. Permissions</h2>
+  <p>The app declares three permissions, all of them for ads:</p>
+  <ul>
+    <li><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> — to fetch ads. No other part of
+    the app makes a network request.</li>
+    <li><code>com.google.android.gms.permission.AD_ID</code> — to read the advertising ID described
+    in section 3.</li>
+  </ul>
+  <p>Google's libraries add a further set automatically when the app is built: three
+  <code>ACCESS_ADSERVICES_*</code> permissions belonging to Android's Privacy Sandbox,
+  <code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>, and one internal permission used by
+  Android's own support libraries. They arrive with the ad SDK and the app's own code uses none of
+  them directly.</p>
+  <p>The app also declares two hardware <em>features</em> — OpenGL ES 3.0, which it needs in order
+  to draw, and live wallpaper support, which is optional. Those are capability declarations, not
+  permissions, and grant no access to anything of yours.</p>
 
-  <h2>6. How long anything is kept</h2>
+  <h2>7. How long anything is kept</h2>
   <ul>
     <li>On your device: until you clear the app's data or uninstall it. Uninstalling deletes all
     of it permanently.</li>
     <li>In your Android Backup: for as long as your Google account keeps that backup, under your
     control, per Google's retention rules.</li>
-    <li>With us: nothing, because we never receive anything.</li>
+    <li>With Google, for ad requests: per Google's own retention policies, linked in section 3.</li>
+    <li>With us: nothing, because we never receive anything about you.</li>
   </ul>
 
-  <h2>7. Children</h2>
-  <p>The app is suitable for all ages and collects no personal information from anyone, children
-  included.</p>
+  <h2>8. Children</h2>
+  <p>The app is not directed at children. Its Play target audience is 13 and over, it is not offered
+  in a children's category, and it shows ordinary AdMob ads rather than the certified child-directed
+  kind. No personal information is knowingly collected from children.</p>
 
-  <h2>8. Your rights (Peru, Law No. 29733)</h2>
+  <h2>9. Your rights (Peru, Law No. 29733)</h2>
   <p>Under Peru's Personal Data Protection Law and its regulations you have rights of
   <strong>access, rectification, cancellation and objection</strong> regarding your personal data.
-  In this case there is nothing to exercise them against, because no personal data is collected or
-  held. To erase everything stored locally, clear the app's data or uninstall it. To remove the
-  backup copy, delete the app's backup from your Google account.</p>
+  We hold no personal data about you to exercise them against, because none is ever sent to us. For
+  the advertising ID, which is the only identifier involved at all: reset or delete it from
+  <strong>Settings → Privacy → Ads</strong>, and where a consent choice applies, change it from the
+  <strong>Ad privacy</strong> button in the app. To erase everything stored locally, clear the app's
+  data or uninstall it. To remove the backup copy, delete the app's backup from your Google
+  account.</p>
 
-  <h2>9. Changes</h2>
+  <h2>10. Changes</h2>
   <p>If this policy changes, this page and the date at the top will be updated. Any change that
-  broadens what is collected will additionally be announced in the release notes.</p>
+  broadens what is collected will additionally be announced in the release notes — as the addition
+  of ads in version 1.1.0 was.</p>
 
-  <h2>10. Contact</h2>
+  <h2>11. Contact</h2>
   <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
 
   <hr>
 
   <h1>Política de Privacidad</h1>
-  <p class="muted">Última actualización: 7 de agosto de 2026</p>
+  <p class="muted">Última actualización: 9 de agosto de 2026</p>
 
   <div class="note">
-    <p><strong>Retro 3D Maze no recopila nada y no envía nada.</strong> No tiene cuentas, ni
-    anuncios, ni analíticas, ni informes de errores. No declara <strong>ningún permiso de
-    Android</strong> — tampoco el de internet, lo que significa que la aplicación no es que decida
-    quedarse sin conexión: es técnicamente incapaz de hacer una petición de red.</p>
+    <p><strong>Retro 3D Maze muestra anuncios, y no recopila nada más.</strong> No hay cuentas, ni
+    analíticas, ni informes de errores, y nada de lo que haces en el laberinto se registra en otro
+    sitio que no sea tu propio teléfono. Los anuncios los sirve Google AdMob, que usa el
+    identificador de publicidad de tu dispositivo — eso es lo único tuyo que sale del dispositivo, y
+    la sección 3 explica exactamente qué implica y cómo desactivar la parte personalizada.</p>
+    <p class="muted">Las versiones hasta la 1.0.0 no declaraban ningún permiso de Android y eran
+    incapaces de hacer una petición de red. La versión 1.1.0 añadió anuncios, y con ellos los
+    permisos de internet y de identificador de publicidad. Esta página se reescribió por ese cambio,
+    en lugar de retocarse en silencio.</p>
   </div>
 
   <h2>1. Información que se guarda en tu dispositivo</h2>
@@ -180,21 +243,59 @@
     casillas de plano, ratas, globos y colores.</li>
     <li>Tu progreso: cuántos laberintos has resuelto, tu mejor tiempo para cada algoritmo y tamaño,
     y si se ha introducido la palabra oculta.</li>
+    <li>Cuántas veces has vuelto de un laberinto y cuándo se mostró el último anuncio a pantalla
+    completa. Eso es lo que espacia los anuncios: un contador y una fecha, y nunca se envían a
+    ninguna parte.</li>
     <li>Si elegiste una imagen propia para las paredes, una <em>referencia</em> a esa imagen — no
     una copia de ella.</li>
   </ul>
-  <p>No se escribe nada más. La aplicación no crea ninguna base de datos ni archivos propios.</p>
+  <p>Las bibliotecas de anuncios y de consentimiento de Google guardan a su vez algunos archivos de
+  preferencias pequeños, con la configuración de anuncios y tu respuesta de consentimiento. La
+  aplicación no crea ninguna base de datos ni otros archivos.</p>
 
   <h2>2. Tu imagen personalizada</h2>
   <p>Al pulsar <strong>Custom bitmap…</strong> se abre el selector de documentos del propio
   Android. Eliges una imagen y la aplicación la lee para dibujar las paredes. La imagen nunca se
-  copia fuera de donde ya está, nunca se sube y nunca se comparte. La aplicación sólo recibe
-  permiso para leer ese archivo concreto, y sólo hasta que elijas otro o desinstales.</p>
+  copia fuera de donde ya está, nunca se sube y nunca se comparte — y menos aún con un anunciante.
+  La aplicación sólo recibe permiso para leer ese archivo concreto, y sólo hasta que elijas otro o
+  desinstales.</p>
 
-  <h2>3. Qué sale de tu dispositivo</h2>
-  <p>Nada que la aplicación envíe — no puede. Hay una excepción indirecta que conviene decir con
-  claridad, porque es una decisión de la configuración de la aplicación y no tuya:</p>
+  <h2>3. Publicidad</h2>
+  <p>Los anuncios los sirve <strong>Google AdMob</strong> y aparecen exactamente en dos sitios:</p>
   <ul>
+    <li>Un banner debajo del cuadro de ajustes.</li>
+    <li>Un anuncio a pantalla completa al volver al cuadro de ajustes desde un laberinto — una de
+    cada tres veces, y nunca antes de noventa segundos desde el anterior.</li>
+  </ul>
+  <p>No hay anuncios mientras recorres un laberinto, ninguno en el fondo de pantalla animado y
+  ninguno en el salvapantallas. Esos tres funcionan igual que antes.</p>
+  <p>Para pedir un anuncio, el código de Google dentro de la aplicación se lo solicita a los
+  servidores de Google. Esa petición lleva lo que lleva cualquier petición de anuncios: el
+  <strong>identificador de publicidad</strong> de tu dispositivo, tu dirección IP — que implica una
+  ubicación aproximada, a nivel de ciudad — y detalles técnicos del dispositivo, la aplicación y el
+  espacio publicitario. Se envía a Google, no a nosotros. Nosotros nunca lo vemos. Lo que recibimos
+  es un recuento de anuncios mostrados y lo que generaron, sin nada que identifique a nadie.</p>
+  <p>Google explica qué hace con esa información en
+  <a href="https://policies.google.com/technologies/partner-sites">Cómo usa Google la información de
+  sitios o aplicaciones que utilizan nuestros servicios</a>.</p>
+
+  <h3>Tus opciones</h3>
+  <ul>
+    <li><strong>En el EEE, el Reino Unido y Suiza</strong> la aplicación pregunta antes de mostrar
+    publicidad personalizada, con el formulario oficial de consentimiento de Google. Tu respuesta se
+    recuerda, y el botón <strong>Ad privacy</strong> del cuadro de ajustes vuelve a abrir ese
+    formulario cuando quieras cambiarla. El botón sólo se muestra donde la elección es obligatoria
+    por ley, así que puede que no lo veas.</li>
+    <li><strong>En cualquier parte del mundo</strong> puedes restablecer o eliminar el identificador
+    de publicidad desde <strong>Ajustes → Privacidad → Anuncios</strong> en tu dispositivo. Si lo
+    eliminas, la aplicación deja de recibirlo. Los anuncios siguen apareciendo; simplemente dejan de
+    ser personalizados.</li>
+  </ul>
+
+  <h2>4. Qué sale de tu dispositivo</h2>
+  <ul>
+    <li><strong>Las peticiones de anuncios</strong>, tal como se describen en la sección 3. Es lo
+    único que envía la aplicación, y va a Google.</li>
     <li><strong>Copia de seguridad de Android.</strong> El archivo de preferencias anterior está
     marcado como apto para el sistema de copia de seguridad y transferencia de Android, para que tus
     mejores tiempos te acompañen a un teléfono nuevo. Cuando eso ocurre, el archivo lo sube
@@ -202,45 +303,64 @@
     a nosotros, y nunca lo vemos. Lo controlas por completo desde <strong>Ajustes → Google →
     Copia de seguridad</strong>.</li>
   </ul>
-  <p>El fondo de pantalla animado y el salvapantallas se ejecutan por completo en tu dispositivo y
-  no transmiten nada.</p>
+  <p>El fondo de pantalla animado y el salvapantallas no contienen código de anuncios y no
+  transmiten absolutamente nada.</p>
 
-  <h2>4. Qué nunca se recopila</h2>
-  <p>Ni nombre, ni correo electrónico, ni número de teléfono, ni contactos, ni ubicación, ni
-  identificador de publicidad, ni identificador de dispositivo, ni estadísticas de uso, ni informes
-  de errores, ni texto libre de ningún tipo. La aplicación no tiene código que pudiera recogerlo ni
-  permiso que se lo permitiera.</p>
+  <h2>5. Qué nunca se recopila</h2>
+  <p>Ni nombre, ni correo electrónico, ni número de teléfono, ni contactos, ni ubicación precisa, ni
+  fotos o archivos más allá de la única imagen de pared que elijas — y esa sólo se lee, nunca se
+  envía. Ninguna cuenta de ningún tipo, ni analíticas, ni informes de errores, ni registro de qué
+  laberintos jugaste o cómo, ni texto libre. La aplicación no tiene código que recoja nada de eso.
+  Todo lo que sí sale del dispositivo está en la sección 4, completo.</p>
 
-  <h2>5. Permisos</h2>
-  <p>La aplicación no solicita <strong>ninguno</strong>. Declara dos <em>características</em> de
-  hardware — OpenGL ES 3.0, que necesita para dibujar, y compatibilidad con fondos animados, que es
-  opcional — y son declaraciones de capacidad, no permisos, y no dan acceso a nada tuyo.</p>
+  <h2>6. Permisos</h2>
+  <p>La aplicación declara tres permisos, todos para los anuncios:</p>
+  <ul>
+    <li><code>INTERNET</code> y <code>ACCESS_NETWORK_STATE</code> — para obtener anuncios. Ninguna
+    otra parte de la aplicación hace peticiones de red.</li>
+    <li><code>com.google.android.gms.permission.AD_ID</code> — para leer el identificador de
+    publicidad descrito en la sección 3.</li>
+  </ul>
+  <p>Las bibliotecas de Google añaden automáticamente otros al compilar: tres permisos
+  <code>ACCESS_ADSERVICES_*</code> del Privacy Sandbox de Android, <code>WAKE_LOCK</code>,
+  <code>FOREGROUND_SERVICE</code> y un permiso interno de las bibliotecas de soporte de Android.
+  Llegan con el SDK de anuncios y el código propio de la aplicación no usa ninguno directamente.</p>
+  <p>Declara además dos <em>características</em> de hardware — OpenGL ES 3.0, que necesita para
+  dibujar, y compatibilidad con fondos animados, que es opcional. Son declaraciones de capacidad, no
+  permisos, y no dan acceso a nada tuyo.</p>
 
-  <h2>6. Cuánto tiempo se conserva</h2>
+  <h2>7. Cuánto tiempo se conserva</h2>
   <ul>
     <li>En tu dispositivo: hasta que borres los datos de la aplicación o la desinstales.
     Desinstalarla lo elimina todo de forma permanente.</li>
     <li>En tu copia de seguridad de Android: mientras tu cuenta de Google conserve esa copia, bajo
     tu control y según las reglas de retención de Google.</li>
-    <li>Con nosotros: nada, porque nunca recibimos nada.</li>
+    <li>En Google, para las peticiones de anuncios: según las políticas de retención de Google,
+    enlazadas en la sección 3.</li>
+    <li>Con nosotros: nada, porque nunca recibimos nada tuyo.</li>
   </ul>
 
-  <h2>7. Menores de edad</h2>
-  <p>La aplicación es apta para todos los públicos y no recopila información personal de nadie,
-  menores incluidos.</p>
+  <h2>8. Menores de edad</h2>
+  <p>La aplicación no está dirigida a menores. Su público objetivo en Play es de 13 años en
+  adelante, no se ofrece en una categoría infantil, y muestra anuncios normales de AdMob y no los
+  certificados para público infantil. No se recopila a sabiendas información personal de menores.</p>
 
-  <h2>8. Tus derechos (Ley N.º 29733)</h2>
+  <h2>9. Tus derechos (Ley N.º 29733)</h2>
   <p>Conforme a la Ley de Protección de Datos Personales del Perú y su reglamento, tienes derecho de
   <strong>acceso, rectificación, cancelación y oposición</strong> respecto de tus datos personales.
-  En este caso no hay nada sobre lo que ejercerlos, porque no se recopilan ni se conservan datos
-  personales. Para borrar todo lo guardado localmente, borra los datos de la aplicación o
-  desinstálala. Para eliminar la copia de seguridad, bórrala desde tu cuenta de Google.</p>
+  No conservamos datos personales tuyos sobre los que ejercerlos, porque nunca se nos envía ninguno.
+  Para el identificador de publicidad, que es el único identificador implicado: restablécelo o
+  elimínalo desde <strong>Ajustes → Privacidad → Anuncios</strong>, y donde aplique una elección de
+  consentimiento, cámbiala con el botón <strong>Ad privacy</strong> de la aplicación. Para borrar
+  todo lo guardado localmente, borra los datos de la aplicación o desinstálala. Para eliminar la
+  copia de seguridad, bórrala desde tu cuenta de Google.</p>
 
-  <h2>9. Cambios</h2>
+  <h2>10. Cambios</h2>
   <p>Si esta política cambia, se actualizará esta página y la fecha del encabezado. Un cambio que
-  amplíe la información recopilada se anunciará además en las notas de la versión.</p>
+  amplíe la información recopilada se anunciará además en las notas de la versión — como se hizo con
+  la incorporación de anuncios en la versión 1.1.0.</p>
 
-  <h2>10. Contacto</h2>
+  <h2>11. Contacto</h2>
   <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
 
   <footer class="muted">
