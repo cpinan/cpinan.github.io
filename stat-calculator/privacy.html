@@ -50,7 +50,7 @@
 </div>
 
 <h1>Stat Calculator — Privacy Policy</h1>
-<p class="muted">Last updated: 8 August 2026</p>
+<p class="muted">Last updated: 10 August 2026</p>
 
 <div class="card">
 <p class="lead">Stat Calculator is a Pokémon stat calculator. It has no accounts, no sign-in, and no analytics. Your builds are stored on your device. It does show ads, and this page explains exactly what that means for your data — because "we care about your privacy" is not a statement anyone can check.</p>
@@ -98,12 +98,19 @@
 </ul>
 
 <h2>Permissions</h2>
-<p>The app requests three, all of them for the same reason:</p>
+<p>Three belong to the app itself:</p>
 <ul>
   <li><code>INTERNET</code> — fetching Pokémon data and ads.</li>
   <li><code>ACCESS_NETWORK_STATE</code> and <code>ACCESS_WIFI_STATE</code> — detecting whether you are offline, so the app can show the offline notice and serve cached data instead of failing.</li>
 </ul>
-<p>It requests no storage, camera, location, contacts or microphone permission. Google Play may additionally list an advertising-ID permission, which is added by the AdMob SDK for the purpose described above.</p>
+<p>The rest arrive with Google's advertising libraries rather than being asked for by this app, and are listed here because a permission list that only mentions your own code is accurate and still misleading:</p>
+<ul>
+  <li><code>com.google.android.gms.permission.AD_ID</code> — the advertising ID described in section 2.</li>
+  <li><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code> and <code>ACCESS_ADSERVICES_TOPICS</code> — Android's Privacy Sandbox interfaces, used by the ads SDK.</li>
+  <li><code>WAKE_LOCK</code> and <code>FOREGROUND_SERVICE</code> — background scheduling inside the ads libraries. The app itself starts no foreground service and holds no wake lock.</li>
+  <li>An app-private permission named after the app's own package, ending in <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is added by an Android support library, grants nothing to anyone, and exists so that other apps cannot reach this app's internal broadcast receivers.</li>
+</ul>
+<p>It requests no storage, camera, location, contacts or microphone permission. Nothing here grants access to your files, your position, or any content on your device.</p>
 
 <h2>Retention</h2>
 <ul>
@@ -131,7 +138,7 @@
 <hr>
 
 <h1>Stat Calculator — Política de Privacidad</h1>
-<p class="muted">Última actualización: 8 de agosto de 2026</p>
+<p class="muted">Última actualización: 10 de agosto de 2026</p>
 
 <div class="card">
 <p class="lead">Stat Calculator es una calculadora de estadísticas de Pokémon. No tiene cuentas, ni inicio de sesión, ni analítica. Tus builds se guardan en tu dispositivo. Sí muestra publicidad, y esta página explica exactamente qué significa eso para tus datos — porque «nos importa tu privacidad» no es algo que nadie pueda comprobar.</p>
@@ -179,12 +186,19 @@
 </ul>
 
 <h2>Permisos</h2>
-<p>La app solicita tres, todos por el mismo motivo:</p>
+<p>Tres son de la propia app:</p>
 <ul>
   <li><code>INTERNET</code> — obtener datos de Pokémon y anuncios.</li>
   <li><code>ACCESS_NETWORK_STATE</code> y <code>ACCESS_WIFI_STATE</code> — detectar si estás sin conexión, para mostrar el aviso correspondiente y servir datos de la caché en lugar de fallar.</li>
 </ul>
-<p>No solicita permisos de almacenamiento, cámara, ubicación, contactos ni micrófono. Google Play puede además listar un permiso de identificador de publicidad, añadido por el SDK de AdMob para el fin descrito arriba.</p>
+<p>El resto llega con las bibliotecas de publicidad de Google, no los pide esta app, y se enumeran aquí porque una lista de permisos que solo menciona tu propio código es exacta y aun así engañosa:</p>
+<ul>
+  <li><code>com.google.android.gms.permission.AD_ID</code> — el identificador de publicidad descrito en la sección 2.</li>
+  <li><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code> y <code>ACCESS_ADSERVICES_TOPICS</code> — interfaces de Privacy Sandbox de Android, usadas por el SDK de anuncios.</li>
+  <li><code>WAKE_LOCK</code> y <code>FOREGROUND_SERVICE</code> — planificación en segundo plano dentro de las bibliotecas de anuncios. La app en sí no inicia ningún servicio en primer plano ni mantiene ningún wake lock.</li>
+  <li>Un permiso privado de la app, con el nombre de su propio paquete y terminado en <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. Lo añade una biblioteca de soporte de Android, no concede nada a nadie, y existe para que otras apps no puedan alcanzar los receptores internos de esta.</li>
+</ul>
+<p>No solicita permisos de almacenamiento, cámara, ubicación, contactos ni micrófono. Nada de lo anterior da acceso a tus archivos, a tu posición ni a ningún contenido de tu dispositivo.</p>
 
 <h2>Conservación</h2>
 <ul>
