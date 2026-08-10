@@ -69,6 +69,7 @@
 <h3>1. PokéAPI requests</h3>
 <p>When you look up a Pokémon the app requests its data from <a href="https://pokeapi.co">pokeapi.co</a>, and sprite artwork from GitHub. These requests contain the Pokémon's name or number and nothing about you — no identifier, no build, no account. As with any web request, those services can see the IP address it came from.</p>
 <p>Your IVs, EVs, natures, saved builds and comparisons are <strong>never</strong> transmitted. All calculation happens on the device.</p>
+<p>Every request the app makes — to PokéAPI, to GitHub for sprites, and to Google's ad servers — uses HTTPS. The app contains no plaintext HTTP endpoint.</p>
 
 <h3>2. Advertising (Google AdMob)</h3>
 <p>The app shows a banner ad, and occasionally a full-screen ad after you save a build. Ads are served by Google AdMob, which collects data on its own behalf — not ours. Typically this includes:</p>
@@ -76,6 +77,7 @@
   <li>your device's <strong>advertising ID</strong> (a resettable identifier you control in Android settings);</li>
   <li>your <strong>IP address</strong>, and coarse location derived from it;</li>
   <li>device and app information — model, OS version, app version;</li>
+  <li>app performance diagnostics — things like launch time, hang rate and energy usage. These are performance measurements, not crash reports: there is no crash-reporting SDK in this app;</li>
   <li>ad interactions, such as which ads were shown or tapped.</li>
 </ul>
 <p>We never receive any of this. We see only aggregate earnings reports containing no information about individuals.</p>
@@ -157,6 +159,7 @@
 <h3>1. Peticiones a PokéAPI</h3>
 <p>Cuando buscas un Pokémon, la app pide sus datos a <a href="https://pokeapi.co">pokeapi.co</a>, y las imágenes a GitHub. Esas peticiones contienen el nombre o número del Pokémon y nada sobre ti — ningún identificador, ninguna build, ninguna cuenta. Como en cualquier petición web, esos servicios pueden ver la dirección IP de origen.</p>
 <p>Tus IVs, EVs, naturalezas, builds guardadas y comparaciones <strong>nunca</strong> se transmiten. Todo el cálculo ocurre en el dispositivo.</p>
+<p>Todas las peticiones que hace la app — a PokéAPI, a GitHub para las imágenes y a los servidores de anuncios de Google — usan HTTPS. La app no contiene ningún endpoint HTTP sin cifrar.</p>
 
 <h3>2. Publicidad (Google AdMob)</h3>
 <p>La app muestra un banner y, ocasionalmente, un anuncio a pantalla completa después de guardar una build. Los anuncios los sirve Google AdMob, que recopila datos por su cuenta — no por la nuestra. Normalmente incluye:</p>
@@ -164,6 +167,7 @@
   <li>el <strong>identificador de publicidad</strong> de tu dispositivo (un ID reiniciable que tú controlas en los ajustes de Android);</li>
   <li>tu <strong>dirección IP</strong>, y la ubicación aproximada derivada de ella;</li>
   <li>información del dispositivo y de la app — modelo, versión del sistema, versión de la app;</li>
+  <li>diagnósticos de rendimiento de la app — cosas como el tiempo de arranque, la tasa de bloqueos momentáneos y el consumo de energía. Son medidas de rendimiento, no informes de fallos: esta app no incluye ningún SDK de informes de fallos;</li>
   <li>interacciones con los anuncios, como cuáles se mostraron o se pulsaron.</li>
 </ul>
 <p>Nosotros no recibimos nada de eso. Solo vemos informes de ingresos agregados que no contienen información sobre personas concretas.</p>
