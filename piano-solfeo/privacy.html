@@ -39,27 +39,37 @@
 <div class="container">
 
   <h1>Piano Solfeo — Política de Privacidad</h1>
-  <p class="muted">Última actualización: 7 de agosto de 2026</p>
+  <p class="muted">Última actualización: 11 de agosto de 2026</p>
 
   <div class="card">
     <p class="lead">Piano Solfeo no tiene cuentas, no pide registro y no recopila tu nombre,
-    tu correo ni tus contactos. Tu historial de práctica se guarda <strong>únicamente en tu
-    dispositivo</strong>. Lo único que sale del teléfono son informes de errores y estadísticas de
-    uso agregadas, descritos abajo.</p>
+    tu correo ni tus contactos. Tu historial de práctica se guarda en tu dispositivo. Lo que sale
+    del teléfono son informes de errores, estadísticas de uso agregadas y, para mostrar anuncios,
+    el identificador de publicidad de Android. Todo ello se describe abajo.</p>
   </div>
 
   <h2>1. Información que se guarda en tu dispositivo</h2>
-  <p>Lo siguiente se almacena localmente y <strong>nunca se transmite</strong>:</p>
+  <p>Lo siguiente se almacena localmente y no se envía a nosotros:</p>
   <ul>
     <li>Tu historial de sesiones: modo, nivel, aciertos, errores y fecha.</li>
     <li>Tu racha diaria, tus logros y qué lecciones has leído.</li>
     <li>Tus preferencias: nivel, nomenclatura (Do-Re-Mi o C-D-E), meta diaria y hora del recordatorio.</li>
   </ul>
-  <p>Desinstalar la aplicación borra todo esto de forma permanente.</p>
+  <p>Desinstalar la aplicación borra todo esto del teléfono. Ten en cuenta la copia de seguridad
+  de Android descrita en la sección 2.</p>
 
-  <h2>2. Información que se envía</h2>
-  <p>La aplicación usa <strong>Firebase Crashlytics</strong> y <strong>Firebase Analytics</strong>,
-  servicios de Google LLC.</p>
+  <h2>2. Copia de seguridad de Android</h2>
+  <p>La aplicación permite la <strong>copia de seguridad automática de Android</strong>. Si la
+  tienes activada en tu teléfono, Android puede subir los datos locales de la sección 1 a
+  <strong>tu propia cuenta de Google</strong>, cifrados, para restaurarlos en un teléfono nuevo.</p>
+  <p>Esa copia es tuya, no nuestra: <strong>nosotros no la vemos ni podemos acceder a ella</strong>.
+  Se menciona aquí porque de otro modo la frase «se queda en tu dispositivo» no sería del todo
+  cierta. Puedes controlarlo en <code>Ajustes → Google → Copia de seguridad</code>.</p>
+
+  <h2>3. Información que se envía</h2>
+  <p>La aplicación usa <strong>Firebase Crashlytics</strong>, <strong>Firebase Analytics</strong>,
+  <strong>Firebase Remote Config</strong> y <strong>Google Mobile Ads (AdMob)</strong>, servicios de
+  Google LLC.</p>
 
   <h3>Informes de fallos (Crashlytics)</h3>
   <ul>
@@ -74,42 +84,74 @@
     <li><code>session_started</code> — modo y nivel.</li>
     <li><code>card_answered</code> — modo, nivel, si fue correcto y cuántos milisegundos tomó.</li>
     <li><code>mode_selected</code>, <code>streak_milestone</code>, <code>reminder_opened</code>.</li>
+    <li><code>ad_shown</code>, <code>paywall_viewed</code> — únicamente el lugar de la pantalla
+    donde apareció. Sin precios, sin identificadores de anuncio.</li>
     <li>Datos que Google añade por defecto: identificador de instancia de la app, tipo de
     dispositivo, sistema operativo y país aproximado deducido de la dirección IP.</li>
   </ul>
 
-  <h3>Lo que nunca se envía</h3>
+  <h3>Configuración remota (Remote Config)</h3>
+  <p>La aplicación consulta a Google unos pocos valores de configuración, como si los anuncios
+  están activados. Es una descarga: no envía datos tuyos.</p>
+
+  <h2>4. Publicidad</h2>
+  <p>Piano Solfeo es gratuita y se financia con publicidad. Los anuncios los sirve
+  <strong>Google AdMob</strong> y aparecen únicamente en las pantallas fijas (inicio, índice de
+  lecciones y progreso) y al terminar una sesión de práctica. <strong>Nunca aparece un anuncio
+  dentro de un ejercicio</strong>, ni al abrir la aplicación.</p>
+  <p>Para mostrarlos, el SDK de Google recopila y comparte con Google:</p>
+  <ul>
+    <li>El <strong>identificador de publicidad de Android</strong> de tu dispositivo.</li>
+    <li>Datos técnicos del dispositivo y una ubicación aproximada deducida de la dirección IP.</li>
+    <li>Interacciones con el anuncio, como visualizaciones y toques.</li>
+  </ul>
+  <p>Google actúa aquí como tercero con su propia política. Puedes consultar cómo trata estos
+  datos en <a href="https://policies.google.com/technologies/partner-sites">las políticas de
+  Google para socios</a>.</p>
+  <p><strong>Tu control:</strong> en <code>Ajustes → Google → Anuncios</code> puedes desactivar la
+  personalización o eliminar tu identificador de publicidad. La aplicación seguirá funcionando
+  igual; los anuncios simplemente dejarán de estar personalizados.</p>
+  <p>La aplicación funciona sin conexión. Si no hay red, el anuncio sencillamente no se carga y no
+  ocupa espacio en la pantalla: nada de lo que hace la aplicación depende de que un anuncio
+  aparezca.</p>
+
+  <h2>5. Lo que nunca se envía</h2>
   <p>Esto es deliberado y está garantizado por el diseño del código, no por revisión manual:
   <strong>nunca se envía qué nota se te mostró ni qué respuesta elegiste</strong>. Los eventos
   sólo llevan la categoría del ejercicio. Tampoco se envía tu nombre, tu correo, tus contactos,
-  tu ubicación precisa ni texto libre de ningún tipo.</p>
+  tu ubicación precisa ni texto libre de ningún tipo. Tu historial de práctica no se usa para
+  segmentar anuncios.</p>
 
-  <h2>3. Para qué se usa</h2>
+  <h2>6. Para qué se usa</h2>
   <ul>
     <li>Corregir fallos: un error que sólo aparece en ciertos dispositivos es invisible sin esto.</li>
     <li>Entender qué modos se usan y cuáles resultan demasiado difíciles, para mejorarlos.</li>
+    <li>Mostrar y medir la publicidad que mantiene la aplicación gratuita.</li>
   </ul>
-  <p>No se usa para publicidad, no se vende y no se comparte con terceros más allá de Google como
-  proveedor del servicio. Esta versión de la aplicación <strong>no muestra anuncios</strong>.</p>
+  <p>No se vende tu información. Se comparte con Google en su papel de proveedor de estos
+  servicios, incluida la publicidad.</p>
 
-  <h2>4. Cuánto tiempo se conserva</h2>
+  <h2>7. Cuánto tiempo se conserva</h2>
   <ul>
     <li>Informes de fallos: aproximadamente 90 días, según la política de Firebase Crashlytics.</li>
     <li>Estadísticas de uso: hasta 14 meses.</li>
+    <li>Datos de publicidad: los conserva Google según sus propias políticas de retención.</li>
     <li>Datos en tu dispositivo: hasta que desinstales la aplicación o borres sus datos.</li>
   </ul>
 
-  <h2>5. Permisos</h2>
+  <h2>8. Permisos</h2>
   <ul>
     <li><strong>Notificaciones</strong> — únicamente para el recordatorio diario de práctica, que
     está desactivado por defecto y que tú activas y programas.</li>
     <li><strong>Estado de la red y reinicio</strong> — para que el recordatorio sobreviva a un
     reinicio del teléfono.</li>
+    <li><strong>Identificador de publicidad</strong> (<code>AD_ID</code> y los permisos de
+    <em>ad services</em>) — los añade el SDK de anuncios para lo descrito en la sección 4.</li>
   </ul>
-  <p>La aplicación funciona por completo sin conexión. No accede a tu micrófono, tu cámara, tus
-  contactos, tus archivos ni tu ubicación.</p>
+  <p>La aplicación no accede a tu micrófono, tu cámara, tus contactos, tus archivos ni tu
+  ubicación.</p>
 
-  <h2>6. Tus derechos (Ley N.º 29733)</h2>
+  <h2>9. Tus derechos (Ley N.º 29733)</h2>
   <p>Conforme a la Ley de Protección de Datos Personales del Perú y su reglamento, tienes derecho
   de <strong>acceso, rectificación, cancelación y oposición</strong> respecto de tus datos
   personales. Para ejercerlos, escribe a la dirección de contacto que aparece abajo.</p>
@@ -118,41 +160,51 @@
   eliminación de informes de fallos ya enviados, escríbenos indicando el modelo de tu dispositivo
   y la fecha aproximada.</p>
 
-  <h2>7. Menores de edad</h2>
+  <h2>10. Menores de edad</h2>
   <p>Esta aplicación está dirigida a adolescentes y adultos que estudian piano por su cuenta. No
   está dirigida a menores de 13 años y no recopila conscientemente datos de ellos.</p>
 
-  <h2>8. Cambios</h2>
+  <h2>11. Cambios</h2>
   <p>Si esta política cambia, se actualizará esta página y la fecha del encabezado. Un cambio que
   amplíe la información recopilada se anunciará además en las notas de la versión.</p>
 
-  <h2>9. Contacto</h2>
+  <h2>12. Contacto</h2>
   <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
 
   <hr>
 
   <h1>Piano Solfeo — Privacy Policy</h1>
-  <p class="muted">Last updated: 7 August 2026</p>
+  <p class="muted">Last updated: 11 August 2026</p>
 
   <div class="card">
     <p class="lead">Piano Solfeo has no accounts, asks for no sign-up, and collects no name,
-    email or contacts. Your practice history is stored <strong>on your device only</strong>. The
-    only things that leave the phone are crash reports and aggregate usage statistics, described
-    below.</p>
+    email or contacts. Your practice history is stored on your device. What leaves the phone is
+    crash reports, aggregate usage statistics, and — in order to show ads — your Android
+    advertising ID. All of it is described below.</p>
   </div>
 
   <h2>1. Information kept on your device</h2>
-  <p>The following is stored locally and <strong>never transmitted</strong>:</p>
+  <p>The following is stored locally and is not sent to us:</p>
   <ul>
     <li>Your session history: mode, level, correct answers, wrong answers and date.</li>
     <li>Your daily streak, your achievements and which lessons you have read.</li>
     <li>Your preferences: level, note naming (Do-Re-Mi or C-D-E), daily goal and reminder time.</li>
   </ul>
-  <p>Uninstalling the app deletes all of it permanently.</p>
+  <p>Uninstalling the app deletes all of it from the phone. Note the Android backup described in
+  section 2.</p>
 
-  <h2>2. Information that is sent</h2>
-  <p>The app uses <strong>Firebase Crashlytics</strong> and <strong>Firebase Analytics</strong>,
-  services provided by Google LLC.</p>
+  <h2>2. Android backup</h2>
+  <p>The app allows <strong>Android Auto Backup</strong>. If you have it switched on, Android may
+  upload the local data in section 1 to <strong>your own Google account</strong>, encrypted, so it
+  can be restored onto a new phone.</p>
+  <p>That backup is yours, not ours: <strong>we never see it and cannot access it</strong>. It is
+  mentioned here because otherwise "it stays on your device" would not be strictly true. You control
+  it under <code>Settings → Google → Backup</code>.</p>
+
+  <h2>3. Information that is sent</h2>
+  <p>The app uses <strong>Firebase Crashlytics</strong>, <strong>Firebase Analytics</strong>,
+  <strong>Firebase Remote Config</strong> and <strong>Google Mobile Ads (AdMob)</strong>, services
+  provided by Google LLC.</p>
 
   <h3>Crash reports (Crashlytics)</h3>
   <ul>
@@ -168,41 +220,70 @@
     <li><code>card_answered</code> — mode, level, whether it was correct, and how many
     milliseconds it took.</li>
     <li><code>mode_selected</code>, <code>streak_milestone</code>, <code>reminder_opened</code>.</li>
+    <li><code>ad_shown</code>, <code>paywall_viewed</code> — the position on screen only. No prices,
+    no ad identifiers.</li>
     <li>Data Google adds by default: an app instance identifier, device type, operating system,
     and approximate country derived from the IP address.</li>
   </ul>
 
-  <h3>What is never sent</h3>
+  <h3>Remote Config</h3>
+  <p>The app fetches a few configuration values from Google, such as whether ads are switched on.
+  It is a download; it sends none of your data.</p>
+
+  <h2>4. Advertising</h2>
+  <p>Piano Solfeo is free and is funded by advertising. Ads are served by <strong>Google
+  AdMob</strong> and appear only on the static screens (home, lesson index and progress) and at the
+  end of a practice session. <strong>An ad never appears inside an exercise</strong>, nor when the
+  app opens.</p>
+  <p>To show them, Google's SDK collects and shares with Google:</p>
+  <ul>
+    <li>Your device's <strong>Android advertising ID</strong>.</li>
+    <li>Technical device data and an approximate location derived from the IP address.</li>
+    <li>Ad interactions, such as impressions and taps.</li>
+  </ul>
+  <p>Google acts here as a third party under its own policy. How it handles this data is described
+  in <a href="https://policies.google.com/technologies/partner-sites">Google's policies for
+  partners</a>.</p>
+  <p><strong>Your control:</strong> under <code>Settings → Google → Ads</code> you can turn off ad
+  personalisation or delete your advertising ID. The app carries on working exactly the same; the
+  ads simply stop being personalised.</p>
+  <p>The app works offline. With no network an ad simply does not load and takes up no space on
+  screen: nothing the app does depends on an ad appearing.</p>
+
+  <h2>5. What is never sent</h2>
   <p>This is deliberate and enforced by how the code is written rather than by review:
   <strong>which note you were shown and which answer you chose are never sent</strong>. Events
   carry only the category of the exercise. Nor is your name, email, contacts, precise location, or
-  free text of any kind.</p>
+  free text of any kind. Your practice history is not used to target ads.</p>
 
-  <h2>3. How it is used</h2>
+  <h2>6. How it is used</h2>
   <ul>
     <li>Fixing crashes: a failure that only happens on certain devices is invisible without this.</li>
     <li>Understanding which modes are used and which are too hard, in order to improve them.</li>
+    <li>Serving and measuring the advertising that keeps the app free.</li>
   </ul>
-  <p>It is not used for advertising, is not sold, and is not shared with third parties beyond
-  Google as the service provider. This version of the app <strong>shows no ads</strong>.</p>
+  <p>Your information is not sold. It is shared with Google in its role as the provider of these
+  services, advertising included.</p>
 
-  <h2>4. How long it is kept</h2>
+  <h2>7. How long it is kept</h2>
   <ul>
     <li>Crash reports: roughly 90 days, per Firebase Crashlytics policy.</li>
     <li>Usage statistics: up to 14 months.</li>
+    <li>Advertising data: retained by Google under its own retention policies.</li>
     <li>Data on your device: until you uninstall the app or clear its data.</li>
   </ul>
 
-  <h2>5. Permissions</h2>
+  <h2>8. Permissions</h2>
   <ul>
     <li><strong>Notifications</strong> — solely for the daily practice reminder, which is off by
     default and which you turn on and schedule yourself.</li>
     <li><strong>Network state and boot completed</strong> — so that reminder survives a restart.</li>
+    <li><strong>Advertising ID</strong> (<code>AD_ID</code> and the ad services permissions) — added
+    by the ads SDK, for what section 4 describes.</li>
   </ul>
-  <p>The app works entirely offline. It does not access your microphone, camera, contacts, files
-  or location.</p>
+  <p>The app does not access your microphone, camera, contacts, files or location.</p>
 
-  <h2>6. Your rights (Peru, Law No. 29733)</h2>
+  <h2>9. Your rights (Peru, Law No. 29733)</h2>
   <p>Under Peru's Personal Data Protection Law and its regulations, you have rights of
   <strong>access, rectification, cancellation and objection</strong> regarding your personal data.
   To exercise them, write to the contact address below.</p>
@@ -210,15 +291,15 @@
   the app's data or uninstall it. To request deletion of crash reports already sent, write to us
   with your device model and the approximate date.</p>
 
-  <h2>7. Children</h2>
+  <h2>10. Children</h2>
   <p>This app is aimed at teenagers and adults studying piano on their own. It is not directed to
   children under 13 and does not knowingly collect data from them.</p>
 
-  <h2>8. Changes</h2>
+  <h2>11. Changes</h2>
   <p>If this policy changes, this page and the date at the top will be updated. Any change that
   broadens what is collected will additionally be announced in the release notes.</p>
 
-  <h2>9. Contact</h2>
+  <h2>12. Contact</h2>
   <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
 
   <p class="muted" style="margin-top:40px">
