@@ -1,8 +1,10 @@
 # cpinan.github.io
 
+**Live site: <https://cpinan.github.io/>**
+
 GitHub Pages site: my **portfolio** plus the landing pages and privacy policies for
 every app. Static HTML only — no build step, no dependencies. Push to `main` and
-GitHub Pages publishes it at <https://cpinan.github.io/>.
+GitHub Pages publishes it at that URL within a minute or two.
 
 Each app gets a folder with two pages:
 
@@ -23,11 +25,18 @@ Each app gets a folder with two pages:
 | Peru Combi Rush | — | [/peru-rush-combi-privacy.html](https://cpinan.github.io/peru-rush-combi-privacy.html) | `com.carlos.pinan.perucombirush.godot` |
 | Piano Flashcards *(renamed)* | redirect → Piano Solfeo | redirect → Piano Solfeo | — |
 
-The playable Turbo Race web build lives in its **own repo** and is served at
-[/turbo-race-godot/](https://cpinan.github.io/turbo-race-godot/) — that path is not
-in this repository.
+Site root — the portfolio: <https://cpinan.github.io/>
 
-Site root: [cpinan.github.io](https://cpinan.github.io/) — the portfolio.
+Live pages the portfolio links out to, **served from other repos**, not this one:
+
+| What | URL |
+| --- | --- |
+| Turbo Race, playable web build | <https://cpinan.github.io/turbo-race-godot/> |
+| Mis Mascotas, memorial PWA | <https://cpinan.github.io/mis-mascotas/> |
+| Building Tempest, 19-chapter tutorial | <https://cpinan.github.io/Tempest-Jetpack-Compose/tutorial.html> |
+
+Those paths are owned by their own project sites — creating a folder of the same
+name here would be dead content that never gets served.
 
 ## What each file is
 
