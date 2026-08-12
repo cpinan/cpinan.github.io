@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turbo Race — endless runner for Android</title>
+<meta name="description" content="Turbo Race: a fast endless runner for Android. Tilt or joystick controls, three difficulties, Play Games leaderboards and 20 achievements. Playable in the browser.">
+<link rel="canonical" href="https://cpinan.github.io/turbo-race/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Turbo Race — endless runner">
+<meta property="og:description" content="Jump, dodge and tilt through an endless obstacle run.">
+<meta property="og:image" content="https://cpinan.github.io/assets/covers/turbo-race.jpg">
+<link rel="icon" href="/assets/icons/turbo-race.png" type="image/png">
+<style>
+  :root {
+    --bg: #0a0d16;
+    --panel: #131a29;
+    --ink: #e8ecf5;
+    --muted: #97a3bb;
+    --line: #24304a;
+    --accent: #ff8a3d;
+    --accent-2: #35d6f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(1000px 480px at 18% -10%, rgba(255, 138, 61, .18), transparent 62%), var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    padding: 24px 16px 72px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .top { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; font-size: .9rem; margin-bottom: 2rem; }
+  .top a { color: var(--accent-2); text-decoration: none; }
+  .top a:hover { text-decoration: underline; }
+
+  header { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+  header img.icon { width: 84px; height: 84px; border-radius: 20px; border: 1px solid var(--line); }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); letter-spacing: -.03em; line-height: 1.1; }
+  .tagline { color: var(--muted); font-size: 1.05rem; }
+
+  .cta { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0 2.25rem; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .6rem 1.15rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .93rem;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #17110a; }
+  .btn.primary:hover { color: #17110a; filter: brightness(1.08); }
+
+  .shots { display: grid; gap: .9rem; grid-template-columns: 1fr; margin-bottom: 2.5rem; }
+  @media (min-width: 640px) { .shots { grid-template-columns: 1fr 1fr; } }
+  .shots img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+  }
+
+  h2 { font-size: 1.2rem; margin: 2.25rem 0 .9rem; color: var(--accent); }
+  ul.features { list-style: none; display: grid; gap: .7rem; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { ul.features { grid-template-columns: 1fr 1fr; } }
+  ul.features li {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: .85rem 1rem;
+    font-size: .95rem;
+  }
+  ul.features b { display: block; color: var(--ink); }
+  ul.features span { color: var(--muted); font-size: .9rem; }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.2rem 1.3rem;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: .95rem;
+  }
+  .panel a { color: var(--accent-2); }
+  .panel strong { color: var(--ink); }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  footer a { color: var(--accent-2); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="top">
+    <a href="/">← All projects</a>
+    <a href="/turbo-race/privacy.html">Privacy policy</a>
+  </div>
+
+  <header>
+    <img class="icon" src="/assets/icons/turbo-race.png" alt="Turbo Race icon" width="84" height="84">
+    <div>
+      <h1>Turbo Race</h1>
+      <p class="tagline">Jump, dodge and tilt through an endless obstacle run.</p>
+    </div>
+  </header>
+
+  <div class="cta">
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.carlos.pinan.turborace.godot">Get it on Google Play</a>
+    <a class="btn" href="https://cpinan.github.io/turbo-race-godot/">▶ Play in your browser</a>
+    <a class="btn" href="/turbo-race/privacy.html">Privacy policy</a>
+  </div>
+
+  <div class="shots">
+    <img src="/assets/turbo-race/shot-1.jpg" alt="Turbo Race gameplay" loading="lazy" width="760" height="341">
+    <img src="/assets/turbo-race/shot-2.jpg" alt="Dodging obstacles" loading="lazy" width="760" height="341">
+    <img src="/assets/turbo-race/shot-3.jpg" alt="Controls" loading="lazy" width="760" height="341">
+    <img src="/assets/turbo-race/shot-4.jpg" alt="Difficulty selection" loading="lazy" width="760" height="341">
+  </div>
+
+  <p>
+    Turbo Race is a fast, addictive endless runner. Ride the sled, jump the walls, dodge the
+    traps, and chase a new high score on every run. Simple to learn, hard to master — time
+    your jumps, react fast, and climb the leaderboard.
+  </p>
+
+  <h2>What's in it</h2>
+  <ul class="features">
+    <li><b>Endless action</b><span>The obstacles never stop and the run never ends.</span></li>
+    <li><b>Two ways to play</b><span>Tilt the phone to steer, or use the on-screen joystick.</span></li>
+    <li><b>Three difficulties</b><span>Start on Easy, then push into Medium and Hard.</span></li>
+    <li><b>Global leaderboards</b><span>Compete worldwide through Google Play Games.</span></li>
+    <li><b>20 achievements</b><span>Near misses, distance milestones, survival streaks.</span></li>
+    <li><b>Pick up and play</b><span>Quick arcade runs made for short breaks. No tutorial needed.</span></li>
+  </ul>
+
+  <h2>Built in Godot 4</h2>
+  <div class="panel">
+    Turbo Race started life as a cocos2d-x game in C++ and shipped on both the App Store and
+    Google Play. This version is a full rewrite in <strong>Godot 4.7</strong> with statically
+    typed GDScript, aiming for behavioural parity with the original — same jump physics, same
+    collision rules, same scoring. The original C++ source is still public at
+    <a href="https://github.com/cpinan/BTEndlessTunnel">BTEndlessTunnel</a>.
+    <br><br>
+    The same project exports to WebAssembly, which is what you play at
+    <a href="https://cpinan.github.io/turbo-race-godot/">cpinan.github.io/turbo-race-godot</a>.
+  </div>
+
+  <h2>Support</h2>
+  <div class="panel">
+    Questions, bugs or ideas: <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>.
+    The game is free to play and supported by ads; what the ad SDK collects is spelled out in
+    the <a href="/turbo-race/privacy.html">privacy policy</a>.
+  </div>
+
+  <footer>
+    © 2026 Carlos Piñán · <a href="/">All projects</a> ·
+    <a href="https://github.com/cpinan">github.com/cpinan</a>
+  </footer>
+
+</div>
+</body>
+</html>

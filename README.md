@@ -1,8 +1,8 @@
 # cpinan.github.io
 
-GitHub Pages site serving landing pages and privacy policies for my Android apps.
-Static HTML only — no build step, no dependencies. Push to `main` and GitHub Pages
-publishes it at <https://cpinan.github.io/>.
+GitHub Pages site: my **portfolio** plus the landing pages and privacy policies for
+every app. Static HTML only — no build step, no dependencies. Push to `main` and
+GitHub Pages publishes it at <https://cpinan.github.io/>.
 
 Each app gets a folder with two pages:
 
@@ -13,31 +13,51 @@ Each app gets a folder with two pages:
 
 ## Shortcuts
 
-| App | Landing page | Privacy policy |
-| --- | --- | --- |
-| Corta Spam | [/corta-spam/](https://cpinan.github.io/corta-spam/) | [/corta-spam/privacy.html](https://cpinan.github.io/corta-spam/privacy.html) |
-| Piano Solfeo | [/piano-solfeo/](https://cpinan.github.io/piano-solfeo/) | [/piano-solfeo/privacy.html](https://cpinan.github.io/piano-solfeo/privacy.html) |
-| Retro 3D Maze | [/retro-3d-maze/](https://cpinan.github.io/retro-3d-maze/) | [/retro-3d-maze/privacy.html](https://cpinan.github.io/retro-3d-maze/privacy.html) |
-| Stat Calculator | [/stat-calculator/](https://cpinan.github.io/stat-calculator/) | [/stat-calculator/privacy.html](https://cpinan.github.io/stat-calculator/privacy.html) |
-| Turbo Race *(separate repo)* | [/turbo-race-godot/](https://cpinan.github.io/turbo-race-godot/) | — |
-| Peru Combi Rush | — | [/peru-rush-combi-privacy.html](https://cpinan.github.io/peru-rush-combi-privacy.html) |
-| Piano Flashcards *(renamed)* | redirect → Piano Solfeo | redirect → Piano Solfeo |
+| App | Landing page | Privacy policy | Play listing |
+| --- | --- | --- | --- |
+| Corta Spam | [/corta-spam/](https://cpinan.github.io/corta-spam/) | [/corta-spam/privacy.html](https://cpinan.github.io/corta-spam/privacy.html) | `org.carlospinan.cortaspam` |
+| Piano Solfeo | [/piano-solfeo/](https://cpinan.github.io/piano-solfeo/) | [/piano-solfeo/privacy.html](https://cpinan.github.io/piano-solfeo/privacy.html) | not public yet |
+| Retro 3D Maze | [/retro-3d-maze/](https://cpinan.github.io/retro-3d-maze/) | [/retro-3d-maze/privacy.html](https://cpinan.github.io/retro-3d-maze/privacy.html) | `com.carlospinan.maze3d` |
+| Stat Calculator | [/stat-calculator/](https://cpinan.github.io/stat-calculator/) | [/stat-calculator/privacy.html](https://cpinan.github.io/stat-calculator/privacy.html) | `com.cpinan.pokemmostats` |
+| Turbo Race | [/turbo-race/](https://cpinan.github.io/turbo-race/) | [/turbo-race/privacy.html](https://cpinan.github.io/turbo-race/privacy.html) | `com.carlos.pinan.turborace.godot` |
+| Peru Combi Rush | — | [/peru-rush-combi-privacy.html](https://cpinan.github.io/peru-rush-combi-privacy.html) | `com.carlos.pinan.perucombirush.godot` |
+| Piano Flashcards *(renamed)* | redirect → Piano Solfeo | redirect → Piano Solfeo | — |
 
-Site root: [cpinan.github.io](https://cpinan.github.io/) — hub page linking every app.
+The playable Turbo Race web build lives in its **own repo** and is served at
+[/turbo-race-godot/](https://cpinan.github.io/turbo-race-godot/) — that path is not
+in this repository.
+
+Site root: [cpinan.github.io](https://cpinan.github.io/) — the portfolio.
 
 ## What each file is
 
 ### Root
 
-- **`index.html`** — Site root. A hub page listing every app with links to its
-  landing page and privacy policy. This is the **developer website** URL that the
-  Play Console listings and AdMob's `app-ads.txt` crawler resolve to, so it has to
-  stay a real page — it must not become a redirect again.
+- **`index.html`** — Site root, and the **portfolio**. Three sections: *Android apps*
+  (cover image, description, Play link, landing page, privacy policy), *Open it in a
+  browser* (things with a live URL — the Turbo Race web build, the Mis Mascotas PWA,
+  the Tempest tutorial) and *Open source* (GitHub-only projects). This is also the
+  **developer website** URL that the Play Console listings and AdMob's `app-ads.txt`
+  crawler resolve to, so it has to stay a real page — it must not become a redirect
+  again.
 
-  Turbo Race is listed here but is **not** in this repo: the Godot web build lives
+  Facts on this page are hardcoded and go stale: the GitHub star count on the
+  cocos2d-x plugin card, the "5 on Google Play" hero stat, and the section counts.
+  Update them when an app goes live or is pulled. Piano Solfeo is listed **without**
+  a Play link because its listing is not public yet — add one when it is.
+
+  The playable Turbo Race build is **not** in this repo: the Godot web export lives
   in its own `turbo-race-godot` repo and GitHub Pages serves it at
   `/turbo-race-godot/`. That project site owns the path — adding a folder of the
-  same name here would be dead content that never gets served.
+  same name here would be dead content that never gets served. The `turbo-race/`
+  folder here is the app's landing page and policy, and links out to it.
+
+- **`assets/`** — the only images on the site. `covers/` holds 880 px-wide JPEGs
+  downscaled from each app's 1024×500 Play feature graphic (plus `tempest.jpg`, a
+  strip composed from four screenshots, and `brickbreaker.gif`, the demo GIF from
+  that repo). `icons/` holds 192 px PNG app icons. `turbo-race/` holds the four
+  screenshots used on the Turbo Race landing page. Sources live in each app's own
+  project folder — regenerate rather than edit these in place.
 - **`app-ads.txt`** — Required by Google Play / AdMob to authorize the AdMob
   publisher ID (`pub-8297579382369512`) to sell inventory in the apps. Must stay
   at the domain root and be reachable as plain text. Do not delete or rename.
@@ -101,6 +121,24 @@ Keep them until the old URL is provably unreferenced.
   SDK collects, plus the Android backup behaviour. No accounts, no analytics;
   builds stay on the device. Last updated 8 August 2026.
 
+### `turbo-race/` — Turbo Race (endless runner, Android + web)
+
+- **`index.html`** — Landing page in English, dark neon palette matching the game.
+  Four screenshots, the Play listing's feature copy (tilt or joystick, three
+  difficulties, Play Games leaderboards, 20 achievements), and the rewrite story:
+  originally cocos2d-x/C++ (source still public at
+  [BTEndlessTunnel](https://github.com/cpinan/BTEndlessTunnel)), now Godot 4.7 with
+  statically typed GDScript. Links out to the playable WebAssembly build at
+  `/turbo-race-godot/`.
+- **`privacy.html`** — Bilingual EN/ES policy, copied from `privacy-policy.html` in
+  the `turbo-race-godot` project repo and translated into Spanish here. Covers
+  AdMob (advertising ID, EEA/UK consent form) and optional Play Games sign-in; best
+  score per difficulty and the mute flag stay on the device. Last updated 15 July
+  2026 — carried over from the source policy, whose wording is unchanged.
+
+  The source repo still serves its own copy at `/turbo-race-godot/privacy-policy.html`.
+  If the policy ever changes, **both** have to be updated.
+
 ## Conventions
 
 - **Folder per app**, lowercase kebab-case, matching the app name. New apps follow
@@ -110,9 +148,10 @@ Keep them until the old URL is provably unreferenced.
 - **Bilingual policies.** Every policy carries both English and Spanish, in full,
   in one page — two `<h1>` sections rather than two files, so a single URL serves
   both audiences.
-- **Self-contained pages.** All CSS is inlined in a `<style>` block, icons are
-  inline SVG. No external stylesheets, fonts, scripts or images — the pages render
-  identically offline and there is nothing to break when a CDN moves.
+- **Self-contained pages.** All CSS is inlined in a `<style>` block; decorative
+  icons are inline SVG. Nothing is loaded from another origin — no CDN stylesheets,
+  fonts, scripts or hotlinked images. Photographic assets are committed under
+  `assets/` and served from this domain, so the pages render identically offline.
 - **Styling follows the app.** Each page reuses its app's palette, so the policy
   looks like it belongs to the thing that linked to it.
 - **A dated "Last updated" line** in each policy. Update it whenever the app's
