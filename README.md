@@ -19,20 +19,25 @@ Each app gets a folder with two pages:
 | Piano Solfeo | [/piano-solfeo/](https://cpinan.github.io/piano-solfeo/) | [/piano-solfeo/privacy.html](https://cpinan.github.io/piano-solfeo/privacy.html) |
 | Retro 3D Maze | [/retro-3d-maze/](https://cpinan.github.io/retro-3d-maze/) | [/retro-3d-maze/privacy.html](https://cpinan.github.io/retro-3d-maze/privacy.html) |
 | Stat Calculator | [/stat-calculator/](https://cpinan.github.io/stat-calculator/) | [/stat-calculator/privacy.html](https://cpinan.github.io/stat-calculator/privacy.html) |
+| Turbo Race *(separate repo)* | [/turbo-race-godot/](https://cpinan.github.io/turbo-race-godot/) | — |
 | Peru Combi Rush | — | [/peru-rush-combi-privacy.html](https://cpinan.github.io/peru-rush-combi-privacy.html) |
 | Piano Flashcards *(renamed)* | redirect → Piano Solfeo | redirect → Piano Solfeo |
 
-Site root: [cpinan.github.io](https://cpinan.github.io/) → redirects to
-[Turbo Race](https://cpinan.github.io/turbo-race-godot/).
+Site root: [cpinan.github.io](https://cpinan.github.io/) — hub page linking every app.
 
 ## What each file is
 
 ### Root
 
-- **`index.html`** — Site root. A meta-refresh redirect to
-  `https://cpinan.github.io/turbo-race-godot/` (the Turbo Race Godot web build,
-  which lives in its own repo). There is no hub page; nothing here links to the
-  app folders.
+- **`index.html`** — Site root. A hub page listing every app with links to its
+  landing page and privacy policy. This is the **developer website** URL that the
+  Play Console listings and AdMob's `app-ads.txt` crawler resolve to, so it has to
+  stay a real page — it must not become a redirect again.
+
+  Turbo Race is listed here but is **not** in this repo: the Godot web build lives
+  in its own `turbo-race-godot` repo and GitHub Pages serves it at
+  `/turbo-race-godot/`. That project site owns the path — adding a folder of the
+  same name here would be dead content that never gets served.
 - **`app-ads.txt`** — Required by Google Play / AdMob to authorize the AdMob
   publisher ID (`pub-8297579382369512`) to sell inventory in the apps. Must stay
   at the domain root and be reachable as plain text. Do not delete or rename.

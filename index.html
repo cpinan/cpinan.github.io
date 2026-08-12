@@ -2,10 +2,178 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=https://cpinan.github.io/turbo-race-godot/">
-<title>Carlos Pinan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carlos Piñán — Android apps</title>
+<meta name="description" content="Android apps by Carlos Piñán: landing pages, privacy policies and support.">
+<meta name="author" content="Carlos Eduardo Piñán Indacochea">
+<link rel="canonical" href="https://cpinan.github.io/">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --ink: #16181d;
+    --muted: #5c6370;
+    --line: #e2e5ea;
+    --accent: #2f6df6;
+    --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 8px 24px rgba(16, 24, 40, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --card: #161b22;
+      --ink: #e8eaed;
+      --muted: #9aa4b2;
+      --line: #262c36;
+      --accent: #6ea0ff;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  header { padding: 4rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  h1 { margin: 0 0 .5rem; font-size: 2rem; letter-spacing: -.02em; }
+  header p { margin: 0; color: var(--muted); max-width: 46ch; }
+  h2 {
+    margin: 2.75rem 0 1rem;
+    font-size: .8rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  ul.apps { list-style: none; margin: 0; padding: 0; display: grid; gap: .875rem; }
+  @media (min-width: 640px) { ul.apps { grid-template-columns: 1fr 1fr; } }
+  li.app {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.125rem 1.25rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+  li.app h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
+  li.app h3 a { color: var(--ink); text-decoration: none; }
+  li.app h3 a:hover { color: var(--accent); text-decoration: underline; }
+  li.app p { margin: 0 0 .9rem; color: var(--muted); font-size: .925rem; flex: 1; }
+  .links { display: flex; flex-wrap: wrap; gap: .4rem .75rem; font-size: .875rem; }
+  .links a { color: var(--accent); text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  .links span { color: var(--muted); }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  footer a { color: var(--accent); }
+  .icon { width: 1em; height: 1em; vertical-align: -.125em; margin-right: .3em; }
+</style>
 </head>
 <body>
-<p>Redirecting to <a href="https://cpinan.github.io/turbo-race-godot/">Turbo Race</a>...</p>
+<div class="wrap">
+
+  <header>
+    <h1>Carlos Piñán</h1>
+    <p>
+      Android apps and small games. Every app below has its landing page and its
+      privacy policy hosted here.
+    </p>
+  </header>
+
+  <h2>Apps</h2>
+  <ul class="apps">
+
+    <li class="app">
+      <h3><a href="/stat-calculator/">Stat Calculator</a></h3>
+      <p>
+        Pokémon stat calculator. All nine generations, 1,025 species with base
+        stats cached offline, build comparison, saved builds, six languages.
+      </p>
+      <div class="links">
+        <a href="/stat-calculator/">Landing page</a>
+        <a href="/stat-calculator/privacy.html">Privacy policy</a>
+      </div>
+    </li>
+
+    <li class="app">
+      <h3><a href="/corta-spam/">Corta Spam</a></h3>
+      <p>
+        Open-source call blocker. Rule engine with wildcards, country matching,
+        quiet hours and an offline spam list. No internet permission at all.
+      </p>
+      <div class="links">
+        <a href="/corta-spam/">Landing page</a>
+        <a href="/corta-spam/privacy.html">Privacy policy</a>
+        <a href="https://github.com/cpinan/Corta-Spam">Source</a>
+      </div>
+    </li>
+
+    <li class="app">
+      <h3><a href="/piano-solfeo/">Piano Solfeo</a></h3>
+      <p>
+        Sight-reading and music theory practice. Eight modes covering clefs,
+        chords, intervals, scales and the circle of fifths. Fully offline.
+      </p>
+      <div class="links">
+        <a href="/piano-solfeo/">Landing page</a>
+        <a href="/piano-solfeo/privacy.html">Privacy policy</a>
+      </div>
+    </li>
+
+    <li class="app">
+      <h3><a href="/retro-3d-maze/">Retro 3D Maze</a></h3>
+      <p>
+        Maze screen saver, game, live wallpaper and Daydream in one. Eleven maze
+        algorithms, five sizes, runtime-drawn texture packs.
+      </p>
+      <div class="links">
+        <a href="/retro-3d-maze/">Landing page</a>
+        <a href="/retro-3d-maze/privacy.html">Privacy policy</a>
+      </div>
+    </li>
+
+    <li class="app">
+      <h3><a href="/turbo-race-godot/">Turbo Race</a></h3>
+      <p>
+        Endless runner built in Godot. Playable right in the browser — no
+        install needed.
+      </p>
+      <div class="links">
+        <a href="/turbo-race-godot/">Play in browser</a>
+      </div>
+    </li>
+
+    <li class="app">
+      <h3>Peru Combi Rush</h3>
+      <p>
+        Driving game set on Lima's combi routes. Bilingual privacy policy in
+        English and Spanish.
+      </p>
+      <div class="links">
+        <a href="/peru-rush-combi-privacy.html">Privacy policy</a>
+      </div>
+    </li>
+
+  </ul>
+
+  <footer>
+    <p>
+      Support and enquiries:
+      <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a><br>
+      More code at <a href="https://github.com/cpinan">github.com/cpinan</a>
+    </p>
+  </footer>
+
+</div>
 </body>
 </html>
