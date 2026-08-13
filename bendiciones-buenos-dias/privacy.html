@@ -136,7 +136,8 @@
     <li><code>full_screen_ad_shown</code>, <code>ad_load_failed</code>, <code>ad_show_failed</code> —
     el lugar donde apareció el anuncio y, si falló, el código de error.</li>
     <li>Datos que Google añade por defecto: identificador de instancia de la aplicación, tipo de
-    dispositivo, sistema operativo y país aproximado deducido de la dirección IP.</li>
+    dispositivo, sistema operativo, país aproximado deducido de la dirección IP y, si llegaste
+    desde un enlace de campaña, el referente de instalación de Google Play.</li>
   </ul>
 
   <h3>3.4 Publicidad (Google AdMob)</h3>
@@ -199,13 +200,28 @@
   proveedores de estos servicios.</p>
 
   <h2>9. Permisos</h2>
+  <p>Esta es la lista completa que declara la aplicación instalada, no sólo la que escribimos a
+  mano: varios los añaden las librerías de Google al compilar, y es esa lista la que ve tu
+  teléfono.</p>
   <ul>
-    <li><strong>Internet</strong> — para traer GIFs e imágenes de sus proveedores, y para la
-    publicidad y los informes de fallos.</li>
+    <li><strong>Internet</strong> y <strong>estado de la red</strong> — para traer GIFs e imágenes de
+    sus proveedores, y para la publicidad y los informes de fallos.</li>
     <li><strong>Notificaciones</strong> — únicamente para el recordatorio descrito en la sección 6.
     Está desactivado por defecto.</li>
-    <li><strong>Identificador de publicidad</strong> (<code>AD_ID</code>) — lo añade el SDK de
-    anuncios para lo descrito en la sección 4.</li>
+    <li><strong>Servicio en primer plano</strong> y <strong>mantener el dispositivo activo</strong> —
+    los usa el programador de tareas de Android para que el recordatorio se dispare a la hora
+    correcta.</li>
+    <li><strong>Identificador de publicidad</strong> (<code>AD_ID</code>) y los permisos de
+    <em>ad services</em> (<code>ACCESS_ADSERVICES_AD_ID</code>, <code>_TOPICS</code>,
+    <code>_ATTRIBUTION</code>) — los añade el SDK de anuncios para lo descrito en la sección 4.</li>
+    <li><strong>Facturación</strong> (<code>com.android.vending.BILLING</code>) — para la compra de
+    la versión sin anuncios, que procesa Google Play.</li>
+    <li><strong>Referente de instalación</strong> — permite que Google indique desde qué enlace o
+    campaña llegó la instalación. No identifica a la persona.</li>
+    <li>Un permiso interno con el nombre del paquete
+    (<code>…app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>), añadido por una librería de
+    AndroidX. <strong>No da acceso a nada</strong>: sólo esta aplicación puede usarlo y existe para
+    que otras aplicaciones no puedan hablar con sus componentes internos.</li>
   </ul>
   <p>La aplicación no accede a tu micrófono, tu cámara, tus contactos, tus archivos ni tu ubicación,
   y no pide esos permisos.</p>
@@ -330,8 +346,9 @@
     <code>verse_shuffled</code>.</li>
     <li><code>full_screen_ad_shown</code>, <code>ad_load_failed</code>, <code>ad_show_failed</code> —
     where the ad appeared and, on failure, the error code.</li>
-    <li>Data Google adds by default: app instance identifier, device type, operating system and
-    approximate country inferred from the IP address.</li>
+    <li>Data Google adds by default: app instance identifier, device type, operating system,
+    approximate country inferred from the IP address, and — if you arrived from a campaign link —
+    the Google Play install referrer.</li>
   </ul>
 
   <h3>3.4 Advertising (Google AdMob)</h3>
@@ -394,13 +411,26 @@
   as providers of these services.</p>
 
   <h2>9. Permissions</h2>
+  <p>This is the full list the installed app declares, not only the ones we wrote by hand: several
+  are added by Google's libraries at build time, and that list is what your phone sees.</p>
   <ul>
-    <li><strong>Internet</strong> — to fetch GIFs and images from their providers, and for
-    advertising and crash reports.</li>
+    <li><strong>Internet</strong> and <strong>network state</strong> — to fetch GIFs and images from
+    their providers, and for advertising and crash reports.</li>
     <li><strong>Notifications</strong> — only for the reminder described in section 6. Off by
     default.</li>
-    <li><strong>Advertising ID</strong> (<code>AD_ID</code>) — added by the ads SDK for what is
-    described in section 4.</li>
+    <li><strong>Foreground service</strong> and <strong>wake lock</strong> — used by Android's task
+    scheduler so the reminder fires at the right time.</li>
+    <li><strong>Advertising ID</strong> (<code>AD_ID</code>) and the <em>ad services</em> permissions
+    (<code>ACCESS_ADSERVICES_AD_ID</code>, <code>_TOPICS</code>, <code>_ATTRIBUTION</code>) — added
+    by the ads SDK for what is described in section 4.</li>
+    <li><strong>Billing</strong> (<code>com.android.vending.BILLING</code>) — for the ad-free
+    purchase, which Google Play processes.</li>
+    <li><strong>Install referrer</strong> — lets Google report which link or campaign an install came
+    from. It does not identify a person.</li>
+    <li>An app-private permission named after the package
+    (<code>…app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>), added by an AndroidX library.
+    <strong>It grants access to nothing</strong>: only this app can hold it, and it exists so other
+    apps cannot talk to its internal components.</li>
   </ul>
   <p>The app does not access your microphone, camera, contacts, files or location, and does not
   request those permissions.</p>
