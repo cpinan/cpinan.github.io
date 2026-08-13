@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bendiciones — Política de Privacidad / Privacy Policy</title>
+<style>
+  :root {
+    --bg: #FBF7F0;
+    --card: #FFFFFF;
+    --border: #E4DCCF;
+    --text: #23281F;
+    --muted: #6B7065;
+    --green: #1E9E6B;
+    --green-deep: #0B5C46;
+    --sun-a: #FF9B54;
+    --sun-b: #FFD166;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 820px; margin: 0 auto; }
+  .sunrise {
+    height: 6px; border-radius: 6px; margin: 8px 0 26px;
+    background: linear-gradient(90deg, var(--sun-a), var(--sun-b) 45%, #8FE3A8 75%, var(--green));
+  }
+  h1 { color: var(--green-deep); font-size: 1.8rem; margin: 30px 0 10px; text-align: center; }
+  h2 { color: var(--green-deep); font-size: 1.25rem; margin: 32px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { color: var(--text); font-size: 1.02rem; margin: 18px 0 6px; }
+  p, li { margin-bottom: 10px; }
+  ul { padding-left: 22px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin: 20px 0; }
+  .muted { color: var(--muted); font-size: 0.92rem; text-align: center; }
+  .lead { color: var(--muted); }
+  a { color: var(--green); }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 54px 0; }
+  code { background: #F0EAE0; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 0.88rem; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Bendiciones — Política de Privacidad</h1>
+  <p class="muted">Última actualización: 13 de agosto de 2026</p>
+  <div class="sunrise"></div>
+
+  <div class="card">
+    <p class="lead">Bendiciones no tiene cuentas y no pide registro. No accede a tus contactos, a tu
+    galería ni a tu cámara, y <strong>nunca sabe a quién le envías un saludo</strong>: el envío lo
+    hace WhatsApp u otra aplicación que tú eliges, ya fuera de aquí. Lo que escribes en el buscador
+    y el nombre que pones sobre una imagen se quedan en el teléfono. Lo que sí sale del dispositivo
+    son informes de fallos, estadísticas de uso por categoría, las búsquedas fijas de GIFs que hace
+    la aplicación a sus proveedores, y el identificador de publicidad de Android. Todo ello se
+    describe abajo.</p>
+  </div>
+
+  <h2>1. Lo que se guarda en tu dispositivo</h2>
+  <p>Lo siguiente se almacena localmente y no se envía a nosotros:</p>
+  <ul>
+    <li><strong>Base de datos <code>buenosdias.db</code></strong> — el catálogo de saludos que trae
+    la aplicación, cuáles marcaste como favoritos, y un registro de cada envío (qué saludo, qué
+    momento del día, qué tono y la fecha). Ese registro es lo que hace posibles las rachas y los
+    logros; <strong>no contiene destinatarios ni el texto que enviaste</strong>.</li>
+    <li><strong>Preferencias <code>onboarding</code></strong> — si ya viste el tutorial de
+    bienvenida.</li>
+    <li><strong>Preferencias <code>ad_gating</code></strong> — contadores que limitan cada cuánto
+    puede aparecer un anuncio.</li>
+    <li><strong>Carpeta <code>packs</code></strong> — las imágenes y los iconos de bandeja de los
+    packs de stickers que creas.</li>
+    <li><strong>Caché</strong> (<code>shared_media</code>, <code>edited_previews</code>,
+    <code>image_cache</code>) — copias temporales de la imagen o el GIF que estás por compartir y de
+    lo que edita el editor. Android puede borrarlas cuando necesite espacio.</li>
+  </ul>
+  <p>Desinstalar la aplicación, o borrar sus datos desde los ajustes del teléfono, elimina todo esto.
+  Ten en cuenta la copia de seguridad de Android descrita en la sección 2.</p>
+
+  <h2>2. Copia de seguridad de Android</h2>
+  <p>La aplicación permite la <strong>copia de seguridad automática de Android</strong>. Si la tienes
+  activada, Android puede subir los datos locales de la sección 1 a <strong>tu propia cuenta de
+  Google</strong>, cifrados, para restaurarlos en un teléfono nuevo.</p>
+  <p>Esa copia es tuya, no nuestra: <strong>nosotros no la vemos ni podemos acceder a ella</strong>.
+  Se menciona aquí porque, de otro modo, la frase «se queda en tu dispositivo» no sería del todo
+  cierta. Puedes controlarlo en <code>Ajustes → Google → Copia de seguridad</code>.</p>
+
+  <h2>3. Lo que sale del dispositivo</h2>
+
+  <h3>3.1 GIFs e imágenes de terceros (Klipy, GIPHY)</h3>
+  <p>La pestaña de GIFs y la de Fotos piden su contenido a <strong>Klipy</strong> y, si Klipy no
+  responde, a <strong>GIPHY</strong>. En esa petición van:</p>
+  <ul>
+    <li>Una <strong>búsqueda en español tomada de una lista fija dentro de la aplicación</strong>
+    (por ejemplo «buenos dias bendiciones»), elegida según el momento del día. <strong>No es lo que
+    tú escribes</strong>: la aplicación no envía texto libre a estos proveedores.</li>
+    <li>El <strong>código de país de dos letras</strong> del idioma configurado en tu teléfono, para
+    que los resultados sean los de tu región.</li>
+    <li>Tu dirección IP, como en cualquier petición a internet.</li>
+  </ul>
+  <p>Klipy y GIPHY son terceros con sus propias políticas de privacidad y son los responsables del
+  contenido que devuelven. Si encuentras un GIF o una imagen inapropiada, escríbenos y la retiramos
+  de las búsquedas.</p>
+
+  <h3>3.2 Informes de fallos (Firebase Crashlytics)</h3>
+  <ul>
+    <li>El detalle técnico del fallo (stack trace).</li>
+    <li>Modelo del dispositivo, versión de Android y versión de la aplicación.</li>
+    <li>Un identificador de instalación de Firebase y la fecha y hora del fallo.</li>
+  </ul>
+
+  <h3>3.3 Estadísticas de uso (Firebase Analytics)</h3>
+  <p>Sólo eventos de categoría, sin contenido. La lista completa es la que la aplicación puede
+  enviar:</p>
+  <ul>
+    <li><code>app_opened</code>, <code>feed_loaded</code> — apertura y cuántos elementos se
+    cargaron.</li>
+    <li><code>moment_selected</code>, <code>tone_selected</code>, <code>media_segment_viewed</code>,
+    <code>preview_opened</code>, <code>favorite_toggled</code> — qué categoría se eligió.</li>
+    <li><code>send_started</code>, <code>send_confirmed</code>, <code>send_review_dismissed</code>,
+    <code>share_media_failed</code> — el tipo de saludo (foto, GIF, sticker), la aplicación de
+    destino elegida y si llevaba versículo. <strong>Nunca el texto ni el destinatario.</strong></li>
+    <li><code>search_submitted</code>, <code>gif_search_submitted</code> — <strong>cuántos caracteres
+    escribiste y cuántos resultados hubo, nunca lo que escribiste</strong>.</li>
+    <li><code>editor_opened</code>, <code>editor_finished</code>, <code>editor_render_failed</code> —
+    qué filtro usaste y <strong>si añadiste un nombre (sí o no), nunca el nombre</strong>.</li>
+    <li><code>pack_created</code>, <code>pack_stickers_added</code>,
+    <code>pack_sticker_add_failed</code>, <code>whatsapp_install_launched</code>,
+    <code>whatsapp_install_result</code> — cuántos stickers tiene el pack y si WhatsApp lo aceptó.</li>
+    <li><code>tutorial_finished</code>, <code>tutorial_replayed</code>,
+    <code>notification_prompt_answered</code>, <code>verse_toggled</code>,
+    <code>verse_shuffled</code>.</li>
+    <li><code>full_screen_ad_shown</code>, <code>ad_load_failed</code>, <code>ad_show_failed</code> —
+    el lugar donde apareció el anuncio y, si falló, el código de error.</li>
+    <li>Datos que Google añade por defecto: identificador de instancia de la aplicación, tipo de
+    dispositivo, sistema operativo y país aproximado deducido de la dirección IP.</li>
+  </ul>
+
+  <h3>3.4 Publicidad (Google AdMob)</h3>
+  <p>Descrita aparte en la sección 4.</p>
+
+  <h3>3.5 Compras (Google Play Billing)</h3>
+  <p>Si compras la versión sin anuncios, la transacción la procesa <strong>Google Play</strong>. La
+  aplicación no ve ni guarda tus datos de pago; sólo pregunta a Google Play si la compra está activa,
+  cada vez que se abre.</p>
+
+  <h2>4. Publicidad y consentimiento</h2>
+  <p>Bendiciones es gratuita y se financia con publicidad de <strong>Google AdMob</strong>. Para
+  mostrarla, el SDK de Google recopila y comparte con Google:</p>
+  <ul>
+    <li>El <strong>identificador de publicidad de Android</strong> de tu dispositivo.</li>
+    <li>Datos técnicos del dispositivo y una ubicación aproximada deducida de la dirección IP.</li>
+    <li>Interacciones con el anuncio, como visualizaciones y toques.</li>
+  </ul>
+  <p>Si estás en el Espacio Económico Europeo o el Reino Unido, la aplicación muestra
+  <strong>primero</strong> el formulario de consentimiento de Google (User Messaging Platform) y sólo
+  después inicializa la publicidad. Si el formulario no puede mostrarse, no se piden anuncios.</p>
+  <p>Google actúa aquí como tercero con su propia política. Puedes consultar cómo trata estos datos
+  en <a href="https://policies.google.com/technologies/partner-sites">las políticas de Google para
+  socios</a>.</p>
+  <p><strong>Tu control:</strong> en <code>Ajustes → Google → Anuncios</code> puedes desactivar la
+  personalización o eliminar tu identificador de publicidad. La aplicación seguirá funcionando igual.
+  La compra de la versión completa retira los anuncios por completo.</p>
+
+  <h2>5. Stickers y WhatsApp</h2>
+  <p>Cuando añades un pack a WhatsApp, las imágenes no viajan por internet: WhatsApp las lee
+  directamente del almacenamiento de la aplicación en tu propio teléfono. Para poder decirte
+  «WhatsApp no está instalado» en vez de fallar en silencio, la aplicación declara que puede
+  <em>ver</em> si WhatsApp está en el teléfono. Eso es todo lo que consulta: si está o no está.</p>
+
+  <h2>6. Notificaciones</h2>
+  <p>El recordatorio de la mañana lo programa tu propio teléfono y el texto viene dentro de la
+  aplicación. <strong>No hay notificaciones enviadas desde ningún servidor</strong>, y el permiso se
+  pide sólo cuando tú tocas «Sí, avísame», nunca al abrir la aplicación por primera vez.</p>
+
+  <h2>7. Lo que nunca se envía</h2>
+  <p>Esto está garantizado por el diseño del código, no por revisión manual:</p>
+  <ul>
+    <li><strong>A quién le envías un saludo.</strong> La aplicación entrega la imagen al selector de
+    Android y ahí termina su participación; nunca ve el destinatario.</li>
+    <li><strong>El texto del saludo que envías</strong>, ni el que edites a mano.</li>
+    <li><strong>El nombre que escribes sobre una imagen</strong> en el editor.</li>
+    <li><strong>Lo que escribes en el buscador.</strong> La búsqueda se resuelve dentro del teléfono,
+    sobre el contenido que ya trae la aplicación.</li>
+    <li>Tu nombre, tu correo, tu número, tus contactos ni tu ubicación precisa.</li>
+    <li>Tus fotos: la aplicación no abre tu galería ni tu cámara, y no tiene permiso para hacerlo.</li>
+  </ul>
+
+  <h2>8. Para qué se usa</h2>
+  <ul>
+    <li>Corregir fallos: un error que sólo aparece en ciertos dispositivos es invisible sin esto.</li>
+    <li>Entender qué saludos y qué funciones se usan, para mejorar el contenido.</li>
+    <li>Mostrar y medir la publicidad que mantiene la aplicación gratuita.</li>
+  </ul>
+  <p>No se vende tu información. Se comparte con Google y con los proveedores de GIFs en su papel de
+  proveedores de estos servicios.</p>
+
+  <h2>9. Permisos</h2>
+  <ul>
+    <li><strong>Internet</strong> — para traer GIFs e imágenes de sus proveedores, y para la
+    publicidad y los informes de fallos.</li>
+    <li><strong>Notificaciones</strong> — únicamente para el recordatorio descrito en la sección 6.
+    Está desactivado por defecto.</li>
+    <li><strong>Identificador de publicidad</strong> (<code>AD_ID</code>) — lo añade el SDK de
+    anuncios para lo descrito en la sección 4.</li>
+  </ul>
+  <p>La aplicación no accede a tu micrófono, tu cámara, tus contactos, tus archivos ni tu ubicación,
+  y no pide esos permisos.</p>
+
+  <h2>10. Cuánto tiempo se conserva</h2>
+  <ul>
+    <li>Informes de fallos: aproximadamente 90 días, según la política de Firebase Crashlytics.</li>
+    <li>Estadísticas de uso: hasta 14 meses.</li>
+    <li>Datos de publicidad: los conserva Google según sus propias políticas de retención.</li>
+    <li>Peticiones a Klipy y GIPHY: las conservan ellos según sus propias políticas.</li>
+    <li>Datos en tu dispositivo: hasta que desinstales la aplicación o borres sus datos.</li>
+  </ul>
+
+  <h2>11. Tus derechos (Ley N.º 29733)</h2>
+  <p>Conforme a la Ley de Protección de Datos Personales del Perú y su reglamento, tienes derecho de
+  <strong>acceso, rectificación, cancelación y oposición</strong> respecto de tus datos personales.
+  Para ejercerlos, escribe a la dirección de contacto que aparece abajo.</p>
+  <p>Dado que la aplicación no tiene cuentas, la vía más rápida para eliminar todo lo que se guarda
+  localmente es borrar los datos de la aplicación o desinstalarla. Para solicitar la eliminación de
+  informes de fallos ya enviados, escríbenos indicando el modelo de tu dispositivo y la fecha
+  aproximada.</p>
+
+  <h2>12. Menores de edad</h2>
+  <p>Esta aplicación está dirigida a personas adultas que quieren enviar saludos a su familia y a
+  sus amistades. No está dirigida a menores de 13 años y no recopila conscientemente datos de
+  ellos.</p>
+
+  <h2>13. Cambios</h2>
+  <p>Si esta política cambia, se actualizará esta página y la fecha del encabezado. Un cambio que
+  amplíe la información recopilada se anunciará además en las notas de la versión.</p>
+
+  <h2>14. Contacto</h2>
+  <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+  <hr>
+
+  <h1>Bendiciones — Privacy Policy</h1>
+  <p class="muted">Last updated: 13 August 2026</p>
+  <div class="sunrise"></div>
+
+  <div class="card">
+    <p class="lead">Bendiciones has no accounts and asks for no sign-up. It does not touch your
+    contacts, your gallery or your camera, and <strong>it never knows who you send a greeting
+    to</strong>: the sending is done by WhatsApp or whichever app you pick, already outside this one.
+    What you type into the search box, and the name you put on an image, stay on the phone. What does
+    leave the device is crash reports, category-level usage statistics, the fixed GIF searches the
+    app makes to its providers, and your Android advertising ID. All of it is described below.</p>
+  </div>
+
+  <h2>1. Information kept on your device</h2>
+  <p>The following is stored locally and is not sent to us:</p>
+  <ul>
+    <li><strong>The <code>buenosdias.db</code> database</strong> — the greeting catalogue the app
+    ships with, which ones you marked as favourites, and a record of each send (which greeting, which
+    time of day, which tone, and the date). That record is what makes streaks and achievements
+    possible; <strong>it holds no recipients and none of the text you sent</strong>.</li>
+    <li><strong><code>onboarding</code> preferences</strong> — whether you have seen the welcome
+    tutorial.</li>
+    <li><strong><code>ad_gating</code> preferences</strong> — counters that limit how often an ad may
+    appear.</li>
+    <li><strong>The <code>packs</code> folder</strong> — the images and tray icons of the sticker
+    packs you create.</li>
+    <li><strong>Caches</strong> (<code>shared_media</code>, <code>edited_previews</code>,
+    <code>image_cache</code>) — temporary copies of the picture or GIF you are about to share and of
+    the editor's output. Android may delete them when it needs space.</li>
+  </ul>
+  <p>Uninstalling the app, or clearing its data from the phone's settings, deletes all of it. Note
+  the Android backup described in section 2.</p>
+
+  <h2>2. Android backup</h2>
+  <p>The app allows <strong>Android Auto Backup</strong>. If you have it switched on, Android may
+  upload the local data in section 1 to <strong>your own Google account</strong>, encrypted, so it
+  can be restored onto a new phone.</p>
+  <p>That backup is yours, not ours: <strong>we never see it and cannot access it</strong>. It is
+  mentioned here because otherwise the sentence "it stays on your device" would not be entirely true.
+  You control it under <code>Settings → Google → Backup</code>.</p>
+
+  <h2>3. What leaves the device</h2>
+
+  <h3>3.1 Third-party GIFs and images (Klipy, GIPHY)</h3>
+  <p>The GIF tab and the Photos tab request their content from <strong>Klipy</strong> and, if Klipy
+  does not answer, from <strong>GIPHY</strong>. That request carries:</p>
+  <ul>
+    <li>A <strong>Spanish search term taken from a fixed list inside the app</strong> (for example
+    "buenos dias bendiciones"), chosen by time of day. <strong>It is not what you type</strong>: the
+    app sends no free text to these providers.</li>
+    <li>The <strong>two-letter country code</strong> of your phone's configured language, so results
+    match your region.</li>
+    <li>Your IP address, as with any internet request.</li>
+  </ul>
+  <p>Klipy and GIPHY are third parties with their own privacy policies and are responsible for the
+  content they return. If you find an inappropriate GIF or image, write to us and we will remove it
+  from the searches.</p>
+
+  <h3>3.2 Crash reports (Firebase Crashlytics)</h3>
+  <ul>
+    <li>The technical detail of the crash (stack trace).</li>
+    <li>Device model, Android version and app version.</li>
+    <li>A Firebase installation identifier and the date and time of the crash.</li>
+  </ul>
+
+  <h3>3.3 Usage statistics (Firebase Analytics)</h3>
+  <p>Category events only, with no content. This list is everything the app can send:</p>
+  <ul>
+    <li><code>app_opened</code>, <code>feed_loaded</code> — app open and how many items loaded.</li>
+    <li><code>moment_selected</code>, <code>tone_selected</code>, <code>media_segment_viewed</code>,
+    <code>preview_opened</code>, <code>favorite_toggled</code> — which category was chosen.</li>
+    <li><code>send_started</code>, <code>send_confirmed</code>, <code>send_review_dismissed</code>,
+    <code>share_media_failed</code> — the kind of greeting (photo, GIF, sticker), the destination app
+    you chose, and whether a Bible verse was attached. <strong>Never the text and never the
+    recipient.</strong></li>
+    <li><code>search_submitted</code>, <code>gif_search_submitted</code> — <strong>how many characters
+    you typed and how many results came back, never what you typed</strong>.</li>
+    <li><code>editor_opened</code>, <code>editor_finished</code>, <code>editor_render_failed</code> —
+    which filter you used and <strong>whether you added a name (yes or no), never the name</strong>.</li>
+    <li><code>pack_created</code>, <code>pack_stickers_added</code>,
+    <code>pack_sticker_add_failed</code>, <code>whatsapp_install_launched</code>,
+    <code>whatsapp_install_result</code> — how many stickers the pack holds and whether WhatsApp
+    accepted it.</li>
+    <li><code>tutorial_finished</code>, <code>tutorial_replayed</code>,
+    <code>notification_prompt_answered</code>, <code>verse_toggled</code>,
+    <code>verse_shuffled</code>.</li>
+    <li><code>full_screen_ad_shown</code>, <code>ad_load_failed</code>, <code>ad_show_failed</code> —
+    where the ad appeared and, on failure, the error code.</li>
+    <li>Data Google adds by default: app instance identifier, device type, operating system and
+    approximate country inferred from the IP address.</li>
+  </ul>
+
+  <h3>3.4 Advertising (Google AdMob)</h3>
+  <p>Described separately in section 4.</p>
+
+  <h3>3.5 Purchases (Google Play Billing)</h3>
+  <p>If you buy the ad-free version, the transaction is processed by <strong>Google Play</strong>.
+  The app never sees or stores your payment details; it only asks Google Play whether the purchase is
+  active, each time it starts.</p>
+
+  <h2>4. Advertising and consent</h2>
+  <p>Bendiciones is free and is funded by <strong>Google AdMob</strong> advertising. To show it,
+  Google's SDK collects and shares with Google:</p>
+  <ul>
+    <li>Your device's <strong>Android advertising ID</strong>.</li>
+    <li>Technical device data and an approximate location inferred from the IP address.</li>
+    <li>Ad interactions, such as impressions and taps.</li>
+  </ul>
+  <p>If you are in the European Economic Area or the United Kingdom, the app shows Google's consent
+  form (User Messaging Platform) <strong>first</strong> and only then initialises advertising. If the
+  form cannot be shown, no ads are requested.</p>
+  <p>Google acts here as a third party with its own policy. You can read how it handles this data in
+  <a href="https://policies.google.com/technologies/partner-sites">Google's partner policies</a>.</p>
+  <p><strong>Your control:</strong> under <code>Settings → Google → Ads</code> you can turn off
+  personalisation or delete your advertising ID. The app carries on working the same. Buying the full
+  version removes ads entirely.</p>
+
+  <h2>5. Stickers and WhatsApp</h2>
+  <p>When you add a pack to WhatsApp, the images do not travel over the internet: WhatsApp reads them
+  straight from the app's storage on your own phone. So that the app can tell you "WhatsApp is not
+  installed" instead of failing silently, it declares that it may <em>see</em> whether WhatsApp is on
+  the phone. That is all it checks: present or not.</p>
+
+  <h2>6. Notifications</h2>
+  <p>The morning reminder is scheduled by your own phone and its text ships inside the app.
+  <strong>No notification is sent from any server</strong>, and the permission is requested only when
+  you tap "Yes, remind me" — never on first launch.</p>
+
+  <h2>7. What is never sent</h2>
+  <p>This is guaranteed by how the code is written, not by manual review:</p>
+  <ul>
+    <li><strong>Who you send a greeting to.</strong> The app hands the image to Android's share
+    sheet and its involvement ends there; it never sees the recipient.</li>
+    <li><strong>The text of the greeting you send</strong>, including any text you edit by hand.</li>
+    <li><strong>The name you write onto an image</strong> in the editor.</li>
+    <li><strong>What you type into the search box.</strong> Search is resolved inside the phone,
+    over the content the app already ships with.</li>
+    <li>Your name, email, phone number, contacts or precise location.</li>
+    <li>Your photos: the app does not open your gallery or camera, and holds no permission to do
+    so.</li>
+  </ul>
+
+  <h2>8. What it is used for</h2>
+  <ul>
+    <li>Fixing bugs: a crash that only happens on certain devices is invisible without this.</li>
+    <li>Understanding which greetings and features are used, in order to improve the content.</li>
+    <li>Showing and measuring the advertising that keeps the app free.</li>
+  </ul>
+  <p>Your information is not sold. It is shared with Google and with the GIF providers in their role
+  as providers of these services.</p>
+
+  <h2>9. Permissions</h2>
+  <ul>
+    <li><strong>Internet</strong> — to fetch GIFs and images from their providers, and for
+    advertising and crash reports.</li>
+    <li><strong>Notifications</strong> — only for the reminder described in section 6. Off by
+    default.</li>
+    <li><strong>Advertising ID</strong> (<code>AD_ID</code>) — added by the ads SDK for what is
+    described in section 4.</li>
+  </ul>
+  <p>The app does not access your microphone, camera, contacts, files or location, and does not
+  request those permissions.</p>
+
+  <h2>10. Retention</h2>
+  <ul>
+    <li>Crash reports: roughly 90 days, per the Firebase Crashlytics policy.</li>
+    <li>Usage statistics: up to 14 months.</li>
+    <li>Advertising data: retained by Google under its own retention policies.</li>
+    <li>Requests to Klipy and GIPHY: retained by them under their own policies.</li>
+    <li>Data on your device: until you uninstall the app or clear its data.</li>
+  </ul>
+
+  <h2>11. Your rights (Law No. 29733)</h2>
+  <p>Under Peru's Personal Data Protection Law and its regulations, you have the rights of
+  <strong>access, rectification, cancellation and objection</strong> regarding your personal data. To
+  exercise them, write to the contact address below.</p>
+  <p>Since the app has no accounts, the fastest way to delete everything stored locally is to clear
+  the app's data or uninstall it. To request deletion of crash reports already sent, write to us with
+  your device model and the approximate date.</p>
+
+  <h2>12. Children</h2>
+  <p>This app is intended for adults who want to send greetings to their family and friends. It is
+  not directed at children under 13 and does not knowingly collect data from them.</p>
+
+  <h2>13. Changes</h2>
+  <p>If this policy changes, this page and the date in its header will be updated. A change that
+  widens what is collected will additionally be announced in the release notes.</p>
+
+  <h2>14. Contact</h2>
+  <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+  <footer>
+    Los GIFs y las imágenes de terceros son proporcionados por KLIPY y GIPHY.<br>
+    Third-party GIFs and images are provided by KLIPY and GIPHY.
+  </footer>
+
+</div>
+</body>
+</html>
