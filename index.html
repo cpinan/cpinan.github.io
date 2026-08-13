@@ -1,45 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carlos Piñán — Android &amp; game developer</title>
-<meta name="description" content="Portfolio of Carlos Piñán: Android apps on Google Play, browser-playable games, and open-source projects — with landing pages and privacy policies for each app.">
+<title>Carlos Piñán — Staff Android Engineer</title>
+<meta name="description" content="Carlos Piñán — Staff Android engineer. 14+ years building mobile software, most recently WhatsApp media infrastructure at Meta. Kotlin, Jetpack Compose, KMM, games and open source.">
 <meta name="author" content="Carlos Eduardo Piñán Indacochea">
 <link rel="canonical" href="https://cpinan.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Carlos Piñán — Android &amp; game developer">
-<meta property="og:description" content="Android apps, small games and open-source projects.">
+<meta property="og:title" content="Carlos Piñán — Staff Android Engineer">
+<meta property="og:description" content="14+ years of Android. WhatsApp media infrastructure at Meta, apps on Google Play, games and 95+ open-source repos.">
 <meta property="og:url" content="https://cpinan.github.io/">
 <meta property="og:image" content="https://cpinan.github.io/assets/covers/turbo-race.jpg">
 <link rel="icon" href="/assets/icons/stat-calculator.png" type="image/png">
 <style>
   :root {
-    --bg: #f5f6f8;
-    --bg-2: #eceef2;
+    --bg: #fbfbfa;
     --card: #ffffff;
-    --ink: #14161b;
-    --muted: #5c6370;
-    --line: #e0e3e9;
-    --accent: #2f6df6;
-    --accent-soft: rgba(47, 109, 246, .1);
-    --tile: #f0f2f6;
-    --shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 10px 28px rgba(16, 24, 40, .07);
-    --shadow-lift: 0 2px 4px rgba(16, 24, 40, .06), 0 18px 44px rgba(16, 24, 40, .12);
+    --ink: #16181d;
+    --muted: #61697a;
+    --faint: #8b93a3;
+    --line: #e3e5ea;
+    --accent: #2f5fe0;
+    --accent-soft: rgba(47, 95, 224, .08);
+    --tile: #f2f3f6;
+    --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 12px 30px rgba(16, 24, 40, .06);
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0c0f14;
-      --bg-2: #11151c;
-      --card: #151a22;
-      --ink: #e9ebef;
-      --muted: #97a1b0;
-      --line: #232a35;
-      --accent: #6ea0ff;
-      --accent-soft: rgba(110, 160, 255, .14);
-      --tile: #1b2029;
-      --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 28px rgba(0, 0, 0, .35);
-      --shadow-lift: 0 2px 6px rgba(0, 0, 0, .55), 0 18px 44px rgba(0, 0, 0, .5);
+      --bg: #0b0d11;
+      --card: #12151b;
+      --ink: #e8eaee;
+      --muted: #99a2b2;
+      --faint: #6f7789;
+      --line: #212630;
+      --accent: #7ea3ff;
+      --accent-soft: rgba(126, 163, 255, .12);
+      --tile: #171b23;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 12px 30px rgba(0, 0, 0, .35);
     }
   }
   * { box-sizing: border-box; }
@@ -47,300 +46,430 @@
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    padding: 0 1.25rem 5rem;
-    background:
-      radial-gradient(1100px 520px at 15% -8%, var(--accent-soft), transparent 60%),
-      var(--bg);
+    padding: 0 1.25rem 4rem;
+    background: var(--bg);
     color: var(--ink);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1080px; margin: 0 auto; }
+  .wrap { max-width: 940px; margin: 0 auto; }
+  a { color: var(--accent); }
+  em { font-style: italic; color: var(--ink); }
 
-  /* ---------- header ---------- */
-  header.hero { padding: 5rem 0 3rem; }
-  .eyebrow {
-    margin: 0 0 .9rem;
-    font-size: .75rem;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 700;
+  /* ---------- i18n ---------- */
+  html[data-lang="en"] .es, html[data-lang="es"] .en { display: none !important; }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: .85rem 0;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(8px);
+    border-bottom: 1px solid var(--line);
   }
-  h1 { margin: 0 0 .75rem; font-size: clamp(2.1rem, 6vw, 3.1rem); line-height: 1.1; letter-spacing: -.03em; }
-  .lede { margin: 0 0 1.75rem; font-size: 1.1rem; color: var(--muted); max-width: 60ch; }
+  .topbar .mark { font-family: var(--mono); font-size: .9rem; letter-spacing: -.02em; text-decoration: none; color: var(--ink); }
+  .topbar .mark b { color: var(--accent); }
+  .topbar nav { display: flex; align-items: center; gap: .25rem 1.1rem; flex-wrap: wrap; justify-content: flex-end; }
+  .topbar nav a { color: var(--muted); text-decoration: none; font-size: .88rem; }
+  .topbar nav a:hover { color: var(--ink); }
+  .langswitch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--card); }
+  .langswitch button {
+    font: inherit; font-size: .78rem; font-family: var(--mono);
+    padding: .25rem .6rem; border: 0; background: transparent; color: var(--muted); cursor: pointer;
+  }
+  .langswitch button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+
+  /* ---------- hero ---------- */
+  header.hero { padding: 4.5rem 0 3rem; }
+  .who { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.6rem; }
+  .avatar {
+    width: 62px; height: 62px; flex: none; border-radius: 50%;
+    display: grid; place-items: center;
+    background: linear-gradient(150deg, var(--accent), #7b4de0);
+    color: #fff; font-weight: 700; font-size: 1.3rem; letter-spacing: .02em;
+  }
+  .who h1 { margin: 0; font-size: 1.15rem; letter-spacing: -.01em; }
+  .who p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .headline {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.9rem, 5.2vw, 2.9rem);
+    line-height: 1.18; letter-spacing: -.03em; font-weight: 700;
+    max-width: 22ch;
+  }
+  .headline em { color: var(--accent); font-style: italic; }
+  .lede { margin: 0 0 1.1rem; font-size: 1.05rem; color: var(--muted); max-width: 68ch; }
   .lede strong { color: var(--ink); font-weight: 600; }
-  .hero-links { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .hero-links { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.6rem; }
   .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: .45rem;
-    padding: .55rem 1rem;
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    background: var(--card);
-    color: var(--ink);
-    text-decoration: none;
-    font-size: .9rem;
-    font-weight: 500;
-    box-shadow: var(--shadow);
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .5rem 1rem; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    text-decoration: none; font-size: .89rem; font-weight: 500;
   }
   .btn:hover { border-color: var(--accent); color: var(--accent); }
   .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
   .btn.primary:hover { color: #fff; filter: brightness(1.08); }
-  .stats { display: flex; flex-wrap: wrap; gap: 1.75rem; margin: 2.5rem 0 0; padding: 0; list-style: none; }
-  .stats li { line-height: 1.25; }
-  .stats b { display: block; font-size: 1.6rem; letter-spacing: -.02em; }
-  .stats span { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .stats { display: flex; flex-wrap: wrap; gap: 1.6rem 2.4rem; margin: 2.6rem 0 0; padding: 0; list-style: none; }
+  .stats b { display: block; font-size: 1.5rem; letter-spacing: -.02em; line-height: 1.2; }
+  .stats span { font-size: .78rem; color: var(--faint); text-transform: uppercase; letter-spacing: .1em; }
 
   /* ---------- sections ---------- */
-  section { padding-top: 3.5rem; }
-  .sec-head { display: flex; align-items: baseline; gap: .9rem; flex-wrap: wrap; margin-bottom: .35rem; }
-  h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.02em; }
-  .sec-head .count {
-    font-size: .75rem;
-    color: var(--muted);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: .1rem .55rem;
+  section { padding-top: 4rem; }
+  .kicker {
+    font-family: var(--mono); font-size: .74rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--faint); margin: 0 0 .5rem;
   }
-  .sec-note { margin: 0 0 1.5rem; color: var(--muted); font-size: .95rem; max-width: 62ch; }
+  h2 { margin: 0 0 .4rem; font-size: 1.55rem; letter-spacing: -.025em; }
+  .sec-note { margin: 0 0 1.9rem; color: var(--muted); max-width: 66ch; }
 
-  /* ---------- cards ---------- */
-  .grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+  /* ---------- what I do ---------- */
+  .areas { display: grid; gap: 1.6rem 2.4rem; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .areas { grid-template-columns: 1fr 1fr; } }
+  .area h3 { margin: 0 0 .35rem; font-size: 1.02rem; letter-spacing: -.01em; }
+  .area p { margin: 0 0 .6rem; color: var(--muted); font-size: .94rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: 0; padding: 0; list-style: none; }
+  .chips li {
+    font-family: var(--mono); font-size: .72rem; color: var(--muted);
+    background: var(--tile); border: 1px solid var(--line); border-radius: 6px; padding: .1rem .45rem;
+  }
+
+  /* ---------- project cards ---------- */
+  .grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
   @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
   @media (min-width: 720px) { .grid.three { grid-template-columns: repeat(3, 1fr); } }
-
   article.card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column;
+    transition: transform .18s ease, border-color .18s ease;
   }
-  article.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
-
-  .cover {
-    position: relative;
-    aspect-ratio: 1024 / 500;
-    background: var(--tile);
-    border-bottom: 1px solid var(--line);
-    overflow: hidden;
-  }
+  article.card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); }
+  .cover { position: relative; aspect-ratio: 1024 / 500; background: var(--tile); border-bottom: 1px solid var(--line); overflow: hidden; }
   .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .cover.contain { background: linear-gradient(160deg, #0d1018, #1b2233); }
   .cover.contain img { object-fit: contain; padding: .75rem; }
   .cover.pad img { object-fit: contain; padding: 1.6rem; }
-
   .badge {
-    position: absolute;
-    left: .85rem;
-    bottom: .85rem;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
-    overflow: hidden;
+    position: absolute; left: .8rem; bottom: .8rem; width: 44px; height: 44px;
+    border-radius: 11px; background: var(--card); border: 1px solid var(--line);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .25); overflow: hidden;
   }
   .badge img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-  .body { padding: 1.1rem 1.2rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
-  .card h3 { margin: 0 0 .3rem; font-size: 1.1rem; letter-spacing: -.01em; }
+  .body { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; flex: 1; }
+  .card h3 { margin: 0 0 .3rem; font-size: 1.05rem; letter-spacing: -.01em; }
   .card h3 a { color: inherit; text-decoration: none; }
   .card h3 a:hover { color: var(--accent); }
-  .card p { margin: 0 0 1rem; color: var(--muted); font-size: .93rem; flex: 1; }
-
-  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0 0 .8rem; padding: 0; list-style: none; }
-  .tags li {
-    font-size: .72rem;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    color: var(--muted);
-    background: var(--tile);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: .12rem .5rem;
-  }
-
-  .links { display: flex; flex-wrap: wrap; gap: .35rem .9rem; font-size: .875rem; }
-  .links a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .card p { margin: 0 0 .9rem; color: var(--muted); font-size: .91rem; flex: 1; }
+  .links { display: flex; flex-wrap: wrap; gap: .3rem .85rem; font-size: .86rem; }
+  .links a { text-decoration: none; font-weight: 500; }
   .links a:hover { text-decoration: underline; }
   .links a.play::before { content: "▶ "; font-size: .8em; }
   .links a.ext::after { content: " ↗"; font-size: .85em; opacity: .7; }
 
-  /* ---------- footer ---------- */
-  footer {
-    margin-top: 4rem;
-    padding-top: 1.75rem;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: .92rem;
+  /* ---------- repo list ---------- */
+  .repos { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .repos li { border-bottom: 1px solid var(--line); padding: 1rem .2rem; display: grid; gap: .2rem .9rem; grid-template-columns: 1fr auto; align-items: baseline; }
+  .repos .name { font-family: var(--mono); font-size: .95rem; font-weight: 600; text-decoration: none; color: var(--ink); letter-spacing: -.01em; }
+  .repos .name:hover { color: var(--accent); }
+  .repos .meta { font-family: var(--mono); font-size: .76rem; color: var(--faint); white-space: nowrap; }
+  .repos .desc { grid-column: 1 / -1; color: var(--muted); font-size: .92rem; }
+  @media (max-width: 520px) { .repos li { grid-template-columns: 1fr; } }
+
+  /* ---------- also on github ---------- */
+  .more { margin-top: 2.6rem; }
+  .more h3 { margin: 0 0 .3rem; font-size: 1.05rem; letter-spacing: -.01em; }
+  .more-note { margin: 0 0 1.6rem; color: var(--muted); font-size: .93rem; max-width: 66ch; }
+  .morelist h4 {
+    margin: 1.4rem 0 .45rem;
+    font-family: var(--mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--faint); font-weight: 600;
   }
-  footer a { color: var(--accent); }
-  footer p { margin: 0 0 .4rem; }
+  .morelist p { margin: 0; font-size: .9rem; line-height: 2; color: var(--faint); }
+  .morelist a { font-family: var(--mono); font-size: .82rem; text-decoration: none; }
+  .morelist a:hover { text-decoration: underline; }
+  .tagnote { color: var(--faint); font-size: .82rem; }
+  .more-all { margin: 1.9rem 0 0; font-size: .9rem; }
+  .more-all a { text-decoration: none; font-weight: 500; }
+  .more-all a:hover { text-decoration: underline; }
+
+  /* ---------- timeline ---------- */
+  .timeline { list-style: none; margin: 0; padding: 0; }
+  .timeline li { display: grid; grid-template-columns: 8.5rem 1fr; gap: .3rem 1.4rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
+  .timeline .when { font-family: var(--mono); font-size: .8rem; color: var(--faint); padding-top: .18rem; }
+  .timeline h3 { margin: 0 0 .2rem; font-size: 1rem; letter-spacing: -.01em; }
+  .timeline h3 .role { color: var(--muted); font-weight: 400; }
+  .timeline p { margin: 0; color: var(--muted); font-size: .93rem; }
+  @media (max-width: 620px) { .timeline li { grid-template-columns: 1fr; } }
+
+  /* ---------- contact ---------- */
+  .cta { margin-top: 4.5rem; padding: 2.2rem 0 0; border-top: 1px solid var(--line); }
+  .cta h2 { font-size: 1.7rem; }
+  .cta .mail { font-family: var(--mono); font-size: 1.05rem; }
+
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--faint); font-size: .88rem; }
+  footer p { margin: 0 0 .35rem; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
 <div class="wrap">
 
+  <div class="topbar">
+    <a class="mark" href="/">carlos<b>.</b>piñán</a>
+    <nav>
+      <a href="#work"><span class="en">Work</span><span class="es">Enfoque</span></a>
+      <a href="#projects"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+      <a href="#open-source"><span class="en">Open source</span><span class="es">Código abierto</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="es">Experiencia</span></a>
+      <div class="langswitch" role="group" aria-label="Language / Idioma">
+        <button type="button" data-setlang="en" aria-pressed="true">EN</button>
+        <button type="button" data-setlang="es" aria-pressed="false">ES</button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ================= HERO ================= -->
   <header class="hero">
-    <p class="eyebrow">Lima, Peru · Android &amp; games</p>
-    <h1>Carlos Piñán</h1>
-    <p class="lede">
-      I build <strong>Android apps and small games</strong> — Kotlin and Jetpack Compose,
-      Godot, and the occasional bit of C++ left over from the cocos2d-x years.
-      Everything below is shipped work: apps on Google Play, things you can open in a
-      browser right now, and source on GitHub.
+    <div class="who">
+      <div class="avatar" aria-hidden="true">CP</div>
+      <div>
+        <h1>Carlos Piñán</h1>
+        <p>
+          <span class="en">Staff Android Engineer · Kotlin &amp; AI-augmented engineering · Lima, Peru</span>
+          <span class="es">Staff Android Engineer · Kotlin e ingeniería aumentada con IA · Lima, Perú</span>
+        </p>
+      </div>
+    </div>
+
+    <p class="headline">
+      <span class="en">I build Android software at <em>2B-user scale</em> — and games on the side.</span>
+      <span class="es">Construyo software Android a <em>escala de 2B usuarios</em> — y juegos en el camino.</span>
     </p>
+
+    <p class="lede">
+      <span class="en">
+        <strong>14+ years</strong> building and leading mobile software. Most recently
+        <strong>Staff Engineer (IC6) at Meta</strong>, on WhatsApp's media infrastructure —
+        photos, videos, files and stickers for more than 2 billion users. As tech lead I shipped
+        <strong>Sticker Maker for Android</strong> end to end, from architecture to global launch,
+        reversing a long-standing decline in sticker usage.
+      </span>
+      <span class="es">
+        <strong>Más de 14 años</strong> construyendo y liderando software móvil. Recientemente
+        <strong>Staff Engineer (IC6) en Meta</strong>, en la infraestructura de medios de WhatsApp —
+        fotos, videos, archivos y stickers para más de 2 mil millones de usuarios. Como tech lead
+        entregué <strong>Sticker Maker para Android</strong> de punta a punta, de la arquitectura al
+        lanzamiento global, revirtiendo una caída sostenida en el uso de stickers.
+      </span>
+    </p>
+    <p class="lede">
+      <span class="en">
+        I work with Kotlin, Jetpack Compose, Clean Architecture and KMM, and use AI tools and agents
+        daily for design decisions, coding and problem-solving. Outside work I maintain
+        <strong>95+ open-source repos</strong>, ship apps on Google Play, and build small games.
+        Based in Lima, open to senior / staff Android and KMM roles remotely.
+      </span>
+      <span class="es">
+        Trabajo con Kotlin, Jetpack Compose, Clean Architecture y KMM, y uso herramientas y agentes de
+        IA a diario para decisiones de diseño, código y resolución de problemas. Fuera del trabajo
+        mantengo <strong>más de 95 repos open source</strong>, publico apps en Google Play y hago
+        juegos pequeños. Radico en Lima y estoy abierto a roles senior / staff de Android y KMM en remoto.
+      </span>
+    </p>
+
     <div class="hero-links">
-      <a class="btn primary" href="#apps">See the apps</a>
+      <a class="btn primary" href="#projects"><span class="en">See the projects</span><span class="es">Ver proyectos</span></a>
       <a class="btn ext" href="https://github.com/cpinan">GitHub</a>
+      <a class="btn ext" href="https://www.linkedin.com/in/cpinan">LinkedIn</a>
       <a class="btn" href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>
     </div>
+
     <ul class="stats">
-      <li><b>5</b><span>on Google Play</span></li>
-      <li><b>3</b><span>playable in a browser</span></li>
-      <li><b>10+</b><span>years shipping</span></li>
+      <li><b>14+</b><span class="en">years shipping</span><span class="es">años entregando</span></li>
+      <li><b>2B+</b><span class="en">users reached</span><span class="es">usuarios alcanzados</span></li>
+      <li><b>95+</b><span class="en">open-source repos</span><span class="es">repos open source</span></li>
+      <li><b>5</b><span class="en">apps on Google Play</span><span class="es">apps en Google Play</span></li>
     </ul>
   </header>
 
-  <!-- ================= APPS ================= -->
-  <section id="apps">
-    <div class="sec-head"><h2>Android apps</h2><span class="count">6</span></div>
+  <!-- ================= WHAT I DO ================= -->
+  <section id="work">
+    <p class="kicker"><span class="en">What I do</span><span class="es">En qué trabajo</span></p>
+    <h2><span class="en">Four things I keep being paid for</span><span class="es">Cuatro cosas que hago bien</span></h2>
     <p class="sec-note">
-      Five are live on Google Play; every one of them has its landing page and privacy
-      policy hosted here on this site.
+      <span class="en">Consumer Android at scale, the architecture underneath it, the graphics work I do for fun, and the people side of engineering.</span>
+      <span class="es">Android de consumo a gran escala, la arquitectura debajo, el trabajo gráfico que hago por gusto y el lado humano de la ingeniería.</span>
+    </p>
+
+    <div class="areas">
+
+      <div class="area">
+        <h3><span class="en">Android at scale</span><span class="es">Android a gran escala</span></h3>
+        <p>
+          <span class="en">Media pipelines, gallery and picker surfaces, ExoPlayer, Android 13 granular media permissions, Google Photo Picker as a native entry point. Reliability work: ANR fixes and deadlocks in download, cursor and sticker pipelines. 50+ A/B experiments authored and managed.</span>
+          <span class="es">Pipelines de medios, galería y pickers, ExoPlayer, permisos granulares de Android 13, Google Photo Picker como punto de entrada nativo. Confiabilidad: correcciones de ANR y deadlocks en descarga, cursores y pipelines de stickers. Más de 50 experimentos A/B diseñados y gestionados.</span>
+        </p>
+        <ul class="chips"><li>Kotlin</li><li>ExoPlayer</li><li>A/B testing</li><li>ANR &amp; deadlocks</li></ul>
+      </div>
+
+      <div class="area">
+        <h3><span class="en">Architecture &amp; Kotlin</span><span class="es">Arquitectura y Kotlin</span></h3>
+        <p>
+          <span class="en">Clean Architecture, modularization of monolithic media stacks into independent modules, XML-to-Compose migrations, server-driven UI for banking apps, and Kotlin Multiplatform. Plus build automation: custom Gradle tasks and Python scripts that cut compile times.</span>
+          <span class="es">Clean Architecture, modularización de stacks de medios monolíticos en módulos independientes, migraciones de XML a Compose, server-driven UI para apps bancarias y Kotlin Multiplatform. Además automatización de builds: tareas Gradle propias y scripts en Python que reducen tiempos de compilación.</span>
+        </p>
+        <ul class="chips"><li>Jetpack Compose</li><li>KMM</li><li>Clean Architecture</li><li>Gradle</li></ul>
+      </div>
+
+      <div class="area">
+        <h3><span class="en">Graphics, games &amp; on-device ML</span><span class="es">Gráficos, juegos y ML en dispositivo</span></h3>
+        <p>
+          <span class="en">Led the migration of an on-device ML model from PyTorch to ExecuTorch across the Family of Apps — lower memory, zero regressions across A/B rounds. On my own time: OpenGL ES renderers, Godot 4 games, cocos2d-x in C++, and game loops written from scratch on a canvas.</span>
+          <span class="es">Lideré la migración de un modelo de ML en dispositivo de PyTorch a ExecuTorch en toda la familia de apps — menos memoria, cero regresiones en varias rondas A/B. Por mi cuenta: renderizadores OpenGL ES, juegos en Godot 4, cocos2d-x en C++ y game loops escritos desde cero sobre un canvas.</span>
+        </p>
+        <ul class="chips"><li>ExecuTorch</li><li>OpenGL ES</li><li>Godot 4</li><li>cocos2d-x</li></ul>
+      </div>
+
+      <div class="area">
+        <h3><span class="en">Leadership &amp; mentoring</span><span class="es">Liderazgo y mentoría</span></h3>
+        <p>
+          <span class="en">Mentored engineers from IC3 to IC5 on architecture and career growth, ran technical interviews, wrote milestone plans and built team wikis so knowledge outlives the project. Certified Scrum Master, former GDG Lima organizer and speaker.</span>
+          <span class="es">Mentoría a ingenieros de IC3 a IC5 en arquitectura y desarrollo de carrera, entrevistas técnicas, planes de hitos y wikis de equipo para que el conocimiento sobreviva al proyecto. Certified Scrum Master, ex organizador y ponente de GDG Lima.</span>
+        </p>
+        <ul class="chips"><li>Tech lead</li><li>Mentoring</li><li>Hiring</li><li>GDG Lima</li></ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS / APPS ================= -->
+  <section id="projects">
+    <p class="kicker"><span class="en">Shipped</span><span class="es">Publicado</span></p>
+    <h2><span class="en">Apps on Google Play</span><span class="es">Apps en Google Play</span></h2>
+    <p class="sec-note">
+      <span class="en">Five are live on the store; each one has its landing page and privacy policy hosted here.</span>
+      <span class="es">Cinco están publicadas en la tienda; cada una tiene su página y su política de privacidad alojadas aquí.</span>
     </p>
 
     <div class="grid">
 
       <article class="card">
         <div class="cover">
-          <img src="/assets/covers/stat-calculator.jpg" alt="Stat Calculator feature graphic" loading="lazy" width="880" height="430">
-          <div class="badge"><img src="/assets/icons/stat-calculator.png" alt="" width="48" height="48"></div>
+          <img src="/assets/covers/stat-calculator.jpg" alt="Stat Calculator" loading="lazy" width="880" height="430">
+          <div class="badge"><img src="/assets/icons/stat-calculator.png" alt="" width="44" height="44"></div>
         </div>
         <div class="body">
           <h3><a href="/stat-calculator/">Stat Calculator</a></h3>
           <p>
-            Pokémon stat calculator covering all nine generations — DVs and Stat Exp for
-            Gen I–II, IVs/EVs/natures from Gen III on. 1,025 species with base stats cached
-            offline, build comparison, 20 saved builds, formula reference, six languages.
+            <span class="en">Pokémon stat calculator across all nine generations — DVs and Stat Exp for Gen I–II, IVs/EVs/natures from Gen III on. 1,025 species cached offline, build comparison, formula reference, six languages.</span>
+            <span class="es">Calculadora de estadísticas Pokémon para las nueve generaciones — DVs y Stat Exp en Gen I–II, IVs/EVs/naturalezas desde Gen III. 1,025 especies en caché offline, comparación de builds, referencia de fórmulas, seis idiomas.</span>
           </p>
-          <ul class="tags"><li>React Native</li><li>Offline</li><li>6 languages</li></ul>
-          <div class="links">
+          <ul class="chips"><li>React Native</li><li>Offline</li><li>6 languages</li></ul>
+          <div class="links" style="margin-top:.8rem">
             <a class="play ext" href="https://play.google.com/store/apps/details?id=com.cpinan.pokemmostats">Google Play</a>
-            <a href="/stat-calculator/">Landing page</a>
-            <a href="/stat-calculator/privacy.html">Privacy</a>
+            <a href="/stat-calculator/"><span class="en">Landing page</span><span class="es">Página</span></a>
+            <a href="/stat-calculator/privacy.html"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="cover">
-          <img src="/assets/covers/corta-spam.jpg" alt="Corta Spam feature graphic" loading="lazy" width="880" height="430">
-          <div class="badge"><img src="/assets/icons/corta-spam.png" alt="" width="48" height="48"></div>
+          <img src="/assets/covers/corta-spam.jpg" alt="Corta Spam" loading="lazy" width="880" height="430">
+          <div class="badge"><img src="/assets/icons/corta-spam.png" alt="" width="44" height="44"></div>
         </div>
         <div class="body">
           <h3><a href="/corta-spam/">Corta Spam</a></h3>
           <p>
-            Open-source call blocker for Peru and beyond. Rule engine with wildcard patterns,
-            country matching, quiet hours, repeat-call rules and a bundled offline spam list.
-            It does not declare the internet permission, so it cannot phone home.
+            <span class="en">Open-source call blocker for Peru and beyond. Rule engine with wildcard patterns, country matching, quiet hours, repeat-call rules and a bundled offline spam list. It does not declare the internet permission, so it cannot phone home.</span>
+            <span class="es">Bloqueador de llamadas open source para Perú y más allá. Motor de reglas con comodines, coincidencia por país, horas de silencio, reglas de llamadas repetidas y una lista de spam offline incluida. No declara el permiso de internet, así que no puede enviar nada.</span>
           </p>
-          <ul class="tags"><li>Kotlin</li><li>MIT</li><li>No internet permission</li></ul>
-          <div class="links">
+          <ul class="chips"><li>Kotlin</li><li>MIT</li><li>No internet permission</li></ul>
+          <div class="links" style="margin-top:.8rem">
             <a class="play ext" href="https://play.google.com/store/apps/details?id=org.carlospinan.cortaspam">Google Play</a>
-            <a href="/corta-spam/">Landing page</a>
-            <a href="/corta-spam/privacy.html">Privacy</a>
-            <a class="ext" href="https://github.com/cpinan/Corta-Spam">Source</a>
+            <a href="/corta-spam/"><span class="en">Landing page</span><span class="es">Página</span></a>
+            <a href="/corta-spam/privacy.html"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
+            <a class="ext" href="https://github.com/cpinan/Corta-Spam"><span class="en">Source</span><span class="es">Código</span></a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="cover">
-          <img src="/assets/covers/retro-3d-maze.jpg" alt="Retro 3D Maze feature graphic" loading="lazy" width="880" height="430">
-          <div class="badge"><img src="/assets/icons/retro-3d-maze.png" alt="" width="48" height="48"></div>
+          <img src="/assets/covers/retro-3d-maze.jpg" alt="Retro 3D Maze" loading="lazy" width="880" height="430">
+          <div class="badge"><img src="/assets/icons/retro-3d-maze.png" alt="" width="44" height="44"></div>
         </div>
         <div class="body">
           <h3><a href="/retro-3d-maze/">Retro 3D Maze</a></h3>
           <p>
-            The Windows 95 maze screen saver, rebuilt for Android as four things in one:
-            screen saver, playable game, live wallpaper and Daydream. Eleven maze
-            algorithms, five sizes, texture packs drawn at runtime plus your own images.
+            <span class="en">The Windows 95 maze screen saver rebuilt for Android as four things in one: screen saver, playable game, live wallpaper and Daydream. Eleven maze algorithms, five sizes, texture packs drawn at runtime.</span>
+            <span class="es">El protector de pantalla del laberinto de Windows 95 rehecho para Android como cuatro cosas en una: protector, juego, fondo animado y Daydream. Once algoritmos de laberinto, cinco tamaños y texturas dibujadas en tiempo de ejecución.</span>
           </p>
-          <ul class="tags"><li>Kotlin</li><li>OpenGL ES</li><li>Live wallpaper</li></ul>
-          <div class="links">
+          <ul class="chips"><li>Kotlin</li><li>OpenGL ES</li><li>Live wallpaper</li></ul>
+          <div class="links" style="margin-top:.8rem">
             <a class="play ext" href="https://play.google.com/store/apps/details?id=com.carlospinan.maze3d">Google Play</a>
-            <a href="/retro-3d-maze/">Landing page</a>
-            <a href="/retro-3d-maze/privacy.html">Privacy</a>
+            <a href="/retro-3d-maze/"><span class="en">Landing page</span><span class="es">Página</span></a>
+            <a href="/retro-3d-maze/privacy.html"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="cover">
-          <img src="/assets/covers/turbo-race.jpg" alt="Turbo Race feature graphic" loading="lazy" width="880" height="430">
-          <div class="badge"><img src="/assets/icons/turbo-race.png" alt="" width="48" height="48"></div>
+          <img src="/assets/covers/turbo-race.jpg" alt="Turbo Race" loading="lazy" width="880" height="430">
+          <div class="badge"><img src="/assets/icons/turbo-race.png" alt="" width="44" height="44"></div>
         </div>
         <div class="body">
           <h3><a href="/turbo-race/">Turbo Race</a></h3>
           <p>
-            Endless tunnel runner: three difficulties, Play Games leaderboards and
-            achievements. Rewritten in Godot 4 from a cocos2d-x game I shipped years ago —
-            and it runs in the browser, no install.
+            <span class="en">Endless tunnel runner: three difficulties, Play Games leaderboards and achievements. Rewritten in Godot 4 from a cocos2d-x game I shipped years ago — and it runs in the browser, no install.</span>
+            <span class="es">Runner de túnel infinito: tres dificultades, tablas de líderes y logros de Play Games. Reescrito en Godot 4 a partir de un juego en cocos2d-x que publiqué hace años — y corre en el navegador, sin instalar nada.</span>
           </p>
-          <ul class="tags"><li>Godot 4</li><li>Play Games</li><li>Web build</li></ul>
-          <div class="links">
+          <ul class="chips"><li>Godot 4</li><li>Play Games</li><li>Web build</li></ul>
+          <div class="links" style="margin-top:.8rem">
             <a class="play ext" href="https://play.google.com/store/apps/details?id=com.carlos.pinan.turborace.godot">Google Play</a>
-            <a class="ext" href="https://cpinan.github.io/turbo-race-godot/">Play in browser</a>
-            <a href="/turbo-race/">Landing page</a>
-            <a href="/turbo-race/privacy.html">Privacy</a>
+            <a class="ext" href="https://cpinan.github.io/turbo-race-godot/"><span class="en">Play in browser</span><span class="es">Jugar en el navegador</span></a>
+            <a href="/turbo-race/"><span class="en">Landing page</span><span class="es">Página</span></a>
+            <a href="/turbo-race/privacy.html"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="cover">
-          <img src="/assets/covers/peru-combi-rush.jpg" alt="Peru Combi Rush feature graphic" loading="lazy" width="880" height="430">
-          <div class="badge"><img src="/assets/icons/peru-combi-rush.png" alt="" width="48" height="48"></div>
+          <img src="/assets/covers/peru-combi-rush.jpg" alt="Peru Combi Rush" loading="lazy" width="880" height="430">
+          <div class="badge"><img src="/assets/icons/peru-combi-rush.png" alt="" width="44" height="44"></div>
         </div>
         <div class="body">
           <h3>Peru Combi Rush</h3>
           <p>
-            Drive a Lima combi: pick up passengers, dodge traffic, survive the route.
-            A love letter to Peruvian public transport, built in Godot, with a bilingual
-            privacy policy in English and Spanish.
+            <span class="en">Drive a Lima combi: pick up passengers, dodge traffic, survive the route. A love letter to Peruvian public transport, built in Godot.</span>
+            <span class="es">Maneja una combi en Lima: recoge pasajeros, esquiva el tráfico y sobrevive la ruta. Una carta de amor al transporte público peruano, hecha en Godot.</span>
           </p>
-          <ul class="tags"><li>Godot</li><li>Arcade</li><li>EN / ES</li></ul>
-          <div class="links">
+          <ul class="chips"><li>Godot</li><li>Arcade</li><li>EN / ES</li></ul>
+          <div class="links" style="margin-top:.8rem">
             <a class="play ext" href="https://play.google.com/store/apps/details?id=com.carlos.pinan.perucombirush.godot">Google Play</a>
-            <a href="/peru-rush-combi-privacy.html">Privacy</a>
+            <a href="/peru-rush-combi-privacy.html"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="cover">
-          <img src="/assets/covers/piano-solfeo.jpg" alt="Piano Solfeo feature graphic" loading="lazy" width="880" height="430">
-          <div class="badge"><img src="/assets/icons/piano-solfeo.png" alt="" width="48" height="48"></div>
+          <img src="/assets/covers/piano-solfeo.jpg" alt="Piano Solfeo" loading="lazy" width="880" height="430">
+          <div class="badge"><img src="/assets/icons/piano-solfeo.png" alt="" width="44" height="44"></div>
         </div>
         <div class="body">
           <h3><a href="/piano-solfeo/">Piano Solfeo</a></h3>
           <p>
-            Sight-reading and music theory drills. Eight modes covering treble and bass
-            clef notes, chords, intervals, scales, the circle of fifths and an interactive
-            keyboard. Do-Re-Mi or C-D-E naming, streaks, fully offline.
+            <span class="en">Sight-reading and music theory drills. Eight modes covering treble and bass clef notes, chords, intervals, scales, the circle of fifths and an interactive keyboard. Do-Re-Mi or C-D-E naming, streaks, fully offline.</span>
+            <span class="es">Ejercicios de lectura a primera vista y teoría musical. Ocho modos: notas en clave de sol y fa, acordes, intervalos, escalas, círculo de quintas y un teclado interactivo. Nombres Do-Re-Mi o C-D-E, rachas y todo offline.</span>
           </p>
-          <ul class="tags"><li>Kotlin</li><li>Compose</li><li>Offline</li></ul>
-          <div class="links">
-            <a href="/piano-solfeo/">Landing page</a>
-            <a href="/piano-solfeo/privacy.html">Privacy</a>
+          <ul class="chips"><li>Kotlin</li><li>Compose</li><li>Offline</li></ul>
+          <div class="links" style="margin-top:.8rem">
+            <a href="/piano-solfeo/"><span class="en">Landing page</span><span class="es">Página</span></a>
+            <a href="/piano-solfeo/privacy.html"><span class="en">Privacy</span><span class="es">Privacidad</span></a>
           </div>
         </div>
       </article>
@@ -350,58 +479,56 @@
 
   <!-- ================= WEB ================= -->
   <section id="web">
-    <div class="sec-head"><h2>Open it in a browser</h2><span class="count">3</span></div>
+    <p class="kicker"><span class="en">No install</span><span class="es">Sin instalar</span></p>
+    <h2><span class="en">Open it in a browser</span><span class="es">Ábrelo en el navegador</span></h2>
     <p class="sec-note">
-      No install, no store account — these run straight from a URL.
+      <span class="en">These run straight from a URL — no store account, nothing to download.</span>
+      <span class="es">Corren directo desde una URL — sin cuenta de tienda ni descargas.</span>
     </p>
 
     <div class="grid three">
 
       <article class="card">
-        <div class="cover">
-          <img src="/assets/covers/turbo-race.jpg" alt="Turbo Race" loading="lazy" width="880" height="430">
-        </div>
+        <div class="cover"><img src="/assets/covers/turbo-race.jpg" alt="Turbo Race" loading="lazy" width="880" height="430"></div>
         <div class="body">
-          <h3><a class="ext" href="https://cpinan.github.io/turbo-race-godot/">Turbo Race — web build</a></h3>
+          <h3><a class="ext" href="https://cpinan.github.io/turbo-race-godot/">Turbo Race — web</a></h3>
           <p>
-            The full Godot game exported to WebAssembly. Arrow keys or touch, three
-            difficulties, same physics as the Android build.
+            <span class="en">The full Godot game exported to WebAssembly. Arrow keys or touch, same physics as the Android build.</span>
+            <span class="es">El juego completo de Godot exportado a WebAssembly. Flechas o toque, con la misma física que la versión Android.</span>
           </p>
           <div class="links">
-            <a class="play ext" href="https://cpinan.github.io/turbo-race-godot/">Play now</a>
+            <a class="play ext" href="https://cpinan.github.io/turbo-race-godot/"><span class="en">Play now</span><span class="es">Jugar</span></a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="cover pad" style="background: linear-gradient(160deg, #f6ede2, #e8d5bd);">
-          <img src="/assets/icons/mis-mascotas.png" alt="Mis Mascotas icon" loading="lazy" width="192" height="192">
+          <img src="/assets/icons/mis-mascotas.png" alt="Mis Mascotas" loading="lazy" width="192" height="192">
         </div>
         <div class="body">
           <h3><a class="ext" href="https://cpinan.github.io/mis-mascotas/">Mis Mascotas</a></h3>
           <p>
-            A memorial site for pets — installable PWA, works offline, photo collages
-            per pet, all driven by JSON files. Static, hosted free on GitHub Pages.
+            <span class="en">A memorial site for pets — installable PWA, works offline, photo collages per pet, all driven by JSON files.</span>
+            <span class="es">Un sitio memorial para mascotas — PWA instalable, funciona offline, collages por mascota y todo definido con archivos JSON.</span>
           </p>
           <div class="links">
-            <a class="ext" href="https://cpinan.github.io/mis-mascotas/">Open site</a>
-            <a class="ext" href="https://github.com/cpinan/mis-mascotas">Source</a>
+            <a class="ext" href="https://cpinan.github.io/mis-mascotas/"><span class="en">Open site</span><span class="es">Abrir sitio</span></a>
+            <a class="ext" href="https://github.com/cpinan/mis-mascotas"><span class="en">Source</span><span class="es">Código</span></a>
           </div>
         </div>
       </article>
 
       <article class="card">
-        <div class="cover contain">
-          <img src="/assets/covers/tempest.jpg" alt="Tempest screenshots" loading="lazy" width="880" height="430">
-        </div>
+        <div class="cover contain"><img src="/assets/covers/tempest.jpg" alt="Tempest" loading="lazy" width="880" height="430"></div>
         <div class="body">
-          <h3><a class="ext" href="https://cpinan.github.io/Tempest-Jetpack-Compose/tutorial.html">Building Tempest — tutorial</a></h3>
+          <h3><a class="ext" href="https://cpinan.github.io/Tempest-Jetpack-Compose/tutorial.html"><span class="en">Building Tempest — tutorial</span><span class="es">Construyendo Tempest — tutorial</span></a></h3>
           <p>
-            A 19-chapter written tutorial that builds Atari's Tempest from an empty
-            Compose project up to a finished game. Reads in the browser.
+            <span class="en">A 19-chapter written tutorial that builds Atari's Tempest from an empty Compose project up to a finished game.</span>
+            <span class="es">Un tutorial escrito de 19 capítulos que construye el Tempest de Atari desde un proyecto Compose vacío hasta el juego terminado.</span>
           </p>
           <div class="links">
-            <a class="ext" href="https://cpinan.github.io/Tempest-Jetpack-Compose/tutorial.html">Read it</a>
+            <a class="ext" href="https://cpinan.github.io/Tempest-Jetpack-Compose/tutorial.html"><span class="en">Read it</span><span class="es">Leerlo</span></a>
           </div>
         </div>
       </article>
@@ -411,125 +538,346 @@
 
   <!-- ================= OPEN SOURCE ================= -->
   <section id="open-source">
-    <div class="sec-head"><h2>Open source</h2><span class="count">5</span></div>
+    <p class="kicker"><span class="en">Open source</span><span class="es">Código abierto</span></p>
+    <h2><span class="en">Repositories I wrote</span><span class="es">Repositorios que escribí</span></h2>
     <p class="sec-note">
-      Projects that never went to a store — experiments, rewrites and one plugin that
-      turned out to be more useful to other people than to me.
+      <span class="en">95+ public repos on GitHub, 60 of them written by me, 150+ stars, Arctic Code Vault contributor. These ten are the ones worth your time, ordered by how much use they've seen — the rest are listed by theme below.</span>
+      <span class="es">Más de 95 repos públicos en GitHub, 60 escritos por mí, 150+ estrellas y contribuidor del Arctic Code Vault. Estos diez son los que valen tu tiempo, ordenados por el uso que han tenido — el resto está listado por tema más abajo.</span>
     </p>
 
-    <div class="grid">
+    <ul class="repos">
 
-      <article class="card">
-        <div class="cover contain">
-          <img src="/assets/covers/tempest.jpg" alt="Tempest for Android screenshots" loading="lazy" width="880" height="430">
-        </div>
-        <div class="body">
-          <h3><a class="ext" href="https://github.com/cpinan/Tempest-Jetpack-Compose">Tempest — Jetpack Compose</a></h3>
-          <p>
-            Atari's Tempest (1981) rebuilt for Android in Kotlin and Jetpack Compose. The
-            vector tube is drawn on a Compose Canvas, state runs through a pure MVI
-            reducer, and the whole thing is documented as a 19-chapter tutorial.
-          </p>
-          <ul class="tags"><li>Kotlin</li><li>Compose Canvas</li><li>MVI</li></ul>
-          <div class="links">
-            <a class="ext" href="https://github.com/cpinan/Tempest-Jetpack-Compose">Repository</a>
-            <a class="ext" href="https://cpinan.github.io/Tempest-Jetpack-Compose/tutorial.html">Tutorial</a>
-          </div>
-        </div>
-      </article>
+      <li>
+        <a class="name" href="https://github.com/cpinan/Cocos2dX_GooglePlayGamesServices">Cocos2dX_GooglePlayGamesServices</a>
+        <span class="meta">64 ★ · 48 forks · C++</span>
+        <span class="desc">
+          <span class="en">Android plugin wiring Google Play Games Services — sign-in, achievements, leaderboards — into cocos2d-x through a C++/JNI bridge. My most-used repo, and the reason strangers still email me about JNI.</span>
+          <span class="es">Plugin de Android que conecta Google Play Games Services — inicio de sesión, logros, tablas de líderes — con cocos2d-x mediante un puente C++/JNI. Mi repo más usado, y la razón por la que aún me escriben desconocidos sobre JNI.</span>
+        </span>
+      </li>
 
-      <article class="card">
-        <div class="cover contain">
-          <img src="/assets/covers/brickbreaker.gif" alt="Brick Breaker gameplay" loading="lazy" width="600" height="277">
-        </div>
-        <div class="body">
-          <h3><a class="ext" href="https://github.com/cpinan/BrickBreakerAndroidProject">Brick Breaker</a></h3>
-          <p>
-            A brick breaker written from scratch on an Android canvas — no engine, no
-            physics library. Collision, levels and the game loop are all hand-rolled
-            Kotlin.
-          </p>
-          <ul class="tags"><li>Kotlin</li><li>Canvas</li><li>From scratch</li></ul>
-          <div class="links">
-            <a class="ext" href="https://github.com/cpinan/BrickBreakerAndroidProject">Repository</a>
-          </div>
-        </div>
-      </article>
+      <li>
+        <a class="name" href="https://github.com/cpinan/Android-Jetpack-Compose-Documentation">Android-Jetpack-Compose-Documentation</a>
+        <span class="meta">23 ★ · Kotlin</span>
+        <span class="desc">
+          <span class="en">Working notes and runnable samples from learning Jetpack Compose while it was still in beta — layout, state, animation and theming, each as compiling code rather than prose.</span>
+          <span class="es">Notas y ejemplos ejecutables de aprender Jetpack Compose cuando aún estaba en beta — layout, estado, animación y theming, cada uno como código que compila y no como prosa.</span>
+        </span>
+      </li>
 
-      <article class="card">
-        <div class="cover pad" style="background: linear-gradient(160deg, #101a2e, #1d3557);">
-          <img src="/assets/icons/turbo-race.png" alt="" loading="lazy" width="192" height="192">
-        </div>
-        <div class="body">
-          <h3><a class="ext" href="https://github.com/cpinan/BTEndlessTunnel">BT Endless Tunnel</a></h3>
-          <p>
-            The original Turbo Race: a cocos2d-x C++ game that shipped on both the App
-            Store and Google Play, with Game Center, Play Games and Facebook wired in.
-            MIT-licensed and still the ancestor of the Godot rewrite above.
-          </p>
-          <ul class="tags"><li>C++</li><li>cocos2d-x</li><li>iOS + Android</li></ul>
-          <div class="links">
-            <a class="ext" href="https://github.com/cpinan/BTEndlessTunnel">Repository</a>
-            <a href="/turbo-race/">The rewrite</a>
-          </div>
-        </div>
-      </article>
+      <li>
+        <a class="name" href="https://github.com/cpinan/OpenGLES-Compendium">OpenGLES-Compendium</a>
+        <span class="meta">13 ★ · Kotlin</span>
+        <span class="desc">
+          <span class="en">A compendium of 3D rendering on Android: canvas and OpenGL ES examples building up from a triangle to lit, textured meshes.</span>
+          <span class="es">Un compendio de renderizado 3D en Android: ejemplos con canvas y OpenGL ES que van del triángulo a mallas texturizadas con iluminación.</span>
+        </span>
+      </li>
 
-      <article class="card">
-        <div class="cover pad" style="background: linear-gradient(160deg, #f6ede2, #e8d5bd);">
-          <img src="/assets/icons/mis-mascotas.png" alt="" loading="lazy" width="192" height="192" style="border-radius: 24px;">
-        </div>
-        <div class="body">
-          <h3><a class="ext" href="https://github.com/cpinan/mis-mascotas">Mis Mascotas</a></h3>
-          <p>
-            Static memorial PWA for pets: mobile-first, installable, offline via a service
-            worker, photos pulled from Google Drive or served locally. Adding a pet is a
-            folder and a JSON file.
-          </p>
-          <ul class="tags"><li>JavaScript</li><li>PWA</li><li>GitHub Pages</li></ul>
-          <div class="links">
-            <a class="ext" href="https://github.com/cpinan/mis-mascotas">Repository</a>
-            <a class="ext" href="https://cpinan.github.io/mis-mascotas/">Live site</a>
-          </div>
-        </div>
-      </article>
+      <li>
+        <a class="name" href="https://github.com/cpinan/BTEndlessTunnel">BTEndlessTunnel</a>
+        <span class="meta">9 ★ · 10 forks · C++</span>
+        <span class="desc">
+          <span class="en">The original Turbo Race: a cocos2d-x game that shipped on both the App Store and Google Play, with Game Center, Play Games and Facebook wired in. MIT-licensed, and the ancestor of the Godot rewrite.</span>
+          <span class="es">El Turbo Race original: un juego en cocos2d-x publicado en App Store y Google Play, con Game Center, Play Games y Facebook integrados. Licencia MIT, y el antecesor de la versión en Godot.</span>
+        </span>
+      </li>
 
-      <article class="card">
-        <div class="cover pad" style="background: linear-gradient(160deg, #2a1330, #5b2a6e);">
-          <svg viewBox="0 0 120 60" width="192" height="96" role="img" aria-label="cocos2d-x plugin">
-            <rect x="4" y="10" width="52" height="40" rx="6" fill="none" stroke="#e6d8f5" stroke-width="2.5"/>
-            <rect x="64" y="10" width="52" height="40" rx="6" fill="none" stroke="#e6d8f5" stroke-width="2.5"/>
-            <path d="M56 30h8M56 24h8M56 36h8" stroke="#c9a6e8" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="30" cy="30" r="9" fill="none" stroke="#c9a6e8" stroke-width="2.5"/>
-            <path d="M80 38l10-16 10 16z" fill="none" stroke="#c9a6e8" stroke-width="2.5" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="body">
-          <h3><a class="ext" href="https://github.com/cpinan/Cocos2dX_GooglePlayGamesServices">cocos2d-x · Play Games Services</a></h3>
-          <p>
-            An Android plugin that wires Google Play Games Services — sign-in, achievements,
-            leaderboards — into cocos2d-x through a C++ bridge. My most-starred repo, and
-            the reason strangers still email me about JNI.
-          </p>
-          <ul class="tags"><li>C++</li><li>JNI</li><li>64 ★</li></ul>
-          <div class="links">
-            <a class="ext" href="https://github.com/cpinan/Cocos2dX_GooglePlayGamesServices">Repository</a>
-          </div>
-        </div>
-      </article>
+      <li>
+        <a class="name" href="https://github.com/cpinan/Tempest-Jetpack-Compose">Tempest-Jetpack-Compose</a>
+        <span class="meta">Kotlin · <span class="en">tutorial</span><span class="es">tutorial</span></span>
+        <span class="desc">
+          <span class="en">Atari's Tempest (1981) rebuilt for Android: the vector tube drawn on a Compose Canvas, state through a pure MVI reducer, and the whole build documented as a 19-chapter tutorial.</span>
+          <span class="es">El Tempest de Atari (1981) rehecho para Android: el túnel vectorial dibujado sobre un Canvas de Compose, el estado en un reducer MVI puro y todo el proceso documentado en un tutorial de 19 capítulos.</span>
+        </span>
+      </li>
 
+      <li>
+        <a class="name" href="https://github.com/cpinan/Corta-Spam">Corta-Spam</a>
+        <span class="meta">Kotlin · MIT · <span class="en">on Google Play</span><span class="es">en Google Play</span></span>
+        <span class="desc">
+          <span class="en">The call blocker above, in full. A rule engine over Android's CallScreeningService with an offline spam list — and no internet permission at all.</span>
+          <span class="es">El bloqueador de llamadas de arriba, completo. Un motor de reglas sobre el CallScreeningService de Android con lista de spam offline — y sin ningún permiso de internet.</span>
+        </span>
+      </li>
+
+      <li>
+        <a class="name" href="https://github.com/cpinan/BrickBreakerAndroidProject">BrickBreakerAndroidProject</a>
+        <span class="meta">6 ★ · Kotlin</span>
+        <span class="desc">
+          <span class="en">A brick breaker written from scratch on an Android canvas — no engine, no physics library. Collision, levels and the game loop are all hand-rolled.</span>
+          <span class="es">Un brick breaker escrito desde cero sobre un canvas de Android — sin motor ni librería de física. Colisiones, niveles y game loop hechos a mano.</span>
+        </span>
+      </li>
+
+      <li>
+        <a class="name" href="https://github.com/cpinan/Raycasting-Android-Kotlin">Raycasting-Android-Kotlin</a>
+        <span class="meta">5 ★ · Kotlin</span>
+        <span class="desc">
+          <span class="en">A Wolfenstein-style raycasting renderer in pure Kotlin: DDA ray traversal, wall texturing and a first-person camera, drawn column by column.</span>
+          <span class="es">Un renderizador por raycasting estilo Wolfenstein en Kotlin puro: recorrido DDA de rayos, texturizado de muros y cámara en primera persona, dibujado columna por columna.</span>
+        </span>
+      </li>
+
+      <li>
+        <a class="name" href="https://github.com/cpinan/turbo-race-godot">turbo-race-godot</a>
+        <span class="meta">GDScript · <span class="en">plays in browser</span><span class="es">juega en el navegador</span></span>
+        <span class="desc">
+          <span class="en">The Godot 4 remake of Turbo Race: GDScript gameplay, Play Games integration on Android and a WebAssembly export served from this same site.</span>
+          <span class="es">El remake de Turbo Race en Godot 4: gameplay en GDScript, integración con Play Games en Android y una exportación a WebAssembly servida desde este mismo sitio.</span>
+        </span>
+      </li>
+
+      <li>
+        <a class="name" href="https://github.com/cpinan/mis-mascotas">mis-mascotas</a>
+        <span class="meta">JavaScript · PWA</span>
+        <span class="desc">
+          <span class="en">Static memorial PWA for pets: mobile-first, installable, offline via a service worker. Adding a pet is a folder and a JSON file — no backend, no build step.</span>
+          <span class="es">PWA memorial estática para mascotas: mobile-first, instalable y offline con un service worker. Agregar una mascota es una carpeta y un archivo JSON — sin backend ni build.</span>
+        </span>
+      </li>
+
+    </ul>
+
+    <div class="more">
+      <h3>
+        <span class="en">Also on GitHub</span>
+        <span class="es">También en GitHub</span>
+      </h3>
+      <p class="more-note">
+        <span class="en">The other 49 repositories I wrote, by theme. Some are talk and workshop sources, some are practice — where a repo follows a book, a course or someone else's game, it says so.</span>
+        <span class="es">Los otros 49 repositorios que escribí, por tema. Algunos son fuentes de charlas y talleres, otros son práctica — cuando un repo sigue un libro, un curso o el juego de otra persona, lo dice.</span>
+      </p>
+
+      <div class="morelist">
+
+        <h4><span class="en">Graphics &amp; 3D on Android</span><span class="es">Gráficos y 3D en Android</span></h4>
+        <p>
+          <a href="https://github.com/cpinan/Maze-3D">Maze-3D</a> ·
+          <a href="https://github.com/cpinan/OpenGLES-32-Samples-App">OpenGLES-32-Samples-App</a> ·
+          <a href="https://github.com/cpinan/OpenGLES2-Android">OpenGLES2-Android</a> ·
+          <a href="https://github.com/cpinan/Android-Cube-OpenGLES-2">Android-Cube-OpenGLES-2</a> ·
+          <a href="https://github.com/cpinan/Android-Canvas-Spritesheet">Android-Canvas-Spritesheet</a> ·
+          <a href="https://github.com/cpinan/3D-Graphics-Engine">3D-Graphics-Engine</a> ·
+          <a href="https://github.com/cpinan/Frogger">Frogger</a> ·
+          <a href="https://github.com/cpinan/AndroidStudioAndengine">AndroidStudioAndengine</a> ·
+          <a href="https://github.com/cpinan/OpenGL-ES-2.0-Android-to-Kotlin">OpenGL-ES-2.0-Android-to-Kotlin</a> <span class="tagnote"><span class="en">(book, ported to Kotlin)</span><span class="es">(libro, portado a Kotlin)</span></span> ·
+          <a href="https://github.com/cpinan/Mobile-3D-Game-Development-From-Start-To-Market">Mobile-3D-Game-Development</a> <span class="tagnote"><span class="en">(book source)</span><span class="es">(código de libro)</span></span>
+        </p>
+
+        <h4><span class="en">cocos2d-x &amp; the C++ years</span><span class="es">cocos2d-x y los años de C++</span></h4>
+        <p>
+          <a href="https://github.com/cpinan/Turbo-Race">Turbo-Race</a> <span class="tagnote"><span class="en">(the 2012 game, updated to cocos2d-x 4.0)</span><span class="es">(el juego de 2012, actualizado a cocos2d-x 4.0)</span></span> ·
+          <a href="https://github.com/cpinan/TweeJumpCocos2dx">TweeJumpCocos2dx</a> <span class="tagnote"><span class="en">(12 ★ — my cocos2d-x port of haqu's TweeJump)</span><span class="es">(12 ★ — mi port a cocos2d-x del TweeJump de haqu)</span></span> ·
+          <a href="https://github.com/cpinan/SneakyInput-Cocos2dx-2.0.x">SneakyInput-Cocos2dx-2.0.x</a> <span class="tagnote"><span class="en">(2 ★, 13 forks — my fix of the joystick lib for v2.0.x)</span><span class="es">(2 ★, 13 forks — mi arreglo de la librería de joystick para v2.0.x)</span></span>
+        </p>
+
+        <h4><span class="en">Talks &amp; workshops — GDG Lima, 2012–2019</span><span class="es">Charlas y talleres — GDG Lima, 2012–2019</span></h4>
+        <p>
+          <a href="https://github.com/cpinan/DevFestLima2012_AndroidGame">DevFestLima2012_AndroidGame</a> ·
+          <a href="https://github.com/cpinan/GameDevConferenceLima15Julio">GameDevConferenceLima15Julio</a> ·
+          <a href="https://github.com/cpinan/WorkshopAndroidGame2012">WorkshopAndroidGame2012</a> ·
+          <a href="https://github.com/cpinan/GDayX">GDayX</a> ·
+          <a href="https://github.com/cpinan/AndroidPE">AndroidPE</a> ·
+          <a href="https://github.com/cpinan/DartSaltarin">DartSaltarin</a> ·
+          <a href="https://github.com/cpinan/CalculadoraDart">CalculadoraDart</a> ·
+          <a href="https://github.com/cpinan/01-Introduccion-SRC">01-Introduccion-SRC</a>,
+          <a href="https://github.com/cpinan/02-Fisica-Basica">02-Fisica-Basica</a>,
+          <a href="https://github.com/cpinan/03-Colisiones-Basicas">03-Colisiones-Basicas</a>
+          <span class="tagnote"><span class="en">(my "game dev from zero" course, in Spanish)</span><span class="es">(mi curso «desarrollo de juegos desde cero», en español)</span></span> ·
+          <a href="https://github.com/cpinan/Android-Jetpack-Composer">Android-Jetpack-Composer</a> ·
+          <a href="https://github.com/cpinan/CameraX-and-MLKit">CameraX-and-MLKit</a> <span class="tagnote"><span class="en">(Kotlin Everywhere)</span><span class="es">(Kotlin Everywhere)</span></span>
+        </p>
+
+        <h4><span class="en">HTML5 games, 2013–2014</span><span class="es">Juegos HTML5, 2013–2014</span></h4>
+        <p>
+          <a href="https://github.com/cpinan/SnakeHTML5">SnakeHTML5</a> ·
+          <a href="https://github.com/cpinan/TetrisHTML5">TetrisHTML5</a> ·
+          <a href="https://github.com/cpinan/Bomberman">Bomberman</a> ·
+          <a href="https://github.com/cpinan/PlatformerExampleHTML5">PlatformerExampleHTML5</a> ·
+          <a href="https://github.com/cpinan/box2d">box2d</a>
+        </p>
+
+        <h4><span class="en">Compose, Android platform &amp; web</span><span class="es">Compose, plataforma Android y web</span></h4>
+        <p>
+          <a href="https://github.com/cpinan/Basic-Bluetooth-Compose-Chat">Basic-Bluetooth-Compose-Chat</a> ·
+          <a href="https://github.com/cpinan/Jetpack-Compose-Challenge-Week-1">Jetpack-Compose-Challenge-Week-1</a>,
+          <a href="https://github.com/cpinan/Jetpack-Compose-Challenge-Week-2">Week-2</a> ·
+          <a href="https://github.com/cpinan/AndroidDevChallenge">AndroidDevChallenge</a> ·
+          <a href="https://github.com/cpinan/Pokedex">Pokedex</a> <span class="tagnote"><span class="en">(follows a video series)</span><span class="es">(sigue una serie de videos)</span></span> ·
+          <a href="https://github.com/cpinan/Android-Template-Libraries">Android-Template-Libraries</a> ·
+          <a href="https://github.com/cpinan/Android-Associate-Developer-Training">Android-Associate-Developer-Training</a> ·
+          <a href="https://github.com/cpinan/AugmentedReality">AugmentedReality</a> ·
+          <a href="https://github.com/cpinan/GoogleMobileVision">GoogleMobileVision</a> ·
+          <a href="https://github.com/cpinan/pokestats-pwa">pokestats-pwa</a> ·
+          <a href="https://github.com/cpinan/Ionic-Practice">Ionic-Practice</a>
+        </p>
+
+        <h4><span class="en">Algorithms &amp; coursework</span><span class="es">Algoritmos y cursos</span></h4>
+        <p>
+          <a href="https://github.com/cpinan/Algorithms-Practice">Algorithms-Practice</a> ·
+          <a href="https://github.com/cpinan/Leetcode-Solutions">Leetcode-Solutions</a> ·
+          <a href="https://github.com/cpinan/Kotlin-for-Java-Developers">Kotlin-for-Java-Developers</a> ·
+          <a href="https://github.com/cpinan/AndroidNanodegree">AndroidNanodegree</a>,
+          <a href="https://github.com/cpinan/CapstoneProject">CapstoneProject</a>,
+          <a href="https://github.com/cpinan/android_spotify_streamer">android_spotify_streamer</a> ·
+          <a href="https://github.com/cpinan/Advanced-Android-Updated">Advanced-Android-Updated</a>,
+          <a href="https://github.com/cpinan/Android-Kotlin-Advanced">Android-Kotlin-Advanced</a>
+          <span class="tagnote"><span class="en">(Udacity courses, updated to current APIs)</span><span class="es">(cursos de Udacity, actualizados a APIs actuales)</span></span>
+        </p>
+
+      </div>
+
+      <p class="more-all">
+        <a class="ext" href="https://github.com/cpinan?tab=repositories&amp;type=source">
+          <span class="en">Browse all 60 repositories I authored on GitHub</span>
+          <span class="es">Ver los 60 repositorios que escribí en GitHub</span>
+        </a>
+      </p>
     </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience">
+    <p class="kicker"><span class="en">Experience</span><span class="es">Experiencia</span></p>
+    <h2><span class="en">Where I've been</span><span class="es">Dónde he estado</span></h2>
+    <p class="sec-note">
+      <span class="en">From cocos2d-x games in Lima to WhatsApp media infrastructure in London.</span>
+      <span class="es">De juegos en cocos2d-x en Lima a la infraestructura de medios de WhatsApp en Londres.</span>
+    </p>
+
+    <ul class="timeline">
+
+      <li>
+        <span class="when">2022 — 2026</span>
+        <div>
+          <h3>Meta <span class="role">· <span class="en">Software Engineer IC4 → IC6 (Staff) · London</span><span class="es">Software Engineer IC4 → IC6 (Staff) · Londres</span></span></h3>
+          <p>
+            <span class="en">WhatsApp media infrastructure: photos, videos, files and stickers for 2B+ users. Tech lead for Sticker Maker (global launch Apr 2024). Modularized the media stack, migrated Android 13 granular media permissions, shipped Google Photo Picker, led a PyTorch → ExecuTorch on-device model migration, fixed ANRs and deadlocks, ran 50+ A/B experiments, mentored IC3–IC5 engineers.</span>
+            <span class="es">Infraestructura de medios de WhatsApp: fotos, videos, archivos y stickers para más de 2 mil millones de usuarios. Tech lead de Sticker Maker (lanzamiento global en abril de 2024). Modularicé el stack de medios, migré los permisos granulares de Android 13, publiqué Google Photo Picker, lideré la migración de un modelo en dispositivo de PyTorch a ExecuTorch, corregí ANRs y deadlocks, corrí más de 50 experimentos A/B y mentoricé a ingenieros IC3–IC5.</span>
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="when">2021 — 2022</span>
+        <div>
+          <h3>Distillery <span class="role">· <span class="en">Android Engineer, embedded with Thrive Market · Lima</span><span class="es">Android Engineer, integrado en Thrive Market · Lima</span></span></h3>
+          <p>
+            <span class="en">Implemented Clean Architecture across the codebase, migrated key screens from XML to Jetpack Compose, and designed the full Amplitude analytics system — events, user properties, funnels. Fixed bugs upstream in Amplitude's Android SDK with their team.</span>
+            <span class="es">Implementé Clean Architecture en todo el código, migré pantallas clave de XML a Jetpack Compose y diseñé el sistema completo de analítica con Amplitude — eventos, propiedades de usuario y funnels. Corregí bugs upstream en el SDK Android de Amplitude junto a su equipo.</span>
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="when">2020 — 2022</span>
+        <div>
+          <h3>Globant <span class="role">· <span class="en">Android Mobile Architect · Lima</span><span class="es">Android Mobile Architect · Lima</span></span></h3>
+          <p>
+            <span class="en">Architect on a large white-label banking platform for FIS, deployed across major US financial institutions. Automated build and release with custom Gradle tasks and Python, cut compile times, and set the Android technical standards across Location, Payments, Withdrawals, Login and Accounts.</span>
+            <span class="es">Arquitecto en una gran plataforma bancaria white-label para FIS, desplegada en varias instituciones financieras de EE. UU. Automaticé build y release con tareas Gradle propias y Python, reduje tiempos de compilación y definí los estándares técnicos de Android en Location, Payments, Withdrawals, Login y Accounts.</span>
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="when">2015 — 2020</span>
+        <div>
+          <h3>Belatrix Software <span class="role">· <span class="en">Senior Android → Subject Matter Expert · Lima</span><span class="es">Senior Android → Subject Matter Expert · Lima</span></span></h3>
+          <p>
+            <span class="en">Android SME on FIS. Designed the Android architecture, implemented server-driven UI for backend-configured screens, led technical interviews across the organization, and ran production monitoring with Firebase Crashlytics and Jenkins CI/CD.</span>
+            <span class="es">SME de Android en FIS. Diseñé la arquitectura Android, implementé server-driven UI para pantallas configuradas desde el backend, lideré entrevistas técnicas en toda la organización y monitoreé producción con Firebase Crashlytics y CI/CD en Jenkins.</span>
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="when">2011 — 2015</span>
+        <div>
+          <h3>NorthSouth Studios <span class="role">· <span class="en">Game Developer → Lead Mobile Developer · Lima</span><span class="es">Game Developer → Lead Mobile Developer · Lima</span></span></h3>
+          <p>
+            <span class="en">Cross-platform games in C++ with cocos2d-x, HTML5 games with cocos2d-html5, and Android development. Where the graphics and game-loop work started.</span>
+            <span class="es">Juegos multiplataforma en C++ con cocos2d-x, juegos HTML5 con cocos2d-html5 y desarrollo Android. Donde empezó todo el trabajo de gráficos y game loops.</span>
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <span class="when">2005 — 2009</span>
+        <div>
+          <h3><span class="en">Universidad Privada Telesup</span><span class="es">Universidad Privada Telesup</span> <span class="role">· <span class="en">Ingeniero de Sistemas — Computer Software Engineering</span><span class="es">Ingeniero de Sistemas</span></span></h3>
+          <p>
+            <span class="en">Also: Certified Scrum Master, Kotlin for Java Developers (JetBrains), Algorithmic Toolbox and Advanced Data Structures in Java (UC San Diego). Spanish native, English full professional.</span>
+            <span class="es">Además: Certified Scrum Master, Kotlin for Java Developers (JetBrains), Algorithmic Toolbox y Advanced Data Structures in Java (UC San Diego). Español nativo, inglés profesional completo.</span>
+          </p>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="cta" id="contact">
+    <h2><span class="en">Shall we work together?</span><span class="es">¿Trabajamos juntos?</span></h2>
+    <p class="sec-note">
+      <span class="en">Open to senior / staff Android and KMM roles, remote from Lima. Also happy to talk about games, OpenGL, or why your app ANRs on cold start.</span>
+      <span class="es">Abierto a roles senior / staff de Android y KMM, en remoto desde Lima. También me encanta hablar de juegos, OpenGL o de por qué tu app hace ANR en el arranque en frío.</span>
+    </p>
+    <p class="mail"><a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
   </section>
 
   <footer>
     <p>
-      Support and enquiries:
-      <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>
+      <a class="ext" href="https://github.com/cpinan">github.com/cpinan</a> ·
+      <a class="ext" href="https://www.linkedin.com/in/cpinan">linkedin.com/in/cpinan</a>
     </p>
-    <p>More code at <a class="ext" href="https://github.com/cpinan">github.com/cpinan</a></p>
     <p>© 2026 Carlos Eduardo Piñán Indacochea</p>
   </footer>
 
 </div>
+
+<script>
+  (function () {
+    var META = {
+      en: {
+        title: "Carlos Piñán — Staff Android Engineer",
+        desc: "Carlos Piñán — Staff Android engineer. 14+ years building mobile software, most recently WhatsApp media infrastructure at Meta. Kotlin, Jetpack Compose, KMM, games and open source."
+      },
+      es: {
+        title: "Carlos Piñán — Staff Android Engineer",
+        desc: "Carlos Piñán — ingeniero Android Staff. Más de 14 años de software móvil, recientemente en la infraestructura de medios de WhatsApp en Meta. Kotlin, Jetpack Compose, KMM, juegos y open source."
+      }
+    };
+    var buttons = document.querySelectorAll('[data-setlang]');
+    var descTag = document.querySelector('meta[name="description"]');
+
+    function apply(lang, persist) {
+      if (lang !== 'es') lang = 'en';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+      document.title = META[lang].title;
+      if (descTag) descTag.setAttribute('content', META[lang].desc);
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.setlang === lang));
+      });
+      if (persist) {
+        try { localStorage.setItem('lang', lang); } catch (e) {}
+        var url = new URL(location.href);
+        url.searchParams.set('lang', lang);
+        history.replaceState(null, '', url);
+      }
+    }
+
+    var initial = new URL(location.href).searchParams.get('lang');
+    if (!initial) { try { initial = localStorage.getItem('lang'); } catch (e) {} }
+    if (!initial) initial = (navigator.language || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+    apply(initial, false);
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.dataset.setlang, true); });
+    });
+  })();
+</script>
 </body>
 </html>

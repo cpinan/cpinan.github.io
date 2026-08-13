@@ -2,9 +2,16 @@
 
 **Live site: <https://cpinan.github.io/>**
 
-GitHub Pages site: my **portfolio** plus the landing pages and privacy policies for
-every app. Static HTML only — no build step, no dependencies. Push to `main` and
-GitHub Pages publishes it at that URL within a minute or two.
+GitHub Pages site: my **portfolio / CV**, in English and Spanish, plus the landing
+pages and privacy policies for every app. Static HTML only — no build step, no
+dependencies. Push to `main` and GitHub Pages publishes it at that URL within a minute
+or two.
+
+Preview it locally with a server, not `file://` — asset paths are absolute:
+
+```sh
+python3 -m http.server 8777    # then open http://127.0.0.1:8777/?lang=es
+```
 
 Each app gets a folder with two pages:
 
@@ -42,18 +49,31 @@ name here would be dead content that never gets served.
 
 ### Root
 
-- **`index.html`** — Site root, and the **portfolio**. Three sections: *Android apps*
-  (cover image, description, Play link, landing page, privacy policy), *Open it in a
-  browser* (things with a live URL — the Turbo Race web build, the Mis Mascotas PWA,
-  the Tempest tutorial) and *Open source* (GitHub-only projects). This is also the
-  **developer website** URL that the Play Console listings and AdMob's `app-ads.txt`
-  crawler resolve to, so it has to stay a real page — it must not become a redirect
-  again.
+- **`index.html`** — Site root, and the **portfolio / CV page**, in English and
+  Spanish. Sections: hero headline (drawn from the LinkedIn profile — Staff Engineer
+  at Meta, WhatsApp media infrastructure), *What I do* (four areas), *Apps on Google
+  Play* (cover image, description, Play link, landing page, privacy policy), *Open it
+  in a browser* (things with a live URL — the Turbo Race web build, the Mis Mascotas
+  PWA, the Tempest tutorial), *Repositories I wrote* (the ten worth reading, then an
+  *Also on GitHub* block grouping the other 49 self-authored repos by theme — forks are
+  excluded, and repos that follow a book, course or someone else's game say so
+  inline), an experience timeline and a contact block. This is also
+  the **developer website** URL that the Play Console listings and AdMob's
+  `app-ads.txt` crawler resolve to, so it has to stay a real page — it must not become
+  a redirect again.
 
-  Facts on this page are hardcoded and go stale: the GitHub star count on the
-  cocos2d-x plugin card, the "5 on Google Play" hero stat, and the section counts.
-  Update them when an app goes live or is pulled. Piano Solfeo is listed **without**
-  a Play link because its listing is not public yet — add one when it is.
+  **Both languages live in this one file.** Every translated string is a
+  `<span class="en">` next to a `<span class="es">`; CSS on `html[data-lang]` hides one
+  set, and the EN/ES switch in the top bar flips the attribute, persists the choice in
+  `localStorage` and writes `?lang=` to the URL. First visit picks Spanish when
+  `navigator.language` starts with `es`. Never split this into two files — edit the
+  pair of spans together, or the two languages drift apart.
+
+  Facts on this page are hardcoded and go stale: the star counts in the repo list, the
+  hero stats (14+ years, 2B+ users, 95+ repos, 5 apps on Google Play), and the job
+  history. Update them when an app goes live or is pulled, or when a role changes.
+  Piano Solfeo is listed **without** a Play link because its listing is not public yet
+  — add one when it is.
 
   The playable Turbo Race build is **not** in this repo: the Godot web export lives
   in its own `turbo-race-godot` repo and GitHub Pages serves it at
