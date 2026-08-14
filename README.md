@@ -25,11 +25,12 @@ Each app gets a folder with two pages:
 | App | Landing page | Privacy policy | Play listing |
 | --- | --- | --- | --- |
 | Corta Spam | [/corta-spam/](https://cpinan.github.io/corta-spam/) | [/corta-spam/privacy.html](https://cpinan.github.io/corta-spam/privacy.html) | `org.carlospinan.cortaspam` |
-| Piano Solfeo | [/piano-solfeo/](https://cpinan.github.io/piano-solfeo/) | [/piano-solfeo/privacy.html](https://cpinan.github.io/piano-solfeo/privacy.html) | not public yet |
+| Piano Solfeo | [/piano-solfeo/](https://cpinan.github.io/piano-solfeo/) | [/piano-solfeo/privacy.html](https://cpinan.github.io/piano-solfeo/privacy.html) | `com.carlospinan.pianosolfeo` |
 | Retro 3D Maze | [/retro-3d-maze/](https://cpinan.github.io/retro-3d-maze/) | [/retro-3d-maze/privacy.html](https://cpinan.github.io/retro-3d-maze/privacy.html) | `com.carlospinan.maze3d` |
 | Stat Calculator | [/stat-calculator/](https://cpinan.github.io/stat-calculator/) | [/stat-calculator/privacy.html](https://cpinan.github.io/stat-calculator/privacy.html) | `com.cpinan.pokemmostats` |
 | Turbo Race | [/turbo-race/](https://cpinan.github.io/turbo-race/) | [/turbo-race/privacy.html](https://cpinan.github.io/turbo-race/privacy.html) | `com.carlos.pinan.turborace.godot` |
-| Peru Combi Rush | — | [/peru-rush-combi-privacy.html](https://cpinan.github.io/peru-rush-combi-privacy.html) | `com.carlos.pinan.perucombirush.godot` |
+| Peru Combi Rush | [/peru-combi-rush/](https://cpinan.github.io/peru-combi-rush/) | [/peru-rush-combi-privacy.html](https://cpinan.github.io/peru-rush-combi-privacy.html) *(root URL — do not move)* | `com.carlos.pinan.perucombirush.godot` |
+| Bendiciones | [/bendiciones-buenos-dias/](https://cpinan.github.io/bendiciones-buenos-dias/) | [/bendiciones-buenos-dias/privacy.html](https://cpinan.github.io/bendiciones-buenos-dias/privacy.html) | `com.cpinanbuenosdias.app` — not public yet |
 | Piano Flashcards *(renamed)* | redirect → Piano Solfeo | redirect → Piano Solfeo | — |
 
 Site root — the portfolio: <https://cpinan.github.io/>
@@ -51,7 +52,9 @@ name here would be dead content that never gets served.
 
 - **`index.html`** — Site root, and the **portfolio / CV page**, in English and
   Spanish. Sections: hero headline (drawn from the LinkedIn profile — Staff Engineer
-  at Meta, WhatsApp media infrastructure), *What I do* (four areas), *Apps on Google
+  at Meta, WhatsApp media infrastructure), *What I do* (six areas — the last two cover
+  cross-platform work in React/React Native, Flutter and iOS, and a stated willingness
+  to learn any stack and adapt to any environment), *Apps on Google
   Play* (cover image, description, Play link, landing page, privacy policy), *Open it
   in a browser* (things with a live URL — the Turbo Race web build, the Mis Mascotas
   PWA, the Tempest tutorial), *Repositories I wrote* (the ten worth reading, then an
@@ -70,10 +73,11 @@ name here would be dead content that never gets served.
   pair of spans together, or the two languages drift apart.
 
   Facts on this page are hardcoded and go stale: the star counts in the repo list, the
-  hero stats (14+ years, 2B+ users, 95+ repos, 5 apps on Google Play), and the job
+  hero stats (14+ years, 2B+ users, 95+ repos, 6 apps on Google Play), and the job
   history. Update them when an app goes live or is pulled, or when a role changes.
-  Piano Solfeo is listed **without** a Play link because its listing is not public yet
-  — add one when it is.
+  Bendiciones is listed **without** a Play link because its listing is not public yet
+  — add one when it is, and bump the app count and the *"six are live, one on its way"*
+  line in the section note.
 
   The playable Turbo Race build is **not** in this repo: the Godot web export lives
   in its own `turbo-race-godot` repo and GitHub Pages serves it at
@@ -95,6 +99,29 @@ name here would be dead content that never gets served.
   root as a single bilingual (EN/ES) page. Covers AdMob advertising ID, Firebase
   Analytics + crash logs, and optional Google Play Games sign-in. Last updated
   28 July 2026. The Play listing points at this exact URL — keep the filename.
+
+### `bendiciones-buenos-dias/` — Bendiciones (Spanish greetings for WhatsApp, KMP)
+
+- **`index.html`** — Landing page in Spanish with an English summary section. Good
+  morning / afternoon / night greetings to send over WhatsApp: photos with a phrase,
+  animated GIFs from KLIPY and GIPHY, sticker packs built in-app, optional Bible
+  verses, 160+ bundled phrases that work offline, favourites and a daily streak.
+  Interface in Spanish, English and Brazilian Portuguese; greetings always Spanish.
+- **`privacy.html`** — Policy for the app.
+- **Not on Google Play yet.** `applicationId` is `com.cpinanbuenosdias.app`, Play title
+  *"Bendiciones: Buenos Días"*. The portfolio card says so out loud and carries no Play
+  link — swap in the link once the listing is public.
+
+### `peru-combi-rush/` — Peru Combi Rush (endless runner, Godot 4)
+
+- **`index.html`** — Landing page in Spanish with an English summary. Pseudo-3D combi
+  runner: lane switching, potholes/cones/ditches, checkpoint-based difficulty ramp,
+  Play Games leaderboards and achievements, procedural audio. Written after the app
+  shipped, so this folder exists **only** for the landing page.
+- **`privacy.html`** — A redirect stub, not a policy. The real policy is the root
+  `peru-rush-combi-privacy.html`, which is the URL registered in the Play listing and
+  cannot move. The stub exists so the folder matches the convention and so anyone who
+  guesses the folder path still lands on the policy.
 
 ### `corta-spam/` — Corta Spam (open-source call blocker, Android)
 
@@ -118,12 +145,18 @@ name here would be dead content that never gets served.
 
 ### `piano-flashcards/` — legacy redirect folder
 
-The app was renamed from *Piano Flashcards* to *Piano Solfeo*, but the old
-privacy URL was already live in the Play listing and elsewhere. Both
-**`index.html`** and **`privacy.html`** are identical stub pages: a canonical
-link plus a meta-refresh to `https://cpinan.github.io/piano-solfeo/privacy.html`,
-with a one-line note that the app changed its name. No content of their own.
-Keep them until the old URL is provably unreferenced.
+**This is not a duplicate of `piano-solfeo/` — it is a redirect.** The app was renamed
+from *Piano Flashcards* to *Piano Solfeo*, but the old privacy URL was already live in
+the Play listing and elsewhere, so the old path has to keep answering. Both files are
+stub pages with no content of their own: a canonical link plus a meta-refresh.
+
+| file | redirects to |
+| --- | --- |
+| `index.html` | `https://cpinan.github.io/piano-solfeo/` (the landing page) |
+| `privacy.html` | `https://cpinan.github.io/piano-solfeo/privacy.html` |
+
+Keep them until the old URL is provably unreferenced. Deleting the folder would 404 an
+address that is already published.
 
 ### `retro-3d-maze/` — Retro 3D Maze (maze screen saver / game, Android)
 
@@ -170,8 +203,9 @@ Keep them until the old URL is provably unreferenced.
 
 ## Conventions
 
-- **Folder per app**, lowercase kebab-case, matching the app name. New apps follow
-  this; only Peru Combi Rush predates it.
+- **Folder per app**, lowercase kebab-case, matching the app name. Every app has one.
+  Peru Combi Rush predates the convention, so its folder holds the landing page while
+  its policy stays at the root path the Play listing already points to.
 - **`index.html` = landing, `privacy.html` = policy.** Play Console gets the
   `privacy.html` URL.
 - **Bilingual policies.** Every policy carries both English and Spanish, in full,
