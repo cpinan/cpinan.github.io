@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pocket Kit — Política de Privacidad / Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f7f8fa; --surface: #ffffff; --ink: #1a1c1f; --muted: #5a6069;
+    --brand: #1f6feb; --line: #e2e5ea; --code: #eef1f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111318; --surface: #191c22; --ink: #e6e8ec; --muted: #9aa2ad;
+      --brand: #6ea8ff; --line: #272b33; --code: #1f2229;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 1.25rem 5rem; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  header.hero {
+    max-width: 46rem; margin: 0 auto; padding: 3rem 0 1.5rem;
+  }
+  .badge {
+    display: inline-block; padding: .25rem .6rem; border-radius: 999px;
+    background: var(--brand); color: #fff; font-size: .78rem; font-weight: 600;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: .8rem 0 .3rem; }
+  h2 { font-size: 1.25rem; margin: 2.4rem 0 .6rem; padding-bottom: .35rem; border-bottom: 1px solid var(--line); }
+  h3 { font-size: 1rem; margin: 1.6rem 0 .4rem; }
+  p, li { color: var(--ink); }
+  .lede { font-size: 1.08rem; color: var(--muted); }
+  .updated { color: var(--muted); font-size: .9rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  code {
+    background: var(--code); padding: .1rem .35rem; border-radius: 4px;
+    font: .88em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere;
+  }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 1rem 1.2rem; margin: 1.2rem 0;
+  }
+  .card p:first-child { margin-top: 0; }
+  .card p:last-child { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .94rem; }
+  th, td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .table-wrap { overflow-x: auto; }
+  hr.lang {
+    border: 0; border-top: 3px solid var(--brand); opacity: .35; margin: 4rem 0 0;
+  }
+  a { color: var(--brand); }
+  footer { max-width: 46rem; margin: 3rem auto 0; color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="badge">Pocket Kit</span>
+  <h1>Política de Privacidad</h1>
+  <p class="updated">Última actualización: 17 de agosto de 2026 · <code>dev.pinan.pocketkit</code></p>
+</header>
+
+<main>
+  <p class="lede">Pocket Kit no tiene cuentas, no tiene servidores propios y no envía tus fotos,
+  documentos ni videos a ninguna parte. Todo el procesamiento — recortes, PDF, stickers, cortes de
+  video — ocurre dentro de tu teléfono.</p>
+
+  <div class="card">
+    <p><strong>En una línea:</strong> los archivos que abres con Pocket Kit nunca salen del
+    dispositivo. Lo único que sale es una solicitud de anuncio y la verificación de tu compra, ambas
+    descritas abajo con detalle.</p>
+  </div>
+
+  <h2>1. Qué se guarda en tu dispositivo</h2>
+  <p>Pocket Kit guarda estos datos en su almacenamiento privado, al que ninguna otra app tiene acceso:</p>
+  <ul>
+    <li><strong>Preferencias</strong> (<code>datastore/pocket_kit.preferences_pb</code>): tema claro/oscuro,
+      idioma elegido, contadores de uso diario y el estado de tu compra en caché.</li>
+    <li><strong>Historial de Chat Link</strong>: hasta 50 números de teléfono que hayas escrito en la
+      herramienta, guardados solo para que no tengas que volver a escribirlos. Se borran todos desde
+      Ajustes → Borrar historial.</li>
+    <li><strong>Archivos de trabajo</strong>: páginas escaneadas, stickers y clips de video en
+      <code>files/scans/</code>, <code>files/stickers/</code>, <code>files/videos/</code> y
+      <code>files/exports/</code>, hasta que los elimines o desinstales la app.</li>
+    <li><strong>Idioma de la interfaz</strong> (<code>pk_locale.xml</code>), duplicado ahí porque debe
+      leerse antes de que la app termine de iniciar.</li>
+  </ul>
+  <p>Desinstalar Pocket Kit borra todo lo anterior. Los archivos que ya exportaste a
+  <em>Descargas</em> o <em>Películas</em> son tuyos y permanecen.</p>
+
+  <h2>2. Los archivos que tú eliges</h2>
+  <p>Cuando eliges una foto o un video, Pocket Kit usa el <strong>selector del sistema Android</strong>,
+  que entrega ese archivo y nada más. Por eso la app <strong>no pide permiso de almacenamiento</strong>
+  en ninguna versión de Android: no puede ver tu galería, solo lo que le entregas.</p>
+  <p>El escáner de documentos y el recorte de stickers usan modelos de Google ML Kit que se ejecutan
+  <strong>en el dispositivo</strong>. La imagen no se sube para ser analizada. La primera vez que
+  usas stickers se descarga el modelo desde los servicios de Google Play; lo que viaja es el modelo
+  hacia tu teléfono, no tu foto hacia Google.</p>
+
+  <h2>3. Qué sí sale del dispositivo</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Qué</th><th>Hacia dónde</th><th>Por qué</th></tr>
+    <tr>
+      <td>Solicitud de anuncio: identificador de publicidad, país, idioma, modelo del dispositivo</td>
+      <td>Google AdMob</td>
+      <td>Mostrar el anuncio con recompensa que desbloquea una acción gratis. Solo cuando tú tocas
+        «Ver un anuncio».</td>
+    </tr>
+    <tr>
+      <td>Estado de compra y un identificador anónimo generado por la app</td>
+      <td>Google Play Billing y RevenueCat</td>
+      <td>Validar la compra Pro y restaurarla en tu próximo teléfono. No incluye tu nombre ni tu
+        correo: Pocket Kit nunca los recibe.</td>
+    </tr>
+    <tr>
+      <td>Descarga del modelo de recorte</td>
+      <td>Servicios de Google Play</td>
+      <td>Una sola vez, para poder recortar sin conexión después.</td>
+    </tr>
+  </table>
+  </div>
+  <p>Antes de la primera solicitud de anuncio, Pocket Kit muestra el formulario de consentimiento de
+  Google (UMP). Puedes cambiar tu elección cuando quieras en Ajustes. Si eliges anuncios no
+  personalizados, se solicitan así.</p>
+
+  <h3>Copia de seguridad de Android</h3>
+  <p>Android puede subir los datos de una app a la cuenta de Google <em>del propio usuario</em>. En
+  Pocket Kit esto está <strong>excluido explícitamente</strong>: ni las preferencias, ni el historial
+  de números, ni tus archivos de trabajo se incluyen en la copia en la nube. Solo se transfieren en
+  una <strong>transferencia directa de teléfono a teléfono</strong>, cuando tú tienes ambos equipos
+  en la mano. Puedes revisar esto en <em>Ajustes → Google → Copia de seguridad</em>.</p>
+
+  <h2>4. Qué nunca se recolecta</h2>
+  <ul>
+    <li>Tus fotos, documentos, videos o stickers. Ninguno se sube nunca.</li>
+    <li>Los números de teléfono del historial de Chat Link.</li>
+    <li>Tu nombre, correo electrónico o cuenta de Google.</li>
+    <li>Tu ubicación, tus contactos, tu micrófono o tu cámara para uso propio de la app.</li>
+    <li>Analítica de comportamiento. Pocket Kit no incluye ningún SDK de analítica.</li>
+    <li>Publicidad basada en el contenido de tus archivos: el contenido nunca sale, así que no puede
+      usarse para eso.</li>
+  </ul>
+
+  <h2>5. Permisos</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Permiso</th><th>Para qué</th></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
+        <td>Anuncios, validación de compra y descarga del modelo de recorte. Nada más viaja por ahí.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td>
+        <td>Mostrar el progreso de una exportación de video. Se pide en el momento, no al abrir la app.</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>, <code>WAKE_LOCK</code></td>
+        <td>Que una exportación larga no muera si sales de la app.</td></tr>
+    <tr><td><code>AD_ID</code> y permisos de Android Ad Services</td>
+        <td>Requeridos por AdMob para el anuncio con recompensa.</td></tr>
+    <tr><td><code>com.android.vending.BILLING</code></td>
+        <td>Comprar Pocket Kit Pro dentro de Google Play.</td></tr>
+  </table>
+  </div>
+  <p>No se solicita permiso de almacenamiento, ni de cámara, ni de contactos, ni la lista de apps
+  instaladas, en ninguna versión de Android.</p>
+
+  <h2>6. Conservación</h2>
+  <p>En tu dispositivo: hasta que borres los datos o desinstales. En la nube: nada nuestro, porque no
+  hay nada nuestro. Google y RevenueCat conservan el registro de la compra según sus propias
+  políticas, necesarias para que puedas restaurarla.</p>
+
+  <h2>7. Menores</h2>
+  <p>Pocket Kit no está dirigido a menores de 13 años y no recolecta a sabiendas datos de menores. Si
+  crees que un menor a tu cargo envió información, escríbenos y la eliminaremos.</p>
+
+  <h2>8. Perú — Ley N.º 29733</h2>
+  <p>Conforme a la Ley de Protección de Datos Personales del Perú, tienes derecho de acceso,
+  rectificación, cancelación y oposición sobre tus datos personales. Como Pocket Kit no almacena
+  datos personales fuera de tu dispositivo, estos derechos se ejercen en la práctica borrando los
+  datos desde Ajustes o desinstalando la app. Para cualquier consulta:
+  <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>.</p>
+
+  <h2>9. Cambios</h2>
+  <p>Si esta política cambia, se publica aquí con una nueva fecha, y los cambios importantes se
+  anuncian en las notas de la versión de la app.</p>
+
+  <h2>10. Contacto</h2>
+  <p><a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a> · Carlos Piñán, Lima, Perú</p>
+</main>
+
+<hr class="lang">
+
+<header class="hero">
+  <span class="badge">Pocket Kit</span>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 17 August 2026 · <code>dev.pinan.pocketkit</code></p>
+</header>
+
+<main>
+  <p class="lede">Pocket Kit has no accounts, no servers of ours, and never sends your photos,
+  documents or videos anywhere. Every operation — cutouts, PDFs, stickers, video splits — happens on
+  your phone.</p>
+
+  <div class="card">
+    <p><strong>In one line:</strong> the files you open in Pocket Kit never leave the device. The only
+    things that leave are an ad request and a purchase check, both described in full below.</p>
+  </div>
+
+  <h2>1. What is stored on your device</h2>
+  <ul>
+    <li><strong>Preferences</strong> (<code>datastore/pocket_kit.preferences_pb</code>): light/dark
+      theme, chosen language, daily usage counters, and a cached copy of your purchase state.</li>
+    <li><strong>Chat Link history</strong>: up to 50 phone numbers you typed into that tool, kept only
+      so you do not have to type them again. Clear them all from Settings → Clear history.</li>
+    <li><strong>Working files</strong>: scanned pages, stickers and video clips in
+      <code>files/scans/</code>, <code>files/stickers/</code>, <code>files/videos/</code> and
+      <code>files/exports/</code>, until you delete them or uninstall.</li>
+    <li><strong>Interface language</strong> (<code>pk_locale.xml</code>), mirrored there because it has
+      to be read before the app finishes starting.</li>
+  </ul>
+  <p>Uninstalling removes all of it. Files you already exported to <em>Downloads</em> or
+  <em>Movies</em> are yours and stay.</p>
+
+  <h2>2. Files you choose</h2>
+  <p>Picking a photo or video goes through the <strong>Android system picker</strong>, which hands the
+  app that one file and nothing else. That is why Pocket Kit <strong>asks for no storage
+  permission</strong> on any Android version: it cannot see your gallery, only what you hand it.</p>
+  <p>Document scanning and sticker cutouts use Google ML Kit models that run <strong>on the
+  device</strong>. Your image is not uploaded for analysis. The first sticker cutout downloads the
+  model from Google Play services — the model travels to your phone, not your photo to Google.</p>
+
+  <h2>3. What does leave the device</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>What</th><th>Where</th><th>Why</th></tr>
+    <tr>
+      <td>Ad request: advertising ID, country, language, device model</td>
+      <td>Google AdMob</td>
+      <td>To show the rewarded ad that unlocks one free action. Only when you tap “Watch an ad”.</td>
+    </tr>
+    <tr>
+      <td>Purchase state and an anonymous app-generated identifier</td>
+      <td>Google Play Billing and RevenueCat</td>
+      <td>To validate Pro and restore it on your next phone. It carries no name or email — Pocket Kit
+        never receives them.</td>
+    </tr>
+    <tr>
+      <td>Cutout model download</td>
+      <td>Google Play services</td>
+      <td>Once, so cutouts work offline afterwards.</td>
+    </tr>
+  </table>
+  </div>
+  <p>Before the first ad request, Pocket Kit shows Google’s consent form (UMP). You can change that
+  choice at any time in Settings; choosing non-personalised ads requests them that way.</p>
+
+  <h3>Android backup</h3>
+  <p>Android can upload an app’s data to <em>the user’s own</em> Google account. In Pocket Kit this is
+  <strong>explicitly excluded</strong>: preferences, the number history and your working files are all
+  kept out of cloud backup. They move only during a <strong>direct phone-to-phone transfer</strong>,
+  with both devices in your hands. You can review this under <em>Settings → Google → Backup</em>.</p>
+
+  <h2>4. What is never collected</h2>
+  <ul>
+    <li>Your photos, documents, videos or stickers. None are ever uploaded.</li>
+    <li>The phone numbers in Chat Link history.</li>
+    <li>Your name, email address or Google account.</li>
+    <li>Your location, contacts, microphone or camera for the app’s own use.</li>
+    <li>Behavioural analytics. Pocket Kit ships no analytics SDK.</li>
+    <li>Advertising based on the content of your files — the content never leaves, so it cannot be.</li>
+  </ul>
+
+  <h2>5. Permissions</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Permission</th><th>Used for</th></tr>
+    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
+        <td>Ads, purchase validation and the cutout model download. Nothing else travels over it.</td></tr>
+    <tr><td><code>POST_NOTIFICATIONS</code></td>
+        <td>Showing video export progress. Requested in context, never at launch.</td></tr>
+    <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>, <code>WAKE_LOCK</code></td>
+        <td>Keeping a long export alive when you leave the app.</td></tr>
+    <tr><td><code>AD_ID</code> and Android Ad Services permissions</td>
+        <td>Required by AdMob for the rewarded ad.</td></tr>
+    <tr><td><code>com.android.vending.BILLING</code></td>
+        <td>Buying Pocket Kit Pro inside Google Play.</td></tr>
+  </table>
+  </div>
+  <p>No storage, camera, contacts or installed-apps permission is requested on any Android version.</p>
+
+  <h2>6. Retention</h2>
+  <p>On your device: until you clear the data or uninstall. In the cloud: nothing of ours, because
+  there is nothing of ours. Google and RevenueCat keep the purchase record under their own policies,
+  which is what makes restoring it possible.</p>
+
+  <h2>7. Children</h2>
+  <p>Pocket Kit is not directed at children under 13 and does not knowingly collect data from them. If
+  you believe a child in your care submitted information, write to us and it will be deleted.</p>
+
+  <h2>8. Peru — Law No. 29733</h2>
+  <p>Under Peru’s Personal Data Protection Law you have rights of access, rectification, cancellation
+  and objection. Since Pocket Kit stores no personal data outside your device, these are exercised in
+  practice by clearing data in Settings or uninstalling. Questions:
+  <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>.</p>
+
+  <h2>9. Changes</h2>
+  <p>Changes are published here with a new date, and anything material is called out in the app’s
+  release notes.</p>
+
+  <h2>10. Contact</h2>
+  <p><a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a> · Carlos Piñán, Lima, Peru</p>
+</main>
+
+<footer>
+  <p><a href="./">Pocket Kit</a> · <a href="terms.html">Términos / Terms</a> ·
+  Pocket Kit no está afiliado a WhatsApp LLC ni a Meta Platforms, Inc. —
+  Pocket Kit is not affiliated with WhatsApp LLC or Meta Platforms, Inc.</p>
+</footer>
+
+</body>
+</html>
