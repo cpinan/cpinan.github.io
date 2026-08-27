@@ -30,7 +30,8 @@ Each app gets a folder with two pages:
 | Stat Calculator | [/stat-calculator/](https://cpinan.github.io/stat-calculator/) | [/stat-calculator/privacy.html](https://cpinan.github.io/stat-calculator/privacy.html) | `com.cpinan.pokemmostats` |
 | Turbo Race | [/turbo-race/](https://cpinan.github.io/turbo-race/) | [/turbo-race/privacy.html](https://cpinan.github.io/turbo-race/privacy.html) | `com.carlos.pinan.turborace.godot` |
 | Peru Combi Rush | [/peru-combi-rush/](https://cpinan.github.io/peru-combi-rush/) | [/peru-rush-combi-privacy.html](https://cpinan.github.io/peru-rush-combi-privacy.html) *(root URL — do not move)* | `com.carlos.pinan.perucombirush.godot` |
-| Bendiciones | [/bendiciones-buenos-dias/](https://cpinan.github.io/bendiciones-buenos-dias/) | [/bendiciones-buenos-dias/privacy.html](https://cpinan.github.io/bendiciones-buenos-dias/privacy.html) | `com.cpinanbuenosdias.app` — not public yet |
+| Bendiciones | [/bendiciones-buenos-dias/](https://cpinan.github.io/bendiciones-buenos-dias/) | [/bendiciones-buenos-dias/privacy.html](https://cpinan.github.io/bendiciones-buenos-dias/privacy.html) | `com.cpinanbuenosdias.app` |
+| Huellitas al Día | [/huellitas-al-dia/](https://cpinan.github.io/huellitas-al-dia/) | [/huellitas-al-dia/privacy.html](https://cpinan.github.io/huellitas-al-dia/privacy.html) | `com.carlospinan.huellitasaldia` — not public yet |
 | Piano Flashcards *(renamed)* | redirect → Piano Solfeo | redirect → Piano Solfeo | — |
 
 Site root — the portfolio: <https://cpinan.github.io/>
@@ -73,11 +74,13 @@ name here would be dead content that never gets served.
   pair of spans together, or the two languages drift apart.
 
   Facts on this page are hardcoded and go stale: the star counts in the repo list, the
-  hero stats (14+ years, 2B+ users, 95+ repos, 6 apps on Google Play), and the job
+  hero stats (14+ years, 2B+ users, 95+ repos, 7 apps on Google Play), and the job
   history. Update them when an app goes live or is pulled, or when a role changes.
-  Bendiciones is listed **without** a Play link because its listing is not public yet
-  — add one when it is, and bump the app count and the *"six are live, one on its way"*
-  line in the section note.
+  The app grid is ordered **live first, not-yet-live last** — Pocket Kit and Huellitas
+  al Día sit at the end and carry no Play link. When one goes live, give it a Play link,
+  swap its gradient-and-icon cover for a real `assets/covers/` image, move it up with the
+  other live cards, and bump both the app count in the hero stats and the
+  *"seven are live and two are on their way"* line in the section note.
 
   The playable Turbo Race build is **not** in this repo: the Godot web export lives
   in its own `turbo-race-godot` repo and GitHub Pages serves it at
@@ -108,9 +111,33 @@ name here would be dead content that never gets served.
   verses, 160+ bundled phrases that work offline, favourites and a daily streak.
   Interface in Spanish, English and Brazilian Portuguese; greetings always Spanish.
 - **`privacy.html`** — Policy for the app.
-- **Not on Google Play yet.** `applicationId` is `com.cpinanbuenosdias.app`, Play title
-  *"Bendiciones: Buenos Días"*. The portfolio card says so out loud and carries no Play
-  link — swap in the link once the listing is public.
+- **Live on Google Play** since 27 August 2026. `applicationId` is
+  `com.cpinanbuenosdias.app`, Play title *"Bendiciones: Buenos Días"*. The landing page
+  carries a download button and the portfolio card carries the Play link and a real cover
+  (`assets/covers/bendiciones.jpg`, downscaled from the 1024×500 feature graphic in
+  `buenos-dias-docs`).
+
+### `huellitas-al-dia/` — Huellitas al Día (pet health record, KMP)
+
+- **`index.html`** — Landing page in Spanish with an English summary section. A pet
+  health agenda that *derives* the care calendar — vaccines, deworming, antiparasitics,
+  check-ups — from species, age and whatever the animal already received, rather than
+  asking the owner to build reminders by hand. Also covers the clinical record (product
+  and lot per vaccine, consultations, surgeries, weights, notes), medication with several
+  doses a day, expenses per pet, and the rescued-pet case where an unknown history stays
+  unknown instead of showing as overdue.
+- **`privacy.html`** — Bilingual ES/EN policy. Same headline claim as Corta Spam: the app
+  does not declare the internet permission, so it cannot make a network request, and
+  `android:allowBackup="false"` keeps the record out of the user's own Google account.
+  Lists all four permissions it does declare. Last updated 21 August 2026.
+- **Two things the landing page states out loud**, because the app does and the listing
+  will: **there is no backup** — the data lives on that phone only — and the derived
+  schedule covers **dogs and cats**; other species keep their own record, plans and
+  medication but get no automatic schedule.
+- **Not on Google Play yet.** `applicationId` is `com.carlospinan.huellitasaldia`; the
+  app itself lives in the private `huellitas-al-dia` repo (local path
+  `~/Projects/VeterinariosApp`). The portfolio card says so out loud and carries no Play
+  link — swap it in once the listing is public.
 
 ### `peru-combi-rush/` — Peru Combi Rush (endless runner, Godot 4)
 
