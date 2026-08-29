@@ -1,34 +1,36 @@
 # STATUS — cpinan.github.io
 
-_Last updated: 2026-08-27 · branch `main` · 0 uncommitted files_
+_Last updated: 2026-08-29 · branch `main` · 1 uncommitted file_
 
 ## Next action
 
-Add the Pocket Kit row to the README *Shortcuts* table — it is the one app with a folder
-here but no row, and it was skipped only because its `applicationId` is not recorded
-anywhere in this repo.
+Decide what to do with the uncommitted donate block in `retro-3d-maze/index.html` — it was
+already in the working tree when this session opened and is the only thing not pushed.
 
 ## State
 
 - **Static HTML, no build step, no dependencies.** Push to `main` and GitHub Pages serves
   it. Every page inlines its own CSS and SVG; nothing loads from another origin.
-- **Nine app cards in `#projects`, ordered live-first.** Seven carry a Play link; **Pocket
-  Kit** and **Huellitas al Día** sit at the end with a gradient-and-icon cover and no link.
-- **Bendiciones went live on Play 2026-08-27** (`com.cpinanbuenosdias.app`) — card has the
-  Play link and a real cover, landing page has a download button.
-- **Huellitas al Día has a landing page and a policy here, but is not on Play.** Its copy
-  is drawn from the app repo's `STORE.md` / `docs/STATUS.md`, and states two limits out
-  loud because the app does: no backup, and the derived schedule covers dogs and cats only.
 - **`index.html` is both the site root and the portfolio/CV**, and is the developer-website
   URL that Play listings and AdMob's `app-ads.txt` crawler resolve to. It must stay a real
   page — never a redirect.
-- **Facts in `index.html` are hardcoded and go stale**: hero stats (14+ years, 2B+ users,
-  95+ repos, **7** apps on Google Play), the repo star counts, and the *"seven are live and
-  two are on their way"* section note. All three move together when an app ships.
+- **Nine app cards in `#projects`, ordered live-first.** Seven carry a Play link; Pocket Kit
+  and Huellitas al Día sit at the end with a gradient-and-icon cover and no link.
+- **`#web` now holds four cards**: MiniApps (first), Turbo Race web, Mis Mascotas, the
+  Tempest tutorial. `.grid.three` wraps the fourth onto a second row — that is fine.
+- **`#open-source` covers every public repo the account authored.** Eleven featured entries
+  plus fifty in the by-theme list equals the 61 non-fork repos the API reports; the site's
+  own repo is one of the fifty.
+- **Hardcoded facts that go stale in `index.html`**: hero stats (14+ years, 2B+ users, 100+
+  repos, **7** apps on Google Play), the per-repo star counts, the "60/61 written by me"
+  and "other 50" counts, and the *"seven are live and two are on their way"* note. Verified
+  against the GitHub API on 2026-08-29 — all correct as of that date.
 
 ## In flight
 
-Nothing in flight. Working tree clean, everything pushed.
+- `retro-3d-maze/index.html` — +77 uncommitted lines adding a `<h2 id="donate">` section
+  with a `.support` block and a `.btn-row`. Not written this session; it predates it.
+  Either commit it or `git checkout --` it.
 
 ## Verify
 
@@ -38,43 +40,44 @@ There is no test suite — this is a static site. What actually proves it:
 python3 -m http.server 8777    # then open http://127.0.0.1:8777/?lang=es
 ```
 
-Then, after pushing, confirm the real URLs rather than the local ones:
+After pushing, check the real URL rather than the local one, and confirm the deployed bytes
+match what is on disk:
 
 ```bash
-curl -s -o /dev/null -w "%{http_code}\n" https://cpinan.github.io/<app>/
+curl -s https://cpinan.github.io/ -o /tmp/live.html && diff index.html /tmp/live.html && echo identical
 ```
 
 ## Open questions
 
 - **Pocket Kit's `applicationId` is unknown.** Nothing in this repo records it — grepping
   `pocket-kit/privacy.html` only turns up `com.android.vending.BILLING`. It blocks the
-  README row above. Get it from the app project, do not guess it.
-- **Huellitas al Día was not submitted to Play as of 2026-08-27.** The app lives in the
-  private `huellitas-al-dia` repo (local path `~/Projects/VeterinariosApp`); its own
-  `docs/STATUS.md` is the source of truth for release state, not this file. When the
-  listing goes public: add the Play link, swap the gradient cover for a real
-  `assets/covers/` image, move the card up with the live ones, bump the hero stat to 8 and
-  rewrite the section note to *"eight are live and one is on its way"*.
-- **No `tools/verify.sh` in this repo**, and none is warranted — there is nothing to build
-  or test. The commands above are the raw ones.
+  Pocket Kit row in the README *Shortcuts* table. Get it from the app project, do not guess.
+- **Huellitas al Día was not on Play as of 2026-08-29.** The app lives in the private
+  `huellitas-al-dia` repo (local path `~/Projects/VeterinariosApp`); its own `docs/STATUS.md`
+  is the source of truth for release state. When the listing goes public: add the Play link,
+  swap the gradient cover for a real `assets/covers/` image, move the card up with the live
+  ones, bump the hero stat to 8, and rewrite the section note to *"eight are live and one is
+  on its way"*.
+- **User reported not seeing the MiniApps card on 2026-08-29**, after it was verified live.
+  Server side was ruled out — deployed HTML byte-identical to local, icon 200, card present
+  six times. Unresolved on the client side; it was never reproduced. If it comes back, the
+  card is the first one under *"Open it in a browser"* (`https://cpinan.github.io/#web`),
+  below the nine Play cards, and Pages sends `cache-control: max-age=600`.
+- **No `tools/verify.sh`**, and none is warranted — there is nothing to build or test. The
+  commands above are the raw ones.
 
 ## Do not redo
 
-- **Do not split `index.html` into one file per language.** Both languages live in that one
-  file as paired `<span class="en">` / `<span class="es">`; CSS on `html[data-lang]` hides
-  one set. Editing the pair together is what keeps them from drifting.
-- **Do not create a `turbo-race-godot/` folder here.** That path is owned by the project
-  site of the same name and is already served from its own repo — a folder here would be
-  dead content that never gets served. Same for `mis-mascotas/`.
-- **Do not move or rename `peru-rush-combi-privacy.html`.** It sits at the root, predating
-  the folder-per-app convention, because that exact URL is registered in the Play listing.
-- **Do not delete `piano-flashcards/`.** Both files are redirect stubs for the app's old
-  name, and the old privacy URL is already published. Deleting them 404s a live address.
-- **Do not curl the live URL straight after a push and conclude it failed.** GitHub Pages
-  took ~40 s on 2026-08-27 — two polls returned 404 before the third returned 200. Retry
-  in a loop before investigating.
-- **Do not hand-build cover images.** They are downscales of each app's 1024×500 Play
-  feature graphic, and `sips` does it in one line — the result is 880×429, so declare that
-  height on the `<img>` rather than the 430 the older covers use:
-  `sips -Z 880 -s format jpeg -s formatOptions 82 <feature>.png --out assets/covers/<app>.jpg`
-- **Do not add a second handoff file.** This path, `docs/STATUS.md`, is the only one.
+- **Do not re-diff the site against the GitHub API from scratch.** It was done on 2026-08-29
+  across both pages of `/users/cpinan/repos?per_page=100` (102 repos, 41 forks, 61 authored,
+  174 stars). Exactly two authored repos were missing and both were added. The star counts
+  already on the page were all correct — checking them again finds nothing.
+- **Do not try to screenshot the live site from here.** The Chrome extension is not
+  connected in this environment: `tabs_context_mcp` returns "Browser extension is not
+  connected". Verify with `curl` and `diff` instead.
+- **MiniApps has no wide cover art.** `assets/pokewheel-cover.png` in that repo is the 512px
+  icon under another name, not a 880×430 cover. The card therefore uses the
+  `cover pad` + gradient pattern with `assets/icons/miniapps.png` (the pokewheel 192px icon).
+- **`<code>` has no CSS rule in `index.html`.** A `<code>` tag was tried inside a repo
+  description and removed again — no other entry uses one, and it renders in the browser
+  default monospace.
