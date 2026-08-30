@@ -14,7 +14,7 @@ instead of Corta Spam's `DONATE_ES.md`, then commit it or `git checkout --` it.
 - **`index.html` is both the site root and the portfolio/CV**, and is the developer-website URL
   that Play listings and AdMob's `app-ads.txt` crawler resolve to. It must stay a real page —
   never a redirect.
-- **`/donate/` is the generic donation page**, added 2026-08-30 (`be3947c`). Yape and Plin QRs
+- **`/donate/` is the generic donation page**, added and verified live 2026-08-30 (`be3947c`). Yape and Plin QRs
   plus GitHub Sponsors / Ko-fi / PayPal, app-agnostic copy, states that donating unlocks nothing
   in any app. **Nothing on the site links to it yet.**
 - **`/corta-spam/donate/` still exists and is app-specific.** Same layout, same QR images, copy
@@ -52,8 +52,6 @@ curl -s https://cpinan.github.io/donate/ -o /tmp/live.html && diff donate/index.
 
 ## Open questions
 
-- **`/donate/` was pushed 2026-08-30 but never fetched back.** This session had no network —
-  `curl` returned `000`. Confirm the page and both QR images render before linking to it anywhere.
 - **The `/donate/` QR codes are Corta Spam's, copied byte-for-byte.** If donations for the other
   apps should land in a different account, regenerate `donate/yape-qr.png` and `donate/plin-qr.png`.
 - **Nothing links to `/donate/` yet.** Candidates: the root `index.html`, each app landing page,
