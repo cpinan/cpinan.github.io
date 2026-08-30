@@ -1,36 +1,40 @@
 # STATUS — cpinan.github.io
 
-_Last updated: 2026-08-29 · branch `main` · 1 uncommitted file_
+_Last updated: 2026-08-30 · branch `main` · 1 uncommitted file_
 
 ## Next action
 
-Decide what to do with the uncommitted donate block in `retro-3d-maze/index.html` — it was
-already in the working tree when this session opened and is the only thing not pushed.
+Repoint the uncommitted donate block in `retro-3d-maze/index.html` at the new `/donate/` page
+instead of Corta Spam's `DONATE_ES.md`, then commit it or `git checkout --` it.
 
 ## State
 
-- **Static HTML, no build step, no dependencies.** Push to `main` and GitHub Pages serves
-  it. Every page inlines its own CSS and SVG; nothing loads from another origin.
-- **`index.html` is both the site root and the portfolio/CV**, and is the developer-website
-  URL that Play listings and AdMob's `app-ads.txt` crawler resolve to. It must stay a real
-  page — never a redirect.
-- **Nine app cards in `#projects`, ordered live-first.** Seven carry a Play link; Pocket Kit
-  and Huellitas al Día sit at the end with a gradient-and-icon cover and no link.
-- **`#web` now holds four cards**: MiniApps (first), Turbo Race web, Mis Mascotas, the
-  Tempest tutorial. `.grid.three` wraps the fourth onto a second row — that is fine.
-- **`#open-source` covers every public repo the account authored.** Eleven featured entries
-  plus fifty in the by-theme list equals the 61 non-fork repos the API reports; the site's
-  own repo is one of the fifty.
-- **Hardcoded facts that go stale in `index.html`**: hero stats (14+ years, 2B+ users, 100+
-  repos, **7** apps on Google Play), the per-repo star counts, the "60/61 written by me"
-  and "other 50" counts, and the *"seven are live and two are on their way"* note. Verified
-  against the GitHub API on 2026-08-29 — all correct as of that date.
+- **Static HTML, no build step, no dependencies.** Push to `main` and GitHub Pages serves it.
+  Every page inlines its own CSS and SVG; nothing loads from another origin.
+- **`index.html` is both the site root and the portfolio/CV**, and is the developer-website URL
+  that Play listings and AdMob's `app-ads.txt` crawler resolve to. It must stay a real page —
+  never a redirect.
+- **`/donate/` is the generic donation page**, added 2026-08-30 (`be3947c`). Yape and Plin QRs
+  plus GitHub Sponsors / Ko-fi / PayPal, app-agnostic copy, states that donating unlocks nothing
+  in any app. **Nothing on the site links to it yet.**
+- **`/corta-spam/donate/` still exists and is app-specific.** Same layout, same QR images, copy
+  naming Corta Spam. Both pages are live; neither links to the other.
+- **Nine app cards in `#projects`, ordered live-first.** Seven carry a Play link; Pocket Kit and
+  Huellitas al Día sit at the end with a gradient-and-icon cover and no link.
+- **`#web` holds four cards**: MiniApps, Turbo Race web, Mis Mascotas, the Tempest tutorial.
+- **`#open-source` covers every public repo the account authored** — eleven featured plus fifty
+  by theme, equal to the 61 non-fork repos the API reports.
+- **Hardcoded facts that go stale in `index.html`**: hero stats (14+ years, 2B+ users, 100+ repos,
+  **7** apps on Google Play), per-repo star counts, the "60/61 written by me" and "other 50"
+  counts, and the *"seven are live and two are on their way"* note. Verified against the GitHub
+  API 2026-08-29 — all correct as of that date.
 
 ## In flight
 
-- `retro-3d-maze/index.html` — +77 uncommitted lines adding a `<h2 id="donate">` section
-  with a `.support` block and a `.btn-row`. Not written this session; it predates it.
-  Either commit it or `git checkout --` it.
+- `retro-3d-maze/index.html` — +77 uncommitted lines adding a `<h2 id="donate">` section with a
+  `.support` block and a `.btn-row`. Predates the 2026-08-29 session. Its Yape/Plin button points
+  at `https://github.com/cpinan/Corta-Spam/blob/main/DONATE_ES.md`; `/donate/` is now the right
+  target. Either fix and commit, or discard.
 
 ## Verify
 
@@ -40,44 +44,48 @@ There is no test suite — this is a static site. What actually proves it:
 python3 -m http.server 8777    # then open http://127.0.0.1:8777/?lang=es
 ```
 
-After pushing, check the real URL rather than the local one, and confirm the deployed bytes
-match what is on disk:
+After pushing, check the real URL and confirm deployed bytes match disk:
 
 ```bash
-curl -s https://cpinan.github.io/ -o /tmp/live.html && diff index.html /tmp/live.html && echo identical
+curl -s https://cpinan.github.io/donate/ -o /tmp/live.html && diff donate/index.html /tmp/live.html && echo identical
 ```
 
 ## Open questions
 
-- **Pocket Kit's `applicationId` is unknown.** Nothing in this repo records it — grepping
-  `pocket-kit/privacy.html` only turns up `com.android.vending.BILLING`. It blocks the
-  Pocket Kit row in the README *Shortcuts* table. Get it from the app project, do not guess.
-- **Huellitas al Día was not on Play as of 2026-08-29.** The app lives in the private
-  `huellitas-al-dia` repo (local path `~/Projects/VeterinariosApp`); its own `docs/STATUS.md`
-  is the source of truth for release state. When the listing goes public: add the Play link,
-  swap the gradient cover for a real `assets/covers/` image, move the card up with the live
-  ones, bump the hero stat to 8, and rewrite the section note to *"eight are live and one is
-  on its way"*.
-- **User reported not seeing the MiniApps card on 2026-08-29**, after it was verified live.
-  Server side was ruled out — deployed HTML byte-identical to local, icon 200, card present
-  six times. Unresolved on the client side; it was never reproduced. If it comes back, the
-  card is the first one under *"Open it in a browser"* (`https://cpinan.github.io/#web`),
-  below the nine Play cards, and Pages sends `cache-control: max-age=600`.
-- **No `tools/verify.sh`**, and none is warranted — there is nothing to build or test. The
-  commands above are the raw ones.
+- **`/donate/` was pushed 2026-08-30 but never fetched back.** This session had no network —
+  `curl` returned `000`. Confirm the page and both QR images render before linking to it anywhere.
+- **The `/donate/` QR codes are Corta Spam's, copied byte-for-byte.** If donations for the other
+  apps should land in a different account, regenerate `donate/yape-qr.png` and `donate/plin-qr.png`.
+- **Nothing links to `/donate/` yet.** Candidates: the root `index.html`, each app landing page,
+  and the maze donate block above.
+- **Pocket Kit's `applicationId` is unknown.** Nothing in this repo records it; grepping
+  `pocket-kit/privacy.html` only turns up `com.android.vending.BILLING`. Get it from the app
+  project, do not guess.
+- **Huellitas al Día was not on Play as of 2026-08-29.** App lives in the private
+  `huellitas-al-dia` repo (`~/Projects/VeterinariosApp`); its own `docs/STATUS.md` rules on release
+  state. When it goes live: add the Play link, swap the gradient cover for a real
+  `assets/covers/` image, move the card up, bump the hero stat to 8, rewrite the section note to
+  *"eight are live and one is on its way"*.
+- **No `tools/verify.sh`**, and none is warranted — nothing to build or test.
 
 ## Do not redo
 
-- **Do not re-diff the site against the GitHub API from scratch.** It was done on 2026-08-29
-  across both pages of `/users/cpinan/repos?per_page=100` (102 repos, 41 forks, 61 authored,
-  174 stars). Exactly two authored repos were missing and both were added. The star counts
-  already on the page were all correct — checking them again finds nothing.
-- **Do not try to screenshot the live site from here.** The Chrome extension is not
-  connected in this environment: `tabs_context_mcp` returns "Browser extension is not
-  connected". Verify with `curl` and `diff` instead.
-- **MiniApps has no wide cover art.** `assets/pokewheel-cover.png` in that repo is the 512px
-  icon under another name, not a 880×430 cover. The card therefore uses the
-  `cover pad` + gradient pattern with `assets/icons/miniapps.png` (the pokewheel 192px icon).
-- **`<code>` has no CSS rule in `index.html`.** A `<code>` tag was tried inside a repo
-  description and removed again — no other entry uses one, and it renders in the browser
-  default monospace.
+- **The LinkedIn post series is deliberately not in this repo.** Eight drafts (seven Play apps
+  plus the Tempest code post), a `PLAN.md` calendar and a reusable donation block live in
+  `~/Projects/LinkedinPosts/`, which is not a git repo. The user asked twice to keep them local.
+  Do not move them under `docs/`, and do not commit them.
+- **Every post links `https://cpinan.github.io/donate/`.** That is why the page was pushed while
+  the drafts were not.
+- **Do not re-diff the site against the GitHub API from scratch.** Done 2026-08-29 across both
+  pages of `/users/cpinan/repos?per_page=100` (102 repos, 41 forks, 61 authored, 174 stars). Two
+  authored repos were missing and both were added; every star count already on the page was right.
+- **Do not try to screenshot or curl the live site from a sandboxed session.** The Chrome
+  extension is not connected (`tabs_context_mcp` → "Browser extension is not connected") and
+  outbound `curl` returns `000`. Verify from a session with network.
+- **MiniApps has no wide cover art.** `assets/pokewheel-cover.png` in that repo is the 512px icon
+  renamed, not an 880×430 cover — hence the `cover pad` + gradient pattern.
+- **`<code>` has no CSS rule in `index.html`.** Tried inside a repo description and removed; it
+  renders in the browser default monospace.
+- **User reported not seeing the MiniApps card on 2026-08-29** after it was verified live. Server
+  side was ruled out — deployed HTML byte-identical, icon 200, card present six times. Never
+  reproduced. Pages sends `cache-control: max-age=600`.
