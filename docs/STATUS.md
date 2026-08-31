@@ -1,6 +1,6 @@
 # STATUS — cpinan.github.io
 
-_Last updated: 2026-08-30 · branch `main` · 1 uncommitted file_
+_Last updated: 2026-08-31 · branch `main` · 1 modified file, 1 untracked dir_
 
 ## Next action
 
@@ -31,6 +31,8 @@ instead of Corta Spam's `DONATE_ES.md`, then commit it or `git checkout --` it.
 
 ## In flight
 
+- `.claude/` — untracked, appeared 2026-08-31. Local Claude Code settings, not site content.
+  Decide whether to commit it or add it to `.gitignore`; it is not blocking anything.
 - `retro-3d-maze/index.html` — +77 uncommitted lines adding a `<h2 id="donate">` section with a
   `.support` block and a `.btn-row`. Predates the 2026-08-29 session. Its Yape/Plin button points
   at `https://github.com/cpinan/Corta-Spam/blob/main/DONATE_ES.md`; `/donate/` is now the right
@@ -68,6 +70,13 @@ curl -s https://cpinan.github.io/donate/ -o /tmp/live.html && diff donate/index.
 
 ## Do not redo
 
+- **The Flexhire blog post is deliberately not in this repo either.** Written 2026-08-31 for the
+  job search, saved to `~/Documents/blog/flexhire-nine-apps.md`. This repo is public and the post
+  is unpublished. It is a fill-in sheet for Flexhire's form (title, summary, categories,
+  subcategories, content) and every fact in it was read out of `index.html`, so `index.html`
+  stays the source — do not let the draft and the site drift. Two items were still open when it
+  was saved: no 1200×630 featured image, and nobody confirmed whether the Meta role is past or
+  present tense.
 - **The LinkedIn post series is deliberately not in this repo.** Eight drafts (seven Play apps
   plus the Tempest code post), a `PLAN.md` calendar and a reusable donation block live in
   `~/Projects/LinkedinPosts/`, which is not a git repo. The user asked twice to keep them local.
