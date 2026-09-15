@@ -201,6 +201,27 @@
   .timeline p { margin: 0; color: var(--muted); font-size: .93rem; }
   @media (max-width: 620px) { .timeline li { grid-template-columns: 1fr; } }
 
+  /* ---------- donate ---------- */
+  .donate-cta {
+    margin-top: 4.5rem; padding: 2.6rem 2rem; border-radius: 18px;
+    position: relative; text-align: center; background: var(--card);
+  }
+  .donate-cta::before {
+    content: ""; position: absolute; inset: 0; border-radius: 18px; padding: 1.5px;
+    background: linear-gradient(115deg, var(--accent), #b25de0, #e0577f, var(--accent));
+    background-size: 300% 300%; animation: donate-sheen 7s ease infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+  }
+  @keyframes donate-sheen { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .donate-cta .icon { display: block; font-size: 2rem; margin-bottom: .6rem; animation: donate-bob 2.6s ease-in-out infinite; }
+  @keyframes donate-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  .donate-cta h2 { font-size: 1.4rem; margin-bottom: .5rem; }
+  .donate-cta p { color: var(--muted); max-width: 48ch; margin: 0 auto 1.4rem; }
+  @media (prefers-reduced-motion: reduce) {
+    .donate-cta::before, .donate-cta .icon { animation: none; }
+  }
+
   /* ---------- contact ---------- */
   .cta { margin-top: 4.5rem; padding: 2.2rem 0 0; border-top: 1px solid var(--line); }
   .cta h2 { font-size: 1.7rem; }
@@ -222,6 +243,7 @@
       <a href="#projects"><span class="en">Projects</span><span class="es">Proyectos</span></a>
       <a href="#open-source"><span class="en">Open source</span><span class="es">Código abierto</span></a>
       <a href="#experience"><span class="en">Experience</span><span class="es">Experiencia</span></a>
+      <a href="#donate" style="color: var(--accent)">☕ <span class="en">Donate</span><span class="es">Donar</span></a>
       <div class="langswitch" role="group" aria-label="Language / Idioma">
         <button type="button" data-setlang="en" aria-pressed="true">EN</button>
         <button type="button" data-setlang="es" aria-pressed="false">ES</button>
@@ -984,6 +1006,19 @@
       </li>
 
     </ul>
+  </section>
+
+  <!-- ================= DONATE ================= -->
+  <section class="donate-cta" id="donate">
+    <span class="icon" aria-hidden="true">☕</span>
+    <h2><span class="en">Using one of the apps?</span><span class="es">¿Usas alguna de las apps?</span></h2>
+    <p>
+      <span class="en">Every app on this page is free, ad-supported, and built solo in whatever time is left after work. A donation is a thank-you — optional, and it unlocks nothing in any of them.</span>
+      <span class="es">Todas las apps de esta página son gratis, con anuncios, y las construyo solo en el tiempo libre que queda después del trabajo. Donar es un gracias — opcional, y no desbloquea nada en ninguna.</span>
+    </p>
+    <a class="btn primary" href="/donate/">
+      <span class="en">Support the work</span><span class="es">Apoyar el trabajo</span>
+    </a>
   </section>
 
   <!-- ================= CONTACT ================= -->
