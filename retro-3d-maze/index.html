@@ -74,6 +74,47 @@
     padding: 16px 18px;
     margin: 22px 0;
   }
+  .support {
+    background: var(--light);
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid var(--shadow);
+    border-bottom: 2px solid var(--shadow);
+    padding: 18px 18px 16px;
+    margin: 22px 0;
+    text-align: center;
+  }
+  .support p { margin-bottom: 14px; }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--panel);
+    color: var(--panel-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 9px 18px;
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid var(--shadow);
+    border-bottom: 2px solid var(--shadow);
+  }
+  .btn:hover { background: var(--light); }
+  /* Pressed: the bevel inverts, the way a real 95 button did. */
+  .btn:active {
+    border-top: 2px solid var(--shadow);
+    border-left: 2px solid var(--shadow);
+    border-right: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    padding: 10px 17px 8px 19px;
+  }
+  .btn.primary { background: var(--title-a); color: #FFFFFF; }
+  .btn.primary:hover { background: var(--title-b); }
   .muted { color: var(--muted); font-size: 0.92rem; }
   a { color: var(--link); }
   .es { margin-top: 44px; padding-top: 28px; border-top: 2px solid var(--shadow); }
@@ -116,6 +157,17 @@
     <p class="tagline">A first-person brick maze that walks itself — or that you solve.</p>
   </header>
 
+  <div class="support">
+    <p><strong>The app is free.</strong> If it earned a place on your phone, you can put something
+    in the jar — it is optional, and it changes nothing in the app.</p>
+    <div class="btn-row">
+      <a class="btn primary" href="https://ko-fi.com/carlospinan">☕ Ko-fi</a>
+      <a class="btn" href="https://github.com/sponsors/cpinan">GitHub Sponsors</a>
+      <a class="btn" href="https://paypal.me/carlospinan">PayPal</a>
+      <a class="btn" href="/donate/">Yape · Plin</a>
+    </div>
+  </div>
+
   <div class="note">
     <p>An original tribute to the mid-90s desktop screen savers that wandered a corridor while
     nobody was watching. Leave it running and it walks the maze on its own. Switch to Play and the
@@ -154,6 +206,19 @@
   <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a>. For a bug, include your phone
   model and Android version.</p>
 
+  <h2 id="donate">Donate</h2>
+  <p>Retro 3D Maze is free and carries ads, and it is written by one person in Lima in his own
+  time. A donation is a thank-you, nothing more: <strong>it unlocks no feature, removes no ad, and
+  the app has no way of knowing you made one.</strong> There is no billing library inside it and it
+  never shows a donation prompt — this page is the only place it is ever asked.</p>
+  <ul>
+    <li><a href="https://ko-fi.com/carlospinan">Ko-fi</a> ·
+        <a href="https://github.com/sponsors/cpinan">GitHub Sponsors</a> ·
+        <a href="https://paypal.me/carlospinan">PayPal</a></li>
+    <li>From Peru, free for both sides:
+        <a href="/donate/">Yape and Plin (QR)</a></li>
+  </ul>
+
   <div class="es">
     <h2>En español</h2>
     <p>Retro 3D Maze es un laberinto de ladrillo en primera persona, un homenaje original a los
@@ -169,6 +234,18 @@
     sin informes de errores. Los anuncios los sirve Google AdMob, que usa el identificador de
     publicidad del dispositivo; en el EEE y el Reino Unido la app pregunta primero, y
     <strong>Ad privacy</strong> en los ajustes vuelve a abrir esa elección.</p>
+    <p><strong>Donaciones.</strong> La app es gratuita y lleva anuncios, y la escribe una sola
+    persona en Lima en su tiempo libre. Donar es un gracias y nada más: <strong>no desbloquea
+    ninguna función, no quita ningún anuncio y la app no tiene forma de saber si donaste.</strong>
+    No lleva ninguna biblioteca de cobros dentro y nunca muestra un aviso pidiendo dinero — esta
+    página es el único sitio donde se pide.</p>
+    <ul>
+      <li><a href="https://ko-fi.com/carlospinan">Ko-fi</a> ·
+          <a href="https://github.com/sponsors/cpinan">GitHub Sponsors</a> ·
+          <a href="https://paypal.me/carlospinan">PayPal</a></li>
+      <li>Desde Perú, sin comisión para nadie:
+          <a href="/donate/">Yape y Plin (QR)</a></li>
+    </ul>
     <p>Soporte: <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a> ·
     <a href="privacy.html">Política de Privacidad</a></p>
   </div>
