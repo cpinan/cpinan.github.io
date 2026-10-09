@@ -1,6 +1,6 @@
 # STATUS — cpinan.github.io
 
-_Last updated: 2026-09-15 · branch `main` · 0 modified files, 1 untracked dir_
+_Last updated: 2026-10-09 · branch `main` · 0 modified files, 1 untracked dir_
 
 ## Next action
 
@@ -32,13 +32,14 @@ are live" → "nine are live and one is on its way").
   also claims FastAPI/Python backend work and cloud deployment (chips: React, React Native,
   Flutter, iOS/Swift, KMP, FastAPI, Cloud).
 - **`#open-source` covers every public repo the account authored** — eleven featured plus
-  fifty-two by theme, equal to the 63 non-fork repos the GitHub API reports as of 2026-09-15
-  (104 public repos total, 178 stars). `godot-skyroads` and `CustomModForPokeMMO` were the two
-  missing and were added under a new "Godot & game modding" theme group.
+  fifty-three by theme, equal to the 64 non-fork repos the GitHub API reports as of 2026-10-09
+  (105 public repos total, 181 stars). `AtomicBomberman` (Godot 4 port, no GitHub description —
+  blurb written from its topics) was added 2026-10-09 to the "Godot & game modding" group.
 - **Hardcoded facts that go stale in `index.html`**: hero stats (14+ years, 2B+ users, 100+
   repos, **8** apps on Google Play), per-repo star counts, the "63 written by me" / "other 52"
   counts, and the *"eight are live and two are on their way"* note. Verified against the GitHub
-  API 2026-09-15 — all correct as of that date.
+  API 2026-10-09 — all correct as of that date. The Play Console stats (installs, ratings) are
+  deliberately not shown on the site.
 
 ## In flight
 
@@ -67,7 +68,8 @@ curl -s https://cpinan.github.io/donate/ -o /tmp/live.html && diff donate/index.
 - **Pocket Kit's `applicationId` is unknown.** Nothing in this repo records it; grepping
   `pocket-kit/privacy.html` only turns up `com.android.vending.BILLING`. Get it from the app
   project, do not guess.
-- **Huellitas al Día was not on Play as of 2026-08-29.** App lives in the private
+- **Huellitas al Día is in Play closed testing as of 2026-10-09** (no public link yet; Pocket Kit
+  is not in the Play Console pinned list at all). App lives in the private
   `huellitas-al-dia` repo (`~/Projects/VeterinariosApp`); its own `docs/STATUS.md` rules on
   release state.
 - **Parabolazo has no public GitHub repo**, so its open-source card has no "Source" link (unlike
@@ -89,9 +91,9 @@ curl -s https://cpinan.github.io/donate/ -o /tmp/live.html && diff donate/index.
 - **Every LinkedIn post links `https://cpinan.github.io/donate/`.** That page now also gets a
   direct nav link from the portfolio itself, so keep both current together.
 - **Do not re-diff the site against the GitHub API from scratch** unless it's actually been a
-  while — done 2026-09-15 across all repo pages (`/users/cpinan/repos?per_page=100`, 104 public,
-  63 authored non-fork, 178 stars). Two authored repos were missing from the site and both were
-  added; every star count already on the page was right.
+  while — done 2026-10-09 across both pages (`/users/cpinan/repos?per_page=100&page=1,2`, 105
+  public, 64 authored non-fork, 181 stars). Only `AtomicBomberman` was missing; added.
+- **Play Console app list was checked against the ten cards 2026-10-09** — nothing missing.
 - **MiniApps has no wide cover art.** `assets/pokewheel-cover.png` in that repo is the 512px icon
   renamed, not an 880×430 cover — hence the `cover pad` + gradient pattern.
 - **`<code>` has no CSS rule in `index.html`.** Tried inside a repo description and removed; it
