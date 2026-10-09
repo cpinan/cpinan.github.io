@@ -47,7 +47,7 @@
 <div class="container">
 
   <h1>Bendiciones — Política de Privacidad</h1>
-  <p class="muted">Última actualización: 26 de agosto de 2026</p>
+  <p class="muted">Última actualización: 9 de octubre de 2026</p>
   <div class="sunrise"></div>
 
   <div class="card">
@@ -71,6 +71,12 @@
     bienvenida.</li>
     <li><strong>Preferencias <code>ad_gating</code></strong> — contadores que limitan cada cuánto
     puede aparecer un anuncio.</li>
+    <li><strong>Preferencias <code>settings</code></strong> — tus ajustes (tema, tamaño del texto,
+    idioma de los saludos, aplicación para compartir, versículo y recordatorio).</li>
+    <li><strong>Preferencias <code>streak_repair</code></strong> — cuándo usaste la última
+    reparación de racha.</li>
+    <li><strong>Preferencias <code>catalogue_seed</code></strong> — si el catálogo inicial ya se
+    cargó en tu idioma.</li>
     <li><strong>Carpeta <code>packs</code></strong> — las imágenes y los iconos de bandeja de los
     packs de stickers que creas.</li>
     <li><strong>Caché</strong> (<code>shared_media</code>, <code>edited_previews</code>,
@@ -157,9 +163,20 @@
   aplicación no ve ni guarda tus datos de pago; sólo pregunta a Google Play si la compra está activa,
   cada vez que se abre.</p>
 
+  <h3>3.6 Configuración remota (Firebase Remote Config)</h3>
+  <p>La aplicación pide a Firebase unos pocos valores numéricos que regulan cada cuánto aparecen los
+  anuncios (por ejemplo, «un anuncio cada 5 saludos»). Para hacerlo, Firebase recibe el
+  <strong>identificador de instalación de Firebase</strong> y datos técnicos básicos de la aplicación
+  (versión, sistema operativo y tu dirección IP). <strong>No se envía nada que hayas escrito ni
+  ningún saludo.</strong> Si no hay conexión, la aplicación usa los valores que ya trae.</p>
+
   <h2>4. Publicidad y consentimiento</h2>
-  <p>Bendiciones es gratuita y se financia con publicidad de <strong>Google AdMob</strong>. Para
-  mostrarla, el SDK de Google recopila y comparte con Google:</p>
+  <p>Bendiciones es gratuita y se financia con publicidad de <strong>Google AdMob</strong>: un banner,
+  anuncios a pantalla completa tras algunos saludos, tarjetas de anuncio entre los saludos de Inicio y
+  Favoritos y, solo si tú lo eliges, anuncios «para ganar» (por ejemplo, ver un anuncio para quitar la
+  marca de agua de un envío o para recuperar una racha). Nunca aparecen anuncios en el editor, en la
+  revisión antes de enviar, en Ajustes ni en la pantalla de Premium. Para mostrarlos, el SDK de Google
+  recopila y comparte con Google:</p>
   <ul>
     <li>El <strong>identificador de publicidad de Android</strong> de tu dispositivo.</li>
     <li>Datos técnicos del dispositivo y una ubicación aproximada deducida de la dirección IP.</li>
@@ -173,7 +190,8 @@
   socios</a>.</p>
   <p><strong>Tu control:</strong> en <code>Ajustes → Google → Anuncios</code> puedes desactivar la
   personalización o eliminar tu identificador de publicidad. La aplicación seguirá funcionando igual.
-  La compra de la versión completa retira los anuncios por completo.</p>
+  La compra de la versión completa retira los anuncios por completo, incluidas las ofertas de anuncios
+  opcionales.</p>
 
   <h2>5. Stickers y WhatsApp</h2>
   <p>Cuando añades un pack a WhatsApp, las imágenes no viajan por internet: WhatsApp las lee
@@ -268,7 +286,7 @@
   <hr>
 
   <h1>Bendiciones — Privacy Policy</h1>
-  <p class="muted">Last updated: 26 August 2026</p>
+  <p class="muted">Last updated: 9 October 2026</p>
   <div class="sunrise"></div>
 
   <div class="card">
@@ -291,6 +309,12 @@
     tutorial.</li>
     <li><strong><code>ad_gating</code> preferences</strong> — counters that limit how often an ad may
     appear.</li>
+    <li><strong><code>settings</code> preferences</strong> — your settings (theme, text size, greeting
+    language, default share app, verse and reminder).</li>
+    <li><strong><code>streak_repair</code> preferences</strong> — when you last used a streak
+    repair.</li>
+    <li><strong><code>catalogue_seed</code> preferences</strong> — whether the starter catalogue has
+    already been loaded in your language.</li>
     <li><strong>The <code>packs</code> folder</strong> — the images and tray icons of the sticker
     packs you create.</li>
     <li><strong>Caches</strong> (<code>shared_media</code>, <code>edited_previews</code>,
@@ -376,9 +400,19 @@
   The app never sees or stores your payment details; it only asks Google Play whether the purchase is
   active, each time it starts.</p>
 
+  <h3>3.6 Remote configuration (Firebase Remote Config)</h3>
+  <p>The app asks Firebase for a few numeric values that control how often ads appear (for example
+  "one ad every 5 greetings"). To do so, Firebase receives the <strong>Firebase installation
+  identifier</strong> and basic technical data about the app (version, operating system and your IP
+  address). <strong>Nothing you typed and no greeting is sent.</strong> With no connection, the app
+  uses the values built into it.</p>
+
   <h2>4. Advertising and consent</h2>
-  <p>Bendiciones is free and is funded by <strong>Google AdMob</strong> advertising. To show it,
-  Google's SDK collects and shares with Google:</p>
+  <p>Bendiciones is free and is funded by <strong>Google AdMob</strong> advertising: a banner,
+  full-screen ads after some greetings, ad cards between the greetings in Inicio and Favoritos and,
+  only if you choose, "watch to earn" ads (for example, watching an ad to remove the watermark from
+  one share or to repair a streak). Ads never appear in the editor, the pre-send review, Settings or
+  the Premium screen. To show them, Google's SDK collects and shares with Google:</p>
   <ul>
     <li>Your device's <strong>Android advertising ID</strong>.</li>
     <li>Technical device data and an approximate location inferred from the IP address.</li>
@@ -391,7 +425,7 @@
   <a href="https://policies.google.com/technologies/partner-sites">Google's partner policies</a>.</p>
   <p><strong>Your control:</strong> under <code>Settings → Google → Ads</code> you can turn off
   personalisation or delete your advertising ID. The app carries on working the same. Buying the full
-  version removes ads entirely.</p>
+  version removes ads entirely, including the optional watch-an-ad offers.</p>
 
   <h2>5. Stickers and WhatsApp</h2>
   <p>When you add a pack to WhatsApp, the images do not travel over the internet: WhatsApp reads them
