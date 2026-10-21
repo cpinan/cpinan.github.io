@@ -1,0 +1,508 @@
+{
+ "schemaVersion": 1,
+ "category": "A_I",
+ "note": "Texto de autoría propia. Resume el Reglamento Nacional de Tránsito (TUO, DS 016-2009-MTC y modificatorias) y el Manual de Dispositivos de Control del Tránsito Automotor del MTC. Verifica siempre la norma vigente.",
+ "chapters": [
+  {
+   "id": "vias-y-conceptos",
+   "title": "La vía y sus partes",
+   "summary": "Vocabulario que el examen da por sabido: calzada, berma, acera, carril, intersección.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Título preliminar y definiciones"],
+   "sections": [
+    {
+     "heading": "Partes de la vía",
+     "paragraphs": ["Muchas preguntas del examen se resuelven solo conociendo las definiciones. Apréndelas con precisión."],
+     "bullets": [
+      "Calzada: parte de la vía destinada a la circulación de vehículos y, eventualmente, al cruce de peatones y animales.",
+      "Carril: parte de la calzada destinada al tránsito de una fila de vehículos.",
+      "Berma: parte de la carretera contigua a la calzada, no habilitada para la circulación de vehículos; sirve para detenciones de emergencia y paso de peatones.",
+      "Acera: parte de la vía destinada al uso de peatones.",
+      "Intersección: lugar donde dos o más vías se cruzan o se unen.",
+      "Rotonda u óvalo: intersección rotatoria. Tiene prioridad quien ya circula dentro de ella.",
+      "Línea de parada (línea de pare): línea transversal que marca el límite donde debes detener el vehículo antes de la intersección.",
+      "Zona rígida: área de la vía donde está prohibido estacionar."
+     ]
+    },
+    {
+     "heading": "Tipos de vía",
+     "paragraphs": ["En zona urbana el reglamento distingue calles y jirones, avenidas y vías expresas; cada una tiene su propio límite de velocidad. Fuera de la ciudad hablamos de carreteras y caminos rurales."]
+    }
+   ]
+  },
+  {
+   "id": "senales-verticales",
+   "title": "Señales verticales",
+   "summary": "Reglamentarias, preventivas e informativas: cómo reconocer cada familia y su código.",
+   "legalBasis": ["Manual de Dispositivos de Control del Tránsito Automotor para Calles y Carreteras (MTC)"],
+   "sections": [
+    {
+     "heading": "Las tres familias",
+     "paragraphs": ["Las señales verticales se agrupan por su función. Cada una tiene un código con una letra: R para reglamentarias, P para preventivas e I para informativas. Si en el examen ves «R-», «P-» o «I-», ya sabes de qué familia se trata."],
+     "bullets": [
+      "Reglamentarias (R): notifican limitaciones, prohibiciones y restricciones en el uso de la vía. Su cumplimiento es obligatorio. Suelen ser circulares con borde rojo; la señal PARE es un octágono rojo y CEDA EL PASO un triángulo invertido.",
+      "Preventivas (P): advierten la existencia y naturaleza de un peligro en la vía. Tienen forma de rombo y fondo amarillo.",
+      "Informativas (I): guían al usuario y le informan sobre direcciones, destinos y servicios. Son rectangulares."
+     ]
+    },
+    {
+     "heading": "Ejemplos que más se preguntan",
+     "bullets": [
+      "R-3: solo se puede seguir de frente.",
+      "R-4: sentido contrario; no ingresar.",
+      "R-6: prohibido voltear a la izquierda (y por tanto prohibido el giro en U).",
+      "R-9: se permite el giro en U.",
+      "R-14: circular solo en el sentido que marca la flecha.",
+      "R-17: prohibida la circulación de vehículos automotores.",
+      "R-29: prohibido usar la bocina.",
+      "R-40: circular con luces bajas.",
+      "R-49: mantener la distancia de seguridad.",
+      "R-53: prohibido detenerse dentro del área de la intersección.",
+      "P-33A: resalto (rompemuelles) cercano. P-34: badén. P-36: superficie deslizante.",
+      "P-46: ciclistas en la vía. P-48: presencia de peatones. P-49: zona escolar. P-50: niños jugando.",
+      "P-58: anuncia un PARE más adelante. P-59: anuncia un CEDA EL PASO.",
+      "I-14: hospital. I-18: servicio mecánico. I-19: grifo. I-20: llantería."
+     ]
+    },
+    {
+     "heading": "Señales de servicios generales",
+     "paragraphs": ["Informan sobre servicios próximos a la vía: teléfono, hospedaje, restaurante, primeros auxilios, estación de combustible, talleres y otros."]
+    }
+   ]
+  },
+  {
+   "id": "marcas-pavimento",
+   "title": "Marcas en el pavimento",
+   "summary": "El color y el trazo de cada línea dicen si puedes cruzarla o no.",
+   "legalBasis": ["Manual de Dispositivos de Control del Tránsito Automotor para Calles y Carreteras (MTC)"],
+   "sections": [
+    {
+     "heading": "Qué son",
+     "paragraphs": ["Las marcas en el pavimento son la señalización horizontal. Reglamentan la circulación y, además, advierten y guían a los usuarios. No sustituyen a las señales verticales: se complementan."]
+    },
+    {
+     "heading": "Colores",
+     "bullets": [
+      "Amarillo: separa carriles de tránsito en sentidos opuestos.",
+      "Blanco: separa carriles de tránsito del mismo sentido y marca los bordes de la calzada.",
+      "Azul: complementa las señales informativas, por ejemplo los estacionamientos para personas con movilidad reducida."
+     ]
+    },
+    {
+     "heading": "Líneas centrales amarillas",
+     "bullets": [
+      "Discontinua: puedes cruzar al otro carril para adelantar, solo si es seguro.",
+      "Continua: no se puede cruzar. Comienza ahí la zona de no adelantar.",
+      "Doble, una continua y una discontinua: rige la línea que está de tu lado. Si la tuya es discontinua puedes adelantar; si es continua, no."
+     ]
+    },
+    {
+     "heading": "Otras marcas",
+     "bullets": [
+      "Línea blanca continua longitudinal (por ejemplo entre el carril derecho y la berma): no se debe cruzar, salvo emergencia.",
+      "Línea de pare: obliga a detenerse antes de ella.",
+      "Malla ortogonal amarilla en una intersección: prohíbe detener el vehículo dentro de esa área.",
+      "Flechas inclinadas: tu carril termina más adelante y debes cambiarte con precaución al carril que continúa."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "semaforos-y-policia",
+   "title": "Semáforos y autoridad de tránsito",
+   "summary": "Qué significa cada luz y por qué la policía prevalece sobre el semáforo.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, normas sobre dispositivos de control"],
+   "sections": [
+    {
+     "heading": "Luces del semáforo",
+     "bullets": [
+      "Rojo: detención.",
+      "Ámbar o amarillo: prevención. Debes detenerte antes de entrar a la intersección si tu velocidad y posición lo permiten; si ya no puedes frenar con seguridad, cruzas y despejas la intersección.",
+      "Verde: paso. Antes de arrancar, verifica que nadie esté despejando la intersección.",
+      "Flecha verde: avanzas con precaución solo en la dirección de la flecha y desde el carril que ella controla.",
+      "Flecha roja con luz circular verde: puedes avanzar, pero el giro que prohíbe la flecha no está permitido.",
+      "Luz roja intermitente: equivale a un PARE.",
+      "Luz ámbar intermitente: reduce la velocidad y continúa con precaución."
+     ]
+    },
+    {
+     "heading": "La policía manda",
+     "paragraphs": ["Los dispositivos de control obligan a conductores y peatones, salvo que la Policía de Tránsito indique lo contrario. Si el policía te hace continuar con el semáforo en rojo, continúas. Cuando el policía te da el frente o la espalda, debes detenerte."]
+    }
+   ]
+  },
+  {
+   "id": "preferencia-de-paso",
+   "title": "Preferencia de paso",
+   "summary": "Quién pasa primero en intersecciones, rotondas, cruces peatonales y vías férreas.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 125 y 176–195"],
+   "sections": [
+    {
+     "heading": "Intersecciones sin señalización",
+     "bullets": [
+      "Tiene preferencia el vehículo que ingresó primero.",
+      "Si llegan al mismo tiempo desde vías distintas, pasa el que viene por la derecha del otro.",
+      "La vía de doble sentido tiene prioridad sobre la de un solo sentido de igual clasificación.",
+      "Los semáforos y las señales PARE o CEDA EL PASO anulan estas reglas."
+     ]
+    },
+    {
+     "heading": "Señales PARE y CEDA EL PASO",
+     "bullets": [
+      "PARE: detención total, cede el paso a quien tenga preferencia y luego continúa con precaución. Aplica también al PARE pintado en el pavimento.",
+      "CEDA EL PASO: reduce la velocidad, detente si es necesario y cede el paso a los vehículos y peatones de la vía transversal."
+     ]
+    },
+    {
+     "heading": "Casos especiales",
+     "bullets": [
+      "Rotonda: tiene prioridad quien ya circula por ella.",
+      "Cuesta de un solo carril: el vehículo que asciende tiene preferencia sobre el que desciende.",
+      "Cruce a nivel con vía férrea: el tren siempre tiene preferencia.",
+      "Vehículos de emergencia y oficiales: ceder el paso cuando emiten señales audibles y visibles. Sin sirena y luces no están en servicio de urgencia.",
+      "Al salir de una cochera o propiedad, cede el paso a peatones de la acera y a vehículos de la vía.",
+      "Al girar, cede el paso al peatón que está cruzando.",
+      "Si un vehículo escolar está detenido recogiendo o dejando escolares, detente y espera a que terminen."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "velocidad",
+   "title": "Límites de velocidad",
+   "summary": "Los números que debes memorizar y las reglas de límite mínimo y mala visibilidad.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 162–168-A (modificado por DS 025-2021-MTC)"],
+   "sections": [
+    {
+     "heading": "Zona urbana (si no hay señal)",
+     "bullets": [
+      "Calles y jirones: 30 km/h.",
+      "Avenidas: 60 km/h.",
+      "Vías expresas: 80 km/h.",
+      "Zona escolar y zona de hospital: 30 km/h."
+     ],
+     "paragraphs": ["Atención: el balotario oficial de 2018 todavía enseña 40 km/h para calles y jirones. Desde el DS 025-2021-MTC el límite es 30 km/h. Si el simulador del MTC te da otra respuesta, conoce ambas."]
+    },
+    {
+     "heading": "Carreteras (si no hay señal)",
+     "bullets": [
+      "Automóviles, camionetas y motocicletas: 100 km/h.",
+      "Transporte público de pasajeros: 90 km/h.",
+      "Vehículos de carga: 80 km/h.",
+      "Transporte escolar: 70 km/h.",
+      "Caminos rurales: 60 km/h."
+     ]
+    },
+    {
+     "heading": "Reglas generales",
+     "bullets": [
+      "Siempre manda la señal instalada: si dice 50 km/h aunque la norma permita 60, respetas 50.",
+      "Velocidad mínima: la mitad del máximo de la vía.",
+      "Con poca visibilidad (neblina, lluvia intensa, humo o polvo) el límite se reduce a la mitad.",
+      "Cerca de colegios o lugares con aglomeración, hasta 20 km/h en los casos que fija la norma.",
+      "Existe un margen de tolerancia de 5 km/h antes de sancionar por exceso de velocidad."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "maniobras",
+   "title": "Adelantar, girar y retroceder",
+   "summary": "Cuándo y cómo realizar las maniobras más riesgosas.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 133–135, 149–150, 154, 169–175, 201"],
+   "sections": [
+    {
+     "heading": "Adelantamiento",
+     "bullets": [
+      "Se hace por la izquierda y luego regresas a tu carril original.",
+      "Verifica que el carril izquierdo esté libre, que haya buena visibilidad y señaliza con anticipación.",
+      "El vehículo que es adelantado no debe acelerar. Mantén o reduce un poco tu velocidad.",
+      "No se debe usar la bocina para avisar que vas a adelantar.",
+      "Está prohibido adelantar en intersecciones (salvo en autopistas), cruces peatonales, cruces a nivel con vías férreas, puentes, túneles, curvas, cambios de rasante y donde la visibilidad sea mala.",
+      "Adelantar por la berma está prohibido."
+     ]
+    },
+    {
+     "heading": "Giros y cambios de carril",
+     "bullets": [
+      "Usa las direccionales y mantén la señal hasta terminar la maniobra.",
+      "En zona urbana, señaliza el giro al menos 20 metros antes; en carretera, 30 metros.",
+      "Los cambios de carril se señalizan con al menos 3 segundos de anticipación.",
+      "Antes de girar a la izquierda ubícate con anticipación en el carril izquierdo.",
+      "Cede el paso a vehículos y peatones antes de girar o cambiar de carril.",
+      "El giro en U está prohibido en intersecciones y cruces peatonales, y cerca de curvas, puentes, túneles y cruces a nivel."
+     ]
+    },
+    {
+     "heading": "Retroceso y punto neutro",
+     "bullets": [
+      "Conducir en retroceso está prohibido, salvo cuando es estrictamente necesario (por ejemplo, para estacionar).",
+      "Conducir con el motor en punto neutro o apagado es una infracción."
+     ]
+    },
+    {
+     "heading": "Carril según tu velocidad",
+     "paragraphs": ["En una vía de dos carriles del mismo sentido, el vehículo lento circula por la derecha y los más rápidos por la izquierda. Ir lento por el carril izquierdo y causar congestión es infracción."]
+    }
+   ]
+  },
+  {
+   "id": "luces-y-bocina",
+   "title": "Luces, bocina y señales manuales",
+   "summary": "Cuándo usar luces bajas, altas, intermitentes y rompenieblas.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 152–154, 244–245, 255"],
+   "sections": [
+    {
+     "heading": "Luces",
+     "bullets": [
+      "Luces bajas: en vías urbanas de noche y en carreteras nacionales y regionales las 24 horas.",
+      "Luces altas: solo en carreteras. Se cambian a bajas antes de cruzarte con otro vehículo (a una distancia prudente, no menor de 200 m en carretera) o al seguir a otro vehículo.",
+      "Luces intermitentes de emergencia: al detenerte o estacionarte en zona peligrosa, al mover un vehículo averiado y en maniobras riesgosas. No sustituyen a las direccionales.",
+      "Rompenieblas: se usan junto con las luces bajas, nunca solas ni con las altas.",
+      "La luz de estacionamiento no se usa con el vehículo en movimiento."
+     ]
+    },
+    {
+     "heading": "Bocina",
+     "paragraphs": ["La bocina se usa únicamente para evitar situaciones peligrosas. Usarla para llamar la atención de forma innecesaria es infracción y están prohibidas las bocinas de aire comprimido, sirenas y similares (solo permitidas a vehículos de emergencia)."]
+    },
+    {
+     "heading": "Señales manuales (solo por fuerza mayor)",
+     "bullets": [
+      "Girar o cambiar de carril a la derecha: antebrazo izquierdo y mano extendidos hacia arriba, formando ángulo recto con el brazo.",
+      "Disminuir velocidad o detenerse: antebrazo izquierdo y mano extendidos hacia abajo, en ángulo recto con el brazo, junto con las luces intermitentes."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "estacionamiento",
+   "title": "Detención y estacionamiento",
+   "summary": "Dónde no puedes estacionarte y cuánto tiempo se considera abandono.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 206–225"],
+   "sections": [
+    {
+     "heading": "Cómo detenerte",
+     "paragraphs": ["La detención se hace en el sentido de la circulación, en el carril derecho y con las luces intermitentes encendidas. Para recoger o dejar pasajeros, acércate al borde de la acera (hasta 20 cm) y usa luces intermitentes."]
+    },
+    {
+     "heading": "Lugares prohibidos para estacionar",
+     "bullets": [
+      "Aceras, cruces peatonales y áreas verdes.",
+      "En doble fila.",
+      "Dentro de una intersección y a menos de 5 m de ella (la norma fija también distancias de 10 m a los cruces peatonales y paraderos).",
+      "Frente a la entrada de garajes y de recintos militares o policiales.",
+      "A menos de 20 m de un cruce a nivel con vía férrea.",
+      "En curvas y zonas rígidas.",
+      "A la salida de salas de espectáculos en funcionamiento."
+     ]
+    },
+    {
+     "heading": "Casos especiales",
+     "bullets": [
+      "Un vehículo de emergencia puede estacionar en lugar no permitido si es imprescindible.",
+      "En pendiente, las ruedas delanteras se orientan contra la acera.",
+      "Si el vehículo se avería en la vía, coloca triángulos de seguridad entre 50 y 150 m antes y después del vehículo.",
+      "Se considera abandonado un vehículo sin conductor por más de 48 horas en la vía pública (24 horas en zona prohibida y 1 hora en zona rígida)."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "documentos-licencia-puntos",
+   "title": "Documentos, licencia y puntos",
+   "summary": "Qué debes portar, qué autoriza la licencia A-I y cómo funciona el sistema de puntos.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Art. 91", "Reglamento Nacional del Sistema de Emisión de Licencias de Conducir (DS 007-2016-MTC)", "Ley 29365 (puntos)"],
+   "sections": [
+    {
+     "heading": "Documentos obligatorios al conducir",
+     "bullets": [
+      "Documento de identidad.",
+      "Licencia de conducir vigente para el tipo de vehículo.",
+      "Tarjeta de identificación vehicular.",
+      "SOAT vigente (puede ser electrónico).",
+      "Certificado de inspección técnica vehicular, cuando corresponda."
+     ]
+    },
+    {
+     "heading": "Licencia A-I",
+     "bullets": [
+      "Es la licencia no profesional de la Clase A, categoría I. Autoriza a conducir automóviles y vehículos de las categorías M1, M2 y N1.",
+      "No autoriza a conducir motocicletas ni mototaxis (son de la Clase B), ni camiones ni ómnibus (categorías profesionales).",
+      "Edad mínima: 18 años para las categorías de la Clase A. Un menor mayor de 16 años solo puede conducir con permiso o licencia provisional según el reglamento de licencias.",
+      "La licencia vencida no habilita para conducir.",
+      "Las restricciones anotadas en la licencia (por ejemplo, el uso de lentes) son obligatorias.",
+      "Si la policía detecta una discapacidad evidente no registrada, puede intervenir al conductor y la autoridad que expidió la licencia ordena su reexaminación."
+     ]
+    },
+    {
+     "heading": "Sistema de puntos",
+     "paragraphs": ["Determinadas infracciones suman puntos a tu licencia. Al acumular 100 puntos firmes en un periodo de 24 meses, la licencia se suspende. Con la licencia suspendida no puedes tramitar duplicado, revalidación ni recategorización, y tramitar el duplicado de una licencia retenida es una infracción."]
+    }
+   ]
+  },
+  {
+   "id": "infracciones-y-sanciones",
+   "title": "Infracciones y sanciones",
+   "summary": "Multas, reincidencia, suspensión y cancelación.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 311 y 336, Anexo de infracciones"],
+   "sections": [
+    {
+     "heading": "Cómo se calculan las multas",
+     "paragraphs": ["Las multas se expresan como un porcentaje de la UIT (Unidad Impositiva Tributaria). Las infracciones muy graves tienen porcentajes mayores que las graves y leves. El pago anticipado reduce la multa: según el texto consolidado consultado, hay un descuento del 17 % si se paga dentro de los cinco días hábiles y del 33 % hasta antes de la resolución de sanción, con excepciones para algunas infracciones."]
+    },
+    {
+     "heading": "Reincidencia",
+     "paragraphs": ["Si cometes la misma infracción dentro de los 12 meses, la multa se duplica."]
+    },
+    {
+     "heading": "Casos graves",
+     "bullets": [
+      "Conducir sin licencia: multa e imposibilidad de obtener licencia por 3 años.",
+      "Conducir con alcohol sobre el límite legal o bajo efectos de drogas: multa y suspensión de la licencia por 3 años.",
+      "Hacerlo y haber participado en un accidente, o negarse a la prueba: multa, cancelación de la licencia e inhabilitación definitiva para obtener otra.",
+      "Conducir sin SOAT: se retiene el vehículo y se interna hasta acreditar el seguro.",
+      "Ejemplos de infracciones: no detenerse totalmente en un PARE, arrojar objetos a la vía, usar la bocina sin necesidad, llevar puertas o maletera abiertas, conducir en punto neutro, competir en la vía pública.",
+      "Está prohibido participar en competencias de velocidad en la vía pública. Se realizan solo en circuitos o pistas autorizadas."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vehiculos-seguros",
+   "title": "Vehículo, SOAT e inspección técnica",
+   "summary": "Placa, tarjeta de identificación, SOAT, revisión técnica y emisiones.",
+   "legalBasis": ["Reglamento Nacional de Vehículos", "Reglamento Nacional de Responsabilidad Civil y Seguros Obligatorios por Accidentes de Tránsito", "Reglamento de Placa Única Nacional de Rodaje"],
+   "sections": [
+    {
+     "heading": "SOAT",
+     "bullets": [
+      "Es el Seguro Obligatorio de Accidentes de Tránsito. Es el seguro exigible para circular.",
+      "Cubre a los ocupantes del vehículo y a terceros no ocupantes (por ejemplo peatones) afectados en un accidente.",
+      "Tiene una vigencia de un año.",
+      "Otros seguros vehiculares no lo reemplazan."
+     ]
+    },
+    {
+     "heading": "Inspección técnica vehicular",
+     "bullets": [
+      "Un vehículo particular M1 (hasta 9 asientos con el conductor) pasa su primera inspección a partir del cuarto año, contado desde el año siguiente al de su fabricación.",
+      "Después la inspección se repite cada año."
+     ]
+    },
+    {
+     "heading": "Placa y tarjeta",
+     "bullets": [
+      "La Placa Única Nacional de Rodaje habilita al vehículo a circular, lo identifica y vincula al titular responsable.",
+      "La tarjeta de identificación vehicular es un documento que debes portar al conducir."
+     ]
+    },
+    {
+     "heading": "Otras reglas del vehículo",
+     "bullets": [
+      "Debes circular con puertas, capot y maletera cerrados.",
+      "Está prohibido emitir contaminantes en un índice superior al límite máximo permitido.",
+      "Un vehículo particular transporta tantas personas como asientos indique la tarjeta de identificación vehicular. Se exceptúan los niños en brazos en los asientos posteriores.",
+      "La carga no debe sobrepasar las dimensiones de la carrocería ni caer a la vía.",
+      "Está prohibido llevar sujeto al auto a un ciclista y transportar personas fuera de la carrocería."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "conduccion-segura",
+   "title": "Conducción segura y factores de riesgo",
+   "summary": "Alcohol, sueño, celular, cinturón y condiciones que provocan choques.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 85–87, 307", "Código Penal"],
+   "sections": [
+    {
+     "heading": "Alcohol y drogas",
+     "bullets": [
+      "El límite de alcohol en la sangre es el que fija el Código Penal. Cero tolerancia a las drogas.",
+      "Ante la solicitud de la policía, el conductor está obligado a someterse a las pruebas: coordinación y equilibrio, alcoholímetro o alcoholemia.",
+      "Negarse a la prueba genera una presunción en contra y se sanciona."
+     ]
+    },
+    {
+     "heading": "Distracciones y fatiga",
+     "bullets": [
+      "El celular solo se usa con el vehículo detenido y el motor apagado; el conductor mantiene las manos en el volante.",
+      "Las pantallas de entretenimiento visibles para el conductor están prohibidas; los navegadores se permiten.",
+      "La somnolencia, incluida la causada por medicamentos, retrasa las decisiones. Si sientes sueño, no manejes.",
+      "Preocupaciones, manipular la radio y el celular también distraen."
+     ]
+    },
+    {
+     "heading": "Cinturón de seguridad",
+     "paragraphs": ["Es obligatorio para los ocupantes de los asientos delanteros. En los asientos posteriores es obligatorio cuando el vehículo los trae de fábrica o la norma así lo exige. Se aplica a todos los ocupantes, no solo al conductor."]
+    },
+    {
+     "heading": "Factores que aumentan el riesgo",
+     "bullets": [
+      "Pavimento húmedo y neumáticos desgastados: la distancia de frenado se alarga.",
+      "Cansancio y falta de atención.",
+      "Frenos desgastados y mantenimiento deficiente."
+     ]
+    },
+    {
+     "heading": "Al abastecer combustible",
+     "paragraphs": ["Apaga el motor, no fumes ni tú ni tus acompañantes y no uses fuego cerca del surtidor."]
+    }
+   ]
+  },
+  {
+   "id": "accidentes-y-auxilios",
+   "title": "Accidentes y primeros auxilios",
+   "summary": "Qué hacer en los primeros minutos tras un choque.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 274–281"],
+   "sections": [
+    {
+     "heading": "Obligaciones del conductor",
+     "bullets": [
+      "Detenerte de inmediato sin crear nuevos peligros.",
+      "Solicitar la intervención de la policía y permanecer hasta que llegue. Quien abandona el lugar es presumido culpable.",
+      "Dar aviso a la compañía de seguros y dejar constancia en la comisaría más cercana.",
+      "Auxiliar a los heridos, señalizar el lugar y preservar las evidencias.",
+      "Someterte a la prueba de alcohol si la autoridad lo solicita.",
+      "Si trasladas heridos a un centro de salud, deja tus datos allí o declara en la comisaría más cercana."
+     ]
+    },
+    {
+     "heading": "Conducta PAS",
+     "paragraphs": ["Protege el lugar (luces intermitentes, triángulos, evitar nuevos choques), Avisa a la policía y a emergencias, y Socorre solo en lo que sabes hacer. No muevas a un herido con sospecha de lesión de columna si no hay peligro inminente."]
+    },
+    {
+     "heading": "Si tu vehículo se malogra",
+     "paragraphs": ["Enciende las luces intermitentes, muévelo con cuidado al costado de la vía y coloca los triángulos de seguridad a una distancia de 50 a 150 metros antes y después del vehículo para que otros conductores te vean a tiempo."]
+    }
+   ]
+  },
+  {
+   "id": "usuarios-vulnerables",
+   "title": "Peatones, escolares y ciclistas",
+   "summary": "Los usuarios más vulnerables y cómo debes comportarte frente a ellos.",
+   "legalBasis": ["Reglamento Nacional de Tránsito, Arts. 63–76, 186"],
+   "sections": [
+    {
+     "heading": "Usuarios vulnerables",
+     "paragraphs": ["Son peatones, niños, adultos mayores, personas con movilidad reducida y ciclistas. Merecen especial protección: el conductor debe valorar la vida, respetar la integridad de los demás y respetar a la autoridad de tránsito."]
+    },
+    {
+     "heading": "Peatones",
+     "bullets": [
+      "En un cruce peatonal sin semáforo ni policía, detén el vehículo y cede el paso al peatón.",
+      "En una intersección con semáforo, los peatones tienen prioridad sobre los vehículos que giran cuando su luz está en verde.",
+      "Si una fila de escolares cruza fuera del cruce peatonal, detente y cede el paso."
+     ]
+    },
+    {
+     "heading": "Zonas escolares",
+     "paragraphs": ["Reduce la velocidad a 30 km/h aunque no haya señal. No adelantes a un vehículo escolar que esté recogiendo o dejando alumnos."]
+    },
+    {
+     "heading": "Ciclistas",
+     "paragraphs": ["El ciclista circula por la ciclovía como el conductor circula por la calzada. Al adelantar a un ciclista debes usar el carril izquierdo y regresar a tu carril después. Un niño solo puede viajar en bicicleta con un asiento adecuado, casco y prenda reflectiva, con un adulto que conduce."]
+    }
+   ]
+  }
+ ]
+}

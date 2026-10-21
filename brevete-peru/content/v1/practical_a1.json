@@ -1,0 +1,68 @@
+{
+  "updated": "2026-10-19",
+  "source": "Directiva N° 001-2020-MTC/18 (resumen público) y prensa; verifica siempre con tu escuela de manejo o el MTC.",
+  "disclaimer": "La estructura del examen es un resumen de fuentes públicas. El listado de recomendaciones es consejo general de manejo escrito por nosotros: NO es el listado oficial de faltas ni de puntajes.",
+  "initialPoints": 150,
+  "minimumPoints": 100,
+  "attempts": 2,
+  "stages": [
+    {
+      "title": "Etapa 1 · Circuito cerrado",
+      "summary": "Maniobras en un circuito controlado, sin tráfico real. Empiezas con 150 puntos y necesitas conservar al menos 100.",
+      "bullets": [
+        "Si no apruebas esta etapa, no pasas a la siguiente.",
+        "Practica arranque suave, frenado, retroceso y estacionamiento con calma.",
+        "Un error pequeño resta poco; una maniobra mal hecha repetida resta mucho."
+      ]
+    },
+    {
+      "title": "Etapa 2 · Vía pública",
+      "summary": "Conducción en tráfico real con un evaluador. Otra vez 150 puntos iniciales y 100 mínimos.",
+      "bullets": [
+        "Se evalúa respeto a señales, velocidad, distancia y observación.",
+        "Los giros, cambios de carril e intersecciones son donde más se pierden puntos.",
+        "Mantén la calma: la conducción tranquila y predecible suma."
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "title": "Antes de arrancar",
+      "items": [
+        "Ajusta asiento, espejos y apoyacabezas",
+        "Abróchate el cinturón y verifica que el evaluador también",
+        "Revisa que el freno de mano esté puesto y la palanca en punto muerto",
+        "Comprueba luces, direccionales y puertas cerradas"
+      ]
+    },
+    {
+      "title": "Durante la conducción",
+      "items": [
+        "Señaliza con anticipación cada giro y cambio de carril",
+        "Mira los espejos y el punto ciego antes de maniobrar",
+        "Respeta límites de velocidad y semáforos, aun sin tráfico",
+        "Mantén distancia segura con el vehículo de adelante",
+        "Cede el paso a peatones en cruces y esquinas",
+        "Detente por completo ante PARE y mira a ambos lados"
+      ]
+    },
+    {
+      "title": "Maniobras en circuito",
+      "items": [
+        "Arranca en pendiente sin que el vehículo retroceda",
+        "Retrocede mirando por la luneta, sin depender solo del espejo",
+        "Estaciona dentro del espacio sin tocar los conos",
+        "Frena de forma progresiva, sin golpes bruscos"
+      ]
+    },
+    {
+      "title": "El día del examen",
+      "items": [
+        "Lleva tu DNI y los documentos que pida el centro de evaluación",
+        "Llega con tiempo y descansado",
+        "Practica antes en el tipo de vehículo que usarás",
+        "Si fallas, tienes más de un intento: aprende de cada error"
+      ]
+    }
+  ]
+}

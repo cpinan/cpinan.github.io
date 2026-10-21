@@ -1,0 +1,2014 @@
+{
+ "schemaVersion": 1,
+ "category": "A_I",
+ "origin": "Preguntas de autoría propia basadas en el Reglamento Nacional de Tránsito (TUO DS 016-2009-MTC) y normas conexas",
+ "extractedOn": "2026-10-19",
+ "questions": [
+  {
+   "id": "RNT-001",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Sin señal que indique otro límite, ¿cuál es la velocidad máxima en una avenida urbana?",
+   "options": [
+    "50 km/h",
+    "40 km/h",
+    "60 km/h",
+    "80 km/h"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "En zona urbana: calles y jirones 30, avenidas 60 y vías expresas 80 km/h.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-002",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Sin señal, ¿qué velocidad máxima rige en las calles y jirones de zona urbana?",
+   "options": [
+    "50 km/h",
+    "30 km/h",
+    "40 km/h",
+    "20 km/h"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "El límite en calles y jirones es 30 km/h desde 2021.",
+   "note": null,
+   "source": "RNT Art. 162 (DS 025-2021-MTC)"
+  },
+  {
+   "id": "RNT-003",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Cuál es el límite máximo en una vía expresa urbana sin señal?",
+   "options": [
+    "60 km/h",
+    "70 km/h",
+    "80 km/h",
+    "100 km/h"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Las vías expresas urbanas permiten hasta 80 km/h.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-004",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En una carretera sin señal de velocidad, un automóvil puede circular como máximo a:",
+   "options": [
+    "100 km/h",
+    "90 km/h",
+    "80 km/h",
+    "120 km/h"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Autos, camionetas y motocicletas: 100 km/h en carretera.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-005",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En carretera, ¿cuál es el límite máximo para un vehículo de carga sin señal?",
+   "options": [
+    "100 km/h",
+    "60 km/h",
+    "80 km/h",
+    "90 km/h"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Los vehículos de carga tienen un tope menor que los livianos: 80 km/h.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-006",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Qué límite rige en una carretera para el transporte público de pasajeros?",
+   "options": [
+    "100 km/h",
+    "80 km/h",
+    "90 km/h",
+    "70 km/h"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "El transporte público de pasajeros llega a 90 km/h.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-007",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En un camino rural, el límite máximo de velocidad es:",
+   "options": [
+    "100 km/h",
+    "40 km/h",
+    "80 km/h",
+    "60 km/h"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Los caminos rurales tienen un máximo de 60 km/h.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-008",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Hay neblina espesa y el límite normal es 100 km/h. ¿Qué límite aplica?",
+   "options": [
+    "La mitad del máximo, 50 km/h",
+    "El mismo, 100 km/h",
+    "80 km/h",
+    "70 km/h"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Con niebla, lluvia intensa, humo o polvo el máximo se reduce a la mitad.",
+   "note": null,
+   "source": "RNT Art. 167"
+  },
+  {
+   "id": "RNT-009",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Cerca de un colegio hay una señal de 30 km/h y la norma general permite 60. Debes:",
+   "options": [
+    "Ignorar la señal si no hay niños",
+    "Respetar los 30 km/h de la señal",
+    "Ir a 60 km/h",
+    "Ir a 45 km/h"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "La señal instalada manda sobre el límite general.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-010",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "La velocidad mínima en una vía es:",
+   "options": [
+    "El 75 % del máximo",
+    "20 km/h en cualquier vía",
+    "La mitad de la velocidad máxima de esa vía",
+    "No existe velocidad mínima"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Circular demasiado lento también es infracción: el mínimo es la mitad del máximo.",
+   "note": null,
+   "source": "RNT Art. 165"
+  },
+  {
+   "id": "RNT-011",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Qué velocidad máxima rige en una zona escolar urbana sin otra señal?",
+   "options": [
+    "20 km/h",
+    "40 km/h",
+    "30 km/h",
+    "50 km/h"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "En zona escolar y de hospital el límite es 30 km/h.",
+   "note": null,
+   "source": "RNT Art. 162"
+  },
+  {
+   "id": "RNT-012",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En una intersección urbana no semaforizada, la velocidad precautoria no debe exceder:",
+   "options": [
+    "60 km/h",
+    "50 km/h",
+    "40 km/h",
+    "30 km/h"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Se debe reducir la velocidad al aproximarte a una intersección sin semáforo.",
+   "note": null,
+   "source": "RNT Art. 164"
+  },
+  {
+   "id": "RNT-013",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Con un margen de tolerancia, ¿cuántos km/h por encima del límite se toleran antes de sancionar?",
+   "options": [
+    "No hay tolerancia",
+    "5 km/h",
+    "10 km/h",
+    "15 km/h"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "El reglamento prevé una tolerancia de 5 km/h.",
+   "note": null,
+   "source": "RNT Art. 168-A"
+  },
+  {
+   "id": "RNT-014",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Dos autos llegan al mismo tiempo a una intersección sin señales, desde calles distintas. ¿Quién pasa primero?",
+   "options": [
+    "El más veloz",
+    "El que viene por la izquierda",
+    "El que viene por la derecha del otro",
+    "El de mayor tamaño"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "En igualdad de condiciones, tiene preferencia el vehículo de la derecha.",
+   "note": null,
+   "source": "RNT Art. 178"
+  },
+  {
+   "id": "RNT-015",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Llegas a una rotonda y un auto ya circula dentro de ella. Tú debes:",
+   "options": [
+    "Entrar si vienes por la derecha",
+    "Cederle el paso",
+    "Tocar la bocina y entrar",
+    "Pasar primero si eres más rápido"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "En la rotonda tiene prioridad quien ya está circulando.",
+   "note": null,
+   "source": "RNT Art. 181"
+  },
+  {
+   "id": "RNT-016",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En una intersección en T sin señales, ¿quién tiene prioridad?",
+   "options": [
+    "El primero en tocar bocina",
+    "El tránsito de la vía continua",
+    "El que viene por la vía que termina",
+    "El de mayor cilindrada"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Quien sale de la vía que termina cede el paso al de la vía continua.",
+   "note": null,
+   "source": "RNT Art. 182"
+  },
+  {
+   "id": "RNT-017",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Un vehículo que entra a una vía preferencial debe:",
+   "options": [
+    "Acelerar para integrarse",
+    "Usar luces altas para anunciarse",
+    "Pasar sin detenerse",
+    "Ceder el paso a quienes ya circulan por ella"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Al ingresar a una vía preferencial se cede el paso.",
+   "note": null,
+   "source": "RNT Art. 177"
+  },
+  {
+   "id": "RNT-018",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Un tren se acerca a un cruce a nivel donde tú quieres pasar. ¿Quién tiene preferencia?",
+   "options": [
+    "El vehículo más pequeño",
+    "El que llegó primero al cruce",
+    "El tren",
+    "El que lleva mayor velocidad"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "El tren no puede frenar ni desviarse: siempre tiene preferencia.",
+   "note": null,
+   "source": "RNT Arts. 189–194"
+  },
+  {
+   "id": "RNT-019",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Una ambulancia con sirena y luces se aproxima por atrás. Debes:",
+   "options": [
+    "Mantener tu carril y velocidad",
+    "Acelerar para alejarte",
+    "Cederle el paso",
+    "Seguirla para pasar más rápido"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Se cede el paso a vehículos de emergencia con señales audibles y visibles; nunca seguirlos.",
+   "note": null,
+   "source": "RNT Art. 129"
+  },
+  {
+   "id": "RNT-020",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Está prohibido seguir a una ambulancia en emergencia para:",
+   "options": [
+    "Avanzar más rápido en el tránsito",
+    "Mantener distancia",
+    "Cederle el paso",
+    "Prestarle auxilio"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Los demás usuarios deben ceder el paso y no seguir a los vehículos de emergencia.",
+   "note": null,
+   "source": "RNT Art. 231"
+  },
+  {
+   "id": "RNT-021",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En un tramo angosto de una sola vía con pendiente, ¿quién tiene preferencia?",
+   "options": [
+    "El vehículo que baja",
+    "El vehículo que sube",
+    "El más pesado",
+    "El que llegó primero siempre"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "El que asciende tiene preferencia porque le cuesta más reiniciar la marcha.",
+   "note": null,
+   "source": "RNT Art. 187"
+  },
+  {
+   "id": "RNT-022",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "El semáforo está en verde pero el policía te indica detenerte. Debes:",
+   "options": [
+    "Pasar con precaución",
+    "Tocar bocina",
+    "Seguir porque la luz está en verde",
+    "Obedecer al policía"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "La instrucción del policía prevalece sobre el semáforo.",
+   "note": null,
+   "source": "RNT Art. 180"
+  },
+  {
+   "id": "RNT-023",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Al girar a la derecha en una intersección con semáforo en verde, un peatón cruza. ¿Quién tiene prioridad?",
+   "options": [
+    "El peatón",
+    "El más cercano a la esquina",
+    "El vehículo",
+    "El que llegó primero"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "El peatón tiene prioridad sobre los vehículos que giran cuando su luz está en verde.",
+   "note": null,
+   "source": "RNT Art. 64"
+  },
+  {
+   "id": "RNT-024",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Sales de una cochera y cruzas la acera. Debes dar paso a:",
+   "options": [
+    "Nadie, si tocas bocina",
+    "Solo a los peatones",
+    "Peatones y vehículos de la vía",
+    "Solo a los vehículos"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Al salir de una propiedad se cede el paso a todos los usuarios.",
+   "note": null,
+   "source": "RNT Art. 183"
+  },
+  {
+   "id": "RNT-025",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Por qué lado se adelanta normalmente a un vehículo?",
+   "options": [
+    "Por la izquierda",
+    "Por cualquier lado",
+    "Por la berma",
+    "Por la derecha"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "El adelantamiento se hace por la izquierda y se regresa al carril original.",
+   "note": null,
+   "source": "RNT Art. 125"
+  },
+  {
+   "id": "RNT-026",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Un vehículo te va a adelantar y tú notas que lo hace. ¿Qué debes hacer?",
+   "options": [
+    "Acelerar para impedirlo",
+    "No acelerar y facilitarle la maniobra",
+    "Zigzaguear",
+    "Frenar bruscamente"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "El adelantado debe mantener su posición y no acelerar.",
+   "note": null,
+   "source": "RNT Art. 170"
+  },
+  {
+   "id": "RNT-027",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Dónde está prohibido adelantar?",
+   "options": [
+    "En autopistas de doble sentido separadas",
+    "Cuando el carril izquierdo está libre",
+    "En rectas largas y despejadas",
+    "En curvas, puentes y túneles"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "El adelantamiento está prohibido donde la visibilidad o el espacio son insuficientes.",
+   "note": null,
+   "source": "RNT Art. 171"
+  },
+  {
+   "id": "RNT-028",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Está permitido adelantar usando la berma?",
+   "options": [
+    "Sí, si el vehículo de adelante es lento",
+    "Solo de noche",
+    "Sí, en carretera",
+    "No"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Usar bermas, medianas o áreas fuera de la calzada para adelantar está prohibido.",
+   "note": null,
+   "source": "RNT Art. 175"
+  },
+  {
+   "id": "RNT-029",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Antes de adelantar a un vehículo debes:",
+   "options": [
+    "Acelerar y luego revisar",
+    "Verificar que el carril izquierdo esté libre y señalizar",
+    "Tocar la bocina fuerte",
+    "Apagar las luces"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Se verifica visibilidad y espacio libre y se señaliza con la luz izquierda.",
+   "note": null,
+   "source": "RNT Art. 169"
+  },
+  {
+   "id": "RNT-030",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En una vía de dos carriles por sentido, ¿qué carril debe usar el vehículo lento?",
+   "options": [
+    "El derecho",
+    "El izquierdo",
+    "El que prefiera",
+    "El central"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Se circula por la derecha y la izquierda se reserva para adelantar.",
+   "note": null,
+   "source": "RNT Art. 135"
+  },
+  {
+   "id": "RNT-031",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Para adelantar a un ciclista en la calzada, un vehículo motorizado debe:",
+   "options": [
+    "Tocar bocina y pasar",
+    "Pasar rozándolo por la derecha",
+    "Usar el carril izquierdo y volver al suyo",
+    "Usar la acera"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Debe pasar por el carril izquierdo y regresar después.",
+   "note": null,
+   "source": "RNT Art. 174-A"
+  },
+  {
+   "id": "RNT-032",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En zona urbana, ¿con cuánta anticipación mínima debes señalizar un giro?",
+   "options": [
+    "5 metros",
+    "10 metros",
+    "50 metros",
+    "20 metros"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Se activa la direccional al menos 20 m antes en ciudad.",
+   "note": null,
+   "source": "RNT Art. 154"
+  },
+  {
+   "id": "RNT-033",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En carretera, ¿con cuánta anticipación mínima debes señalizar un giro?",
+   "options": [
+    "30 metros",
+    "20 metros",
+    "10 metros",
+    "100 metros"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "En carretera la anticipación es de 30 m.",
+   "note": null,
+   "source": "RNT Art. 154"
+  },
+  {
+   "id": "RNT-034",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Con cuánta anticipación mínima se señaliza un cambio de carril?",
+   "options": [
+    "3 segundos",
+    "1 segundo",
+    "No se requiere",
+    "10 segundos"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Se señaliza al menos 3 segundos antes.",
+   "note": null,
+   "source": "RNT Art. 154"
+  },
+  {
+   "id": "RNT-035",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "El giro en U está prohibido:",
+   "options": [
+    "Solo de noche",
+    "En intersecciones y cruces peatonales",
+    "En calles sin tránsito",
+    "Nunca está prohibido"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Se prohíbe en intersecciones, cruces peatonales y cerca de curvas, puentes, túneles y cruces a nivel.",
+   "note": null,
+   "source": "RNT Art. 201"
+  },
+  {
+   "id": "RNT-036",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Cuándo está permitido conducir en retroceso?",
+   "options": [
+    "Nunca bajo ninguna circunstancia",
+    "En autopistas",
+    "Siempre que no haya tránsito",
+    "Solo cuando es indispensable, por ejemplo para estacionar"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Se prohíbe salvo casos justificados.",
+   "note": null,
+   "source": "RNT Art. 149"
+  },
+  {
+   "id": "RNT-037",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Para girar a la izquierda en una intersección debes:",
+   "options": [
+    "Frenar en mitad de la intersección",
+    "Ubicarte en el carril izquierdo con anticipación y señalizar",
+    "Elegir el carril más libre",
+    "Girar desde el carril derecho"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "La ubicación previa y la señal reducen el riesgo de choque.",
+   "note": null,
+   "source": "RNT Arts. 195–196"
+  },
+  {
+   "id": "RNT-038",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Hasta cuándo debes mantener encendida la direccional?",
+   "options": [
+    "Hasta terminar la maniobra",
+    "Solo los primeros metros",
+    "Hasta pasar la esquina",
+    "Mientras dure la luz verde"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "La señal debe mantenerse durante toda la maniobra.",
+   "note": null,
+   "source": "RNT Art. 196"
+  },
+  {
+   "id": "RNT-039",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En carreteras nacionales y regionales, ¿qué luces se deben usar de día y de noche?",
+   "options": [
+    "Luces bajas las 24 horas",
+    "Luces altas siempre",
+    "Solo luces de posición",
+    "Ninguna de día"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "En esas vías las luces bajas son obligatorias las 24 horas.",
+   "note": null,
+   "source": "RNT Art. 152"
+  },
+  {
+   "id": "RNT-040",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Qué luces usar en una vía urbana de noche?",
+   "options": [
+    "Solo las de posición",
+    "Altas",
+    "Intermitentes",
+    "Bajas"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "En ciudad se usan luces bajas.",
+   "note": null,
+   "source": "RNT Art. 153"
+  },
+  {
+   "id": "RNT-041",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Al cruzarte con un auto en carretera de noche, debes:",
+   "options": [
+    "Cambiar a luces bajas",
+    "Mantener las altas",
+    "Encender intermitentes",
+    "Apagar todas las luces"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Se bajan las luces a una distancia prudente (no menor de 200 m) para no encandilar.",
+   "note": null,
+   "source": "RNT Art. 245"
+  },
+  {
+   "id": "RNT-042",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Hay neblina y tu auto tiene rompenieblas. ¿Cómo las usas?",
+   "options": [
+    "Junto con las luces bajas",
+    "No se usan",
+    "Solas, sin otras luces",
+    "Con luces altas"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Las rompenieblas se usan junto con las bajas.",
+   "note": null,
+   "source": "RNT Art. 153"
+  },
+  {
+   "id": "RNT-043",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Las luces intermitentes de emergencia se usan cuando:",
+   "options": [
+    "Giras en cada esquina",
+    "Circulas todo el trayecto",
+    "Adelantas",
+    "Te detienes en zona peligrosa o haces maniobras riesgosas"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "No reemplazan a las direccionales.",
+   "note": null,
+   "source": "RNT Art. 153"
+  },
+  {
+   "id": "RNT-044",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Se puede usar la luz de estacionamiento con el vehículo en movimiento?",
+   "options": [
+    "No",
+    "Sí, de noche",
+    "Sí, en ciudad",
+    "Solo en carretera"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Las luces de estacionamiento no se usan en marcha.",
+   "note": null,
+   "source": "RNT Art. 245"
+  },
+  {
+   "id": "RNT-045",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Para qué se debe usar la bocina?",
+   "options": [
+    "Para saludar",
+    "Para apurar a otros",
+    "Solo para evitar situaciones peligrosas",
+    "Para avisar que adelantarás"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Su uso innecesario es infracción.",
+   "note": null,
+   "source": "RNT Art. 255"
+  },
+  {
+   "id": "RNT-046",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Quiénes pueden usar sirenas y señales sonoras especiales?",
+   "options": [
+    "Cualquier vehículo particular",
+    "Los vehículos con vidrios polarizados",
+    "Solo los vehículos de emergencia y oficiales",
+    "Los taxis"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Las sirenas y similares están prohibidas para el resto.",
+   "note": null,
+   "source": "RNT Art. 255"
+  },
+  {
+   "id": "RNT-047",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Dónde está prohibido estacionar?",
+   "options": [
+    "En una intersección y en el cruce peatonal",
+    "En un espacio señalizado como permitido",
+    "Junto a la acera, en un espacio permitido",
+    "En un estacionamiento autorizado"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "No se estaciona dentro de intersecciones, cruces peatonales ni aceras.",
+   "note": null,
+   "source": "RNT Art. 215"
+  },
+  {
+   "id": "RNT-048",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿A qué distancia máxima del borde de la acera debes detenerte para recoger pasajeros?",
+   "options": [
+    "20 cm",
+    "2 m",
+    "50 cm",
+    "1 m"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Debes acercarte al borde hasta 20 cm y usar intermitentes.",
+   "note": null,
+   "source": "RNT Art. 207"
+  },
+  {
+   "id": "RNT-049",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Está permitido estacionar sobre la acera?",
+   "options": [
+    "Solo en zonas residenciales",
+    "Sí, de noche",
+    "Sí, si dejas espacio para peatones",
+    "No"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Las aceras son para los peatones.",
+   "note": null,
+   "source": "RNT Art. 215"
+  },
+  {
+   "id": "RNT-050",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿A cuántos metros de un cruce a nivel con vía férrea está prohibido estacionar?",
+   "options": [
+    "10 m",
+    "5 m",
+    "2 m",
+    "20 m"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "La norma prohíbe estacionar a menos de 20 m de un cruce a nivel.",
+   "note": null,
+   "source": "RNT Art. 215"
+  },
+  {
+   "id": "RNT-051",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "¿Cuánto tiempo sin conductor, en lugar permitido de la vía pública, convierte al vehículo en abandonado?",
+   "options": [
+    "Más de 24 horas",
+    "Más de 12 horas",
+    "Más de 7 días",
+    "Más de 48 horas"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Pasadas 48 h se considera abandono.",
+   "note": null,
+   "source": "RNT Art. 219"
+  },
+  {
+   "id": "RNT-052",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "Tu auto se malogra en la vía. Los triángulos de seguridad se colocan:",
+   "options": [
+    "Solo delante del vehículo",
+    "A 1 m del vehículo",
+    "Entre 50 y 150 m antes y después del vehículo",
+    "Dentro del vehículo"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Así los demás conductores ven el peligro a tiempo.",
+   "note": null,
+   "source": "RNT Art. 225"
+  },
+  {
+   "id": "RNT-053",
+   "category": "A_I",
+   "topic": "REGLAS",
+   "text": "En una calle con pendiente, al estacionar debes:",
+   "options": [
+    "Dejar el motor encendido",
+    "Orientar las ruedas delanteras contra la acera",
+    "Dejar las ruedas rectas",
+    "Estacionar en doble fila"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Así el vehículo no se desplaza si falla el freno.",
+   "note": null,
+   "source": "RNT Art. 212"
+  },
+  {
+   "id": "RNT-054",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Qué documentos debes portar al conducir?",
+   "options": [
+    "Solo la licencia",
+    "Solo el SOAT",
+    "Contrato de compraventa del auto",
+    "Documento de identidad, licencia, tarjeta de identificación vehicular y SOAT"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Estos documentos deben exhibirse a la autoridad.",
+   "note": null,
+   "source": "RNT Art. 91"
+  },
+  {
+   "id": "RNT-055",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿El SOAT puede ser electrónico?",
+   "options": [
+    "Solo en provincias",
+    "Depende de la aseguradora",
+    "Sí",
+    "No, solo físico"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "El SOAT electrónico es válido y se verifica en la base de datos.",
+   "note": null,
+   "source": "RNT Art. 91"
+  },
+  {
+   "id": "RNT-056",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Cuál es el plazo de vigencia del SOAT?",
+   "options": [
+    "6 meses",
+    "3 años",
+    "2 años",
+    "1 año"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "La vigencia del SOAT es de un año.",
+   "note": null,
+   "source": "Reglamento de SOAT"
+  },
+  {
+   "id": "RNT-057",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Qué cubre el SOAT?",
+   "options": [
+    "Daños a los ocupantes y a terceros no ocupantes",
+    "Solo el robo del vehículo",
+    "Solo al conductor",
+    "Solo el motor"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Cubre atención y gastos de lesiones de ocupantes y terceros.",
+   "note": null,
+   "source": "Reglamento de SOAT"
+  },
+  {
+   "id": "RNT-058",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Circular sin SOAT puede ocasionar:",
+   "options": [
+    "Nada si es primera vez",
+    "Retención e internamiento del vehículo",
+    "Suspensión de la placa",
+    "Solo una amonestación"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "El vehículo se interna hasta acreditar el seguro.",
+   "note": null,
+   "source": "RNT Art. 287"
+  },
+  {
+   "id": "RNT-059",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "La licencia A-I te autoriza a conducir:",
+   "options": [
+    "Un camión pesado",
+    "Un automóvil particular",
+    "Un mototaxi",
+    "Un ómnibus"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "La A-I es la licencia no profesional para M1, M2 y N1.",
+   "note": null,
+   "source": "Reglamento de licencias"
+  },
+  {
+   "id": "RNT-060",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Si tu licencia está vencida, puedes conducir:",
+   "options": [
+    "No puedes conducir",
+    "Con normalidad",
+    "Solo en la ciudad",
+    "Hasta 90 días más"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "La licencia debe estar vigente para conducir.",
+   "note": null,
+   "source": "RNT Art. 107"
+  },
+  {
+   "id": "RNT-061",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Si tu licencia tiene la restricción de usar lentes, debes:",
+   "options": [
+    "Usarlos solo de noche",
+    "Ignorarlo si ves bien",
+    "Usarlos siempre que conduzcas",
+    "Usarlos si quieres"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Las restricciones son obligatorias.",
+   "note": null,
+   "source": "Reglamento de licencias"
+  },
+  {
+   "id": "RNT-062",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Cuál es la edad mínima para obtener una licencia de la Clase A?",
+   "options": [
+    "18 años",
+    "16 años",
+    "21 años",
+    "20 años"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Los 18 años son el mínimo para la Clase A.",
+   "note": null,
+   "source": "Reglamento de licencias"
+  },
+  {
+   "id": "RNT-063",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Con qué documento se identifica un vehículo para circular?",
+   "options": [
+    "El carnet de la municipalidad",
+    "La tarjeta de crédito",
+    "La Placa Única Nacional de Rodaje",
+    "El SOAT"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "La placa identifica al vehículo y al titular responsable.",
+   "note": null,
+   "source": "Reglamento de placas"
+  },
+  {
+   "id": "RNT-064",
+   "category": "A_I",
+   "topic": "MECANICA",
+   "text": "¿Cada cuánto se repite la inspección técnica de un vehículo particular?",
+   "options": [
+    "Cada 6 meses",
+    "Cada 2 años",
+    "Cada 3 años",
+    "Cada año"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Una vez requerida, es anual.",
+   "note": null,
+   "source": "Reglamento de inspecciones técnicas"
+  },
+  {
+   "id": "RNT-065",
+   "category": "A_I",
+   "topic": "MECANICA",
+   "text": "Un auto particular M1 nuevo pasa su primera inspección técnica:",
+   "options": [
+    "Nunca",
+    "A partir del cuarto año",
+    "Al primer año",
+    "Al segundo año"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Cuenta desde el año siguiente al de fabricación.",
+   "note": null,
+   "source": "Reglamento de inspecciones técnicas"
+  },
+  {
+   "id": "RNT-066",
+   "category": "A_I",
+   "topic": "MECANICA",
+   "text": "¿Cuántas personas puede llevar un auto particular?",
+   "options": [
+    "Las asientos de la tarjeta, salvo niños en brazos atrás",
+    "Depende del conductor",
+    "El doble de asientos",
+    "Las que entren"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "No puedes superar la capacidad de la tarjeta.",
+   "note": null,
+   "source": "RNT Art. 96"
+  },
+  {
+   "id": "RNT-067",
+   "category": "A_I",
+   "topic": "MECANICA",
+   "text": "Un vehículo debe circular con:",
+   "options": [
+    "La maletera entreabierta",
+    "Puertas, capot y maletera cerrados",
+    "Una puerta abierta",
+    "El capot abierto"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Circular con ellas abiertas es infracción.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-068",
+   "category": "A_I",
+   "topic": "MECANICA",
+   "text": "¿Puede un ciclista agarrarse a tu auto en marcha?",
+   "options": [
+    "Sí, por la parte trasera",
+    "Sí, en zona urbana",
+    "No, está prohibido",
+    "Sí, si vas lento"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Es peligroso y está sancionado.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-069",
+   "category": "A_I",
+   "topic": "MECANICA",
+   "text": "¿Se puede transportar personas fuera de la carrocería?",
+   "options": [
+    "Sí, a baja velocidad",
+    "Solo niños",
+    "Sí, de noche",
+    "No"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Está prohibido llevar personas en la parte exterior.",
+   "note": null,
+   "source": "RNT Art. 130.2"
+  },
+  {
+   "id": "RNT-070",
+   "category": "A_I",
+   "topic": "MECANICA",
+   "text": "Al transportar carga, esta debe:",
+   "options": [
+    "No sobrepasar las dimensiones de la carrocería ni caer",
+    "Colgar atrás sin amarrar",
+    "Cubrir las luces",
+    "Ser arrastrada"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "La carga debe estar asegurada.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-071",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "¿Quiénes deben usar cinturón de seguridad?",
+   "options": [
+    "Solo adultos",
+    "Los ocupantes de los asientos delanteros y los traseros que lo tengan",
+    "Solo en carretera",
+    "Solo el conductor"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Es obligatorio para todos los ocupantes de asientos con cinturón.",
+   "note": null,
+   "source": "RNT Art. 85"
+  },
+  {
+   "id": "RNT-072",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "¿Cuándo puedes usar un celular de mano?",
+   "options": [
+    "Si vas despacio",
+    "En semáforos en rojo",
+    "En carretera",
+    "Solo con el vehículo estacionado y el motor apagado"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Mientras conduces debes mantener ambas manos en el volante.",
+   "note": null,
+   "source": "RNT Art. 86"
+  },
+  {
+   "id": "RNT-073",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "¿Se permiten pantallas de entretenimiento visibles para el conductor?",
+   "options": [
+    "Sí, solo en semáforos",
+    "No",
+    "Sí",
+    "Sí, con volumen bajo"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Los navegadores sí se permiten.",
+   "note": null,
+   "source": "RNT Art. 87"
+  },
+  {
+   "id": "RNT-074",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Si un policía te pide la prueba de alcoholemia, debes:",
+   "options": [
+    "Someterte a la prueba",
+    "Salir del auto y huir",
+    "Negarte si no hubo accidente",
+    "Pedir un abogado antes"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Negarte genera presunción en tu contra y se sanciona.",
+   "note": null,
+   "source": "RNT Art. 307"
+  },
+  {
+   "id": "RNT-075",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Si sientes mucho sueño al conducir, lo más seguro es:",
+   "options": [
+    "Detenerte y descansar",
+    "Acelerar para llegar",
+    "Subir el volumen",
+    "Abrir la ventana y seguir"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "La somnolencia retrasa tus decisiones.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-076",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "El conductor que tomó un medicamento que le da sueño debe:",
+   "options": [
+    "Conducir despacio",
+    "No conducir",
+    "Llevar copiloto y manejar",
+    "Tomar café y manejar"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "El sueño aumenta el riesgo de accidente.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-077",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Al cargar combustible debes:",
+   "options": [
+    "Usar el celular",
+    "Apagar el motor y no fumar",
+    "Fumar lejos del surtidor",
+    "Dejar el motor encendido"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Evita incendios.",
+   "note": null,
+   "source": "Buenas prácticas"
+  },
+  {
+   "id": "RNT-078",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "¿Qué factor aumenta la distancia de frenado?",
+   "options": [
+    "Llantas nuevas",
+    "Pavimento húmedo y neumáticos desgastados",
+    "Velocidad baja",
+    "Pavimento seco"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Pierdes adherencia.",
+   "note": null,
+   "source": "Seguridad vial"
+  },
+  {
+   "id": "RNT-079",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Los conductores de motos y vehículos similares deben usar:",
+   "options": [
+    "Anteojos solamente",
+    "Casco",
+    "Gorra",
+    "Nada si es de día"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "El casco es obligatorio.",
+   "note": null,
+   "source": "RNT Art. 105"
+  },
+  {
+   "id": "RNT-080",
+   "category": "A_I",
+   "topic": "PRIMEROS_AUXILIOS",
+   "text": "Tras un accidente con daños, los participantes deben:",
+   "options": [
+    "Solicitar la intervención de la policía",
+    "Retirarse del lugar",
+    "Mover los vehículos y seguir",
+    "Esperar a que un tercero decida"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Quien se retira se presume responsable.",
+   "note": null,
+   "source": "RNT Art. 274"
+  },
+  {
+   "id": "RNT-081",
+   "category": "A_I",
+   "topic": "PRIMEROS_AUXILIOS",
+   "text": "Si no te quedas en el lugar de un accidente, la norma presume:",
+   "options": [
+    "Que eres el responsable",
+    "Nada",
+    "Que no hubo accidente",
+    "Que el otro es culpable"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "La fuga genera presunción en tu contra.",
+   "note": null,
+   "source": "RNT Art. 274"
+  },
+  {
+   "id": "RNT-082",
+   "category": "A_I",
+   "topic": "PRIMEROS_AUXILIOS",
+   "text": "Tras un accidente, ¿qué debes avisar además de a la policía?",
+   "options": [
+    "Nadie más",
+    "A un amigo",
+    "A los bomberos únicamente",
+    "A tu compañía de seguros"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "El aviso al seguro es obligatorio.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-083",
+   "category": "A_I",
+   "topic": "PRIMEROS_AUXILIOS",
+   "text": "Tu licencia puede ser retenida tras un accidente cuando:",
+   "options": [
+    "Hubo un rayón",
+    "El auto no pasó revisión técnica",
+    "Hubo lesiones a terceros",
+    "No hubo daños"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "La retención de la licencia procede en casos con lesiones.",
+   "note": null,
+   "source": "RNT Art. 277"
+  },
+  {
+   "id": "RNT-084",
+   "category": "A_I",
+   "topic": "PRIMEROS_AUXILIOS",
+   "text": "Un conductor samaritano que lleva heridos a un hospital debe:",
+   "options": [
+    "Llamar a un familiar",
+    "Esperar que el herido pague",
+    "Dejar sus datos o declarar en la comisaría más cercana",
+    "Irse sin identificarse"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Así queda registrada su intervención.",
+   "note": null,
+   "source": "RNT Art. 279"
+  },
+  {
+   "id": "RNT-085",
+   "category": "A_I",
+   "topic": "PRIMEROS_AUXILIOS",
+   "text": "La conducta PAS significa:",
+   "options": [
+    "Proteger, Avisar y Socorrer",
+    "Parar, Avanzar, Seguir",
+    "Preparar, Arrancar, Salir",
+    "Pagar, Asegurar, Salvar"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Es el orden básico ante un accidente.",
+   "note": null,
+   "source": "Primeros auxilios"
+  },
+  {
+   "id": "RNT-086",
+   "category": "A_I",
+   "topic": "PRIMEROS_AUXILIOS",
+   "text": "Al ver a un herido con posible lesión de columna y sin peligro inminente, debes:",
+   "options": [
+    "Sentarlo",
+    "Levantarlo rápido",
+    "Darle de beber",
+    "No moverlo y llamar a emergencias"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Moverlo puede agravar la lesión.",
+   "note": null,
+   "source": "Primeros auxilios"
+  },
+  {
+   "id": "RNT-087",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Si repites la misma infracción en 12 meses:",
+   "options": [
+    "La multa se duplica",
+    "Solo se amonesta",
+    "Se perdona la segunda",
+    "Se cambia por trabajo comunitario"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Esto es la reincidencia.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-088",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Qué ocurre al acumular 100 puntos firmes en 24 meses?",
+   "options": [
+    "Se anula el SOAT",
+    "Se suspende la licencia",
+    "Se cancela la placa",
+    "Nada"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Es el límite del sistema de puntos.",
+   "note": null,
+   "source": "Ley 29365"
+  },
+  {
+   "id": "RNT-089",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Cómo se expresan las multas del reglamento?",
+   "options": [
+    "Como un porcentaje de la UIT",
+    "Según el tipo de vehículo",
+    "En dólares",
+    "En soles fijos sin cambio"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Se calculan sobre la UIT vigente.",
+   "note": null,
+   "source": "RNT Art. 311"
+  },
+  {
+   "id": "RNT-090",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Conducir sin licencia se sanciona con:",
+   "options": [
+    "Servicio comunitario",
+    "Multa e imposibilidad de obtener licencia por 3 años",
+    "Nada",
+    "Solo amonestación"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Es una infracción gravísima.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-091",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Qué se puede hacer con una licencia suspendida?",
+   "options": [
+    "Recategorizarla",
+    "Nada: no se puede duplicar, revalidar ni recategorizar",
+    "Revalidarla",
+    "Pedir duplicado"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "La suspensión bloquea esos trámites.",
+   "note": null,
+   "source": "Reglamento de licencias"
+  },
+  {
+   "id": "RNT-092",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Conducir con alcohol sobre el límite legal sin accidente se sanciona con:",
+   "options": [
+    "Multa y suspensión de licencia por 3 años",
+    "Nada",
+    "Amonestación",
+    "Solo multa"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "La suspensión es de 3 años.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-093",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Conducir con alcohol en exceso y causar un accidente implica:",
+   "options": [
+    "Solo multa",
+    "Una advertencia",
+    "Multa, cancelación e inhabilitación definitiva",
+    "Suspensión por 1 mes"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Es la sanción más grave.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-094",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Participar en una competencia de velocidad en la vía pública:",
+   "options": [
+    "Está permitido en zona rural",
+    "Está permitido de noche",
+    "Está permitido con permiso municipal",
+    "Está prohibido; solo en circuitos autorizados"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Se realiza únicamente en pistas autorizadas.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-095",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "¿Qué se descuenta por pagar la multa dentro de los cinco días hábiles?",
+   "options": [
+    "50 % de descuento",
+    "Nada",
+    "100 %",
+    "17 % de descuento"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "También hay 33 % si se paga antes de la resolución.",
+   "note": null,
+   "source": "RNT Art. 336"
+  },
+  {
+   "id": "RNT-096",
+   "category": "A_I",
+   "topic": "NORMATIVA",
+   "text": "Para un peatón, ¿las infracciones se miden también como porcentaje de la UIT?",
+   "options": [
+    "Solo si hay accidente",
+    "Sí, con porcentajes menores",
+    "No, no se multa a peatones",
+    "Solo en provincias"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Los peatones también pueden ser multados.",
+   "note": null,
+   "source": "RNT Art. 319"
+  },
+  {
+   "id": "RNT-097",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Un peatón cruza por la zona peatonal sin semáforo. ¿Qué debe hacer el conductor?",
+   "options": [
+    "Tocar bocina",
+    "Pasar rápido",
+    "Esquivarlo por detrás",
+    "Detener el vehículo y cederle el paso"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "El peatón en cruce señalizado tiene preferencia.",
+   "note": null,
+   "source": "RNT Art. 186"
+  },
+  {
+   "id": "RNT-098",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Una fila de escolares cruza fuera del paso peatonal. Debes:",
+   "options": [
+    "Tocar bocina",
+    "Seguir despacio",
+    "Detenerte y cederles el paso",
+    "Adelantarlos"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Los escolares son usuarios vulnerables.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-099",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Un bus escolar está detenido dejando alumnos. Debes:",
+   "options": [
+    "Adelantarlo por la izquierda",
+    "Detenerte hasta que terminen",
+    "Pasar despacio",
+    "Pasar tocando bocina"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "No se avanza hasta que termine el ascenso o descenso.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-100",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "¿Quiénes son usuarios vulnerables de la vía?",
+   "options": [
+    "Peatones, niños, adultos mayores, personas con movilidad reducida y ciclistas",
+    "Solo niños",
+    "Solo ciclistas",
+    "Solo peatones"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Merecen especial protección.",
+   "note": null,
+   "source": "RNT"
+  },
+  {
+   "id": "RNT-101",
+   "category": "A_I",
+   "topic": "SEGURIDAD_VIAL",
+   "text": "Un niño puede viajar en bicicleta si tiene:",
+   "options": [
+    "Solo casco",
+    "Nada si es de día",
+    "Asiento adecuado, casco y prenda reflectiva, con adulto que conduce",
+    "Cualquier asiento"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Son las condiciones de seguridad exigidas.",
+   "note": null,
+   "source": "RNT Art. 106-F.2"
+  },
+  {
+   "id": "RNT-102",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Un octágono rojo con la palabra PARE indica que debes:",
+   "options": [
+    "Pasar si no hay nadie",
+    "Tocar bocina",
+    "Reducir la velocidad",
+    "Detenerte totalmente y ceder el paso"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "El PARE exige detención total.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-103",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Un triángulo invertido con borde rojo (CEDA EL PASO) indica que debes:",
+   "options": [
+    "Reducir, detenerte si hace falta y ceder",
+    "Detenerte siempre",
+    "Pasar primero",
+    "Girar"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "El CEDA EL PASO no exige parar siempre.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-104",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Las señales con forma de rombo amarillo son:",
+   "options": [
+    "Informativas",
+    "Preventivas",
+    "Reglamentarias",
+    "Turísticas"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Advierten un peligro.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-105",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Las señales circulares con borde rojo suelen ser:",
+   "options": [
+    "Reglamentarias",
+    "De servicios",
+    "Informativas",
+    "Preventivas"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Ordenan, prohíben o restringen.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-106",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "¿Qué indican las señales de servicios generales?",
+   "options": [
+    "Límites de velocidad",
+    "Servicios próximos a la vía como teléfono, hospedaje y grifo",
+    "Peligros próximos",
+    "Prohibiciones"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Son informativas.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-107",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Una línea central amarilla continua en una vía de doble sentido significa:",
+   "options": [
+    "No se puede cruzar",
+    "Es un cruce peatonal",
+    "Se puede cruzar para adelantar",
+    "Se separa tráfico del mismo sentido"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Delimita la zona de no adelantar.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-108",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "¿Qué color se usa para separar carriles del mismo sentido?",
+   "options": [
+    "Blanco",
+    "Azul",
+    "Rojo",
+    "Amarillo"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "El amarillo separa sentidos opuestos.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-109",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "El color azul en el pavimento se usa para:",
+   "options": [
+    "Cruces peatonales",
+    "Carriles de adelantamiento",
+    "Zonas escolares",
+    "Estacionamientos para personas con movilidad reducida"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Complementa señales informativas.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-110",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Una malla de cuadrícula amarilla en una intersección indica que:",
+   "options": [
+    "Es una zona escolar",
+    "No puedes detenerte dentro del área",
+    "Puedes estacionar",
+    "Es una isla peatonal"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Evita bloquear el cruce.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-111",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "La línea de pare sirve para:",
+   "options": [
+    "Separar sentidos",
+    "Marcar un estacionamiento",
+    "Delimitar un carril",
+    "Indicar dónde detener el vehículo antes de la intersección"
+   ],
+   "correctIndex": 3,
+   "image": null,
+   "explanation": "Debes detenerte antes de ella.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-112",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "¿Qué hace una señal P-58?",
+   "options": [
+    "Avisa que se aproxima un PARE",
+    "Ordena ceder el paso",
+    "Ordena parar donde está",
+    "Prohíbe estacionar"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Las preventivas anuncian un peligro más adelante.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-113",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "¿Qué hace la señal R-40?",
+   "options": [
+    "Prohíbe la bocina",
+    "Prohíbe adelantar",
+    "Ordena circular con luces bajas",
+    "Indica zona escolar"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Es una señal reglamentaria.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-114",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "¿Qué hace la señal R-29?",
+   "options": [
+    "Prohíbe girar",
+    "Prohíbe el uso de la bocina",
+    "Prohíbe estacionar",
+    "Indica un taller"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "Es reglamentaria.",
+   "note": null,
+   "source": "Manual de Dispositivos"
+  },
+  {
+   "id": "RNT-115",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "La luz ámbar del semáforo significa:",
+   "options": [
+    "Acelerar",
+    "Prevención: detenerte si puedes hacerlo con seguridad",
+    "Giro libre",
+    "Pasar sin mirar"
+   ],
+   "correctIndex": 1,
+   "image": null,
+   "explanation": "No es una luz de aceleración.",
+   "note": null,
+   "source": "Reglamento"
+  },
+  {
+   "id": "RNT-116",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "La luz roja intermitente equivale a:",
+   "options": [
+    "Solo precaución",
+    "Un CEDA EL PASO",
+    "Una señal de PARE",
+    "Paso libre"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Debes detenerte por completo.",
+   "note": null,
+   "source": "Reglamento"
+  },
+  {
+   "id": "RNT-117",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Una flecha verde permite:",
+   "options": [
+    "Detenerse",
+    "Avanzar en cualquier dirección",
+    "Avanzar con precaución en la dirección de la flecha",
+    "Adelantar"
+   ],
+   "correctIndex": 2,
+   "image": null,
+   "explanation": "Solo en la dirección y carril controlados.",
+   "note": null,
+   "source": "Reglamento"
+  },
+  {
+   "id": "RNT-118",
+   "category": "A_I",
+   "topic": "SENALES",
+   "text": "Si el policía te da el frente o la espalda, significa:",
+   "options": [
+    "Detenerte",
+    "Acelerar",
+    "Girar a la derecha",
+    "Seguir"
+   ],
+   "correctIndex": 0,
+   "image": null,
+   "explanation": "Es una señal de detención.",
+   "note": null,
+   "source": "Reglamento"
+  }
+ ]
+}
