@@ -85,17 +85,19 @@
   <div class="body">
 
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: 5 October 2026</p>
+  <p class="muted">Last updated: 23 October 2026</p>
 
   <div class="note">
-    <p><strong>Retro 3D Maze shows ads, and collects nothing else.</strong> There are no accounts,
-    no analytics and no crash reporting, and nothing you do in the maze is recorded anywhere but on
-    your own phone. The ads are served by Google AdMob, which uses your device's advertising ID —
-    that is the one thing about you that leaves the device, and section 3 says exactly what it
-    involves and how to turn the personalised part of it off.</p>
+    <p><strong>Retro 3D Maze shows ads, and reports crashes and basic usage statistics. It collects
+    nothing else.</strong> There are no accounts, and nothing you do in the maze is recorded
+    anywhere but on your own phone. Three things leave the device: ad requests, served by Google
+    AdMob (section 3); crash reports, sent through Google Firebase Crashlytics; and basic usage
+    statistics, sent through Google Firebase Analytics (both in section 4). None of it contains
+    your name, email address or anything you typed or played.</p>
     <p class="muted">Versions up to 1.0.0 declared no Android permissions at all and could not make
     a network request. Version 1.1.0 added ads, and with them the internet and advertising-ID
-    permissions. This page was rewritten for that change rather than quietly amended.</p>
+    permissions. Version 1.2.3 added crash reports and usage statistics. This page was rewritten
+    for each change rather than quietly amended.</p>
   </div>
 
   <h2>1. Information kept on your device</h2>
@@ -158,30 +160,56 @@
 
   <h2>4. What leaves your device</h2>
   <ul>
-    <li><strong>Ad requests</strong>, as described in section 3. This is the only thing the app
-    itself sends, and it goes to Google.</li>
+    <li><strong>Ad requests</strong>, as described in section 3. They go to Google.</li>
+    <li><strong>Crash reports and basic usage statistics</strong>, as described just below. They
+    also go to Google.</li>
     <li><strong>Android Backup.</strong> The preferences file above is marked as eligible for
     Android's own backup and device-transfer system, so your best times and solved count follow you
     to a new phone. When that happens the file is uploaded by <em>Android</em>, to <em>your own</em>
     Google account, under Google's backup encryption — not to us, and we never see it. You control
     it entirely from <strong>Settings → Google → Backup</strong> on your device.</li>
   </ul>
-  <p>The live wallpaper and the screen saver contain no ad code and transmit nothing at all.</p>
+  <h3>Crash reports and usage statistics</h3>
+  <p>Since version 1.2.3 the app includes <strong>Google Firebase Crashlytics</strong> and
+  <strong>Google Firebase Analytics</strong>, to find out when the app crashes and how many people
+  use it. They are on in the Play Store version of the app and off in test builds.</p>
+  <ul>
+    <li><strong>A crash report</strong> is sent when the app crashes: the technical trace of where
+    it failed, the app version, your device's model and Android version, how much memory and
+    storage it had free, and the time. It contains nothing you typed and nothing from your wall
+    image.</li>
+    <li><strong>Usage statistics</strong> are the ones Firebase Analytics gathers by itself: that
+    the app was opened, how long a session lasted, the app version, your device model and Android
+    version, your approximate country (worked out from your IP address) and your device's
+    <strong>advertising ID</strong> where one is available. The app records no custom events of
+    its own, so nothing about which mazes you play or what you choose is sent.</li>
+    <li>Both attach a randomly generated <strong>Firebase installation ID</strong>. It identifies
+    this installation of the app, not you; it is not your name, your account or your phone number,
+    and it is replaced if you uninstall and reinstall.</li>
+  </ul>
+  <p>This data goes to Google, which runs Firebase, and we read it in aggregate in Firebase's
+  console. Google explains how it is handled in
+  <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>.
+  The app has no switch to turn these off; uninstalling the app stops them, and you can reset or
+  delete the advertising ID from <strong>Settings → Privacy → Ads</strong>, which stops it being
+  included.</p>
+  <p>The live wallpaper and the screen saver contain no ad code. Crash reports and usage statistics
+  work for the whole app, so they apply to them as well.</p>
 
   <h2>5. What is never collected</h2>
   <p>No name, no email address, no phone number, no contacts, no precise location, no photos or
   files beyond the single wall image you choose — and that one is only read, never sent. No account
-  of any kind, no analytics, no crash reporting, no record of which mazes you played or how you
-  played them, no free text. The app has no code that gathers any of it. Everything that does leave
-  the device is listed in section 4, in full.</p>
+  of any kind, no record of which mazes you played or how you played them, no free text. The app
+  has no code that gathers any of it. The only things that do leave the device are the ad requests,
+  crash reports and usage statistics listed in sections 3 and 4, in full.</p>
 
   <h2>6. Permissions</h2>
-  <p>The app declares three permissions, all of them for ads:</p>
+  <p>The app declares three permissions, for ads and for crash and usage reporting:</p>
   <ul>
-    <li><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> — to fetch ads. No other part of
-    the app makes a network request.</li>
+    <li><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> — to fetch ads and to
+    send crash reports and usage statistics. No other part of the app makes a network request.</li>
     <li><code>com.google.android.gms.permission.AD_ID</code> — to read the advertising ID described
-    in section 3.</li>
+    in sections 3 and 4.</li>
   </ul>
   <p>Google's libraries add a further set automatically when the app is built: three
   <code>ACCESS_ADSERVICES_*</code> permissions belonging to Android's Privacy Sandbox,
@@ -199,7 +227,11 @@
     <li>In your Android Backup: for as long as your Google account keeps that backup, under your
     control, per Google's retention rules.</li>
     <li>With Google, for ad requests: per Google's own retention policies, linked in section 3.</li>
-    <li>With us: nothing, because we never receive anything about you.</li>
+    <li>With Google, for crash reports and usage statistics: for a limited period set by Firebase's
+    retention rules, linked in section 4.</li>
+    <li>With us: only what we see in Firebase's console — aggregate crash reports and usage
+    figures tied to a random installation ID. We never receive your name, email or anything that
+    identifies you.</li>
   </ul>
 
   <h2>8. Children</h2>
@@ -210,17 +242,19 @@
   <h2>9. Your rights (Peru, Law No. 29733)</h2>
   <p>Under Peru's Personal Data Protection Law and its regulations you have rights of
   <strong>access, rectification, cancellation and objection</strong> regarding your personal data.
-  We hold no personal data about you to exercise them against, because none is ever sent to us. For
-  the advertising ID, which is the only identifier involved at all: reset or delete it from
-  <strong>Settings → Privacy → Ads</strong>, and where a consent choice applies, change it from the
-  <strong>Ad privacy</strong> button in the app. To erase everything stored locally, clear the app's
+  We hold no data that names you: the identifiers involved are the advertising ID and the random
+  Firebase installation ID, neither of which we can link to a person. For the advertising ID: reset
+  or delete it from <strong>Settings → Privacy → Ads</strong>, and where a consent choice applies,
+  change it from the <strong>Ad privacy</strong> button in the app. To get a new installation ID,
+  uninstall and reinstall the app. To ask about data held for you, write to the address in section
+  11. To erase everything stored locally, clear the app's
   data or uninstall it. To remove the backup copy, delete the app's backup from your Google
   account.</p>
 
   <h2>10. Changes</h2>
   <p>If this policy changes, this page and the date at the top will be updated. Any change that
   broadens what is collected will additionally be announced in the release notes — as the addition
-  of ads in version 1.1.0 was.</p>
+  of ads in version 1.1.0 and of crash reports and usage statistics in version 1.2.3 were.</p>
 
   <h2>11. Contact</h2>
   <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
@@ -228,18 +262,21 @@
   <hr>
 
   <h1>Política de Privacidad</h1>
-  <p class="muted">Última actualización: 5 de octubre de 2026</p>
+  <p class="muted">Última actualización: 23 de octubre de 2026</p>
 
   <div class="note">
-    <p><strong>Retro 3D Maze muestra anuncios, y no recopila nada más.</strong> No hay cuentas, ni
-    analíticas, ni informes de errores, y nada de lo que haces en el laberinto se registra en otro
-    sitio que no sea tu propio teléfono. Los anuncios los sirve Google AdMob, que usa el
-    identificador de publicidad de tu dispositivo — eso es lo único tuyo que sale del dispositivo, y
-    la sección 3 explica exactamente qué implica y cómo desactivar la parte personalizada.</p>
+    <p><strong>Retro 3D Maze muestra anuncios e informa de los errores y de estadísticas básicas
+    de uso. No recopila nada más.</strong> No hay cuentas, y nada de lo que haces en el laberinto
+    se registra en otro sitio que no sea tu propio teléfono. Tres cosas salen del dispositivo: las
+    peticiones de anuncios, que sirve Google AdMob (sección 3); los informes de errores, enviados
+    con Google Firebase Crashlytics; y estadísticas básicas de uso, enviadas con Google Firebase
+    Analytics (ambos en la sección 4). Nada de eso contiene tu nombre, tu correo ni nada de lo que
+    escribiste o jugaste.</p>
     <p class="muted">Las versiones hasta la 1.0.0 no declaraban ningún permiso de Android y eran
     incapaces de hacer una petición de red. La versión 1.1.0 añadió anuncios, y con ellos los
-    permisos de internet y de identificador de publicidad. Esta página se reescribió por ese cambio,
-    en lugar de retocarse en silencio.</p>
+    permisos de internet y de identificador de publicidad. La versión 1.2.3 añadió informes de
+    errores y estadísticas de uso. Esta página se reescribió con cada cambio, en lugar de
+    retocarse en silencio.</p>
   </div>
 
   <h2>1. Información que se guarda en tu dispositivo</h2>
@@ -309,8 +346,10 @@
 
   <h2>4. Qué sale de tu dispositivo</h2>
   <ul>
-    <li><strong>Las peticiones de anuncios</strong>, tal como se describen en la sección 3. Es lo
-    único que envía la aplicación, y va a Google.</li>
+    <li><strong>Las peticiones de anuncios</strong>, tal como se describen en la sección 3. Van a
+    Google.</li>
+    <li><strong>Los informes de errores y las estadísticas básicas de uso</strong>, tal como se
+    describen a continuación. También van a Google.</li>
     <li><strong>Copia de seguridad de Android.</strong> El archivo de preferencias anterior está
     marcado como apto para el sistema de copia de seguridad y transferencia de Android, para que tus
     mejores tiempos te acompañen a un teléfono nuevo. Cuando eso ocurre, el archivo lo sube
@@ -318,23 +357,52 @@
     a nosotros, y nunca lo vemos. Lo controlas por completo desde <strong>Ajustes → Google →
     Copia de seguridad</strong>.</li>
   </ul>
-  <p>El fondo de pantalla animado y el salvapantallas no contienen código de anuncios y no
-  transmiten absolutamente nada.</p>
+  <h3>Informes de errores y estadísticas de uso</h3>
+  <p>Desde la versión 1.2.3 la aplicación incluye <strong>Google Firebase Crashlytics</strong> y
+  <strong>Google Firebase Analytics</strong>, para saber cuándo falla la aplicación y cuántas
+  personas la usan. Están activos en la versión de Play Store y desactivados en las compilaciones
+  de prueba.</p>
+  <ul>
+    <li><strong>Un informe de error</strong> se envía cuando la aplicación falla: el rastro técnico
+    de dónde falló, la versión de la aplicación, el modelo de tu dispositivo y su versión de
+    Android, cuánta memoria y almacenamiento tenía libres, y la hora. No contiene nada de lo que
+    escribiste ni nada de tu imagen de pared.</li>
+    <li><strong>Las estadísticas de uso</strong> son las que Firebase Analytics recoge por sí
+    mismo: que la aplicación se abrió, cuánto duró una sesión, la versión de la aplicación, el
+    modelo y la versión de Android de tu dispositivo, tu país aproximado (deducido de tu dirección
+    IP) y el <strong>identificador de publicidad</strong> de tu dispositivo cuando hay uno
+    disponible. La aplicación no registra eventos propios, así que no se envía nada sobre qué
+    laberintos juegas ni qué eliges.</li>
+    <li>Ambos añaden un <strong>identificador de instalación de Firebase</strong> generado al azar.
+    Identifica esta instalación de la aplicación, no a ti; no es tu nombre, tu cuenta ni tu número
+    de teléfono, y se reemplaza si desinstalas y vuelves a instalar.</li>
+  </ul>
+  <p>Estos datos van a Google, que gestiona Firebase, y nosotros los consultamos de forma agregada
+  en la consola de Firebase. Google explica cómo los trata en
+  <a href="https://firebase.google.com/support/privacy">Privacidad y seguridad en Firebase</a>.
+  La aplicación no tiene un interruptor para desactivarlos; desinstalar la aplicación los detiene,
+  y puedes restablecer o eliminar el identificador de publicidad desde
+  <strong>Ajustes → Privacidad → Anuncios</strong>, lo que evita que se incluya.</p>
+  <p>El fondo de pantalla animado y el salvapantallas no contienen código de anuncios. Los informes
+  de errores y las estadísticas de uso funcionan en toda la aplicación, así que también se aplican
+  a ellos.</p>
 
   <h2>5. Qué nunca se recopila</h2>
   <p>Ni nombre, ni correo electrónico, ni número de teléfono, ni contactos, ni ubicación precisa, ni
   fotos o archivos más allá de la única imagen de pared que elijas — y esa sólo se lee, nunca se
-  envía. Ninguna cuenta de ningún tipo, ni analíticas, ni informes de errores, ni registro de qué
-  laberintos jugaste o cómo, ni texto libre. La aplicación no tiene código que recoja nada de eso.
-  Todo lo que sí sale del dispositivo está en la sección 4, completo.</p>
+  envía. Ninguna cuenta de ningún tipo, ni registro de qué laberintos jugaste o cómo, ni texto
+  libre. La aplicación no tiene código que recoja nada de eso. Lo único que sí sale del dispositivo
+  son las peticiones de anuncios, los informes de errores y las estadísticas de uso de las
+  secciones 3 y 4, completos.</p>
 
   <h2>6. Permisos</h2>
-  <p>La aplicación declara tres permisos, todos para los anuncios:</p>
+  <p>La aplicación declara tres permisos, para los anuncios y para los informes de errores y de uso:</p>
   <ul>
-    <li><code>INTERNET</code> y <code>ACCESS_NETWORK_STATE</code> — para obtener anuncios. Ninguna
-    otra parte de la aplicación hace peticiones de red.</li>
+    <li><code>INTERNET</code> y <code>ACCESS_NETWORK_STATE</code> — para obtener anuncios y enviar
+    informes de errores y estadísticas de uso. Ninguna otra parte de la aplicación hace peticiones
+    de red.</li>
     <li><code>com.google.android.gms.permission.AD_ID</code> — para leer el identificador de
-    publicidad descrito en la sección 3.</li>
+    publicidad descrito en las secciones 3 y 4.</li>
   </ul>
   <p>Las bibliotecas de Google añaden automáticamente otros al compilar: tres permisos
   <code>ACCESS_ADSERVICES_*</code> del Privacy Sandbox de Android, <code>WAKE_LOCK</code>,
@@ -352,7 +420,11 @@
     tu control y según las reglas de retención de Google.</li>
     <li>En Google, para las peticiones de anuncios: según las políticas de retención de Google,
     enlazadas en la sección 3.</li>
-    <li>Con nosotros: nada, porque nunca recibimos nada tuyo.</li>
+    <li>En Google, para los informes de errores y las estadísticas de uso: durante un periodo
+    limitado según las reglas de retención de Firebase, enlazadas en la sección 4.</li>
+    <li>Con nosotros: sólo lo que vemos en la consola de Firebase — informes de errores y cifras de
+    uso agregados, asociados a un identificador de instalación aleatorio. Nunca recibimos tu
+    nombre, tu correo ni nada que te identifique.</li>
   </ul>
 
   <h2>8. Menores de edad</h2>
@@ -363,17 +435,21 @@
   <h2>9. Tus derechos (Ley N.º 29733)</h2>
   <p>Conforme a la Ley de Protección de Datos Personales del Perú y su reglamento, tienes derecho de
   <strong>acceso, rectificación, cancelación y oposición</strong> respecto de tus datos personales.
-  No conservamos datos personales tuyos sobre los que ejercerlos, porque nunca se nos envía ninguno.
-  Para el identificador de publicidad, que es el único identificador implicado: restablécelo o
+  No conservamos datos que te nombren: los identificadores implicados son el identificador de
+  publicidad y el identificador de instalación de Firebase, que es aleatorio, y no podemos
+  vincular ninguno de los dos a una persona. Para el identificador de publicidad: restablécelo o
   elimínalo desde <strong>Ajustes → Privacidad → Anuncios</strong>, y donde aplique una elección de
-  consentimiento, cámbiala con el botón <strong>Ad privacy</strong> de la aplicación. Para borrar
+  consentimiento, cámbiala con el botón <strong>Ad privacy</strong> de la aplicación. Para obtener
+  un identificador de instalación nuevo, desinstala y vuelve a instalar la aplicación. Para
+  consultar sobre datos que se conserven sobre ti, escribe a la dirección de la sección 11. Para borrar
   todo lo guardado localmente, borra los datos de la aplicación o desinstálala. Para eliminar la
   copia de seguridad, bórrala desde tu cuenta de Google.</p>
 
   <h2>10. Cambios</h2>
   <p>Si esta política cambia, se actualizará esta página y la fecha del encabezado. Un cambio que
   amplíe la información recopilada se anunciará además en las notas de la versión — como se hizo con
-  la incorporación de anuncios en la versión 1.1.0.</p>
+  la incorporación de anuncios en la versión 1.1.0 y de informes de errores y estadísticas de uso
+  en la versión 1.2.3.</p>
 
   <h2>11. Contacto</h2>
   <p>Carlos Piñán — <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
