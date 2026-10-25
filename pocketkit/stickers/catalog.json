@@ -1,0 +1,503 @@
+{
+  "version": 1,
+  "packs": [
+    {
+      "id": "caras",
+      "name": "Caras",
+      "author": "Google (Noto Emoji)",
+      "license": "Apache-2.0",
+      "category": "Emotions",
+      "animated": false,
+      "tray": "caras/tray.webp",
+      "stickers": [
+        {
+          "file": "caras/01.webp",
+          "emojis": [
+            "😀"
+          ]
+        },
+        {
+          "file": "caras/02.webp",
+          "emojis": [
+            "😂"
+          ]
+        },
+        {
+          "file": "caras/03.webp",
+          "emojis": [
+            "😍"
+          ]
+        },
+        {
+          "file": "caras/04.webp",
+          "emojis": [
+            "🥰"
+          ]
+        },
+        {
+          "file": "caras/05.webp",
+          "emojis": [
+            "😎"
+          ]
+        },
+        {
+          "file": "caras/06.webp",
+          "emojis": [
+            "🥳"
+          ]
+        },
+        {
+          "file": "caras/07.webp",
+          "emojis": [
+            "😭"
+          ]
+        },
+        {
+          "file": "caras/08.webp",
+          "emojis": [
+            "😡"
+          ]
+        },
+        {
+          "file": "caras/09.webp",
+          "emojis": [
+            "🤔"
+          ]
+        },
+        {
+          "file": "caras/10.webp",
+          "emojis": [
+            "😴"
+          ]
+        },
+        {
+          "file": "caras/11.webp",
+          "emojis": [
+            "🤯"
+          ]
+        },
+        {
+          "file": "caras/12.webp",
+          "emojis": [
+            "😅"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corazones",
+      "name": "Corazones",
+      "author": "Google (Noto Emoji)",
+      "license": "Apache-2.0",
+      "category": "Love",
+      "animated": false,
+      "tray": "corazones/tray.webp",
+      "stickers": [
+        {
+          "file": "corazones/01.webp",
+          "emojis": [
+            "❤️"
+          ]
+        },
+        {
+          "file": "corazones/02.webp",
+          "emojis": [
+            "🧡"
+          ]
+        },
+        {
+          "file": "corazones/03.webp",
+          "emojis": [
+            "💛"
+          ]
+        },
+        {
+          "file": "corazones/04.webp",
+          "emojis": [
+            "💚"
+          ]
+        },
+        {
+          "file": "corazones/05.webp",
+          "emojis": [
+            "💙"
+          ]
+        },
+        {
+          "file": "corazones/06.webp",
+          "emojis": [
+            "💜"
+          ]
+        },
+        {
+          "file": "corazones/07.webp",
+          "emojis": [
+            "🖤"
+          ]
+        },
+        {
+          "file": "corazones/08.webp",
+          "emojis": [
+            "🤍"
+          ]
+        },
+        {
+          "file": "corazones/09.webp",
+          "emojis": [
+            "💘"
+          ]
+        },
+        {
+          "file": "corazones/10.webp",
+          "emojis": [
+            "💕"
+          ]
+        },
+        {
+          "file": "corazones/11.webp",
+          "emojis": [
+            "💖"
+          ]
+        },
+        {
+          "file": "corazones/12.webp",
+          "emojis": [
+            "💋"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manos",
+      "name": "Manos",
+      "author": "Google (Noto Emoji)",
+      "license": "Apache-2.0",
+      "category": "Gestures",
+      "animated": false,
+      "tray": "manos/tray.webp",
+      "stickers": [
+        {
+          "file": "manos/01.webp",
+          "emojis": [
+            "👍"
+          ]
+        },
+        {
+          "file": "manos/02.webp",
+          "emojis": [
+            "👏"
+          ]
+        },
+        {
+          "file": "manos/03.webp",
+          "emojis": [
+            "🙏"
+          ]
+        },
+        {
+          "file": "manos/04.webp",
+          "emojis": [
+            "💪"
+          ]
+        },
+        {
+          "file": "manos/05.webp",
+          "emojis": [
+            "✌️"
+          ]
+        },
+        {
+          "file": "manos/06.webp",
+          "emojis": [
+            "👋"
+          ]
+        },
+        {
+          "file": "manos/07.webp",
+          "emojis": [
+            "🤝"
+          ]
+        },
+        {
+          "file": "manos/08.webp",
+          "emojis": [
+            "👌"
+          ]
+        },
+        {
+          "file": "manos/09.webp",
+          "emojis": [
+            "🤘"
+          ]
+        },
+        {
+          "file": "manos/10.webp",
+          "emojis": [
+            "🤞"
+          ]
+        },
+        {
+          "file": "manos/11.webp",
+          "emojis": [
+            "🫶"
+          ]
+        },
+        {
+          "file": "manos/12.webp",
+          "emojis": [
+            "🙌"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "animales",
+      "name": "Animales",
+      "author": "Google (Noto Emoji)",
+      "license": "Apache-2.0",
+      "category": "Animals",
+      "animated": false,
+      "tray": "animales/tray.webp",
+      "stickers": [
+        {
+          "file": "animales/01.webp",
+          "emojis": [
+            "🐶"
+          ]
+        },
+        {
+          "file": "animales/02.webp",
+          "emojis": [
+            "🐱"
+          ]
+        },
+        {
+          "file": "animales/03.webp",
+          "emojis": [
+            "🐯"
+          ]
+        },
+        {
+          "file": "animales/04.webp",
+          "emojis": [
+            "🦄"
+          ]
+        },
+        {
+          "file": "animales/05.webp",
+          "emojis": [
+            "🐼"
+          ]
+        },
+        {
+          "file": "animales/06.webp",
+          "emojis": [
+            "🐸"
+          ]
+        },
+        {
+          "file": "animales/07.webp",
+          "emojis": [
+            "🐵"
+          ]
+        },
+        {
+          "file": "animales/08.webp",
+          "emojis": [
+            "🦉"
+          ]
+        },
+        {
+          "file": "animales/09.webp",
+          "emojis": [
+            "🦊"
+          ]
+        },
+        {
+          "file": "animales/10.webp",
+          "emojis": [
+            "🐨"
+          ]
+        },
+        {
+          "file": "animales/11.webp",
+          "emojis": [
+            "🐢"
+          ]
+        },
+        {
+          "file": "animales/12.webp",
+          "emojis": [
+            "🐬"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comida",
+      "name": "Comida",
+      "author": "Google (Noto Emoji)",
+      "license": "Apache-2.0",
+      "category": "Food",
+      "animated": false,
+      "tray": "comida/tray.webp",
+      "stickers": [
+        {
+          "file": "comida/01.webp",
+          "emojis": [
+            "🍕"
+          ]
+        },
+        {
+          "file": "comida/02.webp",
+          "emojis": [
+            "🍔"
+          ]
+        },
+        {
+          "file": "comida/03.webp",
+          "emojis": [
+            "🌮"
+          ]
+        },
+        {
+          "file": "comida/04.webp",
+          "emojis": [
+            "🍰"
+          ]
+        },
+        {
+          "file": "comida/05.webp",
+          "emojis": [
+            "🍦"
+          ]
+        },
+        {
+          "file": "comida/06.webp",
+          "emojis": [
+            "🍉"
+          ]
+        },
+        {
+          "file": "comida/07.webp",
+          "emojis": [
+            "🍓"
+          ]
+        },
+        {
+          "file": "comida/08.webp",
+          "emojis": [
+            "🥑"
+          ]
+        },
+        {
+          "file": "comida/09.webp",
+          "emojis": [
+            "🍺"
+          ]
+        },
+        {
+          "file": "comida/10.webp",
+          "emojis": [
+            "☕"
+          ]
+        },
+        {
+          "file": "comida/11.webp",
+          "emojis": [
+            "🍟"
+          ]
+        },
+        {
+          "file": "comida/12.webp",
+          "emojis": [
+            "🍫"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fiesta",
+      "name": "Fiesta",
+      "author": "Google (Noto Emoji)",
+      "license": "Apache-2.0",
+      "category": "Celebrations",
+      "animated": false,
+      "tray": "fiesta/tray.webp",
+      "stickers": [
+        {
+          "file": "fiesta/01.webp",
+          "emojis": [
+            "🎉"
+          ]
+        },
+        {
+          "file": "fiesta/02.webp",
+          "emojis": [
+            "🎊"
+          ]
+        },
+        {
+          "file": "fiesta/03.webp",
+          "emojis": [
+            "⚽"
+          ]
+        },
+        {
+          "file": "fiesta/04.webp",
+          "emojis": [
+            "🎶"
+          ]
+        },
+        {
+          "file": "fiesta/05.webp",
+          "emojis": [
+            "🔥"
+          ]
+        },
+        {
+          "file": "fiesta/06.webp",
+          "emojis": [
+            "✨"
+          ]
+        },
+        {
+          "file": "fiesta/07.webp",
+          "emojis": [
+            "🏆"
+          ]
+        },
+        {
+          "file": "fiesta/08.webp",
+          "emojis": [
+            "🚀"
+          ]
+        },
+        {
+          "file": "fiesta/09.webp",
+          "emojis": [
+            "🌈"
+          ]
+        },
+        {
+          "file": "fiesta/10.webp",
+          "emojis": [
+            "🌞"
+          ]
+        },
+        {
+          "file": "fiesta/11.webp",
+          "emojis": [
+            "💡"
+          ]
+        },
+        {
+          "file": "fiesta/12.webp",
+          "emojis": [
+            "🎁"
+          ]
+        }
+      ]
+    }
+  ]
+}

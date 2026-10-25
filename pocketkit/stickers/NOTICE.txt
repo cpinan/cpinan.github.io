@@ -1,0 +1,3 @@
+Sticker images are from Google's Noto Emoji (https://github.com/googlefonts/noto-emoji),
+used under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
+Resized and converted to WebP.
