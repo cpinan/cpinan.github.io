@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Corta Spam — Política de privacidad / Privacy Policy</title>
-<meta name="description" content="Corta Spam no tiene permiso de internet: es incapaz de hacer una petición de red. Nada sale de tu teléfono. / Corta Spam declares no internet permission and is incapable of making a network request.">
+<meta name="description" content="Corta Spam no recopila tus llamadas, contactos ni reglas. Los informes anónimos de uso y de fallos son opcionales y están desactivados hasta que los aceptes. / Corta Spam does not collect your calls, contacts or rules. Anonymous usage and crash reports are optional and off until you accept them.">
 <style>
   :root {
     --cream: #FFF4E6;
@@ -95,13 +95,13 @@
   </div>
   <h1>Corta Spam</h1>
   <p class="tagline">Política de privacidad · Privacy Policy</p>
-  <p class="updated">Última actualización / Last updated: 27 de agosto de 2026</p>
+  <p class="updated">Última actualización / Last updated: 25 de octubre de 2026 / 25 October 2026</p>
 </header>
 
 <!-- ============================ ESPAÑOL ============================ -->
 <div class="card">
 
-<p class="lead"><strong>Corta Spam no declara el permiso de internet.</strong> No es que elijamos no enviar tus datos: la app es <em>incapaz</em> de hacer una petición de red. No hay servidores, no hay cuentas, no hay analíticas y no hay publicidad. Todo ocurre dentro de tu teléfono.</p>
+<p class="lead"><strong>Corta Spam no recopila tus llamadas, contactos, números ni reglas, y no muestra publicidad.</strong> No hay cuentas ni servidores nuestros. Todo eso ocurre dentro de tu teléfono. Los informes anónimos de uso y de fallos son <strong>opcionales y están desactivados hasta que los aceptes</strong>.</p>
 
 <h2>Qué guarda la app, y dónde</h2>
 <p>Todo se guarda en el almacenamiento privado de la app, al que ninguna otra aplicación puede acceder:</p>
@@ -115,7 +115,7 @@
 <p>La app mantiene su <em>propio</em> registro de llamadas. No lee ni escribe el registro de llamadas del sistema Android, y no declara los permisos <code>READ_CALL_LOG</code> ni <code>WRITE_CALL_LOG</code>.</p>
 
 <h2>Qué sale de tu dispositivo</h2>
-<p><strong>Nada.</strong> Ni siquiera a tu propia cuenta de Google.</p>
+<p><strong>Por defecto, nada.</strong> Ni siquiera a tu propia cuenta de Google. La única excepción son los informes anónimos opcionales de la sección «Informes anónimos de uso y de fallos», y solo si los aceptas.</p>
 <p>Muchas apps por lo demás honestas se equivocan aquí: Android hace una copia de seguridad automática de los datos de la app en la cuenta de Google del usuario salvo que la app lo impida. Corta Spam lo impide de forma explícita. El manifiesto declara <code>android:allowBackup="false"</code>, y <code>data_extraction_rules.xml</code> excluye la base de datos, las preferencias y los archivos tanto de la copia en la nube como de la transferencia entre dispositivos.</p>
 <p>El motivo es el contenido: el registro guarda quién te llama y cuándo, es decir, un mapa de tus contactos. Eso pertenece a tu teléfono y a ningún otro sitio. Si quieres llevar tus reglas a otro teléfono, Ajustes tiene una exportación manual a JSON que tú activas y cuyo contenido puedes leer antes de compartirlo.</p>
 
@@ -130,6 +130,7 @@
   <tr><td><code>POST_NOTIFICATIONS</code></td><td>Avisarte de una llamada entrante y de lo que se bloqueó mientras no estabas.</td></tr>
   <tr><td><code>USE_FULL_SCREEN_INTENT</code></td><td>Mostrar la pantalla de llamada entrante cuando el teléfono está bloqueado. Es el único uso que tiene en toda la app.</td></tr>
   <tr><td><code>VIBRATE</code></td><td>Vibrar al sonar. Como app de teléfono predeterminada, Corta Spam es responsable del timbre.</td></tr>
+  <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Solo para enviar los informes anónimos opcionales descritos más abajo. Mientras no los aceptes, la app no hace ninguna conexión.</td></tr>
   <tr><td><code>RECORD_AUDIO</code></td><td>Solo se pide si activas la grabación del auto-respondedor. Ver más abajo.</td></tr>
 </table>
 
@@ -141,20 +142,26 @@
 <p>Para activarla, tu propio saludo debe contener una frase de consentimiento que avise a quien llama de que la llamada se está grabando. Sin ella la app no permite encender la función.</p>
 <p>Detalle técnico que conviene conocer: Android reserva el audio real de la línea telefónica a aplicaciones privilegiadas del sistema, y ser la app de teléfono predeterminada no da ese acceso. La grabación se hace por el micrófono. Varios fabricantes bloquean el micrófono durante una llamada, y en esos teléfonos no se captura nada. La grabación se guarda en el almacenamiento privado, se puede escuchar y borrar desde su entrada del registro, y borrar el registro borra también los archivos de audio.</p>
 
-<h2>Informes de fallos</h2>
-<p>La app no incluye ninguna herramienta de informes de fallos ni de analítica. Si instalaste Corta Spam desde Google Play, Play puede recopilar informes de fallos y ANR por su cuenta, según los ajustes de tu propia cuenta de Google; eso es un servicio de la plataforma y nosotros no recibimos ningún dato tuyo por esa vía.</p>
+<h2>Informes anónimos de uso y de fallos (opcionales)</h2>
+<p>La primera vez que abres la app te preguntamos si quieres compartir informes anónimos. <strong>Está desactivado hasta que aceptes</strong>, no hay casillas premarcadas, y puedes cambiar de opinión cuando quieras en Ajustes. Si lo desactivas, la app deja de enviar y borra los datos de Firebase guardados en el dispositivo, incluido el identificador anónimo de la instalación.</p>
+<p>Si aceptas, la app usa <strong>Google Firebase</strong> (Analytics y Crashlytics) y envía: los nombres de las pantallas que abres; unos pocos pasos de configuración (si concediste o rechazaste un permiso o el rol de app de teléfono); informes de fallos con su traza técnica; un identificador anónimo de la instalación; y datos básicos del dispositivo (modelo, versión de Android, versión de la app, idioma y país aproximado).</p>
+<p><strong>Nunca</strong> incluye números de teléfono, nombres de contactos, tus reglas, el resultado de ninguna llamada, audio ni texto que hayas escrito. La app no recopila el identificador de publicidad ni muestra anuncios. Google trata estos datos bajo <a href="https://firebase.google.com/support/privacy">la política de privacidad de Firebase</a>; nosotros solo vemos informes agregados y de fallos.</p>
+<p>Aparte, si instalaste Corta Spam desde Google Play, Play puede recopilar informes de fallos y ANR por su cuenta, según los ajustes de tu cuenta de Google; es un servicio de la plataforma.</p>
+
+<h2>Invitación a calificar</h2>
+<p>Tras algunos usos, la app puede preguntarte si quieres calificarla en Google Play. Para decidir cuándo preguntar guarda en tu dispositivo solo contadores (veces que se abrió, fecha de instalación, veces que preguntó y si respondiste que sí). Si eliges «Sí», Google Play muestra su propia hoja de calificación (la gestiona Google; la app no recibe tu calificación). Si eliges «No mucho», se abre <em>tu</em> aplicación de correo con un borrador para carlos.pinan@gmail.com que incluye la versión de la app, la versión de Android y el modelo del dispositivo; puedes leerlo, editarlo y decidir si lo envías, y no se envía nada si tú no lo envías. Nunca pregunta durante una llamada ni más de tres veces.</p>
 
 
 <h2>Donaciones</h2>
 <p><strong>La app no pide dinero.</strong> Corta Spam es gratuita, no tiene compras dentro de la aplicación, no incluye ninguna biblioteca de cobros y nunca muestra un aviso pidiendo una donación. Si donas, es porque fuiste al repositorio público y decidiste hacerlo.</p>
 <p>Las donaciones ocurren <strong>fuera de la app</strong>, en servicios de terceros — GitHub Sponsors (que cobra mediante Stripe), Ko-fi, PayPal, Yape y Plin — enlazados desde <a href="https://github.com/cpinan/Corta-Spam/blob/main/DONATE_ES.md">DONATE_ES.md</a> en el repositorio. Cada uno tiene su propia política de privacidad y trata tus datos bajo su responsabilidad, no la nuestra. De una donación recibimos solo lo que ese servicio nos muestra — normalmente un nombre o alias, el monto y a veces un correo — y eso no se cruza con nada de la app.</p>
-<p>La app <strong>no sabe si has donado y no puede saberlo</strong>: no tiene acceso a la red, así que no hay forma de que lo consulte. No existe versión de pago, ni funciones desbloqueadas por donar, ni ningún cambio de comportamiento derivado de una donación.</p>
+<p>La app <strong>no sabe si has donado y no puede saberlo</strong>: no tiene cuentas ni cobros, y los informes opcionales nunca incluyen datos de donaciones, así que no hay forma de que lo sepa. No existe versión de pago, ni funciones desbloqueadas por donar, ni ningún cambio de comportamiento derivado de una donación.</p>
 
 <h2>Conservación</h2>
-<p>Los datos permanecen en tu teléfono hasta que tú los borres — desde la app, borrando los datos de la aplicación, o desinstalándola. No hay copias en ninguna otra parte, ni en tu cuenta ni con nosotros, porque nunca salieron del dispositivo.</p>
+<p>Los datos de tus llamadas, contactos y reglas permanecen en tu teléfono hasta que tú los borres — desde la app, borrando los datos de la aplicación, o desinstalándola. No hay copias en ninguna otra parte, ni en tu cuenta ni con nosotros, porque nunca salieron del dispositivo. Si aceptaste los informes anónimos, Google Firebase conserva sus datos según su propia política; desactivarlos en Ajustes borra los datos del dispositivo y detiene el envío.</p>
 
 <h2>Menores</h2>
-<p>Corta Spam no está dirigida a menores de 13 años y no recopila datos de nadie, de ninguna edad.</p>
+<p>Corta Spam no está dirigida a menores de 13 años y no recopila datos de nadie, de ninguna edad, salvo los informes anónimos opcionales, que no permiten identificar a una persona.</p>
 
 <h2>Tus derechos — Perú, Ley N.º 29733</h2>
 <p>La Ley de Protección de Datos Personales del Perú reconoce los derechos de acceso, rectificación, cancelación y oposición. Dado que Corta Spam no recopila ni transmite datos personales, no existe ninguna base de datos nuestra sobre la que ejercerlos: todos tus datos ya están únicamente en tu poder, en tu dispositivo, y puedes consultarlos, modificarlos o eliminarlos en cualquier momento desde la propia app. Si aun así quieres escribirnos, usa el correo de contacto.</p>
@@ -172,7 +179,7 @@
 <!-- ============================ ENGLISH ============================ -->
 <div class="card">
 
-<p class="lead"><strong>Corta Spam does not declare the internet permission.</strong> It is not that we choose not to send your data — the app is <em>incapable</em> of making a network request. There are no servers, no accounts, no analytics and no advertising. Everything happens on your phone.</p>
+<p class="lead"><strong>Corta Spam does not collect your calls, contacts, numbers or rules, and shows no advertising.</strong> There are no accounts and no servers of ours. All of that stays on your phone. Anonymous usage and crash reports are <strong>optional and off until you accept them</strong>.</p>
 
 <h2>What the app stores, and where</h2>
 <p>Everything is kept in app-private storage, which no other app can read:</p>
@@ -186,7 +193,7 @@
 <p>The app keeps its <em>own</em> call log. It does not read or write the Android system call log, and it does not declare <code>READ_CALL_LOG</code> or <code>WRITE_CALL_LOG</code>.</p>
 
 <h2>What leaves your device</h2>
-<p><strong>Nothing.</strong> Not even to your own Google account.</p>
+<p><strong>By default, nothing.</strong> Not even to your own Google account. The only exception is the optional anonymous reports in the “Anonymous usage and crash reports” section, and only if you accept them.</p>
 <p>This is where otherwise-honest policies go wrong: Android automatically backs an app's data up to the user's Google account unless the app opts out. Corta Spam opts out explicitly. The manifest declares <code>android:allowBackup="false"</code>, and <code>data_extraction_rules.xml</code> excludes the database, preferences and files from both cloud backup and device-to-device transfer.</p>
 <p>The reason is what the data is: the log records who calls you and when, which is a map of the people you know. That belongs on your phone and nowhere else. If you want your rules on a new phone, Settings has a manual JSON export that you trigger yourself and can read before sharing.</p>
 
@@ -201,6 +208,7 @@
   <tr><td><code>POST_NOTIFICATIONS</code></td><td>Tell you about an incoming call, and what was blocked while you were away.</td></tr>
   <tr><td><code>USE_FULL_SCREEN_INTENT</code></td><td>Show the incoming-call screen when the phone is locked. That is its only use anywhere in the app.</td></tr>
   <tr><td><code>VIBRATE</code></td><td>Vibrate when ringing. As the default phone app, Corta Spam is responsible for ringing.</td></tr>
+  <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Only to send the optional anonymous reports described below. Until you accept them, the app makes no connection at all.</td></tr>
   <tr><td><code>RECORD_AUDIO</code></td><td>Only requested if you turn auto-responder recording on. See below.</td></tr>
 </table>
 
@@ -212,20 +220,26 @@
 <p>To enable it, your own greeting must contain a consent phrase telling the caller the call is being recorded. Without one, the app will not let the feature be switched on.</p>
 <p>A technical detail worth knowing: Android reserves the real telephony audio for privileged system applications, and being the default phone app does not grant that access. Recording is done through the microphone. Several manufacturers lock the microphone during a call, and on those phones nothing is captured. Recordings are stored in app-private storage, can be played and deleted from their call-log entry, and clearing the log deletes the audio files too.</p>
 
-<h2>Crash reporting</h2>
-<p>The app contains no crash-reporting or analytics library. If you installed Corta Spam from Google Play, Play may collect crash and ANR reports on its own, subject to your own Google account settings; that is a platform service and we receive no data about you through it.</p>
+<h2>Anonymous usage and crash reports (optional)</h2>
+<p>The first time you open the app it asks whether you want to share anonymous reports. <strong>It is off until you accept</strong>, nothing is pre-ticked, and you can change your mind at any time in Settings. If you switch it off, the app stops sending and clears the Firebase data held on the device, including the anonymous installation ID.</p>
+<p>If you accept, the app uses <strong>Google Firebase</strong> (Analytics and Crashlytics) and sends: the names of the screens you open; a few setup steps (whether you granted or refused a permission or the phone-app role); crash reports with their technical stack trace; an anonymous installation ID; and basic device details (model, Android version, app version, language and approximate country).</p>
+<p>It <strong>never</strong> includes phone numbers, contact names, your rules, the outcome of any call, audio, or any text you typed. The app does not collect the advertising ID and shows no ads. Google handles this data under <a href="https://firebase.google.com/support/privacy">Firebase's privacy policy</a>; we only see aggregated and crash reports.</p>
+<p>Separately, if you installed Corta Spam from Google Play, Play may collect crash and ANR reports on its own, subject to your Google account settings; that is a platform service.</p>
+
+<h2>Rating prompt</h2>
+<p>After some use the app may ask whether you want to rate it on Google Play. To decide when to ask it keeps only counters on your device (times opened, install date, times asked, and whether you said yes). If you choose “Yes”, Google Play shows its own rating sheet (run by Google; the app does not receive your rating). If you choose “Not really”, <em>your</em> email app opens with a draft to carlos.pinan@gmail.com that includes the app version, the Android version and the device model; you can read it, edit it and decide whether to send it, and nothing is sent unless you send it. It never asks during a call, and never more than three times.</p>
 
 
 <h2>Donations</h2>
 <p><strong>The app does not ask for money.</strong> Corta Spam is free, has no in-app purchases, contains no billing library, and never shows a donation prompt. If you donate, it is because you went to the public repository and chose to.</p>
 <p>Donations happen <strong>outside the app</strong>, on third-party services — GitHub Sponsors (which charges through Stripe), Ko-fi, PayPal, Yape and Plin — linked from <a href="https://github.com/cpinan/Corta-Spam/blob/main/DONATE.md">DONATE.md</a> in the repository. Each has its own privacy policy and handles your data under its own responsibility, not ours. From a donation we receive only what that service shows us — usually a name or handle, the amount, and sometimes an email address — and none of it is joined to anything from the app.</p>
-<p>The app <strong>does not know whether you have donated, and cannot know</strong>: it has no network access, so there is no way for it to ask. There is no paid tier, no feature unlocked by donating, and no change in behaviour that follows from one.</p>
+<p>The app <strong>does not know whether you have donated, and cannot know</strong>: it has no accounts or billing, and the optional reports never include donation data, so there is no way for it to know. There is no paid tier, no feature unlocked by donating, and no change in behaviour that follows from one.</p>
 
 <h2>Retention</h2>
-<p>Data stays on your phone until you delete it — from within the app, by clearing app data, or by uninstalling. There are no copies anywhere else, not in your account and not with us, because none was ever made.</p>
+<p>The data about your calls, contacts and rules stays on your phone until you delete it — from within the app, by clearing app data, or by uninstalling. There are no copies anywhere else, not in your account and not with us, because none was ever made. If you accepted the anonymous reports, Google Firebase retains those under its own policy; switching them off in Settings clears the on-device data and stops sending.</p>
 
 <h2>Children</h2>
-<p>Corta Spam is not directed at children under 13, and collects no data from anyone of any age.</p>
+<p>Corta Spam is not directed at children under 13, and collects no data from anyone of any age beyond the optional anonymous reports, which do not identify a person.</p>
 
 <h2>Your rights — Peru, Law No. 29733</h2>
 <p>Peru's Personal Data Protection Law provides rights of access, rectification, cancellation and objection. Because Corta Spam neither collects nor transmits personal data, there is no database of ours against which to exercise them: all your data is already solely in your possession, on your device, and you can view, change or delete it at any time from the app itself. If you would like to write to us regardless, use the contact address.</p>
