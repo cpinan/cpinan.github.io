@@ -63,7 +63,7 @@
 <header class="hero">
   <span class="badge">Pocket Kit</span>
   <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: 17 de agosto de 2026 · <code>dev.pinan.pocketkit</code></p>
+  <p class="updated">Última actualización: 29 de octubre de 2026 · <code>dev.pinan.pocketkit</code></p>
 </header>
 
 <main>
@@ -73,8 +73,9 @@
 
   <div class="card">
     <p><strong>En una línea:</strong> los archivos que abres con Pocket Kit nunca salen del
-    dispositivo. Lo único que sale es una solicitud de anuncio y la verificación de tu compra, ambas
-    descritas abajo con detalle.</p>
+    dispositivo. Lo que sí sale: solicitudes de anuncios; estadísticas de uso y reportes de fallos
+    anónimos, solo si lo aceptas en el aviso de consentimiento; las descargas de los paquetes de
+    stickers que agregas; y las búsquedas de stickers en línea. Todo está descrito en la sección 3.</p>
   </div>
 
   <h2>1. Qué se guarda en tu dispositivo</h2>
@@ -85,6 +86,14 @@
     <li><strong>Historial de Chat Link</strong>: hasta 50 números de teléfono que hayas escrito en la
       herramienta, guardados solo para que no tengas que volver a escribirlos. Se borran todos desde
       Ajustes → Borrar historial.</li>
+    <li><strong>Carpeta de WhatsApp y recuerdos</strong>: el permiso de acceso a la carpeta que elegiste
+      (un identificador del selector del sistema), los archivos que marcaste como «conservar» o
+      «favorito» y una memoria temporal con el resultado del análisis (archivos dañados o duplicados).
+      Nada de esto sale del teléfono.</li>
+    <li><strong>Inicio</strong>: las herramientas que fijaste y cuántas veces abriste cada una, para
+      ordenar la pantalla de inicio y crear accesos directos.</li>
+    <li><strong>Stickers en línea</strong>: resultados de búsqueda en memoria temporal (de 1 a 6 horas)
+      y los paquetes de stickers que agregaste.</li>
     <li><strong>Archivos de trabajo</strong>: páginas escaneadas, stickers y clips de video en
       <code>files/scans/</code>, <code>files/stickers/</code>, <code>files/videos/</code> y
       <code>files/exports/</code>, hasta que los elimines o desinstales la app.</li>
@@ -102,6 +111,12 @@
   <strong>en el dispositivo</strong>. La imagen no se sube para ser analizada. La primera vez que
   usas stickers se descarga el modelo desde los servicios de Google Play; lo que viaja es el modelo
   hacia tu teléfono, no tu foto hacia Google.</p>
+  <h3>Carpeta de WhatsApp</h3>
+  <p>El limpiador de WhatsApp y los recuerdos leen la carpeta que eliges con el selector de carpetas de
+  Android. Las fotos, videos y documentos se analizan <strong>solo en tu teléfono</strong> y nunca se
+  suben. Un archivo se borra únicamente después de que lo confirmas en la pantalla de revisión. Puedes
+  revocar el acceso en cualquier momento en <em>Ajustes → Apps → Pocket Kit</em> o eligiendo otra
+  carpeta.</p>
 
   <h2>3. Qué sí sale del dispositivo</h2>
   <div class="table-wrap">
@@ -110,14 +125,37 @@
     <tr>
       <td>Solicitud de anuncio: identificador de publicidad, país, idioma, modelo del dispositivo</td>
       <td>Google AdMob</td>
-      <td>Mostrar el anuncio con recompensa que desbloquea una acción gratis. Solo cuando tú tocas
-        «Ver un anuncio».</td>
+      <td>Mostrar anuncios: con recompensa (que desbloquean una acción gratis), de banner, intersticiales
+        y al volver a abrir la app tras unos minutos. Los anuncios solo se solicitan según tu elección
+        en el aviso de consentimiento.</td>
+    </tr>
+    <tr>
+      <td>Pantalla abierta, exportación terminada y tu país (según los ajustes del teléfono); si la app
+        falla, un reporte técnico con el modelo del dispositivo, la versión de Android y de la app, y un
+        identificador de instalación</td>
+      <td>Firebase Analytics y Firebase Crashlytics (Google)</td>
+      <td>Saber qué herramientas se usan y corregir fallos. <strong>Solo si lo aceptas</strong> en el
+        aviso de consentimiento. No se registran nombres de archivos, su contenido, números de teléfono
+        ni mensajes.</td>
+    </tr>
+    <tr>
+      <td>Descarga del catálogo y de las imágenes de los paquetes que agregas (la solicitud técnica
+        normal: dirección IP, versión de la app)</td>
+      <td>Nuestro sitio de catálogo en GitHub Pages</td>
+      <td>La tienda de stickers. No se envía ninguna cuenta ni identificador.</td>
+    </tr>
+    <tr>
+      <td>Texto que buscas, idioma, dirección IP y la clave de la app, al buscar stickers en línea</td>
+      <td>GIPHY y KLIPY</td>
+      <td>Mostrar resultados. La clasificación está fijada en apto para todo público. El sticker que
+        elijas se descarga y se convierte en tu teléfono.</td>
     </tr>
     <tr>
       <td>Estado de compra y un identificador anónimo generado por la app</td>
       <td>Google Play Billing y RevenueCat</td>
-      <td>Validar la compra Pro y restaurarla en tu próximo teléfono. No incluye tu nombre ni tu
-        correo: Pocket Kit nunca los recibe.</td>
+      <td>Pocket Kit Pro todavía no se puede comprar. Cuando esté disponible, esto servirá para validar
+        la compra y restaurarla en tu próximo teléfono; Pocket Kit nunca recibe tu nombre ni tu
+        correo.</td>
     </tr>
     <tr>
       <td>Descarga del modelo de recorte</td>
@@ -127,8 +165,10 @@
   </table>
   </div>
   <p>Antes de la primera solicitud de anuncio, Pocket Kit muestra el formulario de consentimiento de
-  Google (UMP). Puedes cambiar tu elección cuando quieras en Ajustes. Si eliges anuncios no
-  personalizados, se solicitan así.</p>
+  Google (UMP). Las estadísticas, los reportes de fallos y los anuncios dependen de lo que elijas ahí.
+  Puedes cambiar tu elección cuando quieras en <em>Ajustes → Opciones de privacidad de anuncios</em>.
+  Los anuncios pueden personalizarse solo si lo permites.</p>
+  <p>Los stickers en línea funcionan con GIPHY y KLIPY. <strong>Powered by GIPHY.</strong></p>
 
   <h3>Copia de seguridad de Android</h3>
   <p>Android puede subir los datos de una app a la cuenta de Google <em>del propio usuario</em>. En
@@ -143,7 +183,8 @@
     <li>Los números de teléfono del historial de Chat Link.</li>
     <li>Tu nombre, correo electrónico o cuenta de Google.</li>
     <li>Tu ubicación, tus contactos, tu micrófono o tu cámara para uso propio de la app.</li>
-    <li>Analítica de comportamiento. Pocket Kit no incluye ningún SDK de analítica.</li>
+    <li>Nombres de archivos ni su contenido en las estadísticas o los reportes de fallos. Las
+      estadísticas y los reportes solo se envían si los aceptas.</li>
     <li>Publicidad basada en el contenido de tus archivos: el contenido nunca sale, así que no puede
       usarse para eso.</li>
   </ul>
@@ -153,24 +194,25 @@
   <table>
     <tr><th>Permiso</th><th>Para qué</th></tr>
     <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
-        <td>Anuncios, validación de compra y descarga del modelo de recorte. Nada más viaja por ahí.</td></tr>
+        <td>Anuncios, estadísticas y reportes de fallos (si los aceptas), la tienda y la búsqueda de stickers, y la descarga del modelo de recorte. Ningún archivo tuyo viaja por ahí.</td></tr>
     <tr><td><code>POST_NOTIFICATIONS</code></td>
         <td>Mostrar el progreso de una exportación de video. Se pide en el momento, no al abrir la app.</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>, <code>WAKE_LOCK</code></td>
         <td>Que una exportación larga no muera si sales de la app.</td></tr>
     <tr><td><code>AD_ID</code> y permisos de Android Ad Services</td>
-        <td>Requeridos por AdMob para el anuncio con recompensa.</td></tr>
+        <td>Requeridos por AdMob para mostrar anuncios.</td></tr>
     <tr><td><code>com.android.vending.BILLING</code></td>
         <td>Comprar Pocket Kit Pro dentro de Google Play.</td></tr>
   </table>
   </div>
-  <p>No se solicita permiso de almacenamiento, ni de cámara, ni de contactos, ni la lista de apps
-  instaladas, en ninguna versión de Android.</p>
+  <p>No se solicita permiso de almacenamiento (tampoco acceso a todos los archivos), ni de cámara, ni de
+  contactos, ni la lista de apps instaladas, en ninguna versión de Android. Pocket Kit solo consulta si
+  WhatsApp y WhatsApp Business están instalados, para poder abrir un chat.</p>
 
   <h2>6. Conservación</h2>
   <p>En tu dispositivo: hasta que borres los datos o desinstales. En la nube: nada nuestro, porque no
-  hay nada nuestro. Google y RevenueCat conservan el registro de la compra según sus propias
-  políticas, necesarias para que puedas restaurarla.</p>
+  hay nada nuestro. Google (AdMob, Firebase) y RevenueCat conservan los datos que reciben según sus propias
+  políticas; en el caso de las compras, para que puedas restaurarlas.</p>
 
   <h2>7. Menores</h2>
   <p>Pocket Kit no está dirigido a menores de 13 años y no recolecta a sabiendas datos de menores. Si
@@ -196,7 +238,7 @@
 <header class="hero">
   <span class="badge">Pocket Kit</span>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 17 August 2026 · <code>dev.pinan.pocketkit</code></p>
+  <p class="updated">Last updated: 29 October 2026 · <code>dev.pinan.pocketkit</code></p>
 </header>
 
 <main>
@@ -205,8 +247,10 @@
   your phone.</p>
 
   <div class="card">
-    <p><strong>In one line:</strong> the files you open in Pocket Kit never leave the device. The only
-    things that leave are an ad request and a purchase check, both described in full below.</p>
+    <p><strong>In one line:</strong> the files you open in Pocket Kit never leave the device. What does
+    leave: ad requests; anonymous usage statistics and crash reports, only if you agree in the consent
+    prompt; the downloads of sticker packs you add; and online sticker searches. All of it is described
+    in section 3.</p>
   </div>
 
   <h2>1. What is stored on your device</h2>
@@ -215,6 +259,13 @@
       theme, chosen language, daily usage counters, and a cached copy of your purchase state.</li>
     <li><strong>Chat Link history</strong>: up to 50 phone numbers you typed into that tool, kept only
       so you do not have to type them again. Clear them all from Settings → Clear history.</li>
+    <li><strong>WhatsApp folder and memories</strong>: the access grant for the folder you chose (an
+      identifier from the system picker), the files you marked “keep” or “starred”, and a temporary
+      cache of the scan result (broken or duplicate files). None of this leaves the phone.</li>
+    <li><strong>Home</strong>: the tools you pinned and how often you opened each, to order the home
+      screen and create launcher shortcuts.</li>
+    <li><strong>Online stickers</strong>: search results cached for 1 to 6 hours, and the sticker packs
+      you added.</li>
     <li><strong>Working files</strong>: scanned pages, stickers and video clips in
       <code>files/scans/</code>, <code>files/stickers/</code>, <code>files/videos/</code> and
       <code>files/exports/</code>, until you delete them or uninstall.</li>
@@ -231,6 +282,11 @@
   <p>Document scanning and sticker cutouts use Google ML Kit models that run <strong>on the
   device</strong>. Your image is not uploaded for analysis. The first sticker cutout downloads the
   model from Google Play services — the model travels to your phone, not your photo to Google.</p>
+  <h3>WhatsApp folder</h3>
+  <p>The WhatsApp cleaner and memories read the folder you pick with Android’s folder picker. Photos,
+  videos and documents are analysed <strong>on your phone only</strong> and are never uploaded. A file
+  is deleted only after you confirm it on the review screen. You can revoke the access any time in
+  <em>Settings → Apps → Pocket Kit</em> or by choosing another folder.</p>
 
   <h2>3. What does leave the device</h2>
   <div class="table-wrap">
@@ -239,13 +295,35 @@
     <tr>
       <td>Ad request: advertising ID, country, language, device model</td>
       <td>Google AdMob</td>
-      <td>To show the rewarded ad that unlocks one free action. Only when you tap “Watch an ad”.</td>
+      <td>To show ads: rewarded (which unlock a free action), banner, interstitial and one when you come
+        back to the app after a few minutes. Ads are requested only according to your choice in the
+        consent prompt.</td>
+    </tr>
+    <tr>
+      <td>Screen opened, export finished, and your country (from the phone’s settings); if the app
+        crashes, a technical report with the device model, Android and app version, and an installation
+        identifier</td>
+      <td>Firebase Analytics and Firebase Crashlytics (Google)</td>
+      <td>To learn which tools are used and fix crashes. <strong>Only if you agree</strong> in the
+        consent prompt. No file names, file contents, phone numbers or messages are recorded.</td>
+    </tr>
+    <tr>
+      <td>Download of the catalog and of the images of packs you add (the normal technical request: IP
+        address, app version)</td>
+      <td>Our catalog site on GitHub Pages</td>
+      <td>The sticker store. No account or identifier is sent.</td>
+    </tr>
+    <tr>
+      <td>The text you search, language, IP address and the app’s key, when you search online stickers</td>
+      <td>GIPHY and KLIPY</td>
+      <td>To show results. The rating is fixed to all-audiences. The sticker you pick is downloaded and
+        converted on your phone.</td>
     </tr>
     <tr>
       <td>Purchase state and an anonymous app-generated identifier</td>
       <td>Google Play Billing and RevenueCat</td>
-      <td>To validate Pro and restore it on your next phone. It carries no name or email — Pocket Kit
-        never receives them.</td>
+      <td>Pocket Kit Pro cannot be purchased yet. When it is available, this will validate the purchase
+        and restore it on your next phone; Pocket Kit never receives your name or email.</td>
     </tr>
     <tr>
       <td>Cutout model download</td>
@@ -254,8 +332,10 @@
     </tr>
   </table>
   </div>
-  <p>Before the first ad request, Pocket Kit shows Google’s consent form (UMP). You can change that
-  choice at any time in Settings; choosing non-personalised ads requests them that way.</p>
+  <p>Before the first ad request, Pocket Kit shows Google’s consent form (UMP). Statistics, crash reports
+  and ads depend on what you choose there. You can change that choice at any time in <em>Settings → Ad
+  privacy choices</em>. Ads can be personalised only if you allow it.</p>
+  <p>Online stickers are provided through GIPHY and KLIPY. <strong>Powered by GIPHY.</strong></p>
 
   <h3>Android backup</h3>
   <p>Android can upload an app’s data to <em>the user’s own</em> Google account. In Pocket Kit this is
@@ -269,7 +349,8 @@
     <li>The phone numbers in Chat Link history.</li>
     <li>Your name, email address or Google account.</li>
     <li>Your location, contacts, microphone or camera for the app’s own use.</li>
-    <li>Behavioural analytics. Pocket Kit ships no analytics SDK.</li>
+    <li>File names or file contents in the statistics or crash reports. Statistics and reports are sent
+      only if you agree.</li>
     <li>Advertising based on the content of your files — the content never leaves, so it cannot be.</li>
   </ul>
 
@@ -278,23 +359,25 @@
   <table>
     <tr><th>Permission</th><th>Used for</th></tr>
     <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
-        <td>Ads, purchase validation and the cutout model download. Nothing else travels over it.</td></tr>
+        <td>Ads, statistics and crash reports (if you agree), the sticker store and search, and the cutout model download. None of your files travel over it.</td></tr>
     <tr><td><code>POST_NOTIFICATIONS</code></td>
         <td>Showing video export progress. Requested in context, never at launch.</td></tr>
     <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_DATA_SYNC</code>, <code>WAKE_LOCK</code></td>
         <td>Keeping a long export alive when you leave the app.</td></tr>
     <tr><td><code>AD_ID</code> and Android Ad Services permissions</td>
-        <td>Required by AdMob for the rewarded ad.</td></tr>
+        <td>Required by AdMob to show ads.</td></tr>
     <tr><td><code>com.android.vending.BILLING</code></td>
         <td>Buying Pocket Kit Pro inside Google Play.</td></tr>
   </table>
   </div>
-  <p>No storage, camera, contacts or installed-apps permission is requested on any Android version.</p>
+  <p>No storage permission (and no all-files access), camera, contacts or installed-apps permission is
+  requested on any Android version. Pocket Kit only checks whether WhatsApp and WhatsApp Business are
+  installed, so it can open a chat.</p>
 
   <h2>6. Retention</h2>
   <p>On your device: until you clear the data or uninstall. In the cloud: nothing of ours, because
-  there is nothing of ours. Google and RevenueCat keep the purchase record under their own policies,
-  which is what makes restoring it possible.</p>
+  there is nothing of ours. Google (AdMob, Firebase) and RevenueCat keep the data they receive under their own policies;
+  for purchases, that is what makes restoring them possible.</p>
 
   <h2>7. Children</h2>
   <p>Pocket Kit is not directed at children under 13 and does not knowingly collect data from them. If
@@ -316,8 +399,8 @@
 
 <footer>
   <p><a href="./">Pocket Kit</a> · <a href="terms.html">Términos / Terms</a> ·
-  Pocket Kit no está afiliado a WhatsApp LLC ni a Meta Platforms, Inc. —
-  Pocket Kit is not affiliated with WhatsApp LLC or Meta Platforms, Inc.</p>
+  Pocket Kit no está afiliado a WhatsApp LLC ni a Meta Platforms, Inc. · Stickers con tecnología de GIPHY —
+  Pocket Kit is not affiliated with WhatsApp LLC or Meta Platforms, Inc. · Stickers powered by GIPHY</p>
 </footer>
 
 </body>
