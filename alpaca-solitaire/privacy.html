@@ -41,13 +41,13 @@
 <div class="container">
 
   <h1>Alpaca Solitaire — Privacy Policy</h1>
-  <p class="muted">Last updated: 27 October 2026</p>
+  <p class="muted">Last updated: 31 October 2026</p>
 
   <div class="card">
     <p class="lead">Alpaca Solitaire has no accounts and never asks for your name, email, contacts or
     location. Your games, statistics and settings stay on your device. The app is free and shows ads,
     so it does connect to the internet: Google AdMob serves the ads, Firebase provides anonymous usage
-    statistics and remote settings, and Google Play handles the optional &ldquo;Remove ads&rdquo; purchase.
+    statistics, crash reports and remote settings, and Google Play handles the optional &ldquo;Remove ads&rdquo; purchase.
     This page explains exactly what each of them receives.</p>
   </div>
 
@@ -57,7 +57,7 @@
     <li>Your chosen card back, language, music and sound-effect settings.</li>
     <li>Which &ldquo;How to play&rdquo; prompts you have seen and which games you pinned to the top.</li>
     <li>Games in progress, so you can continue them.</li>
-    <li>Statistics per game: games played and won, best score, fewest moves, best time.</li>
+    <li>Statistics per game: games played and won, best score, fewest moves, best time, plus your win streak and daily-challenge streak.</li>
     <li>A flag saying whether you bought &ldquo;Remove ads&rdquo;, so ads stay off when you are offline.</li>
   </ul>
   <p>Uninstalling the app deletes all of this from your phone. The app opts out of Android Auto Backup
@@ -77,6 +77,12 @@
   device information. Firebase Remote Config downloads settings, for example how often ads appear; it
   receives the same app-instance identifier and your IP address to do so. We use this only to
   understand how the app is used and to tune ad frequency. We do not use it to identify you.</p>
+  <h3>Crash reports (Firebase Crashlytics)</h3>
+  <p>If the app crashes, Firebase Crashlytics receives a crash report: the error and where it happened in
+  the code, your device model, Android version, available memory and storage, whether the app was in the
+  foreground, and an anonymous installation identifier. It contains no name, email or game content. We use
+  it only to find and fix bugs. Crash reports are kept by Google for a limited period under its retention
+  policy.</p>
   <h3>Purchases (Google Play)</h3>
   <p>If you buy &ldquo;Remove ads&rdquo;, the payment is handled entirely by Google Play. We never see your
   card or payment details. The app only learns whether the purchase exists.</p>
@@ -97,7 +103,7 @@
     <li><strong>Internet</strong> and <strong>network state</strong>: to load ads, remote settings and process purchases.</li>
     <li><strong>Advertising ID</strong> (and Android&rsquo;s related ad-services permissions): used by ads and measurement as described above.</li>
     <li><strong>Billing</strong>: to offer &ldquo;Remove ads&rdquo; through Google Play.</li>
-    <li><strong>Wake lock</strong>: added by the Google libraries so background tasks can finish.</li>
+    <li><strong>Wake lock</strong>: added by the Google libraries so background tasks can finish (ads, statistics and crash reports).</li>
   </ul>
 
   <h2>5. Retention</h2>
@@ -125,13 +131,13 @@
   <hr>
 
   <h1>Alpaca Solitaire — Política de Privacidad</h1>
-  <p class="muted">Última actualización: 27 de octubre de 2026</p>
+  <p class="muted">Última actualización: 31 de octubre de 2026</p>
 
   <div class="card">
     <p class="lead">Alpaca Solitaire no tiene cuentas y nunca te pide tu nombre, correo, contactos ni
     ubicación. Tus partidas, estadísticas y ajustes se quedan en tu dispositivo. La aplicación es gratuita
     y muestra anuncios, por lo que sí se conecta a internet: Google AdMob muestra los anuncios, Firebase
-    ofrece estadísticas de uso anónimas y ajustes remotos, y Google Play gestiona la compra opcional de
+    ofrece estadísticas de uso anónimas, informes de fallos y ajustes remotos, y Google Play gestiona la compra opcional de
     &laquo;Quitar anuncios&raquo;. Esta página explica exactamente qué recibe cada uno.</p>
   </div>
 
@@ -141,7 +147,7 @@
     <li>El reverso de carta elegido, el idioma y los ajustes de música y efectos de sonido.</li>
     <li>Qué avisos de &laquo;Cómo jugar&raquo; ya viste y qué juegos fijaste arriba.</li>
     <li>Las partidas en curso, para que puedas continuarlas.</li>
-    <li>Estadísticas por juego: partidas jugadas y ganadas, mejor puntaje, menos movimientos, mejor tiempo.</li>
+    <li>Estadísticas por juego: partidas jugadas y ganadas, mejor puntaje, menos movimientos, mejor tiempo, además de tu racha de victorias y la del reto diario.</li>
     <li>Una marca que indica si compraste &laquo;Quitar anuncios&raquo;, para que los anuncios sigan apagados sin conexión.</li>
   </ul>
   <p>Desinstalar la aplicación borra todo esto del teléfono. La aplicación desactiva la copia de seguridad
@@ -162,6 +168,12 @@
   información básica del dispositivo. Firebase Remote Config descarga ajustes, por ejemplo con qué
   frecuencia aparecen los anuncios; para ello recibe el mismo identificador y tu dirección IP. Lo usamos
   solo para entender cómo se usa la aplicación y ajustar la frecuencia de anuncios, no para identificarte.</p>
+  <h3>Informes de fallos (Firebase Crashlytics)</h3>
+  <p>Si la aplicación se cierra por un error, Firebase Crashlytics recibe un informe del fallo: el error y
+  dónde ocurrió en el código, el modelo de tu dispositivo, la versión de Android, la memoria y el
+  almacenamiento disponibles, si la aplicación estaba en primer plano y un identificador de instalación
+  anónimo. No contiene nombre, correo ni contenido de tus partidas. Lo usamos solo para encontrar y
+  corregir errores. Google conserva los informes por un periodo limitado según su política de conservación.</p>
   <h3>Compras (Google Play)</h3>
   <p>Si compras &laquo;Quitar anuncios&raquo;, el pago lo gestiona por completo Google Play. Nunca vemos los
   datos de tu tarjeta ni de pago. La aplicación solo sabe si la compra existe.</p>
