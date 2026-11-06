@@ -53,7 +53,7 @@
 <p class="muted">Last updated: 23 October 2026</p>
 
 <div class="card">
-<p class="lead">Stat Calculator is a Pokémon stat calculator. It has no accounts, no sign-in, and no analytics. Your builds are stored on your device. It does show ads, and this page explains exactly what that means for your data — because "we care about your privacy" is not a statement anyone can check.</p>
+<p class="lead">Stat Calculator is a Pokémon stat calculator. It has no accounts and no sign-in. Your builds are stored on your device. It uses anonymous usage and crash reporting (Google Firebase) and shows ads, and this page explains exactly what that means for your data — because "we care about your privacy" is not a statement anyone can check.</p>
 </div>
 
 <h2>What is stored on your device</h2>
@@ -77,14 +77,24 @@
   <li>your device's <strong>advertising ID</strong> (a resettable identifier you control in Android settings);</li>
   <li>your <strong>IP address</strong>, and coarse location derived from it;</li>
   <li>device and app information — model, OS version, app version;</li>
-  <li>app performance diagnostics — things like launch time, hang rate and energy usage. These are performance measurements, not crash reports: there is no crash-reporting SDK in this app;</li>
+  <li>app performance diagnostics — things like launch time, hang rate and energy usage;</li>
   <li>ad interactions, such as which ads were shown or tapped.</li>
 </ul>
 <p>We never receive any of this. We see only aggregate earnings reports containing no information about individuals.</p>
 <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the app asks for your consent before personalised ads are shown, using Google's certified consent form. You may decline, and you may change your answer later; declining means you see non-personalised ads, not fewer features. Google's own explanation of the data it collects is at <a href="https://business.safety.google/privacy/">business.safety.google/privacy</a>.</p>
 <p>You can reset or delete your advertising ID at any time under <code>Settings → Google → Ads</code>.</p>
 
-<h3>3. Android Auto Backup</h3>
+<h3>3. Usage and crash reporting (Google Firebase)</h3>
+<p>The app uses Google Firebase Analytics and Firebase Crashlytics to learn which features are used and to fix crashes. Nothing is collected until the consent step described in section 2 has finished; where it applies, your answer is respected. Firebase processes this data on our behalf. It includes:</p>
+<ul>
+  <li><strong>Usage events</strong> — a fixed, short list: which screen was opened (Calculator, Compare, Saved, More, Target, Damage, Formula), the language you chose, the generation selected, which preset chip was used, whether you shared or copied a build, whether you loaded, compared or deleted a saved build, that a search or a save happened, and that a rewarded ad was completed. Events never contain Pokémon names, search text, your builds or your inputs;</li>
+  <li>an <strong>app-instance ID</strong> that Firebase generates for this installation. It is not linked to your name or account, and it resets when you uninstall or clear the app's data;</li>
+  <li>coarse location derived from your masked IP address, and device and app information (model, OS version, app version);</li>
+  <li><strong>crash reports</strong> — the stack trace, the state of the app and basic device details at the moment it crashed, plus an installation identifier used to count how many users a crash affects.</li>
+</ul>
+<p>We see this only as aggregate figures in the Firebase console. Firebase encrypts it in transit. Google's description of this data is at <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>. To stop it, uninstall the app. Clearing the app's data resets the app-instance ID.</p>
+
+<h3>4. Android Auto Backup</h3>
 <p>This one is easy to overlook, so it is stated plainly. Android backs up your <strong>saved builds</strong> to your own Google Drive, under your Google account and Google's backup encryption. It goes to you, not to us — we have no access to it and never see it. The Pokémon data cache is explicitly excluded from this backup, because it is refetchable and would only consume your storage quota.</p>
 <p>You control this entirely under <code>Settings → Google → Backup</code>.</p>
 
@@ -95,8 +105,7 @@
   <li>your contacts, photos, files, camera or microphone;</li>
   <li>precise or GPS location;</li>
   <li>your saved builds, comparisons or calculator inputs;</li>
-  <li>usage analytics of any kind — there is no analytics SDK in the app;</li>
-  <li>crash reports.</li>
+  <li>anything you type or choose in the calculator — usage events record only which feature was used, never its content.</li>
 </ul>
 
 <h2>Permissions</h2>
@@ -118,8 +127,8 @@
 <ul>
   <li><strong>On your device:</strong> until you delete the builds, clear the app's storage, or uninstall the app.</li>
   <li><strong>In your Google backup:</strong> governed by your Google account settings, not by us.</li>
-  <li><strong>With us:</strong> nothing. We operate no servers and hold no user data of any kind.</li>
-  <li><strong>With Google:</strong> per Google's own advertising retention policies, linked above.</li>
+  <li><strong>With us:</strong> no personal data. We operate no servers; we see only aggregate Firebase figures.</li>
+  <li><strong>With Google:</strong> advertising data per Google's own advertising retention policies, linked above; Firebase usage and crash data per Firebase's retention settings, which we keep at the defaults.</li>
 </ul>
 
 <h2>Children</h2>
@@ -146,7 +155,7 @@
 <p class="muted">Última actualización: 23 de octubre de 2026</p>
 
 <div class="card">
-<p class="lead">Stat Calculator es una calculadora de estadísticas de Pokémon. No tiene cuentas, ni inicio de sesión, ni analítica. Tus builds se guardan en tu dispositivo. Sí muestra publicidad, y esta página explica exactamente qué significa eso para tus datos — porque «nos importa tu privacidad» no es algo que nadie pueda comprobar.</p>
+<p class="lead">Stat Calculator es una calculadora de estadísticas de Pokémon. No tiene cuentas ni inicio de sesión. Tus builds se guardan en tu dispositivo. Usa informes anónimos de uso y de fallos (Google Firebase) y muestra publicidad, y esta página explica exactamente qué significa eso para tus datos — porque «nos importa tu privacidad» no es algo que nadie pueda comprobar.</p>
 </div>
 
 <h2>Qué se guarda en tu dispositivo</h2>
@@ -170,14 +179,24 @@
   <li>el <strong>identificador de publicidad</strong> de tu dispositivo (un ID reiniciable que tú controlas en los ajustes de Android);</li>
   <li>tu <strong>dirección IP</strong>, y la ubicación aproximada derivada de ella;</li>
   <li>información del dispositivo y de la app — modelo, versión del sistema, versión de la app;</li>
-  <li>diagnósticos de rendimiento de la app — cosas como el tiempo de arranque, la tasa de bloqueos momentáneos y el consumo de energía. Son medidas de rendimiento, no informes de fallos: esta app no incluye ningún SDK de informes de fallos;</li>
+  <li>diagnósticos de rendimiento de la app — cosas como el tiempo de arranque, la tasa de bloqueos momentáneos y el consumo de energía;</li>
   <li>interacciones con los anuncios, como cuáles se mostraron o se pulsaron.</li>
 </ul>
 <p>Nosotros no recibimos nada de eso. Solo vemos informes de ingresos agregados que no contienen información sobre personas concretas.</p>
 <p>Si te encuentras en el Espacio Económico Europeo, el Reino Unido o Suiza, la app pide tu consentimiento antes de mostrar publicidad personalizada, mediante el formulario certificado de Google. Puedes rechazarlo, y puedes cambiar tu respuesta después; rechazarlo significa ver anuncios no personalizados, no menos funciones. La explicación de Google sobre los datos que recopila está en <a href="https://business.safety.google/privacy/">business.safety.google/privacy</a>.</p>
 <p>Puedes reiniciar o eliminar tu identificador de publicidad en <code>Ajustes → Google → Anuncios</code>.</p>
 
-<h3>3. Copia de seguridad automática de Android</h3>
+<h3>3. Informes de uso y de fallos (Google Firebase)</h3>
+<p>La app usa Google Firebase Analytics y Firebase Crashlytics para saber qué funciones se usan y corregir fallos. No se recopila nada hasta que termina el paso de consentimiento descrito en la sección 2; cuando aplica, se respeta tu respuesta. Firebase trata estos datos en nuestro nombre. Incluye:</p>
+<ul>
+  <li><strong>Eventos de uso</strong> — una lista fija y corta: qué pantalla se abrió (Calculadora, Comparar, Guardados, Más, Objetivo, Daño, Fórmulas), el idioma elegido, la generación seleccionada, qué preajuste se usó, si compartiste o copiaste una build, si cargaste, comparaste o eliminaste una build guardada, que se hizo una búsqueda o un guardado, y que se completó un anuncio con recompensa. Los eventos nunca contienen nombres de Pokémon, texto de búsqueda, tus builds ni tus datos introducidos;</li>
+  <li>un <strong>ID de instancia de la app</strong> que Firebase genera para esta instalación. No está vinculado a tu nombre ni a tu cuenta, y se reinicia al desinstalar o borrar los datos de la app;</li>
+  <li>ubicación aproximada derivada de tu dirección IP enmascarada, e información del dispositivo y de la app (modelo, versión del sistema, versión de la app);</li>
+  <li><strong>informes de fallos</strong> — el seguimiento de la pila, el estado de la app y datos básicos del dispositivo en el momento del fallo, más un identificador de instalación que sirve para contar cuántos usuarios afecta un fallo.</li>
+</ul>
+<p>Solo lo vemos como cifras agregadas en la consola de Firebase. Firebase lo cifra en tránsito. La descripción de Google de estos datos está en <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>. Para detenerlo, desinstala la app. Borrar los datos de la app reinicia el ID de instancia.</p>
+
+<h3>4. Copia de seguridad automática de Android</h3>
 <p>Esto se pasa por alto con facilidad, así que se dice claramente. Android copia tus <strong>builds guardadas</strong> a tu propio Google Drive, bajo tu cuenta de Google y con el cifrado de copia de seguridad de Google. Va a ti, no a nosotros — no tenemos acceso y nunca lo vemos. La caché de datos de Pokémon está excluida explícitamente de esa copia, porque se puede volver a descargar y solo consumiría tu cuota de almacenamiento.</p>
 <p>Tú lo controlas por completo en <code>Ajustes → Google → Copia de seguridad</code>.</p>
 
@@ -188,8 +207,7 @@
   <li>tus contactos, fotos, archivos, cámara ni micrófono;</li>
   <li>ubicación precisa ni GPS;</li>
   <li>tus builds guardadas, comparaciones ni datos introducidos en la calculadora;</li>
-  <li>analítica de uso de ningún tipo — no hay ningún SDK de analítica en la app;</li>
-  <li>informes de fallos.</li>
+  <li>nada de lo que escribes o eliges en la calculadora — los eventos de uso solo registran qué función se usó, nunca su contenido.</li>
 </ul>
 
 <h2>Permisos</h2>
@@ -211,8 +229,8 @@
 <ul>
   <li><strong>En tu dispositivo:</strong> hasta que borres las builds, borres el almacenamiento de la app, o la desinstales.</li>
   <li><strong>En tu copia de seguridad de Google:</strong> según los ajustes de tu cuenta de Google, no los nuestros.</li>
-  <li><strong>Con nosotros:</strong> nada. No operamos servidores ni guardamos datos de usuarios de ningún tipo.</li>
-  <li><strong>Con Google:</strong> según las políticas de conservación publicitaria de Google, enlazadas arriba.</li>
+  <li><strong>Con nosotros:</strong> ningún dato personal. No operamos servidores; solo vemos cifras agregadas de Firebase.</li>
+  <li><strong>Con Google:</strong> los datos publicitarios según las políticas de conservación publicitaria de Google, enlazadas arriba; los datos de uso y fallos de Firebase según su configuración de conservación, que dejamos por defecto.</li>
 </ul>
 
 <h2>Menores</h2>
