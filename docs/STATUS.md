@@ -1,11 +1,11 @@
 # STATUS — cpinan.github.io
 
-_Last updated: 2026-11-06 · branch `main` · 1 uncommitted file (+ this one)_
+_Last updated: 2026-11-06 · branch `main` · 0 uncommitted files_
 
 ## Next action
 
-Review `git diff stat-calculator/privacy.html` (32+/14-, edited before 2026-11-06, not by the
-portfolio work) and commit or discard it.
+Open https://cpinan.github.io/ in a browser and eyeball the four new cards (gradients, icon crop,
+chip wrap) once Pages has deployed.
 
 ## State
 
@@ -32,8 +32,9 @@ portfolio work) and commit or discard it.
 
 ## In flight
 
-- `stat-calculator/privacy.html` — modified, uncommitted, origin unknown to this session. Decide
-  commit vs discard.
+Nothing in flight. `stat-calculator/privacy.html` (Firebase Analytics + Crashlytics disclosure,
+dated 6 November 2026) was committed in `9f1010d`; confirm the shipped app build really includes
+both SDKs.
 
 ## Verify
 
