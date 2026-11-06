@@ -4,8 +4,8 @@ _Last updated: 2026-11-06 · branch `main` · 0 uncommitted files_
 
 ## Next action
 
-Open https://cpinan.github.io/ in a browser and eyeball the four new cards (gradients, icon crop,
-chip wrap) once Pages has deployed.
+Push `main` (local is ahead of `origin/main` by `cca08c5`, the lighter Brevete Perú gradient, plus
+this STATUS commit), then curl-diff the live page.
 
 ## State
 
@@ -32,7 +32,9 @@ chip wrap) once Pages has deployed.
 
 ## In flight
 
-Nothing in flight. `stat-calculator/privacy.html` (Firebase Analytics + Crashlytics disclosure,
+Unpushed: `cca08c5` (`index.html`, Brevete Perú cover gradient `#F0D58A`→`#B8862B`; checked in a
+browser on a local server, not on the live site). The other new cards were checked live on
+2026-11-06 and render correctly. `stat-calculator/privacy.html` (Firebase Analytics + Crashlytics disclosure,
 dated 6 November 2026) was committed in `9f1010d`; confirm the shipped app build really includes
 both SDKs.
 
