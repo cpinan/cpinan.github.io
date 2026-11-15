@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Last Ascent — Privacy Policy / Política de Privacidad</title>
+<style>
+  :root { --bg:#141f18; --panel:#1c2b21; --edge:#35543c; --text:#e6efe0; --muted:#9fb59a; --moss:#99e86a; --torch:#ffcf5a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  header { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+  header svg { flex:none; image-rendering:pixelated; }
+  h1 { font-size:26px; margin:0; color:var(--moss); letter-spacing:.5px; }
+  .sub { color:var(--muted); font-size:14px; }
+  h2 { font-size:18px; color:var(--torch); margin:32px 0 8px; border-bottom:2px solid var(--edge); padding-bottom:4px; }
+  p, li { color:var(--text); }
+  ul { padding-left:22px; }
+  code { background:var(--panel); border:1px solid var(--edge); padding:1px 6px; border-radius:3px; }
+  .lead { background:var(--panel); border:2px solid var(--edge); border-radius:6px; padding:16px; }
+  hr { border:0; border-top:4px dashed var(--edge); margin:56px 0; }
+  a { color:var(--moss); }
+  footer { color:var(--muted); font-size:13px; margin-top:48px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <svg width="56" height="56" viewBox="0 0 14 14" aria-hidden="true">
+    <rect x="4" y="1" width="6" height="12" fill="#35543c"/><rect x="5" y="0" width="1" height="1" fill="#5d8a5a"/>
+    <rect x="8" y="0" width="1" height="1" fill="#5d8a5a"/><rect x="6" y="3" width="2" height="2" fill="#ffcf5a"/>
+    <rect x="6" y="8" width="2" height="5" fill="#141f18"/><rect x="2" y="12" width="10" height="2" fill="#2f4a35"/>
+  </svg>
+  <div><h1>Privacy Policy</h1><div class="sub">Last Ascent · Last updated: 13 November 2026</div></div>
+</header>
+
+<p class="lead">Last Ascent has no accounts of its own, no ads and no advertising identifier. Your progress stays on your device.
+The data that leaves it is anonymous gameplay statistics and crash reports, which you can switch off at any time
+in <strong>Pause → Anonymous stats</strong>, and your best floor if you use the Google Play Games leaderboard.</p>
+
+<h2>1. Information kept on your device</h2>
+<p>One file, <code>profile.save</code>, in the app's private storage. Other apps cannot read it. It holds:</p>
+<ul>
+  <li>Shards, unlocks and best floor reached per season</li>
+  <li>History of finished runs (floor, level, time, kills, cards and relics)</li>
+  <li>A suspended run, if you chose "Save &amp; quit"</li>
+  <li>Your music and anonymous-stats settings</li>
+</ul>
+<p>Android Auto Backup is turned off for this app (<code>allowBackup="false"</code>), so this file is not copied to your
+Google account. Uninstalling the app deletes it.</p>
+
+<h2>2. Advertising</h2>
+<p>There are no ads. The app removes the Android advertising-ID permission and turns off advertising-ID collection and
+ad-personalisation signals in Firebase.</p>
+
+<h2>3. What leaves your device</h2>
+<p>When anonymous stats are on (the default), the app uses Google Firebase:</p>
+<ul>
+  <li><strong>Firebase Analytics</strong>: gameplay events: run started or ended, floor reached, boss attempts and
+    results, card picks, what ended a run (for example "bullet"), and optional feedback answers (difficulty rating, would-you-play-again). Optional free-text comments are never sent by the app; they leave your device only if you choose to email them from your own mail app. Firebase also records
+    an app-instance ID (random, not linked to you), device model, Android version, app version, approximate country
+    derived from the IP address, and session length.</li>
+  <li><strong>Firebase Crashlytics</strong>: if the app crashes, a crash report with the technical error, device model,
+    Android version, app version and a random installation ID.</li>
+</ul>
+<p>This data is used only to find difficult floors, balance the game and fix crashes. It is not sold or shared for
+advertising. Google processes it under the
+<a href="https://firebase.google.com/support/privacy">Firebase privacy terms</a>.
+Switching <strong>Pause → Anonymous stats</strong> off stops both Analytics and Crashlytics from that moment.</p>
+<p><strong>Google Play Games Services (leaderboard)</strong>: if you open the leaderboard and sign in to Google Play Games,
+your Play Games player profile (public player name and avatar) and the best floor you reached per season are sent to Google
+and shown to other players. This is optional: the game works without signing in, and the anonymous-stats switch does not
+affect it. Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>;
+you can manage or delete your Play Games data from the Play Games app.</p>
+
+<h2>4. What is never collected</h2>
+<ul>
+  <li>Name, email, phone number or any account of ours (the optional Play Games sign-in is handled by Google)</li>
+  <li>Precise location, contacts, photos, files, camera or microphone</li>
+  <li>Advertising ID</li>
+  <li>Payment information (the game is free with no purchases)</li>
+</ul>
+
+<h2>5. Permissions</h2>
+<p>Network access only (<code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code>, used by Firebase). The OpenGL ES 3
+entry in the manifest is a hardware capability declaration, not a permission.</p>
+
+<h2>6. How long anything is kept</h2>
+<ul>
+  <li>On your device: until you uninstall the app</li>
+  <li>Firebase Analytics event data: 2 months</li>
+  <li>Crashlytics crash reports: 90 days</li>
+</ul>
+
+<h2>7. Children</h2>
+<p>Last Ascent is not directed at children under 13 and does not knowingly collect personal information from them.
+The anonymous statistics above contain no personal information.</p>
+
+<h2>8. Your rights (Peru, Law No. 29733)</h2>
+<p>Under Peru's Personal Data Protection Law you can request access, rectification, cancellation and objection
+(ARCO rights). Because the app has no accounts, the statistics cannot be linked back to you; you can stop them at any
+time with the in-game switch. For any request, write to the contact below.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, the new version is published at this address with a new "Last updated" date.</p>
+
+<h2>10. Contact</h2>
+<p>Carlos Piñán · <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+<hr>
+
+<header>
+  <div><h1>Política de Privacidad</h1><div class="sub">Last Ascent · Última actualización: 13 de noviembre de 2026</div></div>
+</header>
+
+<p class="lead">Last Ascent no tiene cuentas propias, ni anuncios, ni identificador de publicidad. Tu progreso se queda en tu
+dispositivo. Lo único que sale de él son estadísticas de juego anónimas e informes de fallos, que puedes desactivar
+cuando quieras en <strong>Pausa → Estadísticas anónimas</strong>.</p>
+
+<h2>1. Información que se guarda en tu dispositivo</h2>
+<p>Un archivo, <code>profile.save</code>, en el almacenamiento privado de la app. Otras apps no pueden leerlo. Contiene:</p>
+<ul>
+  <li>Fragmentos, desbloqueos y mejor piso alcanzado por temporada</li>
+  <li>Historial de partidas terminadas (piso, nivel, tiempo, enemigos derrotados, cartas y reliquias)</li>
+  <li>Una partida suspendida, si elegiste "Guardar y salir"</li>
+  <li>Tus ajustes de música y de estadísticas anónimas</li>
+</ul>
+<p>La copia de seguridad automática de Android está desactivada para esta app (<code>allowBackup="false"</code>), así
+que este archivo no se copia a tu cuenta de Google. Desinstalar la app lo borra.</p>
+
+<h2>2. Publicidad</h2>
+<p>No hay anuncios. La app elimina el permiso del identificador de publicidad de Android y desactiva en Firebase la
+recopilación de ese identificador y las señales de personalización de anuncios.</p>
+
+<h2>3. Qué sale de tu dispositivo</h2>
+<p>Con las estadísticas anónimas activadas (valor por defecto), la app usa Google Firebase:</p>
+<ul>
+  <li><strong>Firebase Analytics</strong>: eventos de juego: inicio o fin de partida, piso alcanzado, intentos y
+    resultados contra jefes, cartas elegidas, qué terminó la partida (por ejemplo "proyectil") y respuestas opcionales
+    de opinión (dificultad, si volverías a jugar). La app nunca envía comentarios de texto libre: solo salen de tu dispositivo si decides enviarlos por correo desde tu propia app de correo. Firebase también registra un ID de instancia de la app (aleatorio, no vinculado a ti), modelo del
+    dispositivo, versión de Android, versión de la app, país aproximado según la dirección IP y duración de la sesión.</li>
+  <li><strong>Firebase Crashlytics</strong>: si la app falla, un informe con el error técnico, modelo del dispositivo,
+    versión de Android, versión de la app y un ID de instalación aleatorio.</li>
+</ul>
+<p>Estos datos se usan solo para encontrar pisos difíciles, equilibrar el juego y corregir fallos. No se venden ni se
+comparten con fines publicitarios. Google los trata según los
+<a href="https://firebase.google.com/support/privacy">términos de privacidad de Firebase</a>.
+Al desactivar <strong>Pausa → Estadísticas anónimas</strong> se detienen Analytics y Crashlytics desde ese momento.</p>
+<p><strong>Google Play Games Services (clasificación)</strong>: si abres la clasificación e inicias sesión en Google Play Games,
+tu perfil de jugador de Play Games (nombre público y avatar) y el mejor piso que alcanzaste por temporada se envían a Google
+y se muestran a otros jugadores. Es opcional: el juego funciona sin iniciar sesión y el interruptor de estadísticas anónimas
+no lo afecta. Google trata estos datos según la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>;
+puedes gestionar o eliminar tus datos de Play Games desde la app Play Games.</p>
+
+<h2>4. Qué nunca se recopila</h2>
+<ul>
+  <li>Nombre, correo, teléfono o cuenta propia (el inicio de sesión opcional de Play Games lo gestiona Google)</li>
+  <li>Ubicación precisa, contactos, fotos, archivos, cámara o micrófono</li>
+  <li>Identificador de publicidad</li>
+  <li>Datos de pago (el juego es gratuito y sin compras)</li>
+</ul>
+
+<h2>5. Permisos</h2>
+<p>Solo acceso a la red (<code>INTERNET</code> y <code>ACCESS_NETWORK_STATE</code>, usados por Firebase). La entrada
+OpenGL ES 3 del manifiesto declara una capacidad del hardware, no es un permiso.</p>
+
+<h2>6. Cuánto tiempo se conserva</h2>
+<ul>
+  <li>En tu dispositivo: hasta que desinstales la app</li>
+  <li>Eventos de Firebase Analytics: 2 meses</li>
+  <li>Informes de Crashlytics: 90 días</li>
+</ul>
+
+<h2>7. Menores de edad</h2>
+<p>Last Ascent no está dirigido a menores de 13 años y no recopila a sabiendas información personal de ellos. Las
+estadísticas anónimas descritas no contienen información personal.</p>
+
+<h2>8. Tus derechos (Ley N.º 29733)</h2>
+<p>Según la Ley de Protección de Datos Personales del Perú puedes solicitar acceso, rectificación, cancelación y
+oposición (derechos ARCO). Como la app no tiene cuentas, las estadísticas no pueden vincularse contigo; puedes
+detenerlas en cualquier momento con el interruptor del juego. Para cualquier solicitud, escribe al contacto indicado.</p>
+
+<h2>9. Cambios</h2>
+<p>Si esta política cambia, la nueva versión se publica en esta dirección con una nueva fecha de actualización.</p>
+
+<h2>10. Contacto</h2>
+<p>Carlos Piñán · <a href="mailto:carlos.pinan@gmail.com">carlos.pinan@gmail.com</a></p>
+
+<footer>Last Ascent is a free game. / Last Ascent es un juego gratuito.</footer>
+</main>
+</body>
+</html>
