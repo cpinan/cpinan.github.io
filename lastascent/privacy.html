@@ -31,11 +31,11 @@
     <rect x="8" y="0" width="1" height="1" fill="#5d8a5a"/><rect x="6" y="3" width="2" height="2" fill="#ffcf5a"/>
     <rect x="6" y="8" width="2" height="5" fill="#141f18"/><rect x="2" y="12" width="10" height="2" fill="#2f4a35"/>
   </svg>
-  <div><h1>Privacy Policy</h1><div class="sub">Last Ascent · Last updated: 13 November 2026</div></div>
+  <div><h1>Privacy Policy</h1><div class="sub">Last Ascent · Last updated: 15 November 2026</div></div>
 </header>
 
-<p class="lead">Last Ascent has no accounts of its own, no ads and no advertising identifier. Your progress stays on your device.
-The data that leaves it is anonymous gameplay statistics and crash reports, which you can switch off at any time
+<p class="lead">Last Ascent has no accounts of its own. It shows ads through Google AdMob, which uses your Android advertising ID. Your progress stays on your device.
+The data that leaves it is anonymous gameplay statistics and crash reports, plus the data ads need (section 2), which you can switch off at any time
 in <strong>Pause → Anonymous stats</strong>, and your best floor if you use the Google Play Games leaderboard.</p>
 
 <h2>1. Information kept on your device</h2>
@@ -50,8 +50,12 @@ in <strong>Pause → Anonymous stats</strong>, and your best floor if you use th
 Google account. Uninstalling the app deletes it.</p>
 
 <h2>2. Advertising</h2>
-<p>There are no ads. The app removes the Android advertising-ID permission and turns off advertising-ID collection and
-ad-personalisation signals in Firebase.</p>
+<p>The game shows full-screen (interstitial) ads between floors using <strong>Google AdMob</strong>. To serve them, the AdMob SDK
+reads your Android advertising ID and device information (device model, Android version, app version, approximate location
+derived from your IP address) and may show personalised ads, depending on your choices. Where the law requires it (EEA, UK),
+the app first asks for your consent through Google's consent form. You can reset or delete your advertising ID, or opt out of
+personalised ads, in Android <em>Settings → Privacy → Ads</em>. The <strong>Anonymous stats</strong> switch does not turn ads off.
+Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
 <h2>3. What leaves your device</h2>
 <p>When anonymous stats are on (the default), the app uses Google Firebase:</p>
@@ -77,12 +81,12 @@ you can manage or delete your Play Games data from the Play Games app.</p>
 <ul>
   <li>Name, email, phone number or any account of ours (the optional Play Games sign-in is handled by Google)</li>
   <li>Precise location, contacts, photos, files, camera or microphone</li>
-  <li>Advertising ID</li>
+  <li>Your advertising ID by the game itself: only the ad SDK uses it, as described in section 2</li>
   <li>Payment information (the game is free with no purchases)</li>
 </ul>
 
 <h2>5. Permissions</h2>
-<p>Network access only (<code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code>, used by Firebase). The OpenGL ES 3
+<p>Network access (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, used by Firebase and ads), vibration (<code>VIBRATE</code>) and the advertising ID (<code>AD_ID</code>, used by Google AdMob). The ad SDK also declares ad-related permissions of its own (<code>ACCESS_ADSERVICES_*</code>). The OpenGL ES 3
 entry in the manifest is a hardware capability declaration, not a permission.</p>
 
 <h2>6. How long anything is kept</h2>
@@ -110,11 +114,11 @@ time with the in-game switch. For any request, write to the contact below.</p>
 <hr>
 
 <header>
-  <div><h1>Política de Privacidad</h1><div class="sub">Last Ascent · Última actualización: 13 de noviembre de 2026</div></div>
+  <div><h1>Política de Privacidad</h1><div class="sub">Last Ascent · Última actualización: 15 de noviembre de 2026</div></div>
 </header>
 
-<p class="lead">Last Ascent no tiene cuentas propias, ni anuncios, ni identificador de publicidad. Tu progreso se queda en tu
-dispositivo. Lo único que sale de él son estadísticas de juego anónimas e informes de fallos, que puedes desactivar
+<p class="lead">Last Ascent no tiene cuentas propias. Muestra anuncios mediante Google AdMob, que usa el identificador de publicidad de tu Android. Tu progreso se queda en tu
+dispositivo. Lo que sale de él son estadísticas de juego anónimas, informes de fallos y los datos que necesitan los anuncios (sección 2), que puedes desactivar
 cuando quieras en <strong>Pausa → Estadísticas anónimas</strong>.</p>
 
 <h2>1. Información que se guarda en tu dispositivo</h2>
@@ -129,8 +133,13 @@ cuando quieras en <strong>Pausa → Estadísticas anónimas</strong>.</p>
 que este archivo no se copia a tu cuenta de Google. Desinstalar la app lo borra.</p>
 
 <h2>2. Publicidad</h2>
-<p>No hay anuncios. La app elimina el permiso del identificador de publicidad de Android y desactiva en Firebase la
-recopilación de ese identificador y las señales de personalización de anuncios.</p>
+<p>El juego muestra anuncios a pantalla completa (intersticiales) entre pisos mediante <strong>Google AdMob</strong>. Para
+mostrarlos, el SDK de AdMob lee el identificador de publicidad de tu Android y datos del dispositivo (modelo, versión de
+Android, versión de la app y ubicación aproximada según tu dirección IP) y puede mostrar anuncios personalizados según tus
+decisiones. Donde la ley lo exige (EEE, Reino Unido), la app antes te pide consentimiento con el formulario de Google. Puedes
+restablecer o eliminar tu identificador de publicidad, o desactivar la personalización, en <em>Ajustes → Privacidad →
+Anuncios</em> de Android. El interruptor <strong>Estadísticas anónimas</strong> no desactiva los anuncios. Google trata estos
+datos según la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.</p>
 
 <h2>3. Qué sale de tu dispositivo</h2>
 <p>Con las estadísticas anónimas activadas (valor por defecto), la app usa Google Firebase:</p>
@@ -156,12 +165,12 @@ puedes gestionar o eliminar tus datos de Play Games desde la app Play Games.</p>
 <ul>
   <li>Nombre, correo, teléfono o cuenta propia (el inicio de sesión opcional de Play Games lo gestiona Google)</li>
   <li>Ubicación precisa, contactos, fotos, archivos, cámara o micrófono</li>
-  <li>Identificador de publicidad</li>
+  <li>Tu identificador de publicidad por parte del juego: solo lo usa el SDK de anuncios, como se describe en la sección 2</li>
   <li>Datos de pago (el juego es gratuito y sin compras)</li>
 </ul>
 
 <h2>5. Permisos</h2>
-<p>Solo acceso a la red (<code>INTERNET</code> y <code>ACCESS_NETWORK_STATE</code>, usados por Firebase). La entrada
+<p>Acceso a la red (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, usados por Firebase y los anuncios), vibración (<code>VIBRATE</code>) y el identificador de publicidad (<code>AD_ID</code>, usado por Google AdMob). El SDK de anuncios declara además permisos propios relacionados (<code>ACCESS_ADSERVICES_*</code>). La entrada
 OpenGL ES 3 del manifiesto declara una capacidad del hardware, no es un permiso.</p>
 
 <h2>6. Cuánto tiempo se conserva</h2>
